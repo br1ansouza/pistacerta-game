@@ -13,8 +13,6 @@
 [![Bun](https://img.shields.io/badge/Bun-000000?logo=bun&logoColor=white)](https://bun.sh)
 [![Cloudflare](https://img.shields.io/badge/Workers-F38020?logo=cloudflare&logoColor=white)](https://workers.cloudflare.com)
 
-<img src="docs/demo.gif" width="230" alt="Uma rodada: pistas, palpite e revelação" />
-
 </div>
 
 O sistema sorteia um carro e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, aspiração, câmbio, tração, carroceria e, por último, o código do motor. Quanto antes você acertar, melhor.
@@ -47,7 +45,10 @@ Só carros com presença real no Brasil. Nada de catálogo mundial.
       <img src="docs/dupla.jpg" width="240" alt="Modo em dupla com a resposta revelada" /><br />
       <sub><b>Em dupla</b><br />Você conduz, o outro adivinha</sub>
     </td>
-    <td></td>
+    <td align="center">
+      <img src="docs/demo.gif" width="240" alt="Uma rodada completa em movimento" /><br />
+      <sub><b>Em movimento</b><br />Uma rodada do começo ao fim</sub>
+    </td>
   </tr>
 </table>
 

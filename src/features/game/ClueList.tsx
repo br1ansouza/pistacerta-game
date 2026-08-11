@@ -2,25 +2,23 @@ import type { ResolvedClue } from '@/domain/clues/clue.types';
 
 type ClueListProps = {
   clues: ResolvedClue[];
-  initialCount: number;
+  highlightFrom?: number;
 };
 
-export function ClueList({ clues, initialCount }: ClueListProps) {
+export function ClueList({ clues, highlightFrom = -1 }: ClueListProps) {
   return (
-    <dl className="flex flex-col">
+    <dl className="grid grid-cols-2 gap-2">
       {clues.map((clue, index) => (
         <div
           key={clue.key}
           className={
-            index === initialCount
-              ? 'border-secondary flex items-baseline justify-between gap-4 border-t pt-4 pb-2'
-              : 'flex items-baseline justify-between gap-4 py-2'
+            index >= highlightFrom && highlightFrom >= 0
+              ? 'border-brand bg-brand-primary flex flex-col gap-0.5 rounded-xl border px-3 py-2'
+              : 'border-secondary bg-primary flex flex-col gap-0.5 rounded-xl border px-3 py-2'
           }
         >
-          <dt className="text-tertiary text-sm">{clue.label}</dt>
-          <dd className="text-primary text-md text-right font-semibold tabular-nums">
-            {clue.value}
-          </dd>
+          <dt className="text-quaternary text-xs">{clue.label}</dt>
+          <dd className="text-primary text-sm font-semibold tabular-nums">{clue.value}</dd>
         </div>
       ))}
     </dl>

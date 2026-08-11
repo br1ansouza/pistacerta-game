@@ -22,6 +22,8 @@
   "cylinders": 4,
   "doors": 2,
   "fipe": null,
-  "specSource": "icarros",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "engineCode": "BS 1.7",
+  "valves": 8
 }

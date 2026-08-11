@@ -15,6 +15,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "001083-9"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 182,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 27,
+    "unit": "kgfm"
+  },
+  "engineCode": "182B",
+  "cylinders": 5,
+  "valves": 20
 }

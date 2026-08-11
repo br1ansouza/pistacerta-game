@@ -19,6 +19,13 @@
     "referenceMonth": "2026-08",
     "fipeCode": "022112-0"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "torque": {
+    "value": 40.7,
+    "unit": "kgfm"
+  },
+  "engineCode": "4B11T",
+  "cylinders": 4,
+  "valves": 16
 }

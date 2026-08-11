@@ -21,6 +21,13 @@
     "referenceMonth": "2026-08",
     "fipeCode": "005171-3"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "torque": {
+    "value": 24.5,
+    "unit": "kgfm"
+  },
+  "engineCode": "AUM",
+  "cylinders": 4,
+  "valves": 20
 }

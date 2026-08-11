@@ -16,6 +16,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "005517-4"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 230,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 35.7,
+    "unit": "kgfm"
+  },
+  "engineCode": "EA888",
+  "cylinders": 4,
+  "valves": 16
 }

@@ -15,6 +15,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "023149-5"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 114,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 15.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "engineCode": "HR16DE",
+  "cylinders": 4,
+  "valves": 16
 }

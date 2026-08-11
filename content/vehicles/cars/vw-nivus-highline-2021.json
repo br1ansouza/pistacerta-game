@@ -15,6 +15,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "005526-3"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 128,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 20.4,
+    "unit": "kgfm"
+  },
+  "engineCode": "EA211",
+  "cylinders": 3,
+  "valves": 12
 }

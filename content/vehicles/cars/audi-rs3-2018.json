@@ -16,6 +16,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "008221-0"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 400,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 48.9,
+    "unit": "kgfm"
+  },
+  "engineCode": "2.5 TFSI",
+  "cylinders": 5,
+  "valves": 20
 }

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { motion } from 'motion/react';
 import type { ResolvedClue } from '@/domain/clues/clue.types';
 
 type CluePagesProps = {
@@ -8,103 +8,105 @@ type CluePagesProps = {
   freshKey: string | null;
 };
 
+function ClueCell({ clue, fresh }: { clue: ResolvedClue; fresh: boolean }) {
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, x: -12 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ type: 'spring', stiffness: 460, damping: 32 }}
+      className={
+        fresh ? 'border-flame-500 border-l-[3px] pl-3' : 'border-ink-700 border-l-[3px] pl-3'
+      }
+    >
+      <dt className="text-chalk-500 font-display text-[0.6rem] leading-tight tracking-[0.14em] uppercase">
+        {clue.label}
+      </dt>
+      <dd
+        className={
+          fresh
+            ? 'text-flame-400 font-display text-base leading-tight font-bold tabular-nums'
+            : 'text-chalk-100 font-display text-base leading-tight font-bold tabular-nums'
+        }
+      >
+        {clue.value}
+      </dd>
+    </motion.div>
+  );
+}
+
 export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [page, setPage] = useState(0);
+
   const pages: ResolvedClue[][] = [];
 
   for (let index = 0; index < clues.length; index += pageSize) {
     pages.push(clues.slice(index, index + pageSize));
   }
 
-  const lastPage = Math.max(0, pages.length - 1);
-  const [page, setPage] = useState(lastPage);
-  const previousPageCount = useRef(pages.length);
+  const previousCount = useRef(pages.length);
 
   useEffect(() => {
-    if (pages.length !== previousPageCount.current) {
-      previousPageCount.current = pages.length;
-      setPage(pages.length - 1);
+    if (pages.length === previousCount.current) {
+      return;
+    }
+
+    previousCount.current = pages.length;
+
+    const track = trackRef.current;
+
+    if (track && globalThis.matchMedia('(width < 64rem)').matches) {
+      track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
     }
   }, [pages.length]);
 
-  useEffect(() => {
-    if (page > lastPage) {
-      setPage(lastPage);
-    }
-  }, [page, lastPage]);
+  function onScroll() {
+    const track = trackRef.current;
 
-  const current = pages[Math.min(page, lastPage)] ?? [];
+    if (!track || track.clientWidth === 0) {
+      return;
+    }
+
+    setPage(Math.round(track.scrollLeft / track.clientWidth));
+  }
+
+  function goTo(index: number) {
+    const track = trackRef.current;
+
+    if (!track) {
+      return;
+    }
+
+    track.scrollTo({ left: index * track.clientWidth, behavior: 'smooth' });
+  }
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="relative overflow-hidden">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.dl
-            key={page}
-            drag={pages.length > 1 ? 'x' : false}
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.16}
-            onDragEnd={(_, info) => {
-              if (info.offset.x < -60 && page < lastPage) setPage(page + 1);
-              if (info.offset.x > 60 && page > 0) setPage(page - 1);
-            }}
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -40 }}
-            transition={{ type: 'spring', stiffness: 420, damping: 34 }}
-            className="grid cursor-grab grid-cols-2 gap-x-3 gap-y-4 active:cursor-grabbing sm:grid-cols-3"
+      <div
+        ref={trackRef}
+        onScroll={onScroll}
+        className="scrollbar-hide flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain lg:grid lg:grid-cols-4 lg:gap-x-3 lg:gap-y-4 lg:overflow-visible"
+      >
+        {pages.map((entries, index) => (
+          <dl
+            key={entries[0]?.key ?? index}
+            className="grid w-full shrink-0 snap-start grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-3 lg:contents"
           >
-            {current.map((clue) => {
-              const fresh = clue.key === freshKey;
-
-              return (
-                <motion.div
-                  key={clue.key}
-                  layout
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ type: 'spring', stiffness: 460, damping: 32 }}
-                  className={
-                    fresh
-                      ? 'border-flame-500 border-l-[3px] pl-3'
-                      : 'border-ink-700 border-l-[3px] pl-3'
-                  }
-                >
-                  <dt className="text-chalk-500 font-display text-[0.6rem] leading-tight tracking-[0.14em] uppercase">
-                    {clue.label}
-                  </dt>
-                  <dd
-                    className={
-                      fresh
-                        ? 'text-flame-400 font-display text-base leading-tight font-bold tabular-nums'
-                        : 'text-chalk-100 font-display text-base leading-tight font-bold tabular-nums'
-                    }
-                  >
-                    {clue.value}
-                  </dd>
-                </motion.div>
-              );
-            })}
-          </motion.dl>
-        </AnimatePresence>
+            {entries.map((clue) => (
+              <ClueCell key={clue.key} clue={clue} fresh={clue.key === freshKey} />
+            ))}
+          </dl>
+        ))}
       </div>
 
       {pages.length > 1 && (
-        <div className="flex items-center justify-center gap-3">
-          <button
-            type="button"
-            onClick={() => setPage(Math.max(0, page - 1))}
-            disabled={page === 0}
-            aria-label="Bloco anterior"
-            className="text-chalk-500 hover:text-flame-400 px-2 text-xs transition disabled:opacity-25"
-          >
-            &lsaquo;
-          </button>
-
+        <div className="flex items-center justify-center gap-2 lg:hidden">
           {pages.map((entries, index) => (
             <button
               key={entries[0]?.key ?? index}
               type="button"
-              onClick={() => setPage(index)}
+              onClick={() => goTo(index)}
               aria-label={`Bloco ${index + 1}`}
               aria-current={index === page}
               className={
@@ -114,16 +116,6 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
               }
             />
           ))}
-
-          <button
-            type="button"
-            onClick={() => setPage(Math.min(lastPage, page + 1))}
-            disabled={page === lastPage}
-            aria-label="Próximo bloco"
-            className="text-chalk-500 hover:text-flame-400 px-2 text-xs transition disabled:opacity-25"
-          >
-            &rsaquo;
-          </button>
         </div>
       )}
     </div>

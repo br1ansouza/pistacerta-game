@@ -23,13 +23,6 @@
   "bodyType": "cupê",
   "cylinders": 4,
   "doors": 2,
-  "image": {
-    "src": "/vehicles/honda-civic-si-2018.webp",
-    "source": "wikimedia",
-    "author": "Alexander Migl",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Honda_Civic_Coupe_SI_P4220691.jpg"
-  },
   "fipe": {
     "value": 153299,
     "referenceMonth": "2026-08",

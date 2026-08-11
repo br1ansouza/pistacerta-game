@@ -24,13 +24,6 @@
   "engineCode": "EA888",
   "cylinders": 4,
   "doors": 4,
-  "image": {
-    "src": "/vehicles/vw-golf-gti-2018.webp",
-    "source": "wikimedia",
-    "author": "Midnight Runner",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Golf_VII_GTI_(KW_P_36).jpg"
-  },
   "fipe": {
     "value": 176217,
     "referenceMonth": "2026-08",

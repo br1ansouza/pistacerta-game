@@ -22,13 +22,6 @@
   "bodyType": "cupê",
   "cylinders": 6,
   "doors": 2,
-  "image": {
-    "src": "/vehicles/chevrolet-opala-ss-1980.webp",
-    "source": "wikimedia",
-    "author": "Niemann333",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Opala_SS_-_1978.jpg"
-  },
   "fipe": null,
   "specSource": "quatro-rodas",
   "active": true

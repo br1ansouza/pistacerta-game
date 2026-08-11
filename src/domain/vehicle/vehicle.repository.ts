@@ -1,8 +1,17 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { vehicleSchema, type Vehicle, type VehicleKind } from './vehicle.schema.ts';
+import {
+  imageDictionarySchema,
+  vehicleSchema,
+  type Image,
+  type Vehicle,
+  type VehicleKind,
+} from './vehicle.schema.ts';
+
+type VehicleRecord = Omit<Vehicle, 'image'>;
 
 const CONTENT_ROOT = join(process.cwd(), 'content', 'vehicles');
+const IMAGES_PATH = join(process.cwd(), 'content', 'images.json');
 
 const DIRECTORY_BY_KIND: Record<VehicleKind, string> = {
   car: 'cars',
@@ -18,7 +27,7 @@ export class VehicleContentError extends Error {
   }
 }
 
-async function readKind(kind: VehicleKind): Promise<Vehicle[]> {
+async function readKind(kind: VehicleKind): Promise<VehicleRecord[]> {
   const directory = join(CONTENT_ROOT, DIRECTORY_BY_KIND[kind]);
 
   let fileNames: string[];
@@ -66,6 +75,27 @@ async function readKind(kind: VehicleKind): Promise<Vehicle[]> {
   return vehicles;
 }
 
+async function readImageDictionary(): Promise<Record<string, Image>> {
+  let raw: string;
+
+  try {
+    raw = await readFile(IMAGES_PATH, 'utf8');
+  } catch {
+    return {};
+  }
+
+  const parsed = imageDictionarySchema.safeParse(JSON.parse(raw));
+
+  if (!parsed.success) {
+    throw new VehicleContentError(
+      'images.json',
+      parsed.error.issues.map((issue) => `${issue.path.join('.')}: ${issue.message}`),
+    );
+  }
+
+  return parsed.data;
+}
+
 let cache: Vehicle[] | null = null;
 
 export async function loadAllVehicles(options: { fresh?: boolean } = {}): Promise<Vehicle[]> {
@@ -74,8 +104,14 @@ export async function loadAllVehicles(options: { fresh?: boolean } = {}): Promis
   }
 
   const kinds = Object.keys(DIRECTORY_BY_KIND) as VehicleKind[];
-  const byKind = await Promise.all(kinds.map(readKind));
-  const all = byKind.flat();
+  const [byKind, images] = await Promise.all([
+    Promise.all(kinds.map(readKind)),
+    readImageDictionary(),
+  ]);
+  const all = byKind.flat().map((vehicle) => ({
+    ...vehicle,
+    image: images[vehicle.slug] ?? null,
+  }));
 
   const seenSlugs = new Set<string>();
   for (const vehicle of all) {

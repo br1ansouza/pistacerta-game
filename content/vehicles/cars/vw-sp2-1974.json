@@ -21,13 +21,6 @@
   "bodyType": "cupê",
   "cylinders": 4,
   "doors": 2,
-  "image": {
-    "src": "/vehicles/vw-sp2-1974.webp",
-    "source": "wikimedia",
-    "author": "Arild Vågen",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_SP2_June_2017_02.jpg"
-  },
   "fipe": null,
   "specSource": "icarros",
   "active": true

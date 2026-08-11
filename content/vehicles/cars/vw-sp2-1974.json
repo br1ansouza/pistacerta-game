@@ -1,0 +1,22 @@
+{
+  "slug": "vw-sp2-1974",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "SP2",
+  "year": 1974,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "1.7",
+  "power": { "value": 75, "unit": "cv" },
+  "torque": { "value": 13.5, "unit": "kgfm" },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "traseira",
+  "bodyType": "cupê",
+  "cylinders": 4,
+  "doors": 2,
+  "image": null,
+  "fipe": null,
+  "specSource": "icarros",
+  "active": true
+}

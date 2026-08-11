@@ -1,0 +1,27 @@
+{
+  "slug": "jeep-renegade-diesel-2018",
+  "kind": "car",
+  "brand": "Jeep",
+  "model": "Renegade",
+  "version": "Longitude 2.0 Turbodiesel 4x4",
+  "year": 2018,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "2.0",
+  "power": { "value": 170, "unit": "cv" },
+  "torque": { "value": 35.7, "unit": "kgfm" },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
+  "cylinders": 4,
+  "doors": 4,
+  "image": null,
+  "fipe": {
+    "value": 84974,
+    "referenceMonth": "2026-08",
+    "fipeCode": "017037-2"
+  },
+  "specSource": "fabricante",
+  "active": true
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "vw-golf-gti-2018",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Golf",
+  "version": "GTI 350 TSI",
+  "generation": "Mk7",
+  "year": 2018,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": { "value": 230, "unit": "cv" },
+  "torque": { "value": 35.7, "unit": "kgfm" },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "engineCode": "EA888",
+  "cylinders": 4,
+  "doors": 4,
+  "image": null,
+  "fipe": {
+    "value": 176217,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005496-8"
+  },
+  "specSource": "webmotors",
+  "active": true
+}

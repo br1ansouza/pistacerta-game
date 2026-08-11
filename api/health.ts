@@ -1,12 +1,12 @@
-import { listVehicleFiles } from './_lib/content.ts';
+import { getPlayableVehicles } from '../src/domain/vehicle/vehicle.repository.ts';
 
 export async function handleHealth(_request: Request): Promise<Response> {
-  const vehicleFiles = await listVehicleFiles();
+  const vehicles = await getPlayableVehicles();
 
   return Response.json(
     {
       ok: true,
-      vehicleCount: vehicleFiles.length,
+      vehicleCount: vehicles.length,
     },
     { headers: { 'Cache-Control': 'no-store' } },
   );

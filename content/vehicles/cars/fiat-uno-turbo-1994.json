@@ -8,15 +8,27 @@
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "1.4",
-  "power": { "value": 118, "unit": "cv" },
-  "torque": { "value": 17.5, "unit": "kgfm" },
+  "power": {
+    "value": 118,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 17.5,
+    "unit": "kgfm"
+  },
   "aspiration": "turbo",
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "hatch",
   "cylinders": 4,
   "doors": 2,
-  "image": null,
+  "image": {
+    "src": "/vehicles/fiat-uno-turbo-1994.webp",
+    "source": "wikimedia",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1988_Fiat_Uno_Turbo_IE_1.jpg"
+  },
   "fipe": {
     "value": 25734,
     "referenceMonth": "2026-08",

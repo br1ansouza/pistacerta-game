@@ -8,8 +8,14 @@
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "4.9",
-  "power": { "value": 199, "unit": "cv" },
-  "torque": { "value": 39.5, "unit": "kgfm" },
+  "power": {
+    "value": 199,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 39.5,
+    "unit": "kgfm"
+  },
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "traseira",
@@ -17,7 +23,13 @@
   "engineCode": "302",
   "cylinders": 8,
   "doors": 2,
-  "image": null,
+  "image": {
+    "src": "/vehicles/ford-maverick-gt-1975.webp",
+    "source": "wikimedia",
+    "author": "Morven",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Maverick_Grabber.jpg"
+  },
   "fipe": null,
   "specSource": "quatro-rodas",
   "active": true

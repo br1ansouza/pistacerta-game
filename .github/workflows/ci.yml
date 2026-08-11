@@ -18,6 +18,17 @@ jobs:
 
       - run: bun install --frozen-lockfile
 
+      - name: Conteúdo
+        run: bun run validate:content
+
+      # src/generated/ é artefato de build e não é versionado, mas o
+      # typecheck e o build dependem dele.
+      - name: Gerar conteúdo do worker
+        run: bun run build:worker-content
+
+      - name: Selar conteúdo estático
+        run: bun run scripts/build-static-content.ts
+
       - name: Lint
         run: bun run lint
 
@@ -26,9 +37,6 @@ jobs:
 
       - name: Formatação
         run: bun run format:check
-
-      - name: Conteúdo
-        run: bun run validate:content
 
       - name: Build
         run: bun run build

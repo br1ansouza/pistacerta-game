@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import type { SafeVehicle } from '@/domain/vehicle/safe-vehicle';
 
 type ExtraInfoPanelProps = {
@@ -32,26 +33,36 @@ export function ExtraInfoPanel({ vehicle }: ExtraInfoPanelProps) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-2">
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
-        className="text-brand-secondary focus-visible:outline-brand self-start text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2"
+        className="text-chalk-500 hover:text-flame-400 focus-visible:outline-flame-500 self-center py-1 text-xs transition focus-visible:outline-2 focus-visible:outline-offset-2"
       >
         {open ? 'Ocultar informações' : 'Mais informações'}
       </button>
 
-      {open && (
-        <dl className="border-secondary bg-secondary flex flex-col rounded-xl border px-4 py-2">
-          {entries.map((entry) => (
-            <div key={entry.label} className="flex items-baseline justify-between gap-4 py-2">
-              <dt className="text-tertiary text-sm">{entry.label}</dt>
-              <dd className="text-primary text-sm font-semibold tabular-nums">{entry.value}</dd>
-            </div>
-          ))}
-        </dl>
-      )}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.dl
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 34 }}
+            className="border-ink-700 bg-ink-900/60 grid grid-cols-2 gap-2 overflow-hidden rounded-xl border p-3"
+          >
+            {entries.map((entry) => (
+              <div key={entry.label} className="flex flex-col gap-0.5">
+                <dt className="text-chalk-500 font-display text-[0.65rem] tracking-wider uppercase">
+                  {entry.label}
+                </dt>
+                <dd className="text-chalk-100 text-sm font-bold tabular-nums">{entry.value}</dd>
+              </div>
+            ))}
+          </motion.dl>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

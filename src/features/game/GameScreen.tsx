@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { ArrowLeft } from '@untitledui/icons';
-import { Button } from '@/components/base/buttons/button';
 import { hasMoreClues, visibleClues } from '@/domain/clues/clue-engine';
 import type { GameMode } from '@/domain/round/round.types';
 import { describeIdentity } from '@/domain/vehicle/safe-vehicle';
@@ -28,6 +28,9 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
     void beginRound();
   }
 
+  const revealed = playing ? state.round.revealedCount : 0;
+  const total = playing ? state.round.board.progressive.length : 0;
+
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col gap-5 px-4 py-6 lg:max-w-3xl">
       <header className="flex items-center justify-between gap-3">
@@ -35,57 +38,106 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
           type="button"
           onClick={onBackHome}
           aria-label="Voltar para a escolha de modo"
-          className="border-secondary text-tertiary hover:text-primary hover:border-primary focus-visible:outline-brand flex size-9 shrink-0 items-center justify-center rounded-lg border transition focus-visible:outline-2 focus-visible:outline-offset-2"
+          className="border-ink-700 text-chalk-500 hover:text-flame-400 hover:border-flame-500/50 focus-visible:outline-flame-500 flex size-9 shrink-0 items-center justify-center rounded-lg border transition focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           <ArrowLeft className="size-4" />
         </button>
 
-        <h1 className="text-primary text-lg font-bold">Qual é?</h1>
+        <h1 className="font-display text-chalk-100 text-base font-bold tracking-tight">
+          Qual <span className="text-flame-500">é?</span>
+        </h1>
 
-        <span className="text-quaternary shrink-0 text-xs font-medium tracking-widest uppercase">
+        <span className="text-chalk-500 font-display shrink-0 text-[0.65rem] font-bold tracking-[0.18em] uppercase">
           {mode === 'solo' ? 'Sozinho' : 'Dupla'}
         </span>
       </header>
 
       {(state.status === 'loading' || state.status === 'idle') && (
-        <p className="text-tertiary text-sm">Sorteando um carro…</p>
+        <motion.p
+          role="status"
+          animate={{ opacity: [0.45, 1, 0.45] }}
+          transition={{ duration: 1.3, repeat: Infinity }}
+          className="text-chalk-500 py-10 text-center text-sm"
+        >
+          Sorteando um carro…
+        </motion.p>
       )}
 
       {state.status === 'error' && (
         <div className="flex flex-col gap-4">
-          <p className="text-error-primary text-sm">{state.message}</p>
-          <Button size="lg" color="secondary" onClick={() => void beginRound()}>
+          <p role="alert" className="text-sm text-red-300">
+            {state.message}
+          </p>
+          <button
+            type="button"
+            onClick={() => void beginRound()}
+            className="border-ink-700 text-chalk-100 hover:border-flame-500/60 rounded-xl border px-5 py-3 text-sm font-semibold transition"
+          >
             Tentar de novo
-          </Button>
+          </button>
         </div>
       )}
 
       {playing && (
-        <div className="flex flex-col gap-5">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="flex flex-col gap-5"
+        >
           {state.round.identity && (
-            <p className="border-brand bg-brand-primary text-brand-secondary rounded-xl border px-4 py-3 text-sm">
-              Resposta: <strong>{describeIdentity(state.round.identity)}</strong>
-            </p>
+            <div className="border-sky-400/40 bg-sky-400/10 rounded-xl border px-4 py-3">
+              <p className="font-display text-sky-400 text-[0.65rem] tracking-[0.18em] uppercase">
+                Resposta
+              </p>
+              <p className="text-chalk-100 text-sm font-bold">
+                {describeIdentity(state.round.identity)}
+              </p>
+            </div>
           )}
 
-          <ClueList
-            clues={visibleClues(state.round.board, state.round.revealedCount)}
-            highlightFrom={state.round.board.initial.length + state.round.revealedCount - 1}
-          />
+          <div aria-live="polite">
+            <ClueList
+              clues={visibleClues(state.round.board, revealed)}
+              highlightFrom={state.round.board.initial.length + revealed - 1}
+            />
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="bg-ink-800 h-1 flex-1 overflow-hidden rounded-full">
+              <motion.div
+                className="from-flame-600 to-flame-400 h-full bg-gradient-to-r"
+                animate={{ width: total > 0 ? `${(revealed / total) * 100}%` : '0%' }}
+                transition={{ type: 'spring', stiffness: 260, damping: 30 }}
+              />
+            </div>
+            <span className="text-chalk-500 font-display text-[0.65rem] tabular-nums">
+              {revealed}/{total}
+            </span>
+          </div>
 
           <div className="flex flex-col gap-3">
-            {hasMoreClues(state.round.board, state.round.revealedCount) ? (
-              <Button size="lg" color="secondary" onClick={revealNextClue}>
+            {hasMoreClues(state.round.board, revealed) ? (
+              <motion.button
+                type="button"
+                onClick={revealNextClue}
+                whileTap={{ scale: 0.98 }}
+                className="border-ink-700 bg-ink-900/70 text-chalk-100 hover:border-flame-500/60 hover:text-flame-400 focus-visible:outline-flame-500 font-display rounded-xl border px-5 py-3.5 text-xs font-bold tracking-[0.15em] uppercase transition focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
                 Próxima pista
-              </Button>
+              </motion.button>
             ) : (
-              <p className="text-quaternary text-center text-sm">Acabaram as pistas.</p>
+              <p className="text-chalk-500 py-2 text-center text-xs">Acabaram as pistas.</p>
             )}
 
             {state.round.choices ? (
-              <Button size="lg" color="primary" onClick={() => setSheetOpen(true)}>
+              <motion.button
+                type="button"
+                onClick={() => setSheetOpen(true)}
+                whileTap={{ scale: 0.98 }}
+                className="from-flame-600 to-flame-500 text-ink-950 font-display shadow-flame-600/25 focus-visible:outline-flame-400 rounded-xl bg-gradient-to-r px-5 py-3.5 text-sm font-bold tracking-wide uppercase shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
                 Responder
-              </Button>
+              </motion.button>
             ) : (
               <AnswerControls
                 onAnswer={(outcome) => void selfReport(outcome)}
@@ -95,19 +147,21 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
 
             <ExtraInfoPanel vehicle={state.round.vehicle} />
           </div>
-        </div>
+        </motion.div>
       )}
 
-      {playing && sheetOpen && state.round.choices && (
-        <AnswerSheet
-          choices={state.round.choices}
-          selectedId={state.round.selectedChoiceId}
-          submitting={state.status === 'revealing'}
-          onSelect={selectChoice}
-          onConfirm={() => void submitChoice()}
-          onClose={() => setSheetOpen(false)}
-        />
-      )}
+      <AnimatePresence>
+        {playing && sheetOpen && state.round.choices && (
+          <AnswerSheet
+            choices={state.round.choices}
+            selectedId={state.round.selectedChoiceId}
+            submitting={state.status === 'revealing'}
+            onSelect={selectChoice}
+            onConfirm={() => void submitChoice()}
+            onClose={() => setSheetOpen(false)}
+          />
+        )}
+      </AnimatePresence>
 
       {state.status === 'revealed' && (
         <VehicleReveal

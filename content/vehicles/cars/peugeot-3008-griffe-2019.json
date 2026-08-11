@@ -1,0 +1,21 @@
+{
+  "slug": "peugeot-3008-griffe-2019",
+  "kind": "car",
+  "brand": "Peugeot",
+  "model": "3008",
+  "year": 2019,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "1.6",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
+  "doors": 5,
+  "fipe": {
+    "value": 105413,
+    "referenceMonth": "2026-08",
+    "fipeCode": "024176-8"
+  },
+  "specSource": "fipe",
+  "active": true
+}

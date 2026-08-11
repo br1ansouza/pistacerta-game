@@ -1,0 +1,19 @@
+{
+  "slug": "chevrolet-camaro-ss-2018",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Camaro",
+  "year": 2018,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "gasolina",
+  "displacement": "6.2",
+  "bodyType": "cupê",
+  "fipe": {
+    "value": 352296,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004371-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

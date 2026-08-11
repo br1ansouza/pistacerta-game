@@ -15,7 +15,7 @@ export const BODY_TYPES = [
   'minivan',
 ] as const;
 export const ORIGIN_TYPES = ['nacional', 'importado'] as const;
-export const SPEC_SOURCES = ['webmotors', 'icarros', 'quatro-rodas', 'fabricante'] as const;
+export const SPEC_SOURCES = ['webmotors', 'icarros', 'quatro-rodas', 'fabricante', 'fipe'] as const;
 export const IMAGE_SOURCES = ['wikimedia', 'press-kit', 'placeholder'] as const;
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;

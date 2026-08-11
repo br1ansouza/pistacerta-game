@@ -1,0 +1,22 @@
+{
+  "slug": "subaru-impreza-wrx-2011",
+  "kind": "car",
+  "brand": "Subaru",
+  "model": "Impreza",
+  "year": 2011,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "gasolina",
+  "displacement": "2.5",
+  "aspiration": "turbo",
+  "drivetrain": "integral",
+  "bodyType": "sedã",
+  "doors": 5,
+  "fipe": {
+    "value": 133006,
+    "referenceMonth": "2026-08",
+    "fipeCode": "027050-4"
+  },
+  "specSource": "fipe",
+  "active": true
+}

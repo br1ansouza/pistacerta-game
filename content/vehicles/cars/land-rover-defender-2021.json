@@ -1,0 +1,21 @@
+{
+  "slug": "land-rover-defender-2021",
+  "kind": "car",
+  "brand": "Land Rover",
+  "model": "Defender",
+  "year": 2021,
+  "origin": "importado",
+  "countryOfOrigin": "Reino Unido",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
+  "fipe": {
+    "value": 420619,
+    "referenceMonth": "2026-08",
+    "fipeCode": "033179-1"
+  },
+  "specSource": "fipe",
+  "active": true
+}

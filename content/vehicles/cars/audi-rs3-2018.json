@@ -1,0 +1,21 @@
+{
+  "slug": "audi-rs3-2018",
+  "kind": "car",
+  "brand": "Audi",
+  "model": "RS3",
+  "year": 2018,
+  "origin": "importado",
+  "countryOfOrigin": "Alemanha",
+  "fuel": "gasolina",
+  "displacement": "2.5",
+  "aspiration": "turbo",
+  "drivetrain": "integral",
+  "bodyType": "hatch",
+  "fipe": {
+    "value": 376124,
+    "referenceMonth": "2026-08",
+    "fipeCode": "008221-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "chevrolet-omega-cd-1998",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Omega",
+  "year": 1998,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "4.1",
+  "bodyType": "sedã",
+  "fipe": {
+    "value": 62276,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004011-8"
+  },
+  "specSource": "fipe",
+  "active": true
+}

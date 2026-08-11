@@ -1,0 +1,23 @@
+{
+  "slug": "ford-fiesta-supercharger-2005",
+  "kind": "car",
+  "brand": "Ford",
+  "model": "Fiesta",
+  "year": 2005,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "1.0",
+  "power": {
+    "value": 95,
+    "unit": "cv"
+  },
+  "bodyType": "hatch",
+  "doors": 5,
+  "fipe": {
+    "value": 15459,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003260-3"
+  },
+  "specSource": "fipe",
+  "active": true
+}

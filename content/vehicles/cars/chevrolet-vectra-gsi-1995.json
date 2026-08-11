@@ -1,0 +1,18 @@
+{
+  "slug": "chevrolet-vectra-gsi-1995",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Vectra",
+  "year": 1995,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "bodyType": "sedã",
+  "fipe": {
+    "value": 26716,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004069-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

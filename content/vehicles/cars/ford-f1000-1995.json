@@ -1,0 +1,18 @@
+{
+  "slug": "ford-f1000-1995",
+  "kind": "car",
+  "brand": "Ford",
+  "model": "F-1000",
+  "year": 1995,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "3.6",
+  "bodyType": "picape",
+  "fipe": {
+    "value": 16938,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003162-3"
+  },
+  "specSource": "fipe",
+  "active": true
+}

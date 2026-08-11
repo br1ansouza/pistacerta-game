@@ -1,0 +1,19 @@
+{
+  "slug": "kia-soul-2016",
+  "kind": "car",
+  "brand": "Kia",
+  "model": "Soul",
+  "year": 2016,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "1.6",
+  "transmission": "automático",
+  "bodyType": "hatch",
+  "fipe": {
+    "value": 76141,
+    "referenceMonth": "2026-08",
+    "fipeCode": "018070-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

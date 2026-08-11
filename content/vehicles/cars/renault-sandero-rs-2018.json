@@ -1,0 +1,19 @@
+{
+  "slug": "renault-sandero-rs-2018",
+  "kind": "car",
+  "brand": "Renault",
+  "model": "Sandero",
+  "year": 2018,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "2.0",
+  "bodyType": "hatch",
+  "doors": 5,
+  "fipe": {
+    "value": 66608,
+    "referenceMonth": "2026-08",
+    "fipeCode": "025260-3"
+  },
+  "specSource": "fipe",
+  "active": true
+}

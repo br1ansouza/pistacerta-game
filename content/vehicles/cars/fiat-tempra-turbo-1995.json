@@ -1,0 +1,19 @@
+{
+  "slug": "fiat-tempra-turbo-1995",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Tempra",
+  "year": 1995,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "bodyType": "sedã",
+  "doors": 2,
+  "fipe": {
+    "value": 9585,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001037-5"
+  },
+  "specSource": "fipe",
+  "active": true
+}

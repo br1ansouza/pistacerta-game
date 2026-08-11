@@ -1,0 +1,17 @@
+{
+  "slug": "ford-del-rey-1990",
+  "kind": "car",
+  "brand": "Ford",
+  "model": "Del Rey",
+  "year": 1990,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "bodyType": "sedã",
+  "fipe": {
+    "value": 7067,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003135-6"
+  },
+  "specSource": "fipe",
+  "active": true
+}

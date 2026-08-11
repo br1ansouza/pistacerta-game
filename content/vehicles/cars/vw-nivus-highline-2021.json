@@ -1,0 +1,20 @@
+{
+  "slug": "vw-nivus-highline-2021",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Nivus",
+  "year": 2021,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.0",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
+  "fipe": {
+    "value": 102017,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005526-3"
+  },
+  "specSource": "fipe",
+  "active": true
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "fiat-argo-hgt-2020",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Argo",
+  "year": 2020,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.8",
+  "transmission": "automático",
+  "bodyType": "hatch",
+  "fipe": {
+    "value": 70388,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001488-5"
+  },
+  "specSource": "fipe",
+  "active": true
+}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowLeft } from '@untitledui/icons';
 import { hasMoreClues, visibleClues } from '@/domain/clues/clue-engine';
@@ -8,6 +8,8 @@ import { AnswerRevealBar } from './AnswerRevealBar';
 import { AnswerSheet } from './AnswerSheet';
 import { ClueList } from './ClueList';
 import { ExtraInfoPanel } from './ExtraInfoPanel';
+import { ScoreBoard } from './ScoreBoard';
+import { useScore } from './useScore';
 import { useGameRound } from './useGameRound';
 import { VehicleReveal } from './VehicleReveal';
 
@@ -20,6 +22,21 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
   const { state, beginRound, revealNextClue, selectChoice, submitChoice, selfReport } =
     useGameRound(mode);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const { score, record, reset } = useScore(mode);
+  const scoredToken = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (state.status !== 'revealed') {
+      return;
+    }
+
+    if (scoredToken.current === state.round.token) {
+      return;
+    }
+
+    scoredToken.current = state.round.token;
+    record(state.outcome);
+  }, [state, record]);
 
   const playing = state.status === 'playing' || state.status === 'revealing';
 
@@ -43,13 +60,14 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
           <ArrowLeft className="size-4" />
         </button>
 
-        <h1 className="font-display text-chalk-100 text-base font-bold tracking-tight">
+        <h1 className="font-display text-chalk-100 flex-1 text-center text-base font-bold tracking-tight">
           Qual <span className="text-flame-500">é?</span>
+          <span className="text-chalk-500 ml-2 text-[0.6rem] tracking-[0.16em] uppercase">
+            {mode === 'solo' ? 'Sozinho' : 'Dupla'}
+          </span>
         </h1>
 
-        <span className="text-chalk-500 font-display shrink-0 text-[0.65rem] font-bold tracking-[0.18em] uppercase">
-          {mode === 'solo' ? 'Sozinho' : 'Dupla'}
-        </span>
+        <ScoreBoard score={score} onReset={reset} />
       </header>
 
       {(state.status === 'loading' || state.status === 'idle') && (

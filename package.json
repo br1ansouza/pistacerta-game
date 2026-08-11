@@ -16,6 +16,8 @@
     "preview": "rsbuild preview",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint",
+    "validate:content": "bun run scripts/validate-content.ts",
+    "fipe": "bun run scripts/fipe-lookup.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

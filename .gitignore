@@ -24,3 +24,6 @@ CLAUDE.local.md
 CLAUDE.md
 docs/ARCHITECTURE.md
 docs/PROGRESS.md
+
+# Conteúdo selado do build estático (gerado)
+src/generated/

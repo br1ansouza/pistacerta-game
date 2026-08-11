@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { asset } from '@/lib/asset';
 import type { GameMode } from '@/domain/round/round.types';
 
 type HomeScreenProps = {
@@ -48,7 +49,7 @@ export function HomeScreen({ onSelectMode, onOpenCredits }: HomeScreenProps) {
           >
             <div className="from-flame-600/25 absolute inset-0 -z-10 rounded-full bg-gradient-to-t to-transparent blur-2xl" />
             <img
-              src="/car.gif"
+              src={asset('car.gif')}
               alt=""
               aria-hidden
               className="pixelated h-36 w-36 object-contain drop-shadow-[0_10px_24px_rgba(232,69,44,0.35)]"

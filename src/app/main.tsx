@@ -11,7 +11,7 @@ if (!container) {
 
 if ('serviceWorker' in navigator && import.meta.env?.MODE === 'production') {
   globalThis.addEventListener('load', () => {
-    void navigator.serviceWorker.register('/service-worker.js');
+    void navigator.serviceWorker.register(`${process.env.PUBLIC_BASE ?? '/'}service-worker.js`);
   });
 }
 

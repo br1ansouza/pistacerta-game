@@ -56,9 +56,9 @@ export function AnswerSheet({
         initial={{ y: 40, opacity: 0, scale: 0.98 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ type: 'spring', stiffness: 420, damping: 34 }}
-        className="border-ink-700 bg-ink-900 relative flex w-full max-w-md flex-col gap-4 rounded-t-3xl border p-5 shadow-2xl outline-none sm:rounded-3xl"
+        className="border-flame-500/60 bg-ink-900 relative flex w-full max-w-md flex-col gap-4 border-2 p-5 shadow-[0_-6px_0_0_var(--color-crimson-700)] outline-none sm:shadow-[6px_6px_0_0_var(--color-crimson-700)]"
       >
-        <span aria-hidden className="bg-ink-600 mx-auto h-1 w-10 rounded-full sm:hidden" />
+        <span aria-hidden className="bg-ink-600 mx-auto h-1 w-10 sm:hidden" />
 
         <h2 className="font-display text-chalk-100 text-xs font-bold tracking-[0.18em] uppercase">
           Qual desses é?
@@ -81,8 +81,8 @@ export function AnswerSheet({
                 }}
                 className={
                   selected
-                    ? 'border-flame-500 bg-flame-500/15 flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3'
-                    : 'border-ink-700 bg-ink-850 hover:border-ink-600 flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 transition-colors'
+                    ? 'border-flame-500 bg-flame-500/15 shadow-hard-sm flex cursor-pointer items-center gap-3 border-2 px-4 py-3'
+                    : 'border-ink-700 bg-ink-850 hover:border-chalk-500/50 flex cursor-pointer items-center gap-3 border-2 px-4 py-3 transition-colors'
                 }
               >
                 <input
@@ -113,7 +113,7 @@ export function AnswerSheet({
             disabled={!selectedId || submitting}
             onClick={onConfirm}
             whileTap={{ scale: 0.98 }}
-            className="from-flame-600 to-flame-500 text-ink-950 font-display shadow-flame-600/25 focus-visible:outline-flame-400 rounded-xl bg-gradient-to-r px-5 py-3.5 text-sm font-bold tracking-wide uppercase shadow-lg transition disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2"
+            className="from-flame-600 to-flame-400 text-ink-950 font-display border-flame-400 shadow-hard focus-visible:outline-flame-400 border-2 bg-gradient-to-r px-5 py-4 text-sm font-bold tracking-[0.15em] uppercase transition disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             {submitting ? 'Conferindo…' : 'Confirmar'}
           </motion.button>

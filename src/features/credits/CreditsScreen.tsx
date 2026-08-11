@@ -36,7 +36,7 @@ export function CreditsScreen({ onBack }: CreditsScreenProps) {
           type="button"
           onClick={onBack}
           aria-label="Voltar"
-          className="border-ink-700 text-chalk-500 hover:text-flame-400 hover:border-flame-500/50 focus-visible:outline-flame-500 flex size-9 shrink-0 items-center justify-center rounded-lg border transition focus-visible:outline-2 focus-visible:outline-offset-2"
+          className="border-ink-700 text-chalk-500 hover:text-flame-400 hover:border-flame-500 focus-visible:outline-flame-500 shadow-hard-sm flex size-9 shrink-0 items-center justify-center border-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           <ArrowLeft className="size-4" />
         </button>

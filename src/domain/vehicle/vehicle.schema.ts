@@ -71,6 +71,7 @@ export const carSchema = z.object({
   bodyType: z.enum(BODY_TYPES).optional(),
   engineCode: z.string().min(1).optional(),
   cylinders: z.number().int().positive().optional(),
+  valves: z.number().int().positive().optional(),
   doors: z.number().int().positive().optional(),
 });
 

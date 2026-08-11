@@ -6,7 +6,7 @@ import type { GameMode } from '@/domain/round/round.types';
 import { AnswerControls } from './AnswerControls';
 import { AnswerRevealBar } from './AnswerRevealBar';
 import { AnswerSheet } from './AnswerSheet';
-import { ClueList } from './ClueList';
+import { CluePages } from './CluePages';
 import { ExtraInfoPanel } from './ExtraInfoPanel';
 import { ScoreBoard } from './ScoreBoard';
 import { useScore } from './useScore';
@@ -47,6 +47,9 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
 
   const revealed = playing ? state.round.revealedCount : 0;
   const total = playing ? state.round.board.progressive.length : 0;
+  const pageSize = mode === 'solo' ? 12 : 10;
+  const shown = playing ? visibleClues(state.round.board, revealed) : [];
+  const freshKey = revealed > 0 ? (shown.at(-1)?.key ?? null) : null;
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col gap-5 px-4 py-6 lg:max-w-2xl">
@@ -105,10 +108,7 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
           {state.round.identity && <AnswerRevealBar identity={state.round.identity} />}
 
           <div aria-live="polite">
-            <ClueList
-              clues={visibleClues(state.round.board, revealed)}
-              highlightFrom={state.round.board.initial.length + revealed - 1}
-            />
+            <CluePages clues={shown} pageSize={pageSize} freshKey={freshKey} />
           </div>
 
           <div className="flex items-center gap-3">

@@ -60,11 +60,8 @@ async function main() {
   }
 
   for (const model of matches) {
-    // Sequencial e com pausa: a API pública da FIPE tem limite diário de requisições.
-    // oxlint-disable-next-line no-await-in-loop
     await delay(THROTTLE_MS);
 
-    // oxlint-disable-next-line no-await-in-loop
     const years = await api<Entry[]>(`/cars/brands/${brand.code}/models/${model.code}/years`);
     const relevant = yearQuery
       ? years.filter((year) => year.name.startsWith(yearQuery))
@@ -77,10 +74,8 @@ async function main() {
     console.log(`\n${model.name} (${model.code})`);
 
     for (const year of relevant) {
-      // oxlint-disable-next-line no-await-in-loop
       await delay(THROTTLE_MS);
 
-      // oxlint-disable-next-line no-await-in-loop
       const detail = await api<YearDetail>(
         `/cars/brands/${brand.code}/models/${model.code}/years/${year.code}`,
       );

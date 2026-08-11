@@ -1,0 +1,25 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+build/
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# Editor / SO
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+*.log
+
+# Contexto local do Claude (nunca versionar)
+CLAUDE.local.md
+.claude/
+
+# Notas de trabalho (não publicar)
+CLAUDE.md
+docs/ARCHITECTURE.md

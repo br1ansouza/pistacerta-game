@@ -1,4 +1,6 @@
 import { handleHealth } from '../api/health.ts';
+import { handleReveal } from '../api/reveal.ts';
+import { handleRound } from '../api/round.ts';
 
 const PORT = Number(process.env.API_PORT ?? 3001);
 
@@ -6,6 +8,8 @@ type RouteHandler = (request: Request) => Promise<Response>;
 
 const routes: Record<string, RouteHandler> = {
   '/api/health': handleHealth,
+  '/api/round': handleRound,
+  '/api/reveal': handleReveal,
 };
 
 Bun.serve({

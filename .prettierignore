@@ -1,0 +1,10 @@
+dist/
+node_modules/
+bun.lock
+
+# Componentes vindos da CLI do Untitled UI — mantidos no formato original
+# para não conflitar com `untitledui add` / `untitledui upgrade`.
+src/components/
+src/utils/
+src/styles/theme.css
+src/styles/typography.css

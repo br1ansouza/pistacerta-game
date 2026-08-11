@@ -13,6 +13,8 @@
 [![Bun](https://img.shields.io/badge/Bun-000000?logo=bun&logoColor=white)](https://bun.sh)
 [![Cloudflare](https://img.shields.io/badge/Workers-F38020?logo=cloudflare&logoColor=white)](https://workers.cloudflare.com)
 
+<img src="docs/demo.gif" width="230" alt="Uma rodada: pistas, palpite e revelação" />
+
 </div>
 
 O sistema sorteia um carro e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, aspiração, câmbio, tração, carroceria e, por último, o código do motor. Quanto antes você acertar, melhor.

@@ -29,6 +29,9 @@ jobs:
       - name: Selar conteúdo
         run: bun run scripts/build-static-content.ts
 
+      - name: Gerar conteúdo do worker
+        run: bun run build:worker-content
+
       - name: Build
         run: bun run build
         env:

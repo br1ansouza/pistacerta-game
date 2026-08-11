@@ -6,6 +6,7 @@ import { verifyRoundToken } from './_lib/round-token.ts';
 
 const requestSchema = z.object({
   token: z.string().min(1),
+  choiceId: z.string().min(1).nullable().default(null),
 });
 
 export async function handleReveal(request: Request): Promise<Response> {
@@ -32,5 +33,10 @@ export async function handleReveal(request: Request): Promise<Response> {
     return errorResponse('Veículo não encontrado', 404);
   }
 
-  return jsonResponse({ identity: toVehicleIdentity(vehicle) });
+  const { choiceId } = parsed.data;
+
+  return jsonResponse({
+    identity: toVehicleIdentity(vehicle),
+    correct: choiceId === null ? null : choiceId === vehicle.slug,
+  });
 }

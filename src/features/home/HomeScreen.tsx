@@ -76,7 +76,7 @@ export function HomeScreen({ onSelectMode, onOpenCredits }: HomeScreenProps) {
               whileHover={{ x: 4 }}
               whileTap={{ scale: 0.985 }}
               transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-              className="group border-ink-700 bg-ink-900/70 hover:border-flame-500/60 focus-visible:outline-flame-500 relative overflow-hidden rounded-2xl border px-5 py-4 text-left backdrop-blur focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="group border-chalk-500/30 bg-ink-900/80 hover:border-flame-500 focus-visible:outline-flame-500 shadow-hard relative overflow-hidden border-2 px-5 py-4 text-left backdrop-blur transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               <span className="from-flame-600 to-flame-400 absolute inset-y-0 left-0 w-1 bg-gradient-to-b opacity-0 transition-opacity group-hover:opacity-100" />
               <span className="flex items-center justify-between gap-4">

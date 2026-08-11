@@ -37,8 +37,8 @@ export function VehicleReveal({
           transition={{ type: 'spring', stiffness: 500, damping: 22, delay: 0.08 }}
           className={
             correct
-              ? 'border-mint-400/40 bg-mint-400/15 text-mint-400 font-display self-start rounded-full border px-3 py-1 text-[0.65rem] font-bold tracking-[0.18em] uppercase'
-              : 'border-ink-700 bg-ink-800 text-chalk-500 font-display self-start rounded-full border px-3 py-1 text-[0.65rem] font-bold tracking-[0.18em] uppercase'
+              ? 'border-mint-400 bg-mint-400/15 text-mint-400 font-display shadow-hard-sm self-start border-2 px-3 py-1 text-[0.65rem] font-bold tracking-[0.18em] uppercase'
+              : 'border-chalk-500/40 bg-ink-900 text-chalk-500 font-display shadow-hard-sm self-start border-2 px-3 py-1 text-[0.65rem] font-bold tracking-[0.18em] uppercase'
           }
         >
           {correct ? 'Acertou' : 'Era esse'}
@@ -71,7 +71,8 @@ export function VehicleReveal({
           type="button"
           onClick={onNextRound}
           whileTap={{ scale: 0.98 }}
-          className="from-flame-600 to-flame-500 text-ink-950 font-display shadow-flame-600/25 focus-visible:outline-flame-400 rounded-xl bg-gradient-to-r px-5 py-3.5 text-sm font-bold tracking-wide uppercase shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2"
+          whileHover={{ x: 2, y: 2 }}
+          className="from-flame-600 to-flame-400 text-ink-950 font-display border-flame-400 shadow-hard focus-visible:outline-flame-400 border-2 bg-gradient-to-r px-5 py-4 text-sm font-bold tracking-[0.15em] uppercase focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           Próxima rodada
         </motion.button>

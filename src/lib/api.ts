@@ -15,6 +15,17 @@ export type RevealResponse = {
   correct: boolean | null;
 };
 
+export type ImageCredit = {
+  vehicle: string;
+  author: string | null;
+  license: string | null;
+  sourceUrl: string | null;
+};
+
+export type CreditsResponse = {
+  credits: ImageCredit[];
+};
+
 export class ApiError extends Error {
   constructor(
     message: string,
@@ -58,4 +69,14 @@ export function revealVehicle(
   signal?: AbortSignal,
 ): Promise<RevealResponse> {
   return post<RevealResponse>('/api/reveal', { token, choiceId }, signal);
+}
+
+export async function fetchCredits(signal?: AbortSignal): Promise<CreditsResponse> {
+  const response = await fetch('/api/credits', { signal });
+
+  if (!response.ok) {
+    throw new ApiError(`Falha na requisição (${response.status})`, response.status);
+  }
+
+  return (await response.json()) as CreditsResponse;
 }

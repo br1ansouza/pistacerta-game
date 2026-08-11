@@ -2,6 +2,7 @@ import type { GameMode } from '@/domain/round/round.types';
 
 type HomeScreenProps = {
   onSelectMode: (mode: GameMode) => void;
+  onOpenCredits: () => void;
 };
 
 const MODES: { mode: GameMode; title: string; description: string }[] = [
@@ -17,7 +18,7 @@ const MODES: { mode: GameMode; title: string; description: string }[] = [
   },
 ];
 
-export function HomeScreen({ onSelectMode }: HomeScreenProps) {
+export function HomeScreen({ onSelectMode, onOpenCredits }: HomeScreenProps) {
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col justify-center gap-10 px-6 py-12">
       <header className="flex flex-col items-center gap-3 text-center">
@@ -56,6 +57,14 @@ export function HomeScreen({ onSelectMode }: HomeScreenProps) {
           </button>
         ))}
       </section>
+
+      <button
+        type="button"
+        onClick={onOpenCredits}
+        className="text-quaternary hover:text-tertiary focus-visible:outline-brand self-center text-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+      >
+        Créditos das imagens
+      </button>
     </main>
   );
 }

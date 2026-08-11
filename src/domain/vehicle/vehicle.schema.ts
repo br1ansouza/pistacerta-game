@@ -50,7 +50,6 @@ const vehicleBaseShape = {
   year: z.number().int().min(1900).max(2100),
   origin: z.enum(ORIGIN_TYPES),
   countryOfOrigin: z.string().min(1).optional(),
-  image: imageSchema.nullable(),
   fipe: fipeSchema.nullable(),
   specSource: z.enum(SPEC_SOURCES),
   active: z.boolean(),
@@ -79,8 +78,10 @@ export const vehicleSchema = z.discriminatedUnion('kind', [carSchema]);
 
 export type Image = z.infer<typeof imageSchema>;
 export type Fipe = z.infer<typeof fipeSchema>;
-export type Car = z.infer<typeof carSchema>;
-export type Vehicle = z.infer<typeof vehicleSchema>;
+export const imageDictionarySchema = z.record(z.string(), imageSchema);
+
+export type Car = z.infer<typeof carSchema> & { image: Image | null };
+export type Vehicle = Car;
 export type VehicleKind = Vehicle['kind'];
 
 export const IDENTITY_FIELDS = ['brand', 'model', 'generation', 'image'] as const;

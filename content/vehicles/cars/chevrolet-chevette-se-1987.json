@@ -20,13 +20,6 @@
   "transmission": "manual",
   "drivetrain": "traseira",
   "cylinders": 4,
-  "image": {
-    "src": "/vehicles/chevrolet-chevette-se-1987.webp",
-    "source": "wikimedia",
-    "author": "order_242 from Chile",
-    "license": "CC BY-SA 2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Chevette_1.4_SL_Sedan_1980_(16659103019).jpg"
-  },
   "fipe": null,
   "specSource": "icarros",
   "active": true

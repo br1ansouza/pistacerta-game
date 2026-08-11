@@ -22,13 +22,6 @@
   "bodyType": "suv",
   "cylinders": 4,
   "doors": 4,
-  "image": {
-    "src": "/vehicles/jeep-renegade-diesel-2018.webp",
-    "source": "wikimedia",
-    "author": "RL GNZLZ from Chile",
-    "license": "CC BY-SA 2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeep_Renegade_1.8_Sport_2018_(43134425314).jpg"
-  },
   "fipe": {
     "value": 84974,
     "referenceMonth": "2026-08",

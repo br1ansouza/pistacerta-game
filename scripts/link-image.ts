@@ -1,13 +1,13 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import sharp from 'sharp';
+import process from 'node:process';
 
 const API = 'https://commons.wikimedia.org/w/api.php';
 const USER_AGENT = 'PistaCerta/0.1 (https://github.com/br1ansouza/pistacerta-game)';
-const TARGET_WIDTH = 900;
-const WEBP_QUALITY = 78;
+const THUMB_WIDTH = 900;
 
 type ImageInfo = {
+  thumburl?: string;
   url: string;
   descriptionurl: string;
   extmetadata?: Record<string, { value: string }>;
@@ -24,6 +24,12 @@ function stripHtml(value: string): string {
     .replace(/&[a-z]+;/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function stripTracking(url: string): string {
+  const parsed = new URL(url);
+  parsed.search = '';
+  return parsed.toString();
 }
 
 async function commons<T>(params: Record<string, string>): Promise<T> {
@@ -43,7 +49,7 @@ const [slug, ...titleParts] = process.argv.slice(2);
 const title = titleParts.join(' ');
 
 if (!slug || !title) {
-  console.error('uso: bun run scripts/fetch-image.ts <slug> <File:Nome.jpg>');
+  console.error('uso: bun run scripts/link-image.ts <slug> <File:Nome.jpg>');
   process.exit(1);
 }
 
@@ -52,6 +58,7 @@ const info = await commons<InfoResponse>({
   prop: 'imageinfo',
   titles: title,
   iiprop: 'url|extmetadata',
+  iiurlwidth: String(THUMB_WIDTH),
 });
 
 const page = Object.values(info.query?.pages ?? {})[0];
@@ -71,35 +78,21 @@ if (!license) {
   process.exit(1);
 }
 
-const download = await fetch(imageInfo.url, { headers: { 'User-Agent': USER_AGENT } });
+const dictionaryPath = join(process.cwd(), 'content', 'images.json');
+const dictionary = JSON.parse(await readFile(dictionaryPath, 'utf8')) as Record<string, unknown>;
 
-if (!download.ok) {
-  console.error(`Falha ao baixar (${download.status})`);
-  process.exit(1);
-}
-
-const original = Buffer.from(await download.arrayBuffer());
-const outputPath = join(process.cwd(), 'public', 'vehicles', `${slug}.webp`);
-
-const output = await sharp(original)
-  .resize({ width: TARGET_WIDTH, withoutEnlargement: true })
-  .webp({ quality: WEBP_QUALITY })
-  .toBuffer();
-
-await writeFile(outputPath, output);
-
-const contentPath = join(process.cwd(), 'content', 'vehicles', 'cars', `${slug}.json`);
-const vehicle = JSON.parse(await readFile(contentPath, 'utf8')) as Record<string, unknown>;
-
-vehicle.image = {
-  src: `/vehicles/${slug}.webp`,
+dictionary[slug] = {
+  src: stripTracking(imageInfo.thumburl ?? imageInfo.url),
   source: 'wikimedia',
   ...(author ? { author } : {}),
   license,
   sourceUrl: imageInfo.descriptionurl,
 };
 
-await writeFile(contentPath, `${JSON.stringify(vehicle, null, 2)}\n`);
+const sorted = Object.fromEntries(
+  Object.entries(dictionary).toSorted(([a], [b]) => a.localeCompare(b)),
+);
 
-const kb = Math.round(output.length / 1024);
-console.log(`${slug}: ${kb} kB · ${license} · ${author ?? 'autor não declarado'}`);
+await writeFile(dictionaryPath, `${JSON.stringify(sorted, null, 2)}\n`);
+
+console.log(`${slug}: ${license} · ${author ?? 'autor não declarado'}`);

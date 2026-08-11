@@ -23,13 +23,6 @@
   "engineCode": "302",
   "cylinders": 8,
   "doors": 2,
-  "image": {
-    "src": "/vehicles/ford-maverick-gt-1975.webp",
-    "source": "wikimedia",
-    "author": "Morven",
-    "license": "CC BY-SA 3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Maverick_Grabber.jpg"
-  },
   "fipe": null,
   "specSource": "quatro-rodas",
   "active": true

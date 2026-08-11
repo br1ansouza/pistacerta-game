@@ -45,9 +45,10 @@ Só carros com presença real no Brasil. Nada de catálogo mundial.
       <img src="docs/dupla.jpg" width="240" alt="Modo em dupla com a resposta revelada" /><br />
       <sub><b>Em dupla</b><br />Você conduz, o outro adivinha</sub>
     </td>
-    <td>
-      <img src="docs/demo.gif" width="230" alt="Uma rodada: pistas, palpite e revelação" />
- </td>
+    <td align="center">
+      <img src="docs/demo.gif" width="240" alt="Uma rodada completa em movimento" /><br />
+      <sub><b>Em movimento</b><br />Uma rodada do começo ao fim</sub>
+    </td>
   </tr>
 </table>
 

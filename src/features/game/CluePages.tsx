@@ -86,12 +86,12 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
       <div
         ref={trackRef}
         onScroll={onScroll}
-        className="scrollbar-hide flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain lg:grid lg:grid-cols-4 lg:gap-x-3 lg:gap-y-4 lg:overflow-visible"
+        className="scrollbar-hide flex snap-x snap-mandatory items-stretch overflow-x-auto overscroll-x-contain lg:grid lg:auto-rows-min lg:grid-cols-4 lg:gap-x-3 lg:gap-y-4 lg:overflow-visible"
       >
         {pages.map((entries, index) => (
           <dl
             key={entries[0]?.key ?? index}
-            className="grid w-full shrink-0 snap-start grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-3 lg:contents"
+            className="grid w-full shrink-0 snap-start auto-rows-min content-start grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-3 lg:contents"
           >
             {entries.map((clue) => (
               <ClueCell key={clue.key} clue={clue} fresh={clue.key === freshKey} />

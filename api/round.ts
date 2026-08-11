@@ -1,6 +1,10 @@
 import { z } from 'zod';
+import { buildChoices } from '../src/domain/round/choices.ts';
 import { toSafeVehicle, toVehicleIdentity } from '../src/domain/vehicle/safe-vehicle.ts';
-import { pickRandomVehicle } from '../src/domain/vehicle/vehicle.repository.ts';
+import {
+  getPlayableVehicles,
+  pickRandomVehicle,
+} from '../src/domain/vehicle/vehicle.repository.ts';
 import { errorResponse, jsonResponse, readJsonBody } from './_lib/http.ts';
 import { signRoundToken, slugsFromTokens } from './_lib/round-token.ts';
 
@@ -29,10 +33,13 @@ export async function handleRound(request: Request): Promise<Response> {
     return errorResponse('Nenhum veículo disponível', 503);
   }
 
+  const pool = await getPlayableVehicles('car');
+
   return jsonResponse({
     token: await signRoundToken(vehicle.slug),
     mode,
     clues: toSafeVehicle(vehicle),
     identity: mode === 'duo' ? toVehicleIdentity(vehicle) : null,
+    choices: mode === 'solo' ? buildChoices(vehicle, pool) : null,
   });
 }

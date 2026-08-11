@@ -3,6 +3,7 @@ import { hasMoreClues, visibleClues } from '@/domain/clues/clue-engine';
 import type { GameMode } from '@/domain/round/round.types';
 import { describeIdentity } from '@/domain/vehicle/safe-vehicle';
 import { AnswerControls } from './AnswerControls';
+import { ChoiceList } from './ChoiceList';
 import { ClueList } from './ClueList';
 import { ExtraInfoPanel } from './ExtraInfoPanel';
 import { useGameRound } from './useGameRound';
@@ -14,7 +15,10 @@ type GameScreenProps = {
 };
 
 export function GameScreen({ mode, onBackHome }: GameScreenProps) {
-  const { state, beginRound, revealNextClue, answer } = useGameRound(mode);
+  const { state, beginRound, revealNextClue, selectChoice, submitChoice, selfReport } =
+    useGameRound(mode);
+
+  const playing = state.status === 'playing' || state.status === 'revealing';
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col gap-6 px-6 py-8">
@@ -38,7 +42,7 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
         </div>
       )}
 
-      {(state.status === 'playing' || state.status === 'revealing') && (
+      {playing && (
         <div className="flex flex-col gap-6">
           {state.round.identity && (
             <p className="border-brand bg-brand-primary text-brand-secondary rounded-xl border px-4 py-3 text-sm">
@@ -64,10 +68,29 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
 
             <ExtraInfoPanel vehicle={state.round.vehicle} />
 
-            <AnswerControls
-              onAnswer={(outcome) => void answer(outcome)}
-              disabled={state.status === 'revealing'}
-            />
+            {state.round.choices ? (
+              <div className="flex flex-col gap-4">
+                <ChoiceList
+                  choices={state.round.choices}
+                  selectedId={state.round.selectedChoiceId}
+                  disabled={state.status === 'revealing'}
+                  onSelect={selectChoice}
+                />
+                <Button
+                  size="lg"
+                  color="primary"
+                  isDisabled={!state.round.selectedChoiceId || state.status === 'revealing'}
+                  onClick={() => void submitChoice()}
+                >
+                  Responder
+                </Button>
+              </div>
+            ) : (
+              <AnswerControls
+                onAnswer={(outcome) => void selfReport(outcome)}
+                disabled={state.status === 'revealing'}
+              />
+            )}
           </div>
         </div>
       )}

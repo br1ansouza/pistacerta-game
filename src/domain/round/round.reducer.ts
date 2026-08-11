@@ -18,6 +18,8 @@ export function roundReducer(state: RoundState, action: RoundAction): RoundState
           board: buildClueBoard(action.vehicle),
           revealedCount: 0,
           identity: action.identity,
+          choices: action.choices,
+          selectedChoiceId: null,
         },
       };
 
@@ -39,21 +41,37 @@ export function roundReducer(state: RoundState, action: RoundAction): RoundState
       };
     }
 
-    case 'answer/given': {
+    case 'choice/selected': {
       if (state.status !== 'playing') {
         return state;
       }
 
-      if (state.round.identity) {
-        return {
-          status: 'revealed',
-          round: state.round,
-          outcome: action.outcome,
-          identity: state.round.identity,
-        };
+      return { ...state, round: { ...state.round, selectedChoiceId: action.choiceId } };
+    }
+
+    case 'answer/submitted': {
+      if (state.status !== 'playing' || !state.round.selectedChoiceId) {
+        return state;
       }
 
-      return { status: 'revealing', round: state.round, outcome: action.outcome };
+      return { status: 'revealing', round: state.round };
+    }
+
+    case 'answer/selfReported': {
+      if (state.status !== 'playing') {
+        return state;
+      }
+
+      if (!state.round.identity) {
+        return { status: 'revealing', round: state.round };
+      }
+
+      return {
+        status: 'revealed',
+        round: state.round,
+        outcome: action.outcome,
+        identity: state.round.identity,
+      };
     }
 
     case 'reveal/received': {
@@ -64,7 +82,7 @@ export function roundReducer(state: RoundState, action: RoundAction): RoundState
       return {
         status: 'revealed',
         round: { ...state.round, identity: action.identity },
-        outcome: state.outcome,
+        outcome: action.outcome,
         identity: action.identity,
       };
     }

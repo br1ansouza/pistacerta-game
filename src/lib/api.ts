@@ -1,15 +1,18 @@
-import type { SafeVehicle, VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
 import type { GameMode } from '@/domain/round/round.types';
+import type { RoundChoice } from '@/domain/round/choices';
+import type { SafeVehicle, VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
 
 export type RoundResponse = {
   token: string;
   mode: GameMode;
   clues: SafeVehicle;
   identity: VehicleIdentity | null;
+  choices: RoundChoice[] | null;
 };
 
 export type RevealResponse = {
   identity: VehicleIdentity;
+  correct: boolean | null;
 };
 
 export class ApiError extends Error {
@@ -49,6 +52,10 @@ export function startRound(
   return post<RoundResponse>('/api/round', { mode, recentTokens }, signal);
 }
 
-export function revealVehicle(token: string, signal?: AbortSignal): Promise<RevealResponse> {
-  return post<RevealResponse>('/api/reveal', { token }, signal);
+export function revealVehicle(
+  token: string,
+  choiceId: string | null,
+  signal?: AbortSignal,
+): Promise<RevealResponse> {
+  return post<RevealResponse>('/api/reveal', { token, choiceId }, signal);
 }

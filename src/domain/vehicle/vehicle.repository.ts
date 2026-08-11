@@ -1,0 +1,116 @@
+import { readdir, readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { vehicleSchema, type Vehicle, type VehicleKind } from './vehicle.schema.ts';
+
+const CONTENT_ROOT = join(process.cwd(), 'content', 'vehicles');
+
+const DIRECTORY_BY_KIND: Record<VehicleKind, string> = {
+  car: 'cars',
+};
+
+export class VehicleContentError extends Error {
+  constructor(
+    readonly file: string,
+    readonly issues: string[],
+  ) {
+    super(`${file}: ${issues.join('; ')}`);
+    this.name = 'VehicleContentError';
+  }
+}
+
+async function readKind(kind: VehicleKind): Promise<Vehicle[]> {
+  const directory = join(CONTENT_ROOT, DIRECTORY_BY_KIND[kind]);
+
+  let fileNames: string[];
+  try {
+    fileNames = (await readdir(directory)).filter((name) => name.endsWith('.json')).toSorted();
+  } catch {
+    return [];
+  }
+
+  const vehicles = await Promise.all(
+    fileNames.map(async (fileName) => {
+      const raw = await readFile(join(directory, fileName), 'utf8');
+
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(raw);
+      } catch (error) {
+        throw new VehicleContentError(fileName, [
+          `JSON inválido: ${error instanceof Error ? error.message : 'erro desconhecido'}`,
+        ]);
+      }
+
+      const result = vehicleSchema.safeParse(parsed);
+
+      if (!result.success) {
+        throw new VehicleContentError(
+          fileName,
+          result.error.issues.map(
+            (issue) => `${issue.path.join('.') || '(raiz)'}: ${issue.message}`,
+          ),
+        );
+      }
+
+      const expectedFileName = `${result.data.slug}.json`;
+      if (fileName !== expectedFileName) {
+        throw new VehicleContentError(fileName, [
+          `nome do arquivo deve casar com o slug (esperado ${expectedFileName})`,
+        ]);
+      }
+
+      return result.data;
+    }),
+  );
+
+  return vehicles;
+}
+
+let cache: Vehicle[] | null = null;
+
+export async function loadAllVehicles(options: { fresh?: boolean } = {}): Promise<Vehicle[]> {
+  if (cache && !options.fresh) {
+    return cache;
+  }
+
+  const kinds = Object.keys(DIRECTORY_BY_KIND) as VehicleKind[];
+  const byKind = await Promise.all(kinds.map(readKind));
+  const all = byKind.flat();
+
+  const seenSlugs = new Set<string>();
+  for (const vehicle of all) {
+    if (seenSlugs.has(vehicle.slug)) {
+      throw new VehicleContentError(`${vehicle.slug}.json`, ['slug duplicado entre veículos']);
+    }
+    seenSlugs.add(vehicle.slug);
+  }
+
+  cache = all;
+  return all;
+}
+
+export async function getPlayableVehicles(kind?: VehicleKind): Promise<Vehicle[]> {
+  const all = await loadAllVehicles();
+  return all.filter((vehicle) => vehicle.active && (kind ? vehicle.kind === kind : true));
+}
+
+export async function getVehicleBySlug(slug: string): Promise<Vehicle | null> {
+  const all = await loadAllVehicles();
+  return all.find((vehicle) => vehicle.slug === slug) ?? null;
+}
+
+export async function pickRandomVehicle(
+  options: { kind?: VehicleKind; excludeSlugs?: readonly string[] } = {},
+): Promise<Vehicle | null> {
+  const playable = await getPlayableVehicles(options.kind);
+
+  if (playable.length === 0) {
+    return null;
+  }
+
+  const excluded = new Set(options.excludeSlugs ?? []);
+  const candidates = playable.filter((vehicle) => !excluded.has(vehicle.slug));
+  const pool = candidates.length > 0 ? candidates : playable;
+
+  return pool[Math.floor(Math.random() * pool.length)] ?? null;
+}

@@ -11,7 +11,8 @@
     "es2024": true
   },
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "no-await-in-loop": "off"
   },
   "ignorePatterns": ["dist/", "node_modules/", "src/ui/"]
 }

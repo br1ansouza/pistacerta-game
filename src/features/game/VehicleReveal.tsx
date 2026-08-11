@@ -38,9 +38,7 @@ export function VehicleReveal({
 
       <VehicleImage identity={identity} />
 
-      <section className="border-secondary bg-secondary rounded-2xl border px-5 py-3">
-        <ClueList clues={clues} initialCount={-1} />
-      </section>
+      <ClueList clues={clues} />
 
       <div className="flex flex-col gap-3">
         <Button size="lg" color="primary" onClick={onNextRound}>

@@ -9,7 +9,7 @@ export type RoundChoice = {
 };
 
 export function choiceLabel(vehicle: Vehicle): string {
-  return [vehicle.brand, vehicle.model, vehicle.version].filter(Boolean).join(' ');
+  return `${vehicle.brand} ${vehicle.model}`;
 }
 
 function shuffle<T>(items: T[], random: () => number): T[] {

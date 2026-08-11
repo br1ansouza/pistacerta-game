@@ -23,5 +23,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "api", "scripts", "rsbuild.config.ts"]
+  "include": ["src", "api", "worker", "scripts", "rsbuild.config.ts"]
 }

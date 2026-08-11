@@ -21,7 +21,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "refresh:fipe": "bun run scripts/refresh-fipe.ts",
-    "import:fipe": "bun run scripts/import-fipe.ts"
+    "import:fipe": "bun run scripts/import-fipe.ts",
+    "build:worker-content": "bun run scripts/build-worker-content.ts",
+    "deploy": "bun run build:worker-content && bun run build && wrangler deploy"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",
@@ -45,6 +47,7 @@
     "oxlint": "^1.78.0",
     "prettier": "^3.9.6",
     "tailwindcss": "^4.3.3",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "wrangler": "^4.121.0"
   }
 }

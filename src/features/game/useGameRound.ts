@@ -25,6 +25,7 @@ export function useGameRound(mode: GameMode) {
         mode: response.mode,
         vehicle: response.clues,
         identity: response.identity,
+        choices: response.choices,
       });
     } catch (error) {
       if (error instanceof DOMException && error.name === 'AbortError') {
@@ -49,31 +50,55 @@ export function useGameRound(mode: GameMode) {
     dispatch({ type: 'clue/revealed' });
   }, []);
 
-  const answer = useCallback(
+  const selectChoice = useCallback((choiceId: string) => {
+    dispatch({ type: 'choice/selected', choiceId });
+  }, []);
+
+  const requestReveal = useCallback(async (token: string, choiceId: string | null) => {
+    try {
+      const response = await revealVehicle(token, choiceId);
+
+      dispatch({
+        type: 'reveal/received',
+        identity: response.identity,
+        outcome: response.correct === false ? 'incorrect' : 'correct',
+      });
+    } catch (error) {
+      dispatch({
+        type: 'reveal/failed',
+        message: error instanceof Error ? error.message : 'Não foi possível revelar o veículo.',
+      });
+    }
+  }, []);
+
+  const submitChoice = useCallback(async () => {
+    if (state.status !== 'playing' || !state.round.selectedChoiceId) {
+      return;
+    }
+
+    const { token, selectedChoiceId } = state.round;
+    dispatch({ type: 'answer/submitted' });
+
+    await requestReveal(token, selectedChoiceId);
+  }, [state, requestReveal]);
+
+  const selfReport = useCallback(
     async (outcome: Outcome) => {
       if (state.status !== 'playing') {
         return;
       }
 
       const { token, identity } = state.round;
-      dispatch({ type: 'answer/given', outcome });
+      dispatch({ type: 'answer/selfReported', outcome });
 
       if (identity) {
         return;
       }
 
-      try {
-        const response = await revealVehicle(token);
-        dispatch({ type: 'reveal/received', identity: response.identity });
-      } catch (error) {
-        dispatch({
-          type: 'reveal/failed',
-          message: error instanceof Error ? error.message : 'Não foi possível revelar o veículo.',
-        });
-      }
+      await requestReveal(token, null);
     },
-    [state],
+    [state, requestReveal],
   );
 
-  return { state, beginRound, revealNextClue, answer };
+  return { state, beginRound, revealNextClue, selectChoice, submitChoice, selfReport };
 }

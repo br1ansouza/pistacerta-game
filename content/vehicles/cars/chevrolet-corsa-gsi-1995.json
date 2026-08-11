@@ -12,6 +12,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "004033-9"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 108,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 14.8,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "engineCode": "1.6 SFi 16V",
+  "cylinders": 4,
+  "valves": 16
 }

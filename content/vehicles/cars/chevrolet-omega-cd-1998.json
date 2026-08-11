@@ -13,6 +13,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "004011-8"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 168,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 29.1,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "engineCode": "4.1 SFi",
+  "cylinders": 6,
+  "valves": 12
 }

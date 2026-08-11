@@ -9,7 +9,7 @@
   "fuel": "gasolina",
   "displacement": "4.9",
   "power": {
-    "value": 199,
+    "value": 197,
     "unit": "cv"
   },
   "torque": {
@@ -20,10 +20,11 @@
   "transmission": "manual",
   "drivetrain": "traseira",
   "bodyType": "cupê",
-  "engineCode": "302",
+  "engineCode": "Windsor 302",
   "cylinders": 8,
   "doors": 2,
   "fipe": null,
-  "specSource": "quatro-rodas",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "valves": 16
 }

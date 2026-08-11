@@ -9,14 +9,6 @@ type ExtraInfoPanelProps = {
 function buildEntries(vehicle: SafeVehicle): { label: string; value: string }[] {
   const entries: { label: string; value: string }[] = [];
 
-  if (vehicle.cylinders !== undefined) {
-    entries.push({ label: 'Cilindros', value: String(vehicle.cylinders) });
-  }
-
-  if (vehicle.doors !== undefined) {
-    entries.push({ label: 'Portas', value: String(vehicle.doors) });
-  }
-
   if (vehicle.countryOfOrigin !== undefined) {
     entries.push({ label: 'País de origem', value: vehicle.countryOfOrigin });
   }

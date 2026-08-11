@@ -28,7 +28,7 @@ export function VehicleReveal({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: 'spring', stiffness: 380, damping: 32 }}
-      className="flex flex-col gap-5"
+      className="flex flex-1 flex-col justify-center gap-5"
     >
       <header className="flex flex-col gap-2">
         <motion.span

@@ -30,7 +30,7 @@ export function CreditsScreen({ onBack }: CreditsScreenProps) {
   }, []);
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col gap-5 px-4 py-6 lg:max-w-3xl">
+    <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col gap-5 px-4 py-6 lg:max-w-2xl">
       <header className="flex items-center gap-3">
         <button
           type="button"

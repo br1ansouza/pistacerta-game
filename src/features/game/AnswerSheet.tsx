@@ -60,9 +60,19 @@ export function AnswerSheet({
       >
         <span aria-hidden className="bg-ink-600 mx-auto h-1 w-10 sm:hidden" />
 
-        <h2 className="font-display text-chalk-100 text-xs font-bold tracking-[0.18em] uppercase">
-          Qual desses é?
-        </h2>
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="font-display text-chalk-100 text-xs font-bold tracking-[0.18em] uppercase">
+            Qual desses é?
+          </h2>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Fechar"
+            className="border-ink-700 text-chalk-500 hover:border-flame-500 hover:text-flame-400 focus-visible:outline-flame-500 flex size-7 shrink-0 items-center justify-center border-2 text-sm leading-none transition focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            &times;
+          </button>
+        </div>
 
         <fieldset disabled={submitting} className="flex flex-col gap-2">
           {choices.map((choice, index) => {

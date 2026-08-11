@@ -1,0 +1,18 @@
+{
+  "slug": "chevrolet-veraneio-1990",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Veraneio",
+  "year": 1990,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "4.1",
+  "bodyType": "perua",
+  "fipe": {
+    "value": 32009,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004070-3"
+  },
+  "specSource": "fipe",
+  "active": true
+}

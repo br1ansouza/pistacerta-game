@@ -1,0 +1,25 @@
+{
+  "slug": "alfa-romeo-147-2003",
+  "kind": "car",
+  "brand": "Alfa Romeo",
+  "model": "147",
+  "year": 2003,
+  "origin": "importado",
+  "countryOfOrigin": "Itália",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 148,
+    "unit": "cv"
+  },
+  "transmission": "automático",
+  "bodyType": "hatch",
+  "doors": 4,
+  "fipe": {
+    "value": 94484,
+    "referenceMonth": "2026-08",
+    "fipeCode": "006017-8"
+  },
+  "specSource": "fipe",
+  "active": true
+}

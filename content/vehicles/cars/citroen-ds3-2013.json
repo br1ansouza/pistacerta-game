@@ -1,0 +1,21 @@
+{
+  "slug": "citroen-ds3-2013",
+  "kind": "car",
+  "brand": "Citroën",
+  "model": "DS3",
+  "year": 2013,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "1.6",
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "bodyType": "hatch",
+  "doors": 3,
+  "fipe": {
+    "value": 57435,
+    "referenceMonth": "2026-08",
+    "fipeCode": "011113-9"
+  },
+  "specSource": "fipe",
+  "active": true
+}

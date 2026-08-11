@@ -1,0 +1,21 @@
+{
+  "slug": "toyota-sw4-srx-2020",
+  "kind": "car",
+  "brand": "Toyota",
+  "model": "SW4",
+  "year": 2020,
+  "origin": "importado",
+  "fuel": "diesel",
+  "displacement": "2.8",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
+  "fipe": {
+    "value": 236446,
+    "referenceMonth": "2026-08",
+    "fipeCode": "002146-6"
+  },
+  "specSource": "fipe",
+  "active": true
+}

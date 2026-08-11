@@ -1,0 +1,21 @@
+{
+  "slug": "vw-amarok-v6-2020",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Amarok",
+  "year": 2020,
+  "origin": "importado",
+  "fuel": "diesel",
+  "displacement": "3.0",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "picape",
+  "fipe": {
+    "value": 161279,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005506-9"
+  },
+  "specSource": "fipe",
+  "active": true
+}

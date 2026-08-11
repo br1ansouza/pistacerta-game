@@ -1,0 +1,17 @@
+{
+  "slug": "fiat-147-1985",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "147",
+  "year": 1985,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "bodyType": "hatch",
+  "fipe": {
+    "value": 4851,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001124-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

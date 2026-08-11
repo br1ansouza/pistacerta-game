@@ -1,0 +1,20 @@
+{
+  "slug": "fiat-punto-tjet-2013",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Punto",
+  "year": 2013,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "1.4",
+  "aspiration": "turbo",
+  "bodyType": "hatch",
+  "doors": 5,
+  "fipe": {
+    "value": 53808,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001271-8"
+  },
+  "specSource": "fipe",
+  "active": true
+}

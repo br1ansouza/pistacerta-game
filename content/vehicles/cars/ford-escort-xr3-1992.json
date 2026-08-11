@@ -1,0 +1,18 @@
+{
+  "slug": "ford-escort-xr3-1992",
+  "kind": "car",
+  "brand": "Ford",
+  "model": "Escort",
+  "year": 1992,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "1.8",
+  "bodyType": "hatch",
+  "fipe": {
+    "value": 20232,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003038-4"
+  },
+  "specSource": "fipe",
+  "active": true
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "chevrolet-kadett-gsi-1994",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Kadett",
+  "year": 1994,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "bodyType": "hatch",
+  "fipe": {
+    "value": 25416,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004044-4"
+  },
+  "specSource": "fipe",
+  "active": true
+}

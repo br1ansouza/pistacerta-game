@@ -1,0 +1,24 @@
+{
+  "slug": "mitsubishi-lancer-evolution-2011",
+  "kind": "car",
+  "brand": "Mitsubishi",
+  "model": "Lancer",
+  "year": 2011,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 295,
+    "unit": "cv"
+  },
+  "aspiration": "turbo",
+  "bodyType": "sedã",
+  "fipe": {
+    "value": 196984,
+    "referenceMonth": "2026-08",
+    "fipeCode": "022112-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

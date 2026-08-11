@@ -1,0 +1,20 @@
+{
+  "slug": "hyundai-creta-n-line-2023",
+  "kind": "car",
+  "brand": "Hyundai",
+  "model": "Creta",
+  "year": 2023,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.0",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
+  "fipe": {
+    "value": 127418,
+    "referenceMonth": "2026-08",
+    "fipeCode": "015212-9"
+  },
+  "specSource": "fipe",
+  "active": true
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "jeep-compass-diesel-2021",
+  "kind": "car",
+  "brand": "Jeep",
+  "model": "Compass",
+  "year": 2021,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "2.0",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
+  "fipe": {
+    "value": 118167,
+    "referenceMonth": "2026-08",
+    "fipeCode": "017051-8"
+  },
+  "specSource": "fipe",
+  "active": true
+}

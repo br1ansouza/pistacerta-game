@@ -1,0 +1,1016 @@
+[
+  {
+    "slug": "vw-golf-gti-mk4-2003",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Golf",
+    "generation": "Mk4",
+    "match": "Golf GTI 1.8",
+    "year": 2003,
+    "bodyType": "hatch",
+    "origin": "importado"
+  },
+  {
+    "slug": "vw-gti-mk7-r-2018",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Golf",
+    "generation": "Mk7",
+    "match": "Golf R 2.0",
+    "year": 2018,
+    "bodyType": "hatch",
+    "origin": "importado"
+  },
+  {
+    "slug": "vw-polo-gts-2021",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Polo",
+    "match": "Polo GTS 1.4",
+    "year": 2021,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "vw-jetta-gli-2019",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Jetta",
+    "match": "Jetta GLI 350",
+    "year": 2019,
+    "bodyType": "sedã",
+    "origin": "importado"
+  },
+  {
+    "slug": "vw-passat-variant-2013",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Passat",
+    "match": "Passat Variant",
+    "year": 2013,
+    "bodyType": "perua",
+    "origin": "importado"
+  },
+  {
+    "slug": "vw-fusca-1980",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Fusca",
+    "match": "Fusca 1300",
+    "year": 1980,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "vw-brasilia-1980",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Brasília",
+    "match": "Brasilia",
+    "year": 1980,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "vw-santana-quantum-1995",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Quantum",
+    "match": "Quantum",
+    "year": 1995,
+    "bodyType": "perua",
+    "origin": "nacional"
+  },
+  {
+    "slug": "vw-parati-gti-1996",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Parati",
+    "match": "Parati GTI",
+    "year": 1996,
+    "bodyType": "perua",
+    "origin": "nacional"
+  },
+  {
+    "slug": "vw-saveiro-cross-2020",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Saveiro",
+    "match": "Saveiro CROSS",
+    "year": 2020,
+    "bodyType": "picape",
+    "origin": "nacional"
+  },
+  {
+    "slug": "vw-amarok-v6-2020",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Amarok",
+    "match": "AMAROK Extreme CD 3.0",
+    "year": 2020,
+    "bodyType": "picape",
+    "origin": "importado"
+  },
+  {
+    "slug": "vw-tiguan-r-line-2019",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Tiguan",
+    "match": "TIGUAN Allspace R-Line",
+    "year": 2019,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+  {
+    "slug": "vw-nivus-highline-2021",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "Nivus",
+    "match": "NIVUS Highline",
+    "year": 2021,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+  {
+    "slug": "vw-t-cross-highline-2020",
+    "brand": "Volkswagen",
+    "brandCode": "59",
+    "model": "T-Cross",
+    "match": "T-CROSS Highline",
+    "year": 2020,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+
+  {
+    "slug": "fiat-uno-way-2015",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Uno",
+    "match": "Uno WAY 1.4",
+    "year": 2015,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-palio-adventure-2015",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Palio",
+    "match": "Palio Weekend ADVENTURE",
+    "year": 2015,
+    "bodyType": "perua",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-punto-tjet-2013",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Punto",
+    "match": "Punto T-JET",
+    "year": 2013,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-bravo-tjet-2014",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Bravo",
+    "match": "Bravo T-JET",
+    "year": 2014,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-marea-turbo-2000",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Marea",
+    "match": "Marea Turbo",
+    "year": 2000,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-tempra-turbo-1995",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Tempra",
+    "match": "Tempra",
+    "year": 1995,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-toro-volcano-diesel-2021",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Toro",
+    "match": "TORO Volcano",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-strada-volcano-2021",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Strada",
+    "match": "STRADA Volcano",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-500-abarth-2013",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "500",
+    "match": "500 ABARTH",
+    "year": 2013,
+    "bodyType": "hatch",
+    "origin": "importado"
+  },
+  {
+    "slug": "fiat-argo-hgt-2020",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Argo",
+    "match": "ARGO HGT",
+    "year": 2020,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-fastback-abarth-2023",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "Fastback",
+    "match": "FASTBACK ABARTH",
+    "year": 2023,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+  {
+    "slug": "fiat-147-1985",
+    "brand": "Fiat",
+    "brandCode": "21",
+    "model": "147",
+    "match": "147 C/ CL",
+    "year": 1985,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+
+  {
+    "slug": "chevrolet-onix-rs-2023",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Onix",
+    "match": "ONIX RS",
+    "year": 2023,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chevrolet-cruze-sport6-2019",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Cruze",
+    "match": "CRUZE SPORT6 LTZ",
+    "year": 2019,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chevrolet-camaro-ss-2018",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Camaro",
+    "match": "CAMARO SS",
+    "year": 2018,
+    "bodyType": "cupê",
+    "origin": "importado",
+    "countryOfOrigin": "Estados Unidos"
+  },
+  {
+    "slug": "chevrolet-s10-high-country-2021",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "S10",
+    "match": "S10 High Country",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chevrolet-tracker-premier-2021",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Tracker",
+    "match": "TRACKER Premier",
+    "year": 2021,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chevrolet-astra-gsi-1996",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Astra",
+    "match": "Astra GSi",
+    "year": 1996,
+    "bodyType": "hatch",
+    "origin": "importado"
+  },
+  {
+    "slug": "chevrolet-omega-cd-1998",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Omega",
+    "match": "Omega CD 4.1",
+    "year": 1998,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chevrolet-monza-classic-1990",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Monza",
+    "match": "Monza Classic",
+    "year": 1990,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chevrolet-corsa-gsi-1995",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Corsa",
+    "match": "Corsa GSi",
+    "year": 1995,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chevrolet-kadett-gsi-1994",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Kadett",
+    "match": "Kadett GSi",
+    "year": 1994,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chevrolet-vectra-gsi-1995",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Vectra",
+    "match": "Vectra GSI",
+    "year": 1995,
+    "bodyType": "sedã",
+    "origin": "importado"
+  },
+  {
+    "slug": "chevrolet-veraneio-1990",
+    "brand": "Chevrolet",
+    "brandCode": "23",
+    "model": "Veraneio",
+    "match": "Veraneio",
+    "year": 1990,
+    "bodyType": "perua",
+    "origin": "nacional"
+  },
+
+  {
+    "slug": "ford-ka-freestyle-2020",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "Ka",
+    "match": "Ka FreeStyle 1.5",
+    "year": 2020,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "ford-focus-titanium-2018",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "Focus",
+    "match": "Focus Titanium",
+    "year": 2018,
+    "bodyType": "hatch",
+    "origin": "importado"
+  },
+  {
+    "slug": "ford-fusion-awd-2018",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "Fusion",
+    "match": "Fusion 2.0 GTDI",
+    "year": 2018,
+    "bodyType": "sedã",
+    "origin": "importado"
+  },
+  {
+    "slug": "ford-ranger-raptor-2021",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "Ranger",
+    "match": "Ranger Raptor",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "importado"
+  },
+  {
+    "slug": "ford-mustang-gt-2019",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "Mustang",
+    "match": "Mustang GT",
+    "year": 2019,
+    "bodyType": "cupê",
+    "origin": "importado",
+    "countryOfOrigin": "Estados Unidos"
+  },
+  {
+    "slug": "ford-escort-xr3-1992",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "Escort",
+    "match": "Escort XR3",
+    "year": 1992,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "ford-del-rey-1990",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "Del Rey",
+    "match": "Del Rey",
+    "year": 1990,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "ford-f1000-1995",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "F-1000",
+    "match": "F-1000",
+    "year": 1995,
+    "bodyType": "picape",
+    "origin": "nacional"
+  },
+  {
+    "slug": "ford-fiesta-supercharger-2005",
+    "brand": "Ford",
+    "brandCode": "22",
+    "model": "Fiesta",
+    "match": "Fiesta Supercharger",
+    "year": 2005,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+
+  {
+    "slug": "toyota-corolla-gr-sport-2023",
+    "brand": "Toyota",
+    "brandCode": "56",
+    "model": "Corolla",
+    "match": "Corolla GR-S",
+    "year": 2023,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "toyota-hilux-srx-2021",
+    "brand": "Toyota",
+    "brandCode": "56",
+    "model": "Hilux",
+    "match": "Hilux CD SRX",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "importado"
+  },
+  {
+    "slug": "toyota-sw4-srx-2020",
+    "brand": "Toyota",
+    "brandCode": "56",
+    "model": "SW4",
+    "match": "SW4 SRX",
+    "year": 2020,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+  {
+    "slug": "toyota-bandeirante-1995",
+    "brand": "Toyota",
+    "brandCode": "56",
+    "model": "Bandeirante",
+    "match": "Band. Jipe 4x4",
+    "year": 1995,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+  {
+    "slug": "toyota-supra-2021",
+    "brand": "Toyota",
+    "brandCode": "56",
+    "model": "Supra",
+    "match": "Supra",
+    "year": 2021,
+    "bodyType": "cupê",
+    "origin": "importado",
+    "countryOfOrigin": "Áustria"
+  },
+
+  {
+    "slug": "honda-fit-ex-2016",
+    "brand": "Honda",
+    "brandCode": "25",
+    "model": "Fit",
+    "match": "Fit EX",
+    "year": 2016,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "honda-hrv-touring-2021",
+    "brand": "Honda",
+    "brandCode": "25",
+    "model": "HR-V",
+    "match": "HR-V Touring",
+    "year": 2021,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+  {
+    "slug": "honda-civic-type-r-2023",
+    "brand": "Honda",
+    "brandCode": "25",
+    "model": "Civic",
+    "match": "Civic Type R",
+    "year": 2023,
+    "bodyType": "hatch",
+    "origin": "importado",
+    "countryOfOrigin": "Japão"
+  },
+  {
+    "slug": "honda-accord-2019",
+    "brand": "Honda",
+    "brandCode": "25",
+    "model": "Accord",
+    "match": "Accord",
+    "year": 2019,
+    "bodyType": "sedã",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "jeep-compass-diesel-2021",
+    "brand": "Jeep",
+    "brandCode": "29",
+    "model": "Compass",
+    "match": "COMPASS LIMITED 2.0 4x4 Die",
+    "year": 2021,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+  {
+    "slug": "jeep-wrangler-rubicon-2020",
+    "brand": "Jeep",
+    "brandCode": "29",
+    "model": "Wrangler",
+    "match": "Wrangler Rubicon",
+    "year": 2020,
+    "bodyType": "suv",
+    "origin": "importado",
+    "countryOfOrigin": "Estados Unidos"
+  },
+  {
+    "slug": "jeep-commander-diesel-2022",
+    "brand": "Jeep",
+    "brandCode": "29",
+    "model": "Commander",
+    "match": "COMMANDER Overland 2.0 TB Die",
+    "year": 2022,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+  {
+    "slug": "jeep-cherokee-1998",
+    "brand": "Jeep",
+    "brandCode": "29",
+    "model": "Cherokee",
+    "match": "Grand Cherokee Limited",
+    "year": 1998,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "hyundai-veloster-2013",
+    "brand": "Hyundai",
+    "brandCode": "26",
+    "model": "Veloster",
+    "match": "Veloster",
+    "year": 2013,
+    "bodyType": "cupê",
+    "origin": "importado"
+  },
+  {
+    "slug": "hyundai-creta-n-line-2023",
+    "brand": "Hyundai",
+    "brandCode": "26",
+    "model": "Creta",
+    "match": "CRETA N Line",
+    "year": 2023,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+  {
+    "slug": "hyundai-santa-fe-2018",
+    "brand": "Hyundai",
+    "brandCode": "26",
+    "model": "Santa Fe",
+    "match": "Santa Fe",
+    "year": 2018,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "renault-sandero-rs-2018",
+    "brand": "Renault",
+    "brandCode": "48",
+    "model": "Sandero",
+    "match": "SANDERO RS",
+    "year": 2018,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "renault-duster-oroch-2021",
+    "brand": "Renault",
+    "brandCode": "48",
+    "model": "Oroch",
+    "match": "DUSTER OROCH",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "nacional"
+  },
+  {
+    "slug": "renault-clio-rt-1999",
+    "brand": "Renault",
+    "brandCode": "48",
+    "model": "Clio",
+    "match": "Clio RT",
+    "year": 1999,
+    "bodyType": "hatch",
+    "origin": "importado"
+  },
+  {
+    "slug": "renault-megane-2010",
+    "brand": "Renault",
+    "brandCode": "48",
+    "model": "Mégane",
+    "match": "Megane",
+    "year": 2010,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+
+  {
+    "slug": "peugeot-206-quiksilver-2004",
+    "brand": "Peugeot",
+    "brandCode": "44",
+    "model": "206",
+    "match": "206 Quiksilver",
+    "year": 2004,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "peugeot-208-gt-2023",
+    "brand": "Peugeot",
+    "brandCode": "44",
+    "model": "208",
+    "match": "208 GT",
+    "year": 2023,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "peugeot-3008-griffe-2019",
+    "brand": "Peugeot",
+    "brandCode": "44",
+    "model": "3008",
+    "match": "3008 Griffe",
+    "year": 2019,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "citroen-c4-vtr-2011",
+    "brand": "Citroën",
+    "brandCode": "13",
+    "model": "C4",
+    "match": "C4 VTR",
+    "year": 2011,
+    "bodyType": "hatch",
+    "origin": "nacional"
+  },
+  {
+    "slug": "citroen-ds3-2013",
+    "brand": "Citroën",
+    "brandCode": "13",
+    "model": "DS3",
+    "match": "DS3",
+    "year": 2013,
+    "bodyType": "hatch",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "nissan-frontier-attack-2021",
+    "brand": "Nissan",
+    "brandCode": "43",
+    "model": "Frontier",
+    "match": "FRONTIER ATTACK",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "importado"
+  },
+  {
+    "slug": "nissan-370z-2015",
+    "brand": "Nissan",
+    "brandCode": "43",
+    "model": "370Z",
+    "match": "370Z",
+    "year": 2015,
+    "bodyType": "cupê",
+    "origin": "importado",
+    "countryOfOrigin": "Japão"
+  },
+  {
+    "slug": "nissan-kicks-sl-2021",
+    "brand": "Nissan",
+    "brandCode": "43",
+    "model": "Kicks",
+    "match": "KICKS SL",
+    "year": 2021,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+
+  {
+    "slug": "mitsubishi-lancer-evolution-2011",
+    "brand": "Mitsubishi",
+    "brandCode": "41",
+    "model": "Lancer",
+    "match": "Lancer Evolution",
+    "year": 2011,
+    "bodyType": "sedã",
+    "origin": "importado",
+    "countryOfOrigin": "Japão"
+  },
+  {
+    "slug": "mitsubishi-l200-triton-2021",
+    "brand": "Mitsubishi",
+    "brandCode": "41",
+    "model": "L200",
+    "match": "L200 TRITON SPORT",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "nacional"
+  },
+  {
+    "slug": "mitsubishi-pajero-full-2019",
+    "brand": "Mitsubishi",
+    "brandCode": "41",
+    "model": "Pajero",
+    "match": "Pajero Full",
+    "year": 2019,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "subaru-impreza-wrx-2011",
+    "brand": "Subaru",
+    "brandCode": "54",
+    "model": "Impreza",
+    "match": "Impreza WRX",
+    "year": 2011,
+    "bodyType": "sedã",
+    "origin": "importado",
+    "countryOfOrigin": "Japão"
+  },
+
+  {
+    "slug": "bmw-320i-2018",
+    "brand": "BMW",
+    "brandCode": "7",
+    "model": "320i",
+    "match": "320i",
+    "year": 2018,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "bmw-m3-2016",
+    "brand": "BMW",
+    "brandCode": "7",
+    "model": "M3",
+    "match": "M3",
+    "year": 2016,
+    "bodyType": "sedã",
+    "origin": "importado",
+    "countryOfOrigin": "Alemanha"
+  },
+
+  {
+    "slug": "audi-a3-sedan-2019",
+    "brand": "Audi",
+    "brandCode": "6",
+    "model": "A3",
+    "match": "A3 Sedan",
+    "year": 2019,
+    "bodyType": "sedã",
+    "origin": "nacional"
+  },
+  {
+    "slug": "audi-rs3-2018",
+    "brand": "Audi",
+    "brandCode": "6",
+    "model": "RS3",
+    "match": "RS3",
+    "year": 2018,
+    "bodyType": "hatch",
+    "origin": "importado",
+    "countryOfOrigin": "Alemanha"
+  },
+  {
+    "slug": "audi-tt-2016",
+    "brand": "Audi",
+    "brandCode": "6",
+    "model": "TT",
+    "match": "TT ",
+    "year": 2016,
+    "bodyType": "cupê",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "mercedes-c180-2018",
+    "brand": "Mercedes-Benz",
+    "brandCode": "39",
+    "model": "C 180",
+    "match": "C 180",
+    "year": 2018,
+    "bodyType": "sedã",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "porsche-911-carrera-2018",
+    "brand": "Porsche",
+    "brandCode": "47",
+    "model": "911",
+    "match": "911 Carrera",
+    "year": 2018,
+    "bodyType": "cupê",
+    "origin": "importado",
+    "countryOfOrigin": "Alemanha"
+  },
+
+  {
+    "slug": "dodge-dart-1978",
+    "brand": "Dodge",
+    "brandCode": "17",
+    "model": "Dart",
+    "match": "Dart",
+    "year": 1978,
+    "bodyType": "cupê",
+    "origin": "nacional"
+  },
+  {
+    "slug": "chrysler-300c-2011",
+    "brand": "Chrysler",
+    "brandCode": "12",
+    "model": "300C",
+    "match": "300C",
+    "year": 2011,
+    "bodyType": "sedã",
+    "origin": "importado",
+    "countryOfOrigin": "Estados Unidos"
+  },
+
+  {
+    "slug": "troller-t4-2019",
+    "brand": "Troller",
+    "brandCode": "57",
+    "model": "T4",
+    "match": "T4",
+    "year": 2019,
+    "bodyType": "suv",
+    "origin": "nacional"
+  },
+
+  {
+    "slug": "land-rover-defender-2021",
+    "brand": "Land Rover",
+    "brandCode": "33",
+    "model": "Defender",
+    "match": "DEFENDER",
+    "year": 2021,
+    "bodyType": "suv",
+    "origin": "importado",
+    "countryOfOrigin": "Reino Unido"
+  },
+
+  {
+    "slug": "mini-cooper-s-2018",
+    "brand": "MINI",
+    "brandCode": "156",
+    "model": "Cooper S",
+    "match": "COOPER S",
+    "year": 2018,
+    "bodyType": "hatch",
+    "origin": "importado",
+    "countryOfOrigin": "Reino Unido"
+  },
+
+  {
+    "slug": "volvo-xc60-2020",
+    "brand": "Volvo",
+    "brandCode": "58",
+    "model": "XC60",
+    "match": "XC60",
+    "year": 2020,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "kia-sportage-2018",
+    "brand": "Kia",
+    "brandCode": "31",
+    "model": "Sportage",
+    "match": "Sportage",
+    "year": 2018,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+  {
+    "slug": "kia-soul-2016",
+    "brand": "Kia",
+    "brandCode": "31",
+    "model": "Soul",
+    "match": "Soul",
+    "year": 2016,
+    "bodyType": "hatch",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "suzuki-jimny-2021",
+    "brand": "Suzuki",
+    "brandCode": "55",
+    "model": "Jimny",
+    "match": "Jimny",
+    "year": 2021,
+    "bodyType": "suv",
+    "origin": "importado"
+  },
+
+  {
+    "slug": "ram-2500-laramie-2021",
+    "brand": "RAM",
+    "brandCode": "185",
+    "model": "2500",
+    "match": "2500 Laramie",
+    "year": 2021,
+    "bodyType": "picape",
+    "origin": "importado",
+    "countryOfOrigin": "México"
+  },
+
+  {
+    "slug": "alfa-romeo-147-2003",
+    "brand": "Alfa Romeo",
+    "brandCode": "3",
+    "model": "147",
+    "match": "147",
+    "year": 2003,
+    "bodyType": "hatch",
+    "origin": "importado",
+    "countryOfOrigin": "Itália"
+  }
+]

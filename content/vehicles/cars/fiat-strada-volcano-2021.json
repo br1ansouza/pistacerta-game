@@ -1,0 +1,18 @@
+{
+  "slug": "fiat-strada-volcano-2021",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Strada",
+  "year": 2021,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.3",
+  "bodyType": "picape",
+  "fipe": {
+    "value": 96576,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001528-8"
+  },
+  "specSource": "fipe",
+  "active": true
+}

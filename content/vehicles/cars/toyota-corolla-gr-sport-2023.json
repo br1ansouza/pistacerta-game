@@ -1,0 +1,19 @@
+{
+  "slug": "toyota-corolla-gr-sport-2023",
+  "kind": "car",
+  "brand": "Toyota",
+  "model": "Corolla",
+  "year": 2023,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "2.0",
+  "transmission": "automático",
+  "bodyType": "sedã",
+  "fipe": {
+    "value": 137325,
+    "referenceMonth": "2026-08",
+    "fipeCode": "002199-7"
+  },
+  "specSource": "fipe",
+  "active": true
+}

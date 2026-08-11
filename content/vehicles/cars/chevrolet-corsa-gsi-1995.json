@@ -1,0 +1,17 @@
+{
+  "slug": "chevrolet-corsa-gsi-1995",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Corsa",
+  "year": 1995,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "bodyType": "hatch",
+  "fipe": {
+    "value": 22937,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004033-9"
+  },
+  "specSource": "fipe",
+  "active": true
+}

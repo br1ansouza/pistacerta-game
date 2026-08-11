@@ -17,6 +17,15 @@
   transition-timing-function: inherit;
 }
 
+@utility scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @utility pixelated {
   image-rendering: pixelated;
 }

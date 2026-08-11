@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import type { ResolvedClue } from '@/domain/clues/clue.types';
 import type { Outcome } from '@/domain/round/round.types';
 import { describeIdentity, type VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
-import { ClueList } from './ClueList';
+import { CluePages } from './CluePages';
 import { VehicleImage } from './VehicleImage';
 
 type VehicleRevealProps = {
@@ -64,7 +64,7 @@ export function VehicleReveal({
         <VehicleImage identity={identity} />
       </motion.div>
 
-      <ClueList clues={clues} />
+      <CluePages clues={clues} pageSize={12} freshKey={null} />
 
       <div className="flex flex-col gap-2">
         <motion.button

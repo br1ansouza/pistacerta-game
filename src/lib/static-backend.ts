@@ -54,7 +54,9 @@ function pick(recentTokens: readonly string[]): SealedVehicle {
   const pool = candidates.length > 0 ? candidates : VEHICLES;
 
   const recentBrands = recent.slice(0, 6).map((entry) => entry.brand);
-  const recentDecades = recent.slice(0, 3).map((entry) => Math.floor(entry.clues.year / 10));
+  const recentDecades = new Set(
+    recent.slice(0, 3).map((entry) => Math.floor(entry.clues.year / 10)),
+  );
 
   const weights = pool.map((entry) => {
     let weight = 1;
@@ -64,7 +66,7 @@ function pick(recentTokens: readonly string[]): SealedVehicle {
       weight *= BRAND_PENALTY * (1 + brandIndex / recentBrands.length);
     }
 
-    if (recentDecades.includes(Math.floor(entry.clues.year / 10))) {
+    if (recentDecades.has(Math.floor(entry.clues.year / 10))) {
       weight *= DECADE_PENALTY;
     }
 

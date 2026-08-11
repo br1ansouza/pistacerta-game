@@ -16,6 +16,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "014102-0"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 173,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 22.4,
+    "unit": "kgfm"
+  },
+  "engineCode": "L15B7",
+  "cylinders": 4,
+  "valves": 16
 }

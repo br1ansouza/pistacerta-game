@@ -16,6 +16,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "002141-5"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 204,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 50.9,
+    "unit": "kgfm"
+  },
+  "engineCode": "1GD-FTV",
+  "cylinders": 4,
+  "valves": 16
 }

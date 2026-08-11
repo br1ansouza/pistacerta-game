@@ -83,6 +83,11 @@ function parsePower(name: string): number | undefined {
   return match?.[1] ? Number(match[1]) : undefined;
 }
 
+function parseValves(name: string): number | undefined {
+  const match = /(\d{1,2})\s?v\b/i.exec(name);
+  return match?.[1] ? Number(match[1]) : undefined;
+}
+
 function parseDoors(name: string): number | undefined {
   const match = /(\d)p\b/.exec(name);
   return match?.[1] ? Number(match[1]) : undefined;
@@ -190,6 +195,7 @@ for (const pick of targets) {
   const drivetrain = parseDrivetrain(name);
   const aspiration = parseAspiration(name);
   const doors = parseDoors(name);
+  const valves = parseValves(name);
   const fuel = parseFuel(detail.fuel);
 
   const vehicle = {
@@ -209,6 +215,7 @@ for (const pick of targets) {
     ...(drivetrain ? { drivetrain } : {}),
     bodyType: pick.bodyType,
     ...(doors ? { doors } : {}),
+    ...(valves ? { valves } : {}),
     fipe: {
       value: parsePrice(detail.price),
       referenceMonth: '2026-08',

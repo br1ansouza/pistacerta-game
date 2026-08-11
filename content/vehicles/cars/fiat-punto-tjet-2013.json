@@ -15,6 +15,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "001271-8"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 152,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 21.1,
+    "unit": "kgfm"
+  },
+  "engineCode": "T-Jet",
+  "cylinders": 4,
+  "valves": 16
 }

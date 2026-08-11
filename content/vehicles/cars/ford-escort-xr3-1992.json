@@ -13,6 +13,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "003038-4"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 80,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 16,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "engineCode": "AP-1800S",
+  "cylinders": 4,
+  "valves": 8
 }

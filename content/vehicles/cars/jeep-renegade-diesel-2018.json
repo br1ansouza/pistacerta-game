@@ -27,6 +27,8 @@
     "referenceMonth": "2026-08",
     "fipeCode": "017037-2"
   },
-  "specSource": "fabricante",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "engineCode": "Multijet II",
+  "valves": 16
 }

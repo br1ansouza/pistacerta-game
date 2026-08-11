@@ -20,3 +20,15 @@
   --color-mint-400: #3ddc97;
   --color-sky-400: #7fd4f5;
 }
+
+@utility shadow-hard {
+  box-shadow: 4px 4px 0 0 var(--color-ink-950);
+}
+
+@utility shadow-hard-sm {
+  box-shadow: 3px 3px 0 0 var(--color-ink-950);
+}
+
+@utility shadow-hard-flame {
+  box-shadow: 4px 4px 0 0 var(--color-crimson-700);
+}

@@ -21,6 +21,8 @@
   "drivetrain": "traseira",
   "cylinders": 4,
   "fipe": null,
-  "specSource": "icarros",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "engineCode": "OHV 1.6",
+  "valves": 8
 }

@@ -28,6 +28,8 @@
     "referenceMonth": "2026-08",
     "fipeCode": "014099-6"
   },
-  "specSource": "icarros",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "engineCode": "L15B7",
+  "valves": 16
 }

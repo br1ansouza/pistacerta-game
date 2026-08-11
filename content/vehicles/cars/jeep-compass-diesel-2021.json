@@ -15,6 +15,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "017051-8"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 170,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 35.7,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "engineCode": "Multijet II",
+  "cylinders": 4,
+  "valves": 16
 }

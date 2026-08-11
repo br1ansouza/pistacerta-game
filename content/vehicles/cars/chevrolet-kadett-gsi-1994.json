@@ -13,6 +13,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "004044-4"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 121,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 17.6,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "engineCode": "2.0 MPFI",
+  "cylinders": 4,
+  "valves": 8
 }

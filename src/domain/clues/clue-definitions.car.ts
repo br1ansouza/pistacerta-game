@@ -83,6 +83,24 @@ export const CAR_CLUE_DEFINITIONS: ClueDefinition<SafeCar>[] = [
       vehicle.bodyType ? (vehicle.bodyType === 'suv' ? 'SUV' : capitalize(vehicle.bodyType)) : null,
   },
   {
+    key: 'cylinders',
+    label: 'Cilindros',
+    group: 'progressive',
+    resolve: (vehicle) => (vehicle.cylinders ? String(vehicle.cylinders) : null),
+  },
+  {
+    key: 'doors',
+    label: 'Portas',
+    group: 'progressive',
+    resolve: (vehicle) => (vehicle.doors ? String(vehicle.doors) : null),
+  },
+  {
+    key: 'valves',
+    label: 'Válvulas',
+    group: 'progressive',
+    resolve: (vehicle) => (vehicle.valves ? `${vehicle.valves}V` : null),
+  },
+  {
     key: 'engineCode',
     label: 'Código do motor',
     group: 'progressive',

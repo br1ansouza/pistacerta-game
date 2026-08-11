@@ -14,6 +14,9 @@ export type ClueKey =
   | 'transmission'
   | 'drivetrain'
   | 'bodyType'
+  | 'valves'
+  | 'cylinders'
+  | 'doors'
   | 'engineCode';
 
 export type ClueDefinition<V extends SafeVehicle = SafeVehicle> = {

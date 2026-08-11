@@ -27,3 +27,10 @@ docs/PROGRESS.md
 
 # Conteúdo selado do build estático (gerado)
 src/generated/
+
+# Cloudflare Workers (estado local e segredos)
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env.local
+wrangler.toml.bak

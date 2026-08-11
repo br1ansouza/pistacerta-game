@@ -1,0 +1,26 @@
+{
+  "slug": "chevrolet-chevette-se-1987",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Chevette",
+  "version": "SE 1.6",
+  "year": 1987,
+  "origin": "nacional",
+  "fuel": "etanol",
+  "displacement": "1.6",
+  "power": {
+    "value": 72,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 12.3,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "traseira",
+  "cylinders": 4,
+  "fipe": null,
+  "specSource": "icarros",
+  "active": true
+}

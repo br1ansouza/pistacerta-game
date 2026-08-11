@@ -1,0 +1,19 @@
+{
+  "slug": "porsche-911-carrera-2018",
+  "kind": "car",
+  "brand": "Porsche",
+  "model": "911",
+  "year": 2018,
+  "origin": "importado",
+  "countryOfOrigin": "Alemanha",
+  "fuel": "gasolina",
+  "displacement": "3.0",
+  "bodyType": "cupê",
+  "fipe": {
+    "value": 618153,
+    "referenceMonth": "2026-08",
+    "fipeCode": "035073-7"
+  },
+  "specSource": "fipe",
+  "active": true
+}

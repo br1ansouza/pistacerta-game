@@ -1,0 +1,19 @@
+{
+  "slug": "mitsubishi-l200-triton-2021",
+  "kind": "car",
+  "brand": "Mitsubishi",
+  "model": "L200",
+  "year": 2021,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "2.4",
+  "transmission": "automático",
+  "bodyType": "picape",
+  "fipe": {
+    "value": 135066,
+    "referenceMonth": "2026-08",
+    "fipeCode": "022164-3"
+  },
+  "specSource": "fipe",
+  "active": true
+}

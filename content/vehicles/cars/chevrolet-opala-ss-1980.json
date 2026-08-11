@@ -1,0 +1,28 @@
+{
+  "slug": "chevrolet-opala-ss-1980",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Opala",
+  "version": "Cupê SS 4.1",
+  "year": 1980,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "4.1",
+  "power": {
+    "value": 171,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 32.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "traseira",
+  "bodyType": "cupê",
+  "cylinders": 6,
+  "doors": 2,
+  "fipe": null,
+  "specSource": "quatro-rodas",
+  "active": true
+}

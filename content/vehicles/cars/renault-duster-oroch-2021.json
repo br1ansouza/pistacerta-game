@@ -1,0 +1,19 @@
+{
+  "slug": "renault-duster-oroch-2021",
+  "kind": "car",
+  "brand": "Renault",
+  "model": "Oroch",
+  "year": 2021,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.6",
+  "transmission": "manual",
+  "bodyType": "picape",
+  "fipe": {
+    "value": 79034,
+    "referenceMonth": "2026-08",
+    "fipeCode": "025231-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "chevrolet-tracker-premier-2021",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Tracker",
+  "year": 2021,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.0",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
+  "fipe": {
+    "value": 92087,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004533-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

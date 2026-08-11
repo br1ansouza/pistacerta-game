@@ -1,0 +1,20 @@
+{
+  "slug": "fiat-uno-way-2015",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Uno",
+  "year": 2015,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.4",
+  "transmission": "automatizado",
+  "bodyType": "hatch",
+  "doors": 5,
+  "fipe": {
+    "value": 40356,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001427-3"
+  },
+  "specSource": "fipe",
+  "active": true
+}

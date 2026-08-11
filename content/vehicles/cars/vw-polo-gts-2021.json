@@ -1,0 +1,19 @@
+{
+  "slug": "vw-polo-gts-2021",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Polo",
+  "year": 2021,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.4",
+  "aspiration": "turbo",
+  "bodyType": "hatch",
+  "fipe": {
+    "value": 105580,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005521-2"
+  },
+  "specSource": "fipe",
+  "active": true
+}

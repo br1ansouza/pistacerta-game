@@ -1,0 +1,21 @@
+{
+  "slug": "vw-jetta-gli-2019",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Jetta",
+  "year": 2019,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "sedã",
+  "doors": 4,
+  "fipe": {
+    "value": 146885,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005517-4"
+  },
+  "specSource": "fipe",
+  "active": true
+}

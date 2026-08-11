@@ -1,0 +1,21 @@
+{
+  "slug": "toyota-hilux-srx-2021",
+  "kind": "car",
+  "brand": "Toyota",
+  "model": "Hilux",
+  "year": 2021,
+  "origin": "importado",
+  "fuel": "diesel",
+  "displacement": "2.8",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "picape",
+  "fipe": {
+    "value": 229599,
+    "referenceMonth": "2026-08",
+    "fipeCode": "002141-5"
+  },
+  "specSource": "fipe",
+  "active": true
+}

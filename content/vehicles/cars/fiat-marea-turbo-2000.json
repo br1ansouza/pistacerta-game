@@ -1,0 +1,20 @@
+{
+  "slug": "fiat-marea-turbo-2000",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Marea",
+  "year": 2000,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "aspiration": "turbo",
+  "bodyType": "sedã",
+  "doors": 4,
+  "fipe": {
+    "value": 27350,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001083-9"
+  },
+  "specSource": "fipe",
+  "active": true
+}

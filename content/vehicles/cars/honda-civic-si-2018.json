@@ -1,0 +1,33 @@
+{
+  "slug": "honda-civic-si-2018",
+  "kind": "car",
+  "brand": "Honda",
+  "model": "Civic",
+  "version": "Coupe Si 1.5 Turbo",
+  "generation": "10ª geração",
+  "year": 2018,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "1.5",
+  "power": {
+    "value": 208,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 26.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "cupê",
+  "cylinders": 4,
+  "doors": 2,
+  "fipe": {
+    "value": 153299,
+    "referenceMonth": "2026-08",
+    "fipeCode": "014099-6"
+  },
+  "specSource": "icarros",
+  "active": true
+}

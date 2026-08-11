@@ -1,0 +1,26 @@
+{
+  "slug": "vw-golf-gti-mk4-2003",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Golf",
+  "generation": "Mk4",
+  "year": 2003,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "1.8",
+  "power": {
+    "value": 193,
+    "unit": "cv"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "bodyType": "hatch",
+  "doors": 4,
+  "fipe": {
+    "value": 42872,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005171-3"
+  },
+  "specSource": "fipe",
+  "active": true
+}

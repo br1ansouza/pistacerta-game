@@ -1,0 +1,21 @@
+{
+  "slug": "honda-hrv-touring-2021",
+  "kind": "car",
+  "brand": "Honda",
+  "model": "HR-V",
+  "year": 2021,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.5",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
+  "doors": 5,
+  "fipe": {
+    "value": 130553,
+    "referenceMonth": "2026-08",
+    "fipeCode": "014102-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

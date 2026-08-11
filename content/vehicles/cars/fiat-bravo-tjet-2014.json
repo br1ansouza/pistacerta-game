@@ -1,0 +1,20 @@
+{
+  "slug": "fiat-bravo-tjet-2014",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Bravo",
+  "year": 2014,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "1.4",
+  "aspiration": "turbo",
+  "bodyType": "hatch",
+  "doors": 5,
+  "fipe": {
+    "value": 55561,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001356-0"
+  },
+  "specSource": "fipe",
+  "active": true
+}

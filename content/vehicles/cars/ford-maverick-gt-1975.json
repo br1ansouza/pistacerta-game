@@ -1,0 +1,29 @@
+{
+  "slug": "ford-maverick-gt-1975",
+  "kind": "car",
+  "brand": "Ford",
+  "model": "Maverick",
+  "version": "Cupê GT 4.9 V8",
+  "year": 1975,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "4.9",
+  "power": {
+    "value": 199,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 39.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "traseira",
+  "bodyType": "cupê",
+  "engineCode": "302",
+  "cylinders": 8,
+  "doors": 2,
+  "fipe": null,
+  "specSource": "quatro-rodas",
+  "active": true
+}

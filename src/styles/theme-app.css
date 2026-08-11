@@ -1,0 +1,22 @@
+@theme {
+  --font-display: ui-monospace, 'SFMono-Regular', 'Roboto Mono', Menlo, monospace;
+
+  --color-ink-950: #0a0a0f;
+  --color-ink-900: #12121a;
+  --color-ink-850: #171722;
+  --color-ink-800: #1e1e2b;
+  --color-ink-700: #2a2a3a;
+  --color-ink-600: #3a3a4e;
+
+  --color-chalk-100: #f4f4f7;
+  --color-chalk-300: #b8b8c8;
+  --color-chalk-500: #7a7a90;
+
+  --color-flame-400: #ffd23f;
+  --color-flame-500: #f5821f;
+  --color-flame-600: #e8452c;
+  --color-crimson-700: #c4123f;
+
+  --color-mint-400: #3ddc97;
+  --color-sky-400: #7fd4f5;
+}

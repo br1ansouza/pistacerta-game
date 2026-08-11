@@ -1,0 +1,19 @@
+{
+  "slug": "chevrolet-monza-classic-1990",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Monza",
+  "year": 1990,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "bodyType": "sedã",
+  "doors": 2,
+  "fipe": {
+    "value": 16120,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004051-7"
+  },
+  "specSource": "fipe",
+  "active": true
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "ram-2500-laramie-2021",
+  "kind": "car",
+  "brand": "RAM",
+  "model": "2500",
+  "year": 2021,
+  "origin": "importado",
+  "countryOfOrigin": "México",
+  "fuel": "diesel",
+  "displacement": "6.7",
+  "aspiration": "turbo",
+  "drivetrain": "integral",
+  "bodyType": "picape",
+  "fipe": {
+    "value": 320599,
+    "referenceMonth": "2026-08",
+    "fipeCode": "083001-1"
+  },
+  "specSource": "fipe",
+  "active": true
+}

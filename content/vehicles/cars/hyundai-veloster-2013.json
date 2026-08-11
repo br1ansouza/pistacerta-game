@@ -1,0 +1,23 @@
+{
+  "slug": "hyundai-veloster-2013",
+  "kind": "car",
+  "brand": "Hyundai",
+  "model": "Veloster",
+  "year": 2013,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "1.6",
+  "power": {
+    "value": 140,
+    "unit": "cv"
+  },
+  "transmission": "automático",
+  "bodyType": "cupê",
+  "fipe": {
+    "value": 61491,
+    "referenceMonth": "2026-08",
+    "fipeCode": "015079-7"
+  },
+  "specSource": "fipe",
+  "active": true
+}

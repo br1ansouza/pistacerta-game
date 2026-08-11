@@ -1,0 +1,23 @@
+{
+  "slug": "jeep-wrangler-rubicon-2020",
+  "kind": "car",
+  "brand": "Jeep",
+  "model": "Wrangler",
+  "year": 2020,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
+  "doors": 4,
+  "fipe": {
+    "value": 325361,
+    "referenceMonth": "2026-08",
+    "fipeCode": "017068-2"
+  },
+  "specSource": "fipe",
+  "active": true
+}

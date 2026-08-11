@@ -1,0 +1,19 @@
+{
+  "slug": "renault-clio-rt-1999",
+  "kind": "car",
+  "brand": "Renault",
+  "model": "Clio",
+  "year": 1999,
+  "origin": "importado",
+  "fuel": "gasolina",
+  "displacement": "1.6",
+  "bodyType": "hatch",
+  "doors": 5,
+  "fipe": {
+    "value": 6674,
+    "referenceMonth": "2026-08",
+    "fipeCode": "025005-8"
+  },
+  "specSource": "fipe",
+  "active": true
+}

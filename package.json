@@ -9,19 +9,24 @@
     "url": "https://github.com/br1ansouza/pistacerta-game.git"
   },
   "scripts": {
-    "dev": "bun run dev:api & rsbuild dev",
+    "dev": "bun run scripts/dev.ts",
     "dev:api": "bun run --hot scripts/dev-api.ts",
     "dev:web": "rsbuild dev",
     "build": "rsbuild build",
     "preview": "rsbuild preview",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint",
+    "validate:content": "bun run scripts/validate-content.ts",
+    "fipe": "bun run scripts/fipe-lookup.ts",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "refresh:fipe": "bun run scripts/refresh-fipe.ts",
+    "import:fipe": "bun run scripts/import-fipe.ts"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",
     "@untitledui/icons": "^0.0.22",
+    "motion": "^13.1.0",
     "react": "^19.2.8",
     "react-aria-components": "^1.20.0",
     "react-dom": "^19.2.8",

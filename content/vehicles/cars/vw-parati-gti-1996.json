@@ -1,0 +1,18 @@
+{
+  "slug": "vw-parati-gti-1996",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Parati",
+  "year": 1996,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "bodyType": "perua",
+  "fipe": {
+    "value": 20997,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005053-9"
+  },
+  "specSource": "fipe",
+  "active": true
+}

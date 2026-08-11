@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Jogo de adivinhação de veículos com pistas progressivas.",
+  "description": "Jogo de adivinha\u00e7\u00e3o de ve\u00edculos com pistas progressivas.",
   "repository": {
     "type": "git",
     "url": "https://github.com/br1ansouza/pistacerta-game.git"
@@ -19,7 +19,9 @@
     "validate:content": "bun run scripts/validate-content.ts",
     "fipe": "bun run scripts/fipe-lookup.ts",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "refresh:fipe": "bun run scripts/refresh-fipe.ts",
+    "import:fipe": "bun run scripts/import-fipe.ts"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",

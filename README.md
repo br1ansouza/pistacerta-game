@@ -99,5 +99,3 @@ As fotos são links para o Wikimedia Commons em `content/images.json`. Nenhuma i
 `Vehicle` já nasce como união discriminada por `kind` e o motor de pistas é genérico sobre a lista de definições. Adicionar motos é conteúdo, um tipo e uma lista de pistas nova: nenhuma tela muda.
 
 Sem banco de dados. As rotas são handlers `(Request) => Response` sem estado — rodam no `Bun.serve` local, no Cloudflare Workers em produção, e em qualquer outro provedor serverless sem reescrita.
-
-Há também um build estático (`PUBLIC_STATIC=1`) publicado no [GitHub Pages](https://br1ansouza.github.io/pistacerta-game/), que sela a identidade dos carros em tempo de build. É mais fraco — a chave viaja para o navegador — e serve só como alternativa sem servidor.

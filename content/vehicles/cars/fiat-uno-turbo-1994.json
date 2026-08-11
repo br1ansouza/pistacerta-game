@@ -1,0 +1,27 @@
+{
+  "slug": "fiat-uno-turbo-1994",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Uno",
+  "version": "Turbo i.e. 1.4",
+  "year": 1994,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "1.4",
+  "power": { "value": 118, "unit": "cv" },
+  "torque": { "value": 17.5, "unit": "kgfm" },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "cylinders": 4,
+  "doors": 2,
+  "image": null,
+  "fipe": {
+    "value": 25734,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001056-1"
+  },
+  "specSource": "icarros",
+  "active": true
+}

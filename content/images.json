@@ -1,10 +1,59 @@
 {
+  "alfa-romeo-147-2003": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2003_Alfa_Romeo_147_GTA.jpg/960px-2003_Alfa_Romeo_147_GTA.jpg",
+    "source": "wikimedia",
+    "author": "Calreyn88",
+    "license": "CC0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2003_Alfa_Romeo_147_GTA.jpg"
+  },
+  "audi-rs3-2018": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2018_Audi_RS3_TFSi_Quattro.jpg/960px-2018_Audi_RS3_TFSi_Quattro.jpg",
+    "source": "wikimedia",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Audi_RS3_TFSi_Quattro.jpg"
+  },
+  "chevrolet-camaro-ss-2018": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/1969_Chevrolet_Camaro%2C_Tuning_World_Bodensee_2018%2C_Friedrichshafen_%28OW1A0661%29.jpg/960px-1969_Chevrolet_Camaro%2C_Tuning_World_Bodensee_2018%2C_Friedrichshafen_%28OW1A0661%29.jpg",
+    "source": "wikimedia",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1969_Chevrolet_Camaro,_Tuning_World_Bodensee_2018,_Friedrichshafen_(OW1A0661).jpg"
+  },
   "chevrolet-chevette-se-1987": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Chevrolet_Chevette_1.4_SL_Sedan_1980_%2816659103019%29.jpg/960px-Chevrolet_Chevette_1.4_SL_Sedan_1980_%2816659103019%29.jpg",
     "source": "wikimedia",
     "author": "order_242 from Chile",
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Chevette_1.4_SL_Sedan_1980_(16659103019).jpg"
+  },
+  "chevrolet-corsa-gsi-1995": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Chevrolet_Corsa_20150814-DSC05622.JPG/960px-Chevrolet_Corsa_20150814-DSC05622.JPG",
+    "source": "wikimedia",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Corsa_20150814-DSC05622.JPG"
+  },
+  "chevrolet-kadett-gsi-1994": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e1/1989-94_Chevrolet_Kadett_SL_hatchback.jpg",
+    "source": "wikimedia",
+    "author": "Rodrigo de Almeida Fraga de Oliveira , cropped and lightly adjusted by uploader Mr.choppers",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1989-94_Chevrolet_Kadett_SL_hatchback.jpg"
+  },
+  "chevrolet-monza-classic-1990": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Chevrolet_Monza_IMG003.jpg/960px-Chevrolet_Monza_IMG003.jpg",
+    "source": "wikimedia",
+    "author": "Anonymousfox36",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Monza_IMG003.jpg"
+  },
+  "chevrolet-omega-cd-1998": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b6/DOMINGO_DIVERS%C3%83O_GM-OMEGA_OMEGA_OMEGA_-_19.jpg",
+    "source": "wikimedia",
+    "author": "@janio cobra",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DOMINGO_DIVERS%C3%83O_GM-OMEGA_OMEGA_OMEGA_-_19.jpg"
   },
   "chevrolet-opala-ss-1980": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Chevrolet_Opala_SS_-_1978.jpg/960px-Chevrolet_Opala_SS_-_1978.jpg",
@@ -13,12 +62,117 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Opala_SS_-_1978.jpg"
   },
+  "chevrolet-tracker-premier-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Chevrolet_Tracker_003.jpg/960px-Chevrolet_Tracker_003.jpg",
+    "source": "wikimedia",
+    "author": "Quzhouliulian",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Tracker_003.jpg"
+  },
+  "chevrolet-vectra-gsi-1995": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Opel_Vectra_GLS.jpg/960px-Opel_Vectra_GLS.jpg",
+    "source": "wikimedia",
+    "author": "Rutger van der Maar",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Opel_Vectra_GLS.jpg"
+  },
+  "citroen-ds3-2013": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/2013_Citro%C3%ABn_DS3_D-Sport_Airdream_E-HDi.jpg/960px-2013_Citro%C3%ABn_DS3_D-Sport_Airdream_E-HDi.jpg",
+    "source": "wikimedia",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013_Citro%C3%ABn_DS3_D-Sport_Airdream_E-HDi.jpg"
+  },
+  "fiat-147-1985": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Fiat_147_late.jpg/960px-Fiat_147_late.jpg",
+    "source": "wikimedia",
+    "author": "Marcelo Bezerra Cavalcanti ; levels adjusted by uploader Mr.choppers",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiat_147_late.jpg"
+  },
+  "fiat-argo-hgt-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Fiat_Argo_2020_Trekking_in_Uruguay_%28front%29.jpg/960px-Fiat_Argo_2020_Trekking_in_Uruguay_%28front%29.jpg",
+    "source": "wikimedia",
+    "author": "NaBUru38",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiat_Argo_2020_Trekking_in_Uruguay_(front).jpg"
+  },
+  "fiat-bravo-tjet-2014": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Fiat_Bravo_1.4_TJet_Sport_2014_%2813274775195%29.jpg/960px-Fiat_Bravo_1.4_TJet_Sport_2014_%2813274775195%29.jpg",
+    "source": "wikimedia",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiat_Bravo_1.4_TJet_Sport_2014_(13274775195).jpg"
+  },
+  "fiat-marea-turbo-2000": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Fiat_Marea_Weekend_2000.jpg/960px-Fiat_Marea_Weekend_2000.jpg",
+    "source": "wikimedia",
+    "author": "Christian Giersing",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiat_Marea_Weekend_2000.jpg"
+  },
+  "fiat-punto-tjet-2013": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/2013_Fiat_Punto_Pop.jpg/960px-2013_Fiat_Punto_Pop.jpg",
+    "source": "wikimedia",
+    "author": "TuRbO_J",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013_Fiat_Punto_Pop.jpg"
+  },
+  "fiat-strada-volcano-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Fiat_Strada_2020_Volcano_in_Montevideo_%28back%29.jpg/960px-Fiat_Strada_2020_Volcano_in_Montevideo_%28back%29.jpg",
+    "source": "wikimedia",
+    "author": "NaBUru38",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiat_Strada_2020_Volcano_in_Montevideo_(back).jpg"
+  },
+  "fiat-tempra-turbo-1995": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Fiat120_TrojaPalace_K13._FIAT_Tempra%2C_1995.jpg/960px-Fiat120_TrojaPalace_K13._FIAT_Tempra%2C_1995.jpg",
+    "source": "wikimedia",
+    "author": "Stribrohorak",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiat120_TrojaPalace_K13._FIAT_Tempra,_1995.jpg"
+  },
   "fiat-uno-turbo-1994": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/1988_Fiat_Uno_Turbo_IE_1.jpg/960px-1988_Fiat_Uno_Turbo_IE_1.jpg",
     "source": "wikimedia",
     "author": "Calreyn88",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:1988_Fiat_Uno_Turbo_IE_1.jpg"
+  },
+  "fiat-uno-way-2015": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/2015_Fiat_Uno_1.4_Sporting.jpg/960px-2015_Fiat_Uno_1.4_Sporting.jpg",
+    "source": "wikimedia",
+    "author": "Maxi-Napo-99",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Fiat_Uno_1.4_Sporting.jpg"
+  },
+  "ford-del-rey-1990": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ford_Del_Rey_1982_%2810546603165%29.jpg/960px-Ford_Del_Rey_1982_%2810546603165%29.jpg",
+    "source": "wikimedia",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Del_Rey_1982_(10546603165).jpg"
+  },
+  "ford-escort-xr3-1992": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/1992_Ford_Escort_RS_Cosworth_2.jpg/960px-1992_Ford_Escort_RS_Cosworth_2.jpg",
+    "source": "wikimedia",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1992_Ford_Escort_RS_Cosworth_2.jpg"
+  },
+  "ford-f1000-1995": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Ford_F-1000_Gal%C3%A1xia.jpg/960px-Ford_F-1000_Gal%C3%A1xia.jpg",
+    "source": "wikimedia",
+    "author": "Uploader's brother, digitally altered by Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_F-1000_Gal%C3%A1xia.jpg"
+  },
+  "ford-fiesta-supercharger-2005": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Ford_Fiesta_2005_Kofferraum.jpg/960px-Ford_Fiesta_2005_Kofferraum.jpg",
+    "source": "wikimedia",
+    "author": "Norbert Schnitzler",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Fiesta_2005_Kofferraum.jpg"
   },
   "ford-maverick-gt-1975": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Ford_Maverick_Grabber.jpg",
@@ -34,6 +188,34 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Honda_Civic_Coupe_SI_P4220691.jpg"
   },
+  "honda-hrv-touring-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Honda_HR-V_Hybrid_Auto_Zuerich_2021_IMG_0619.jpg/960px-Honda_HR-V_Hybrid_Auto_Zuerich_2021_IMG_0619.jpg",
+    "source": "wikimedia",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Honda_HR-V_Hybrid_Auto_Zuerich_2021_IMG_0619.jpg"
+  },
+  "hyundai-creta-n-line-2023": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2023_Hyundai_Creta_Smart.jpg/960px-2023_Hyundai_Creta_Smart.jpg",
+    "source": "wikimedia",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Hyundai_Creta_Smart.jpg"
+  },
+  "hyundai-veloster-2013": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Hyundai_Veloster_FS_China_2013-03-04.jpg/960px-Hyundai_Veloster_FS_China_2013-03-04.jpg",
+    "source": "wikimedia",
+    "author": "Navigator84",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hyundai_Veloster_FS_China_2013-03-04.jpg"
+  },
+  "jeep-compass-diesel-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg/960px-2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg",
+    "source": "wikimedia",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg"
+  },
   "jeep-renegade-diesel-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Jeep_Renegade_1.8_Sport_2018_%2843134425314%29.jpg/960px-Jeep_Renegade_1.8_Sport_2018_%2843134425314%29.jpg",
     "source": "wikimedia",
@@ -41,12 +223,145 @@
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeep_Renegade_1.8_Sport_2018_(43134425314).jpg"
   },
+  "jeep-wrangler-rubicon-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Modified_Jeep_Wrangler_-_LEAD_2020.jpg/960px-Modified_Jeep_Wrangler_-_LEAD_2020.jpg",
+    "source": "wikimedia",
+    "author": "Noah Wulf",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Modified_Jeep_Wrangler_-_LEAD_2020.jpg"
+  },
+  "kia-soul-2016": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2016_Kia_Soul_EV_%2B%2C_front_right%2C_08-25-2023.jpg/960px-2016_Kia_Soul_EV_%2B%2C_front_right%2C_08-25-2023.jpg",
+    "source": "wikimedia",
+    "author": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016_Kia_Soul_EV_%2B,_front_right,_08-25-2023.jpg"
+  },
+  "land-rover-defender-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Land_Rover_Defender_%28L663%29_Auto_Zuerich_2021_IMG_0432.jpg/960px-Land_Rover_Defender_%28L663%29_Auto_Zuerich_2021_IMG_0432.jpg",
+    "source": "wikimedia",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_(L663)_Auto_Zuerich_2021_IMG_0432.jpg"
+  },
+  "mitsubishi-l200-triton-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/2021_Mitsubishi_L200_delivery_van%2C_06-01-2024.jpg/960px-2021_Mitsubishi_L200_delivery_van%2C_06-01-2024.jpg",
+    "source": "wikimedia",
+    "author": "Ethan Llamas",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Mitsubishi_L200_delivery_van,_06-01-2024.jpg"
+  },
+  "mitsubishi-lancer-evolution-2011": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/2011_Mitsubishi_Lancer_Evolution_X_GSR_FQ300.jpg/960px-2011_Mitsubishi_Lancer_Evolution_X_GSR_FQ300.jpg",
+    "source": "wikimedia",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011_Mitsubishi_Lancer_Evolution_X_GSR_FQ300.jpg"
+  },
+  "nissan-kicks-sl-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/NISSAN_KICKS_China.jpg/960px-NISSAN_KICKS_China.jpg",
+    "source": "wikimedia",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NISSAN_KICKS_China.jpg"
+  },
+  "peugeot-3008-griffe-2019": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Peugeot_3008_BlueHDi_Allure_2019.jpg/960px-Peugeot_3008_BlueHDi_Allure_2019.jpg",
+    "source": "wikimedia",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peugeot_3008_BlueHDi_Allure_2019.jpg"
+  },
+  "porsche-911-carrera-2018": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/2013_Porsche_911_Carrera_4S_%28991%29_%289626546987%29.jpg/960px-2013_Porsche_911_Carrera_4S_%28991%29_%289626546987%29.jpg",
+    "source": "wikimedia",
+    "author": "David Villarreal Fernández",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013_Porsche_911_Carrera_4S_(991)_(9626546987).jpg"
+  },
+  "ram-2500-laramie-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/RAM_3500_and_2019_2500_RAM_Power_Wagon.jpg/960px-RAM_3500_and_2019_2500_RAM_Power_Wagon.jpg",
+    "source": "wikimedia",
+    "author": "Group29",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:RAM_3500_and_2019_2500_RAM_Power_Wagon.jpg"
+  },
+  "renault-clio-rt-1999": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/1999_Renault_Clio_5-door_Radio_101_edition.jpg/960px-1999_Renault_Clio_5-door_Radio_101_edition.jpg",
+    "source": "wikimedia",
+    "author": "Corvettec6r",
+    "license": "CC0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1999_Renault_Clio_5-door_Radio_101_edition.jpg"
+  },
+  "renault-duster-oroch-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Renault_Duster_Oroch_2016_in_Punta_del_Este_01.JPG/960px-Renault_Duster_Oroch_2016_in_Punta_del_Este_01.JPG",
+    "source": "wikimedia",
+    "author": "NaBUru38",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Renault_Duster_Oroch_2016_in_Punta_del_Este_01.JPG"
+  },
+  "renault-sandero-rs-2018": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/2018_Renault_Sandero_Stepway_silver_front.jpg/960px-2018_Renault_Sandero_Stepway_silver_front.jpg",
+    "source": "wikimedia",
+    "author": "Throwawayacc222",
+    "license": "CC0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Renault_Sandero_Stepway_silver_front.jpg"
+  },
+  "subaru-impreza-wrx-2011": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/2011_Subaru_Impreza_%28GRE_MY11%29_WRX_hatchback_%282011-11-18%29.jpg/960px-2011_Subaru_Impreza_%28GRE_MY11%29_WRX_hatchback_%282011-11-18%29.jpg",
+    "source": "wikimedia",
+    "author": "FotoSleuth",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011_Subaru_Impreza_(GRE_MY11)_WRX_hatchback_(2011-11-18).jpg"
+  },
+  "vw-amarok-v6-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Volkswagen_Amarok_in_Defensie_uitvoering_-_Doelwater_-_Rotterdam_%2823618479791%29.jpg/960px-Volkswagen_Amarok_in_Defensie_uitvoering_-_Doelwater_-_Rotterdam_%2823618479791%29.jpg",
+    "source": "wikimedia",
+    "author": "Frans Berkelaar",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Amarok_in_Defensie_uitvoering_-_Doelwater_-_Rotterdam_(23618479791).jpg"
+  },
   "vw-golf-gti-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Volkswagen_Golf_VII_GTI_%28KW_P_36%29.jpg/960px-Volkswagen_Golf_VII_GTI_%28KW_P_36%29.jpg",
     "source": "wikimedia",
     "author": "Midnight Runner",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Golf_VII_GTI_(KW_P_36).jpg"
+  },
+  "vw-golf-gti-mk4-2003": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/2003_Volkswagen_Golf_R32_2.jpg/960px-2003_Volkswagen_Golf_R32_2.jpg",
+    "source": "wikimedia",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2003_Volkswagen_Golf_R32_2.jpg"
+  },
+  "vw-jetta-gli-2019": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Volkswagen_Jetta_09-21-2019_1.jpg/960px-Volkswagen_Jetta_09-21-2019_1.jpg",
+    "source": "wikimedia",
+    "author": "SsmIntrigue",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Jetta_09-21-2019_1.jpg"
+  },
+  "vw-nivus-highline-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg/960px-2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg",
+    "source": "wikimedia",
+    "author": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg"
+  },
+  "vw-parati-gti-1996": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VW_Parati-Tandil-mar2016.jpg/960px-VW_Parati-Tandil-mar2016.jpg",
+    "source": "wikimedia",
+    "author": "Ezarate",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:VW_Parati-Tandil-mar2016.jpg"
+  },
+  "vw-polo-gts-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Volkswagen_Polo_VI_%282021%29_IMG_5322.jpg/960px-Volkswagen_Polo_VI_%282021%29_IMG_5322.jpg",
+    "source": "wikimedia",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Polo_VI_(2021)_IMG_5322.jpg"
   },
   "vw-sp2-1974": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Volkswagen_SP2_June_2017_02.jpg/960px-Volkswagen_SP2_June_2017_02.jpg",

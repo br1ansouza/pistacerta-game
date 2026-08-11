@@ -42,37 +42,25 @@ export function CreditsScreen({ onBack }: CreditsScreenProps) {
         <h1 className="text-primary text-lg font-bold">Créditos das imagens</h1>
       </header>
 
-      <p className="text-tertiary text-sm">
-        As fotos vêm do Wikimedia Commons, sob licenças que exigem atribuição. Cada uma está listada
-        com autor, licença e link para o arquivo original.
-      </p>
+      <p className="text-tertiary text-sm">Fotos do Wikimedia Commons.</p>
 
       {error && <p className="text-error-primary text-sm">{error}</p>}
 
       {!credits && !error && <p className="text-tertiary text-sm">Carregando…</p>}
 
       {credits && (
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col">
           {credits.map((credit) => (
-            <li
-              key={credit.vehicle}
-              className="border-secondary bg-secondary flex flex-col gap-1 rounded-xl border px-4 py-3"
-            >
-              <span className="text-primary text-sm font-semibold">{credit.vehicle}</span>
-              <span className="text-tertiary text-xs">
-                {credit.author ?? 'autor não declarado'}
+            <li key={credit.vehicle} className="border-secondary border-b py-2 last:border-0">
+              <a
+                href={credit.sourceUrl ?? undefined}
+                target="_blank"
+                rel="noreferrer"
+                className="text-tertiary hover:text-primary text-xs"
+              >
+                {credit.vehicle} — {credit.author ?? 'autor não declarado'}
                 {credit.license ? ` · ${credit.license}` : ''}
-              </span>
-              {credit.sourceUrl && (
-                <a
-                  href={credit.sourceUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-brand-secondary text-xs font-medium hover:underline"
-                >
-                  Ver original no Commons
-                </a>
-              )}
+              </a>
             </li>
           ))}
         </ul>

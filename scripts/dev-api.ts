@@ -14,6 +14,7 @@ const routes: Record<string, RouteHandler> = {
 
 Bun.serve({
   port: PORT,
+  hostname: '127.0.0.1',
   async fetch(request) {
     const { pathname } = new URL(request.url);
     const handler = routes[pathname];

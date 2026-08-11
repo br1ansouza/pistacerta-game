@@ -7,9 +7,14 @@ import { pluginTailwindcss } from '@rsbuild/plugin-tailwindcss';
 const rootDir = dirname(fileURLToPath(import.meta.url));
 const API_PORT = Number(process.env.API_PORT ?? 3001);
 const WEB_PORT = Number(process.env.PORT ?? 3000);
+const IS_STATIC = process.env.PUBLIC_STATIC === '1';
+const BASE = process.env.ASSET_PREFIX ?? '/';
 
 export default defineConfig({
   plugins: [pluginReact(), pluginTailwindcss()],
+  output: {
+    assetPrefix: BASE,
+  },
   resolve: {
     alias: {
       '@': resolve(rootDir, 'src'),
@@ -18,6 +23,10 @@ export default defineConfig({
   source: {
     entry: {
       index: './src/app/main.tsx',
+    },
+    define: {
+      'process.env.PUBLIC_STATIC': JSON.stringify(IS_STATIC ? '1' : '0'),
+      'process.env.PUBLIC_BASE': JSON.stringify(BASE),
     },
   },
   html: {
@@ -28,9 +37,9 @@ export default defineConfig({
       'theme-color': '#7f56d9',
     },
     tags: [
-      { tag: 'link', attrs: { rel: 'manifest', href: '/manifest.webmanifest' } },
-      { tag: 'link', attrs: { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' } },
-      { tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/icon.svg' } },
+      { tag: 'link', attrs: { rel: 'manifest', href: 'manifest.webmanifest' } },
+      { tag: 'link', attrs: { rel: 'icon', type: 'image/svg+xml', href: 'icon.svg' } },
+      { tag: 'link', attrs: { rel: 'apple-touch-icon', href: 'icon.svg' } },
     ],
   },
   server: {

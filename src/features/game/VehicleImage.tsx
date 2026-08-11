@@ -1,4 +1,5 @@
 import type { VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
+import { asset } from '@/lib/asset';
 
 type VehicleImageProps = {
   identity: VehicleIdentity;
@@ -10,7 +11,7 @@ export function VehicleImage({ identity }: VehicleImageProps) {
       <div className="border-ink-700 from-ink-900 to-ink-850 shadow-hard relative flex aspect-video w-full flex-col items-center justify-center gap-2 overflow-hidden border-2 bg-gradient-to-b">
         <div className="from-flame-600/10 absolute inset-0 bg-gradient-to-t to-transparent" />
         <img
-          src="/car.gif"
+          src={asset('car.gif')}
           alt=""
           aria-hidden
           className="pixelated relative h-20 w-20 opacity-25"

@@ -8,15 +8,27 @@
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "4.1",
-  "power": { "value": 171, "unit": "cv" },
-  "torque": { "value": 32.5, "unit": "kgfm" },
+  "power": {
+    "value": 171,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 32.5,
+    "unit": "kgfm"
+  },
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "traseira",
   "bodyType": "cupê",
   "cylinders": 6,
   "doors": 2,
-  "image": null,
+  "image": {
+    "src": "/vehicles/chevrolet-opala-ss-1980.webp",
+    "source": "wikimedia",
+    "author": "Niemann333",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Opala_SS_-_1978.jpg"
+  },
   "fipe": null,
   "specSource": "quatro-rodas",
   "active": true

@@ -1,14 +1,26 @@
 import { useState } from 'react';
 import type { GameMode } from '@/domain/round/round.types';
+import { CreditsScreen } from '@/features/credits/CreditsScreen';
 import { GameScreen } from '@/features/game/GameScreen';
 import { HomeScreen } from '@/features/home/HomeScreen';
 
-export function App() {
-  const [mode, setMode] = useState<GameMode | null>(null);
+type View = { name: 'home' } | { name: 'game'; mode: GameMode } | { name: 'credits' };
 
-  if (!mode) {
-    return <HomeScreen onSelectMode={setMode} />;
+export function App() {
+  const [view, setView] = useState<View>({ name: 'home' });
+
+  if (view.name === 'game') {
+    return <GameScreen mode={view.mode} onBackHome={() => setView({ name: 'home' })} />;
   }
 
-  return <GameScreen mode={mode} onBackHome={() => setMode(null)} />;
+  if (view.name === 'credits') {
+    return <CreditsScreen onBack={() => setView({ name: 'home' })} />;
+  }
+
+  return (
+    <HomeScreen
+      onSelectMode={(mode) => setView({ name: 'game', mode })}
+      onOpenCredits={() => setView({ name: 'credits' })}
+    />
+  );
 }

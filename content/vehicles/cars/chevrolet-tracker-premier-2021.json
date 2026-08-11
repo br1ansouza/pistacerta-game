@@ -15,6 +15,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "004533-0"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 133,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 21.4,
+    "unit": "kgfm"
+  },
+  "engineCode": "CSS",
+  "cylinders": 3,
+  "valves": 12
 }

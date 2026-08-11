@@ -23,6 +23,8 @@
   "cylinders": 6,
   "doors": 2,
   "fipe": null,
-  "specSource": "quatro-rodas",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "engineCode": "250-S",
+  "valves": 12
 }

@@ -27,6 +27,8 @@
     "referenceMonth": "2026-08",
     "fipeCode": "001056-1"
   },
-  "specSource": "icarros",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "engineCode": "176A",
+  "valves": 8
 }

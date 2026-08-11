@@ -18,6 +18,17 @@
     "referenceMonth": "2026-08",
     "fipeCode": "017068-2"
   },
-  "specSource": "fipe",
-  "active": true
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 272,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 40.8,
+    "unit": "kgfm"
+  },
+  "engineCode": "GME T4",
+  "cylinders": 4,
+  "valves": 16
 }

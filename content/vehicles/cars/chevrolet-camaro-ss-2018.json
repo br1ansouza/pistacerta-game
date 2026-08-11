@@ -14,6 +14,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "004371-0"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "webmotors",
+  "active": true,
+  "power": {
+    "value": 461,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 62.9,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "engineCode": "LT1",
+  "cylinders": 8,
+  "valves": 16
 }

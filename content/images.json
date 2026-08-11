@@ -279,6 +279,13 @@
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013_Porsche_911_Carrera_4S_(991)_(9626546987).jpg"
   },
+  "puma-gte-1976": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Puma_gte_1970_mod2.JPG/960px-Puma_gte_1970_mod2.JPG",
+    "source": "wikimedia",
+    "author": "Dock",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puma_gte_1970_mod2.JPG"
+  },
   "ram-2500-laramie-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/RAM_3500_and_2019_2500_RAM_Power_Wagon.jpg/960px-RAM_3500_and_2019_2500_RAM_Power_Wagon.jpg",
     "source": "wikimedia",
@@ -335,6 +342,13 @@
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Amarok_in_Defensie_uitvoering_-_Doelwater_-_Rotterdam_(23618479791).jpg"
   },
+  "vw-gol-gti-1995": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/1995_Volkswagen_Gol_GL_1.6.jpg/960px-1995_Volkswagen_Gol_GL_1.6.jpg",
+    "source": "wikimedia",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1995_Volkswagen_Gol_GL_1.6.jpg"
+  },
   "vw-golf-gti-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Volkswagen_Golf_VII_GTI_%28KW_P_36%29.jpg/960px-Volkswagen_Golf_VII_GTI_%28KW_P_36%29.jpg",
     "source": "wikimedia",
@@ -369,6 +383,13 @@
     "author": "Ezarate",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:VW_Parati-Tandil-mar2016.jpg"
+  },
+  "vw-passat-ts-1979": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Volkswagen_Passat_B1_Brazilian_version.jpg/960px-Volkswagen_Passat_B1_Brazilian_version.jpg",
+    "source": "wikimedia",
+    "author": "Charles01",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Passat_B1_Brazilian_version.jpg"
   },
   "vw-polo-gts-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Volkswagen_Polo_VI_%282021%29_IMG_5322.jpg/960px-Volkswagen_Polo_VI_%282021%29_IMG_5322.jpg",

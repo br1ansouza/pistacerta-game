@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Jogo de adivinha\u00e7\u00e3o de ve\u00edculos com pistas progressivas.",
+  "description": "Jogo de adivinhação de veículos com pistas progressivas.",
   "repository": {
     "type": "git",
     "url": "https://github.com/br1ansouza/pistacerta-game.git"
@@ -26,6 +26,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",
     "@untitledui/icons": "^0.0.22",
+    "motion": "^13.1.0",
     "react": "^19.2.8",
     "react-aria-components": "^1.20.0",
     "react-dom": "^19.2.8",

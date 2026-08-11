@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Button } from '@/components/base/buttons/button';
+import { motion } from 'motion/react';
 import type { RoundChoice } from '@/domain/round/choices';
 
 type AnswerSheetProps = {
@@ -37,34 +37,52 @@ export function AnswerSheet({
 
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center">
-      <button
+      <motion.button
         type="button"
         aria-label="Fechar"
         onClick={onClose}
-        className="absolute inset-0 bg-black/50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
       />
 
-      <div
+      <motion.div
         ref={panelRef}
         role="dialog"
         aria-modal="true"
         aria-label="Escolha o veículo"
         tabIndex={-1}
-        className="border-secondary bg-primary relative flex w-full max-w-md flex-col gap-4 rounded-t-2xl border p-5 shadow-xl outline-none sm:rounded-2xl"
+        initial={{ y: 40, opacity: 0, scale: 0.98 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ type: 'spring', stiffness: 420, damping: 34 }}
+        className="border-ink-700 bg-ink-900 relative flex w-full max-w-md flex-col gap-4 rounded-t-3xl border p-5 shadow-2xl outline-none sm:rounded-3xl"
       >
-        <h2 className="text-primary text-md font-semibold">Qual desses é?</h2>
+        <span aria-hidden className="bg-ink-600 mx-auto h-1 w-10 rounded-full sm:hidden" />
+
+        <h2 className="font-display text-chalk-100 text-xs font-bold tracking-[0.18em] uppercase">
+          Qual desses é?
+        </h2>
 
         <fieldset disabled={submitting} className="flex flex-col gap-2">
-          {choices.map((choice) => {
+          {choices.map((choice, index) => {
             const selected = choice.id === selectedId;
 
             return (
-              <label
+              <motion.label
                 key={choice.id}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.05 + index * 0.05,
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 34,
+                }}
                 className={
                   selected
-                    ? 'border-brand bg-brand-primary flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3'
-                    : 'border-secondary bg-primary hover:border-primary flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3'
+                    ? 'border-flame-500 bg-flame-500/15 flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3'
+                    : 'border-ink-700 bg-ink-850 hover:border-ink-600 flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 transition-colors'
                 }
               >
                 <input
@@ -73,36 +91,42 @@ export function AnswerSheet({
                   value={choice.id}
                   checked={selected}
                   onChange={() => onSelect(choice.id)}
-                  className="accent-brand-solid size-4 shrink-0"
+                  className="accent-flame-500 size-4 shrink-0"
                 />
                 <span
                   className={
                     selected
-                      ? 'text-brand-secondary text-sm font-semibold'
-                      : 'text-primary text-sm font-medium'
+                      ? 'text-flame-400 text-sm font-bold'
+                      : 'text-chalk-100 text-sm font-medium'
                   }
                 >
                   {choice.label}
                 </span>
-              </label>
+              </motion.label>
             );
           })}
         </fieldset>
 
         <div className="flex flex-col gap-2">
-          <Button
-            size="lg"
-            color="primary"
-            isDisabled={!selectedId || submitting}
+          <motion.button
+            type="button"
+            disabled={!selectedId || submitting}
             onClick={onConfirm}
+            whileTap={{ scale: 0.98 }}
+            className="from-flame-600 to-flame-500 text-ink-950 font-display shadow-flame-600/25 focus-visible:outline-flame-400 rounded-xl bg-gradient-to-r px-5 py-3.5 text-sm font-bold tracking-wide uppercase shadow-lg transition disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             {submitting ? 'Conferindo…' : 'Confirmar'}
-          </Button>
-          <Button size="md" color="link-gray" isDisabled={submitting} onClick={onClose}>
+          </motion.button>
+          <button
+            type="button"
+            disabled={submitting}
+            onClick={onClose}
+            className="text-chalk-500 hover:text-chalk-300 focus-visible:outline-flame-500 py-2 text-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
             Ver mais pistas
-          </Button>
+          </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

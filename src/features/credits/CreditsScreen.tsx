@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'motion/react';
 import { ArrowLeft } from '@untitledui/icons';
 import { fetchCredits, type ImageCredit } from '@/lib/api';
 
@@ -35,33 +36,43 @@ export function CreditsScreen({ onBack }: CreditsScreenProps) {
           type="button"
           onClick={onBack}
           aria-label="Voltar"
-          className="border-secondary text-tertiary hover:text-primary hover:border-primary focus-visible:outline-brand flex size-9 shrink-0 items-center justify-center rounded-lg border transition focus-visible:outline-2 focus-visible:outline-offset-2"
+          className="border-ink-700 text-chalk-500 hover:text-flame-400 hover:border-flame-500/50 focus-visible:outline-flame-500 flex size-9 shrink-0 items-center justify-center rounded-lg border transition focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           <ArrowLeft className="size-4" />
         </button>
-        <h1 className="text-primary text-lg font-bold">Créditos das imagens</h1>
+        <h1 className="font-display text-chalk-100 text-base font-bold">Créditos</h1>
       </header>
 
-      <p className="text-tertiary text-sm">Fotos do Wikimedia Commons.</p>
+      <p className="text-chalk-500 text-xs">Fotos do Wikimedia Commons.</p>
 
-      {error && <p className="text-error-primary text-sm">{error}</p>}
+      {error && (
+        <p role="alert" className="text-sm text-red-300">
+          {error}
+        </p>
+      )}
 
-      {!credits && !error && <p className="text-tertiary text-sm">Carregando…</p>}
+      {!credits && !error && <p className="text-chalk-500 text-xs">Carregando…</p>}
 
       {credits && (
         <ul className="flex flex-col">
-          {credits.map((credit) => (
-            <li key={credit.vehicle} className="border-secondary border-b py-2 last:border-0">
+          {credits.map((credit, index) => (
+            <motion.li
+              key={credit.vehicle}
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: Math.min(index * 0.02, 0.3) }}
+              className="border-ink-800 border-b py-2 last:border-0"
+            >
               <a
                 href={credit.sourceUrl ?? undefined}
                 target="_blank"
                 rel="noreferrer"
-                className="text-tertiary hover:text-primary text-xs"
+                className="text-chalk-500 hover:text-flame-400 text-xs transition"
               >
                 {credit.vehicle} — {credit.author ?? 'autor não declarado'}
                 {credit.license ? ` · ${credit.license}` : ''}
               </a>
-            </li>
+            </motion.li>
           ))}
         </ul>
       )}

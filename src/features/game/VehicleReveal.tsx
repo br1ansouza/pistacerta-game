@@ -1,4 +1,4 @@
-import { Button } from '@/components/base/buttons/button';
+import { motion } from 'motion/react';
 import type { ResolvedClue } from '@/domain/clues/clue.types';
 import type { Outcome } from '@/domain/round/round.types';
 import { describeIdentity, type VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
@@ -20,34 +20,69 @@ export function VehicleReveal({
   onNextRound,
   onBackHome,
 }: VehicleRevealProps) {
+  const correct = outcome === 'correct';
+
   return (
-    <div className="flex flex-col gap-6">
+    <motion.div
+      role="status"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+      className="flex flex-col gap-5"
+    >
       <header className="flex flex-col gap-2">
-        <p
+        <motion.span
+          initial={{ scale: 0.7, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ type: 'spring', stiffness: 500, damping: 22, delay: 0.08 }}
           className={
-            outcome === 'correct'
-              ? 'bg-success-primary text-success-primary self-start rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase'
-              : 'bg-secondary text-tertiary self-start rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase'
+            correct
+              ? 'border-mint-400/40 bg-mint-400/15 text-mint-400 font-display self-start rounded-full border px-3 py-1 text-[0.65rem] font-bold tracking-[0.18em] uppercase'
+              : 'border-ink-700 bg-ink-800 text-chalk-500 font-display self-start rounded-full border px-3 py-1 text-[0.65rem] font-bold tracking-[0.18em] uppercase'
           }
         >
-          {outcome === 'correct' ? 'Acertou' : 'Era esse'}
-        </p>
-        <h2 className="text-primary text-display-xs font-bold">{describeIdentity(identity)}</h2>
-        {identity.generation && <p className="text-tertiary text-sm">{identity.generation}</p>}
+          {correct ? 'Acertou' : 'Era esse'}
+        </motion.span>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.14 }}
+          className="font-display text-chalk-100 text-2xl font-bold tracking-tight"
+        >
+          {describeIdentity(identity)}
+        </motion.h2>
+
+        {identity.generation && <p className="text-chalk-500 text-xs">{identity.generation}</p>}
       </header>
 
-      <VehicleImage identity={identity} />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.97 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.18, type: 'spring', stiffness: 340, damping: 30 }}
+      >
+        <VehicleImage identity={identity} />
+      </motion.div>
 
       <ClueList clues={clues} />
 
-      <div className="flex flex-col gap-3">
-        <Button size="lg" color="primary" onClick={onNextRound}>
+      <div className="flex flex-col gap-2">
+        <motion.button
+          type="button"
+          onClick={onNextRound}
+          whileTap={{ scale: 0.98 }}
+          className="from-flame-600 to-flame-500 text-ink-950 font-display shadow-flame-600/25 focus-visible:outline-flame-400 rounded-xl bg-gradient-to-r px-5 py-3.5 text-sm font-bold tracking-wide uppercase shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           Próxima rodada
-        </Button>
-        <Button size="lg" color="link-gray" onClick={onBackHome}>
+        </motion.button>
+        <button
+          type="button"
+          onClick={onBackHome}
+          className="text-chalk-500 hover:text-chalk-300 focus-visible:outline-flame-500 py-2 text-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           Trocar de modo
-        </Button>
+        </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

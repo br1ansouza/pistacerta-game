@@ -1,6 +1,9 @@
+import { useEffect, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Car01, Truck01 } from '@untitledui/icons';
 import { asset } from '@/lib/asset';
+import { motionSpring } from '@/lib/motion';
 import type { GameMode } from '@/domain/round/round.types';
 import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
 
@@ -8,28 +11,30 @@ const APP_VERSION = process.env.PUBLIC_APP_VERSION ?? '';
 
 type HomeScreenProps = {
   kind: VehicleKind;
-  onToggleKind: () => void;
+  onSelectKind: (kind: VehicleKind) => void;
   onSelectMode: (mode: GameMode) => void;
   onOpenCredits: () => void;
 };
 
 const KIND_COPY: Record<
   VehicleKind,
-  { noun: string; tagline: string; solo: string; duo: string; next: string }
+  { label: string; garage: string; tagline: string; solo: string; duo: string; sprite: string }
 > = {
   car: {
-    noun: 'carro',
-    tagline: 'Doze pistas. Um carro. Descubra antes que elas acabem.',
+    label: 'Carros',
+    garage: 'Garagem de carros',
+    tagline: 'Pistas progressivas. Um carro. Descubra antes que elas acabem.',
     solo: 'Quatro alternativas no fim. O carro só aparece quando você responde.',
     duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
-    next: 'Trocar para caminhões',
+    sprite: 'car.gif',
   },
   truck: {
-    noun: 'caminhão',
-    tagline: 'Doze pistas. Um caminhão. Descubra antes que elas acabem.',
+    label: 'Caminhões',
+    garage: 'Garagem de caminhões',
+    tagline: 'Pistas progressivas. Um caminhão. Descubra antes que elas acabem.',
     solo: 'Quatro alternativas no fim. O caminhão só aparece quando você responde.',
     duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
-    next: 'Trocar para carros',
+    sprite: 'truck.gif',
   },
 };
 
@@ -38,115 +43,210 @@ const MODES: { mode: GameMode; title: string; accent: string }[] = [
   { mode: 'duo', title: 'Em dupla', accent: 'text-sky-400' },
 ];
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.09, delayChildren: 0.12 } },
-};
+const CATEGORIES: { kind: VehicleKind; icon: typeof Car01 }[] = [
+  { kind: 'car', icon: Car01 },
+  { kind: 'truck', icon: Truck01 },
+];
 
-const item = {
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { type: 'spring' as const, stiffness: 380, damping: 30 } },
-};
+function playShutter(shutter: HTMLDivElement, from: number, to: number, duration: number) {
+  const animation = shutter.animate(
+    [{ transform: `scaleY(${from})` }, { transform: `scaleY(${to})` }],
+    {
+      duration,
+      easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      fill: 'forwards',
+    },
+  );
 
-export function HomeScreen({ kind, onToggleKind, onSelectMode, onOpenCredits }: HomeScreenProps) {
+  return new Promise<void>((resolve) => {
+    let settled = false;
+    let timeout = 0;
+    const complete = () => {
+      if (settled) {
+        return;
+      }
+
+      settled = true;
+      window.clearTimeout(timeout);
+
+      if (animation.playState !== 'finished') {
+        animation.finish();
+      }
+
+      resolve();
+    };
+
+    timeout = window.setTimeout(complete, duration + 120);
+    animation.finished.then(complete, complete);
+  });
+}
+
+export function HomeScreen({ kind, onSelectKind, onSelectMode, onOpenCredits }: HomeScreenProps) {
   const copy = KIND_COPY[kind];
-  const NextIcon = kind === 'car' ? Truck01 : Car01;
+  const shutterRef = useRef<HTMLDivElement>(null);
+  const switchingRef = useRef(false);
+  const [switching, setSwitching] = useState(false);
+  const [loadedSprite, setLoadedSprite] = useState<VehicleKind | null>(null);
+
+  useEffect(() => {
+    for (const category of Object.values(KIND_COPY)) {
+      const image = new Image();
+      image.src = asset(category.sprite);
+    }
+  }, []);
+
+  async function selectKind(nextKind: VehicleKind) {
+    const shutter = shutterRef.current;
+
+    if (nextKind === kind || switchingRef.current || !shutter) {
+      return;
+    }
+
+    switchingRef.current = true;
+    setSwitching(true);
+
+    try {
+      await playShutter(shutter, 0, 1, 320);
+
+      flushSync(() => onSelectKind(nextKind));
+      await playShutter(shutter, 1, 0, 380);
+    } finally {
+      for (const animation of shutter.getAnimations()) {
+        animation.cancel();
+      }
+
+      switchingRef.current = false;
+      setSwitching(false);
+    }
+  }
 
   return (
-    <main className="relative mx-auto flex min-h-dvh w-full max-w-md flex-col justify-center gap-9 px-5 py-10">
-      <motion.button
-        type="button"
-        onClick={onToggleKind}
-        aria-label={copy.next}
-        title={copy.next}
-        whileTap={{ scale: 0.88, rotate: -12 }}
-        transition={{ type: 'spring', stiffness: 600, damping: 20 }}
-        className="border-ink-700 text-chalk-500 hover:text-flame-400 hover:border-flame-500 focus-visible:outline-flame-500 shadow-hard-sm absolute top-6 right-5 flex size-10 items-center justify-center overflow-hidden border-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"
-      >
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.span
-            key={kind}
-            initial={{ y: 18, opacity: 0, rotate: 20 }}
-            animate={{ y: 0, opacity: 1, rotate: 0 }}
-            exit={{ y: -18, opacity: 0, rotate: -20 }}
-            transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
-          >
-            <NextIcon className="size-5" />
-          </motion.span>
-        </AnimatePresence>
-      </motion.button>
+    <main className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col justify-center px-5 py-8 sm:py-12">
+      <div className="flex flex-col gap-7 sm:gap-8">
+        <header className="text-center">
+          <h1 className="font-display text-chalk-100 text-4xl font-bold tracking-tight sm:text-5xl">
+            Pista<span className="text-flame-500">Certa</span>
+          </h1>
+        </header>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="flex flex-col gap-9"
-      >
-        <motion.header variants={item} className="flex flex-col items-center gap-4 text-center">
-          <motion.div
-            animate={{ y: [0, -7, 0] }}
-            transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
-            className="relative flex h-44 items-center justify-center"
-          >
-            <motion.div
-              key={`brilho-${kind}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.35 }}
-              className={`absolute inset-0 -z-10 rounded-full bg-gradient-to-t to-transparent blur-2xl ${
-                kind === 'truck' ? 'from-emerald-500/25' : 'from-flame-600/25'
+        <section className="flex flex-col gap-4" aria-label="Categoria do jogo">
+          <div className="border-ink-700 bg-ink-900/70 shadow-hard relative h-52 overflow-hidden border-2 sm:h-60">
+            <div className="garage-grid pointer-events-none absolute inset-0" />
+            <div
+              className={`pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent ${
+                kind === 'truck' ? 'from-mint-400/15' : 'from-flame-600/15'
               }`}
             />
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.img
-                key={kind}
-                src={asset(kind === 'truck' ? 'truck.gif' : 'car.gif')}
-                alt=""
+
+            <div className="absolute top-3 left-3 z-20 flex items-center gap-2">
+              <span
+                className={`size-2 ${kind === 'truck' ? 'bg-mint-400' : 'bg-flame-500'}`}
                 aria-hidden
-                initial={{ x: 120, opacity: 0, scale: 0.9 }}
-                animate={{ x: 0, opacity: 1, scale: 1 }}
-                exit={{ x: -120, opacity: 0, scale: 0.9 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 26 }}
-                className={`pixelated object-contain ${kind === 'truck' ? 'h-44 w-44' : 'h-36 w-36'} ${
-                  kind === 'truck'
-                    ? 'drop-shadow-[0_10px_24px_rgba(16,185,129,0.35)]'
-                    : 'drop-shadow-[0_10px_24px_rgba(232,69,44,0.35)]'
-                }`}
               />
-            </AnimatePresence>
-          </motion.div>
+              <span className="text-chalk-500 font-display text-[0.6rem] tracking-[0.18em] uppercase">
+                <span className="sm:hidden">{copy.label}</span>
+                <span className="hidden sm:inline">{copy.garage}</span>
+              </span>
+            </div>
 
-          <div className="flex flex-col items-center gap-2">
-            <h1 className="font-display text-chalk-100 text-4xl font-bold tracking-tight">
-              Pista<span className="text-flame-500">Certa</span>
-            </h1>
-            <div className="via-flame-500/70 h-px w-24 bg-gradient-to-r from-transparent to-transparent" />
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.p
-                key={kind}
-                initial={{ y: 8, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -8, opacity: 0 }}
-                transition={{ duration: 0.22 }}
-                className="text-chalk-300 text-sm text-balance"
-              >
-                {copy.tagline}
-              </motion.p>
+            <div className="absolute top-3 right-3 z-20 flex gap-2">
+              {CATEGORIES.filter((category) => category.kind !== kind).map(
+                ({ kind: categoryKind, icon: Icon }) => (
+                  <button
+                    key={categoryKind}
+                    type="button"
+                    onClick={() => selectKind(categoryKind)}
+                    disabled={switching}
+                    aria-label={`Trocar para ${KIND_COPY[categoryKind].label.toLocaleLowerCase('pt-BR')}`}
+                    title={`Trocar para ${KIND_COPY[categoryKind].label.toLocaleLowerCase('pt-BR')}`}
+                    className="border-ink-600 bg-ink-950/75 text-chalk-500 hover:border-flame-500 hover:text-flame-400 focus-visible:outline-flame-500 shadow-hard-sm flex size-10 items-center justify-center border-2 transition-colors disabled:cursor-wait disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2"
+                  >
+                    <Icon className="size-5" />
+                  </button>
+                ),
+              )}
+            </div>
+
+            <motion.img
+              key={kind}
+              src={asset(copy.sprite)}
+              alt=""
+              aria-hidden
+              onLoad={() => setLoadedSprite(kind)}
+              initial={{ opacity: 0, y: 10, scale: 0.98 }}
+              animate={
+                loadedSprite === kind
+                  ? { opacity: 1, y: [10, -2, 0], scale: 1 }
+                  : { opacity: 0, y: 10, scale: 0.98 }
+              }
+              transition={{ ...motionSpring, delay: 0.05 }}
+              className={`pixelated absolute inset-0 m-auto object-contain ${
+                kind === 'truck'
+                  ? 'h-48 w-48 drop-shadow-[0_12px_24px_rgba(61,220,151,0.28)] sm:h-56 sm:w-56'
+                  : 'h-44 w-44 drop-shadow-[0_12px_24px_rgba(232,69,44,0.32)] sm:h-52 sm:w-52'
+              }`}
+            />
+
+            <AnimatePresence>
+              {loadedSprite !== kind && (
+                <motion.div
+                  role="status"
+                  aria-label="Carregando automóvel"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="absolute inset-0 flex items-center justify-center gap-1.5"
+                >
+                  {[0, 1, 2].map((index) => (
+                    <motion.span
+                      key={index}
+                      animate={{ opacity: [0.25, 1, 0.25] }}
+                      transition={{ duration: 0.75, repeat: Infinity, delay: index * 0.12 }}
+                      className="bg-chalk-500 size-1.5"
+                    />
+                  ))}
+                </motion.div>
+              )}
             </AnimatePresence>
+
+            <div
+              ref={shutterRef}
+              aria-hidden
+              style={{ transform: 'scaleY(0)' }}
+              className="garage-shutter pointer-events-none absolute inset-0 z-[30] origin-top"
+            />
+
+            <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center gap-3 opacity-35">
+              <span className="bg-chalk-500 h-px w-12" />
+              <span className="bg-flame-400 h-px w-5" />
+              <span className="bg-chalk-500 h-px w-12" />
+            </div>
           </div>
-        </motion.header>
 
-        <section className="flex flex-col gap-3">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.p
+              key={kind}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.18 }}
+              className="text-chalk-300 min-h-10 text-center text-sm text-balance"
+            >
+              {copy.tagline}
+            </motion.p>
+          </AnimatePresence>
+        </section>
+
+        <section className="grid gap-3 sm:grid-cols-2">
           {MODES.map(({ mode, title, accent }) => (
             <motion.button
               key={mode}
-              variants={item}
               type="button"
               onClick={() => onSelectMode(mode)}
-              whileHover={{ x: 4 }}
+              disabled={switching}
               whileTap={{ scale: 0.985 }}
-              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-              className="group border-chalk-500/30 bg-ink-900/80 hover:border-flame-500 focus-visible:outline-flame-500 shadow-hard relative overflow-hidden border-2 px-5 py-4 text-left backdrop-blur transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+              transition={motionSpring}
+              className="group border-chalk-500/30 bg-ink-900/80 hover:border-flame-500 focus-visible:outline-flame-500 shadow-hard relative overflow-hidden border-2 px-5 py-4 text-left backdrop-blur transition-colors disabled:cursor-wait disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               <span className="from-flame-600 to-flame-400 absolute inset-y-0 left-0 w-1 bg-gradient-to-b opacity-0 transition-opacity group-hover:opacity-100" />
               <span className="flex items-center justify-between gap-4">
@@ -171,20 +271,21 @@ export function HomeScreen({ kind, onToggleKind, onSelectMode, onOpenCredits }: 
           ))}
         </section>
 
-        <motion.div variants={item} className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2">
           <button
             type="button"
             onClick={onOpenCredits}
-            className="text-chalk-500 hover:text-chalk-300 focus-visible:outline-flame-500 text-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+            disabled={switching}
+            className="text-chalk-500 hover:text-chalk-300 focus-visible:outline-flame-500 text-xs disabled:cursor-wait disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             Créditos das imagens
           </button>
 
-          <p className="font-display text-chalk-500/60 text-[0.625rem] tracking-[0.18em]">
+          <p className="font-display text-chalk-500 text-[0.625rem] tracking-[0.18em]">
             Versão {APP_VERSION}
           </p>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </main>
   );
 }

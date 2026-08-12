@@ -51,7 +51,7 @@ export function AnswerSheet({
         ref={panelRef}
         role="dialog"
         aria-modal="true"
-        aria-label="Escolha o veículo"
+        aria-label="Escolha o automóvel"
         tabIndex={-1}
         initial={{ y: 40, opacity: 0, scale: 0.98 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
@@ -95,13 +95,21 @@ export function AnswerSheet({
                     : 'border-ink-700 bg-ink-850 hover:border-chalk-500/50 flex cursor-pointer items-center gap-3 border-2 px-4 py-3 transition-colors'
                 }
               >
+                <span
+                  aria-hidden
+                  className={`flex size-4 shrink-0 items-center justify-center border-2 ${
+                    selected ? 'border-flame-400' : 'border-chalk-500/60'
+                  }`}
+                >
+                  {selected && <span className="bg-flame-400 size-2" />}
+                </span>
                 <input
                   type="radio"
                   name="vehicle-choice"
                   value={choice.id}
                   checked={selected}
                   onChange={() => onSelect(choice.id)}
-                  className="accent-flame-500 size-4 shrink-0"
+                  className="sr-only"
                 />
                 <span
                   className={

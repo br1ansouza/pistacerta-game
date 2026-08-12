@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import type { ResolvedClue } from '@/domain/clues/clue.types';
+import { motionSpring } from '@/lib/motion';
 
 type CluePagesProps = {
   clues: ResolvedClue[];
@@ -14,9 +15,9 @@ function ClueCell({ clue, fresh }: { clue: ResolvedClue; fresh: boolean }) {
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, x: -12 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ type: 'spring', stiffness: 460, damping: 32 }}
+      initial={{ opacity: 0, scale: 0.97 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={motionSpring}
       className={`${
         fresh ? 'border-flame-500 border-l-[3px] pl-3' : 'border-ink-700 border-l-[3px] pl-3'
       } ${width}`}

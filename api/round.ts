@@ -1,16 +1,14 @@
 import { z } from 'zod';
 import { buildChoices } from '../src/domain/round/choices.ts';
+import { pickFromDeck } from '../src/domain/round/deck.ts';
 import { toSafeVehicle, toVehicleIdentity } from '../src/domain/vehicle/safe-vehicle.ts';
-import {
-  getPlayableVehicles,
-  pickRandomVehicle,
-} from '../src/domain/vehicle/vehicle.repository.ts';
+import { getPlayableVehicles } from '../src/domain/vehicle/vehicle.repository.ts';
 import { errorResponse, jsonResponse, readJsonBody } from './_lib/http.ts';
-import { signRoundToken, slugsFromTokens } from './_lib/round-token.ts';
+import { readDeckToken, signDeckToken, signRoundToken } from './_lib/round-token.ts';
 
 const requestSchema = z.object({
   mode: z.enum(['solo', 'duo']).default('solo'),
-  recentTokens: z.array(z.string()).max(50).default([]),
+  deck: z.string().nullish().default(null),
 });
 
 export async function handleRound(request: Request): Promise<Response> {
@@ -25,18 +23,20 @@ export async function handleRound(request: Request): Promise<Response> {
     return errorResponse('Requisição inválida', 400);
   }
 
-  const { mode, recentTokens } = parsed.data;
-  const excludeSlugs = await slugsFromTokens(recentTokens);
-  const vehicle = await pickRandomVehicle({ kind: 'car', excludeSlugs });
+  const { mode, deck } = parsed.data;
+  const pool = await getPlayableVehicles('car');
+  const picked = pickFromDeck(pool, await readDeckToken(deck));
 
-  if (!vehicle) {
+  if (!picked) {
     return errorResponse('Nenhum veículo disponível', 503);
   }
 
-  const pool = await getPlayableVehicles('car');
+  const { vehicle } = picked;
 
   return jsonResponse({
     token: await signRoundToken(vehicle.slug),
+    deck: await signDeckToken(picked.seen),
+    reshuffled: picked.reshuffled,
     mode,
     clues: toSafeVehicle(vehicle),
     identity: mode === 'duo' ? toVehicleIdentity(vehicle) : null,

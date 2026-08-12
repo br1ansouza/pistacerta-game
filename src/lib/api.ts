@@ -4,6 +4,8 @@ import type { SafeVehicle, VehicleIdentity } from '@/domain/vehicle/safe-vehicle
 
 export type RoundResponse = {
   token: string;
+  deck: string;
+  reshuffled: boolean;
   mode: GameMode;
   clues: SafeVehicle;
   identity: VehicleIdentity | null;
@@ -59,16 +61,14 @@ const STATIC = process.env.PUBLIC_STATIC === '1';
 
 export function startRound(
   mode: GameMode,
-  recentTokens: readonly string[],
+  deck: string | null,
   signal?: AbortSignal,
 ): Promise<RoundResponse> {
   if (STATIC) {
-    return import('./static-backend').then(({ startRoundStatic }) =>
-      startRoundStatic(mode, recentTokens),
-    );
+    return import('./static-backend').then(({ startRoundStatic }) => startRoundStatic(mode, deck));
   }
 
-  return post<RoundResponse>('/api/round', { mode, recentTokens }, signal);
+  return post<RoundResponse>('/api/round', { mode, deck }, signal);
 }
 
 export function revealVehicle(

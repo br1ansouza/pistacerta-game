@@ -1,5 +1,6 @@
 const DEV_SECRET = 'pistacerta-dev-secret';
-const TTL_MS = 6 * 60 * 60 * 1000;
+const ROUND_TTL_MS = 6 * 60 * 60 * 1000;
+const DECK_TTL_MS = 180 * 24 * 60 * 60 * 1000;
 const IV_BYTES = 12;
 
 const encoder = new TextEncoder();
@@ -57,13 +58,7 @@ function fromBase64Url(value: string): Uint8Array<ArrayBuffer> {
   return bytes;
 }
 
-export type RoundTokenPayload = {
-  slug: string;
-  expiresAt: number;
-};
-
-export async function signRoundToken(slug: string): Promise<string> {
-  const payload: RoundTokenPayload = { slug, expiresAt: Date.now() + TTL_MS };
+async function seal(payload: unknown): Promise<string> {
   const iv = crypto.getRandomValues(new Uint8Array(IV_BYTES));
 
   const ciphertext = await crypto.subtle.encrypt(
@@ -79,7 +74,7 @@ export async function signRoundToken(slug: string): Promise<string> {
   return toBase64Url(packed);
 }
 
-export async function verifyRoundToken(token: string): Promise<RoundTokenPayload | null> {
+async function unseal(token: string): Promise<unknown> {
   let packed: Uint8Array<ArrayBuffer>;
 
   try {
@@ -93,6 +88,7 @@ export async function verifyRoundToken(token: string): Promise<RoundTokenPayload
   }
 
   let plaintext: ArrayBuffer;
+
   try {
     plaintext = await crypto.subtle.decrypt(
       { name: 'AES-GCM', iv: packed.subarray(0, IV_BYTES) },
@@ -103,10 +99,33 @@ export async function verifyRoundToken(token: string): Promise<RoundTokenPayload
     return null;
   }
 
-  let payload: RoundTokenPayload;
   try {
-    payload = JSON.parse(decoder.decode(plaintext)) as RoundTokenPayload;
+    return JSON.parse(decoder.decode(plaintext));
   } catch {
+    return null;
+  }
+}
+
+export type RoundTokenPayload = {
+  t?: 'round';
+  slug: string;
+  expiresAt: number;
+};
+
+type DeckTokenPayload = {
+  t: 'deck';
+  seen: string[];
+  expiresAt: number;
+};
+
+export async function signRoundToken(slug: string): Promise<string> {
+  return seal({ t: 'round', slug, expiresAt: Date.now() + ROUND_TTL_MS });
+}
+
+export async function verifyRoundToken(token: string): Promise<RoundTokenPayload | null> {
+  const payload = (await unseal(token)) as RoundTokenPayload | null;
+
+  if (!payload || (payload.t !== undefined && payload.t !== 'round')) {
     return null;
   }
 
@@ -121,8 +140,24 @@ export async function verifyRoundToken(token: string): Promise<RoundTokenPayload
   return payload;
 }
 
-export async function slugsFromTokens(tokens: readonly string[]): Promise<string[]> {
-  const payloads = await Promise.all(tokens.map((token) => verifyRoundToken(token)));
+export async function signDeckToken(seen: readonly string[]): Promise<string> {
+  return seal({ t: 'deck', seen: [...seen], expiresAt: Date.now() + DECK_TTL_MS });
+}
 
-  return payloads.flatMap((payload) => (payload ? [payload.slug] : []));
+export async function readDeckToken(token: string | null | undefined): Promise<string[]> {
+  if (!token) {
+    return [];
+  }
+
+  const payload = (await unseal(token)) as DeckTokenPayload | null;
+
+  if (!payload || payload.t !== 'deck' || !Array.isArray(payload.seen)) {
+    return [];
+  }
+
+  if (typeof payload.expiresAt !== 'number' || Date.now() > payload.expiresAt) {
+    return [];
+  }
+
+  return payload.seen.filter((slug) => typeof slug === 'string');
 }

@@ -1,31 +1,32 @@
 {
-  "slug": "vw-constellation-25480-2024",
+  "slug": "iveco-tector-24320-2024",
   "kind": "truck",
-  "brand": "Volkswagen",
-  "model": "Constellation 25.480",
+  "brand": "Iveco",
+  "model": "Tector 24-320",
   "version": "6x2",
   "year": 2024,
   "origin": "nacional",
   "fuel": "diesel",
-  "displacement": "12.4",
+  "displacement": "6.7",
   "power": {
-    "value": 475,
+    "value": 320,
     "unit": "cv"
   },
   "torque": {
-    "value": 2400,
+    "value": 1100,
     "unit": "Nm"
   },
   "aspiration": "turbo",
   "transmission": "automatizado",
   "axleConfigs": ["6x2"],
+  "cabins": ["Simples", "Estendida", "Leito teto alto"],
   "gvwr": 23000,
-  "gcwr": 56000,
-  "engineCode": "MAN D2676LFAG",
+  "gcwr": 36000,
+  "engineCode": "FPT NEF 6",
   "cylinders": 6,
   "cylinderLayout": "em linha",
   "fipe": {
-    "value": 785560,
+    "value": 609517,
     "referenceMonth": "2024-05"
   },
   "specSource": "carros-na-web",

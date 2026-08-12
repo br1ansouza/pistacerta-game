@@ -404,6 +404,13 @@
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
   },
+  "ford-cargo-2629-2017": {
+    "src": "/vehicles/ford-cargo-2629-2017.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Ford Cargo 2629 6x4 basculante",
+    "sourceUrl": "https://br.pinterest.com/pin/10555380363909522/"
+  },
   "ford-cargo-2842-2017": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
     "source": "wikimedia",
@@ -557,6 +564,24 @@
     "license": "CC BY-SA 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hyundai_Veloster_FS_China_2013-03-04.jpg"
   },
+  "isuzu-fvr-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Isuzu_FVR_Fire_Truck_%28Cabanatuan_City_Fire_Station%29.jpg/960px-Isuzu_FVR_Fire_Truck_%28Cabanatuan_City_Fire_Station%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Isuzu FVR",
+    "author": "Captainmorlypogi1959",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isuzu_FVR_Fire_Truck_(Cabanatuan_City_Fire_Station).jpg"
+  },
+  "isuzu-npr-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/2012_Isuzu_NPR_Turbo_hauling_truck%2C_06-12-2024.jpg/960px-2012_Isuzu_NPR_Turbo_hauling_truck%2C_06-12-2024.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Isuzu NPR",
+    "author": "Ethan Llamas",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012_Isuzu_NPR_Turbo_hauling_truck,_06-12-2024.jpg"
+  },
   "isuzu-nqr75-2020": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Isuzu_NQR%2C_White_Truck%2C.jpg/960px-Isuzu_NQR%2C_White_Truck%2C.jpg",
     "source": "wikimedia",
@@ -566,6 +591,15 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isuzu_NQR,_White_Truck,.jpg"
   },
+  "iveco-daily-55170-2022": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2022_Iveco_Daily_3.0_55-170_%28Brazil%29.jpg/960px-2022_Iveco_Daily_3.0_55-170_%28Brazil%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Iveco Daily 55-170 brasileira",
+    "author": "Maxi-Napo-99",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Iveco_Daily_3.0_55-170_(Brazil).jpg"
+  },
   "iveco-sway-480-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IVECO_S-Way_Front.jpg/960px-IVECO_S-Way_Front.jpg",
     "source": "wikimedia",
@@ -574,6 +608,33 @@
     "author": "WDHOSS",
     "license": "CC0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:IVECO_S-Way_Front.jpg"
+  },
+  "iveco-tector-11190-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/AySa_Iveco_Tector.jpg/960px-AySa_Iveco_Tector.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Iveco Tector",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AySa_Iveco_Tector.jpg"
+  },
+  "iveco-tector-24320-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/AySa_Iveco_Tector.jpg/960px-AySa_Iveco_Tector.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Iveco Tector",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AySa_Iveco_Tector.jpg"
+  },
+  "iveco-tector-27320-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/AySa_Iveco_Tector.jpg/960px-AySa_Iveco_Tector.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Iveco Tector",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AySa_Iveco_Tector.jpg"
   },
   "jeep-compass-diesel-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg/960px-2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg",
@@ -682,6 +743,14 @@
     "author": "JoachimKohler-HB",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Banz_Axor_1833_mit_Abrollmulde_(2022).jpg"
+  },
+  "mercedes-l1113-1978": {
+    "src": "/vehicles/mercedes-l1113-1978.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Mercedes-Benz 1113 brasileiro",
+    "author": "AutoPapo",
+    "sourceUrl": "https://autopapo.com.br/noticia/mercedes-benz-l1111-l1113/"
   },
   "mini-cooper-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg/960px-2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg",
@@ -1007,6 +1076,38 @@
     "license": "Public domain",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:'99-'03_Volkswagen_Jetta_Sedan_(Orange_Julep).jpg"
   },
+  "vw-constellation-25480-2024": {
+    "src": "/vehicles/vw-constellation-25480-2024.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Constellation 25.480",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+  },
+  "vw-constellation-33260-2024": {
+    "src": "/vehicles/vw-constellation-25480-2024.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Constellation",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+  },
+  "vw-constellation-33480-2024": {
+    "src": "/vehicles/vw-constellation-25480-2024.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Constellation, mesma linha do 33.480",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+  },
+  "vw-delivery-9180-2024": {
+    "src": "/vehicles/vw-meteor.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Linha de caminhões Volkswagen",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+  },
   "vw-gol-gti-1995": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Vermelho2.jpg",
     "source": "wikimedia",
@@ -1042,6 +1143,22 @@
     "author": "Bull-Doser",
     "license": "Public domain",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:'19_Volkswagen_Jetta.jpg"
+  },
+  "vw-meteor-28480-2024": {
+    "src": "/vehicles/vw-meteor.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Meteor",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+  },
+  "vw-meteor-29530-2024": {
+    "src": "/vehicles/vw-meteor.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Meteor",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
   },
   "vw-nivus-highline-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg/960px-2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg",

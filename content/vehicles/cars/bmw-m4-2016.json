@@ -1,0 +1,30 @@
+{
+  "slug": "bmw-m4-2016",
+  "kind": "car",
+  "brand": "BMW",
+  "model": "M4",
+  "version": "3.0 Biturbo",
+  "year": 2016,
+  "origin": "importado",
+  "countryOfOrigin": "Alemanha",
+  "fuel": "gasolina",
+  "displacement": "3.0",
+  "power": {
+    "value": 431,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 56,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "drivetrain": "traseira",
+  "bodyType": "cupê",
+  "cylinders": 6,
+  "valves": 24,
+  "doors": 2,
+  "fipe": null,
+  "specSource": "icarros",
+  "active": true
+}

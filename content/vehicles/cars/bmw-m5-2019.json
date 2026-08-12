@@ -1,0 +1,30 @@
+{
+  "slug": "bmw-m5-2019",
+  "kind": "car",
+  "brand": "BMW",
+  "model": "M5",
+  "version": "4.4 V8 Biturbo",
+  "year": 2019,
+  "origin": "importado",
+  "countryOfOrigin": "Alemanha",
+  "fuel": "gasolina",
+  "displacement": "4.4",
+  "power": {
+    "value": 600,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 76.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "sedã",
+  "cylinders": 8,
+  "valves": 32,
+  "doors": 4,
+  "fipe": null,
+  "specSource": "icarros",
+  "active": true
+}

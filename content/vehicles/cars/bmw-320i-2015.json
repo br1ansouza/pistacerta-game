@@ -1,0 +1,29 @@
+{
+  "slug": "bmw-320i-2015",
+  "kind": "car",
+  "brand": "BMW",
+  "model": "320i",
+  "version": "2.0 Turbo ActiveFlex",
+  "year": 2015,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "2.0",
+  "power": {
+    "value": 184,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 27.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "traseira",
+  "bodyType": "sedã",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 4,
+  "fipe": null,
+  "specSource": "icarros",
+  "active": true
+}

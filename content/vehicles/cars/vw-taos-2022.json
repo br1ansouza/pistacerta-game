@@ -1,0 +1,35 @@
+{
+  "slug": "vw-taos-2022",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Taos",
+  "version": "1.4 250 TSI",
+  "year": 2022,
+  "origin": "importado",
+  "countryOfOrigin": "Argentina",
+  "fuel": "flex",
+  "displacement": "1.4",
+  "power": {
+    "value": 150,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 25.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "suv",
+  "engineCode": "EA211",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 134594,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005529-8"
+  },
+  "specSource": "icarros",
+  "active": true
+}

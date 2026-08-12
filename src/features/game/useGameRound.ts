@@ -6,17 +6,19 @@ import { readDeck, saveDeck } from '@/lib/deck-storage';
 
 export function useGameRound(mode: GameMode) {
   const [state, dispatch] = useReducer(roundReducer, initialRoundState);
-  const abortRef = useRef<AbortController | null>(null);
+  const inFlight = useRef(false);
 
   const beginRound = useCallback(async () => {
-    abortRef.current?.abort();
-    const controller = new AbortController();
-    abortRef.current = controller;
+    if (inFlight.current) {
+      return;
+    }
+
+    inFlight.current = true;
 
     dispatch({ type: 'round/requested', mode });
 
     try {
-      const response = await startRound(mode, readDeck(), controller.signal);
+      const response = await startRound(mode, readDeck());
       saveDeck(response.deck);
 
       dispatch({
@@ -28,22 +30,18 @@ export function useGameRound(mode: GameMode) {
         choices: response.choices,
       });
     } catch (error) {
-      if (error instanceof DOMException && error.name === 'AbortError') {
-        return;
-      }
-
       dispatch({
         type: 'round/failed',
         mode,
         message: error instanceof Error ? error.message : 'Não foi possível iniciar a rodada.',
       });
+    } finally {
+      inFlight.current = false;
     }
   }, [mode]);
 
   useEffect(() => {
     void beginRound();
-
-    return () => abortRef.current?.abort();
   }, [beginRound]);
 
   const revealNextClue = useCallback(() => {

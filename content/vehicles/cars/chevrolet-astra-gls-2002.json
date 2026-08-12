@@ -1,0 +1,29 @@
+{
+  "slug": "chevrolet-astra-gls-2002",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Astra",
+  "version": "GLS 2.0 16V",
+  "year": 2002,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 130,
+    "unit": "cv"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 3,
+  "fipe": {
+    "value": 21242,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004169-6"
+  },
+  "specSource": "icarros",
+  "active": true
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "toyota-corolla-fielder-2008",
+  "kind": "car",
+  "brand": "Toyota",
+  "model": "Corolla Fielder",
+  "version": "XEi 1.8 16V",
+  "year": 2008,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.8",
+  "power": {
+    "value": 136,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 17.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "perua",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 4,
+  "fipe": {
+    "value": 42171,
+    "referenceMonth": "2026-08",
+    "fipeCode": "002084-2"
+  },
+  "specSource": "icarros",
+  "active": true
+}

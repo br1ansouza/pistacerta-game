@@ -1,0 +1,35 @@
+{
+  "slug": "subaru-wrx-2021",
+  "kind": "car",
+  "brand": "Subaru",
+  "model": "WRX",
+  "version": "2.0 Turbo",
+  "year": 2021,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 270,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 35.7,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "cvt",
+  "drivetrain": "integral",
+  "bodyType": "sedã",
+  "engineCode": "FA20",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 4,
+  "fipe": {
+    "value": 217224,
+    "referenceMonth": "2026-08",
+    "fipeCode": "027068-7"
+  },
+  "specSource": "icarros",
+  "active": true
+}

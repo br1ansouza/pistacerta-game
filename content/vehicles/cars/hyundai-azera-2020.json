@@ -1,0 +1,34 @@
+{
+  "slug": "hyundai-azera-2020",
+  "kind": "car",
+  "brand": "Hyundai",
+  "model": "Azera",
+  "version": "3.0 V6",
+  "year": 2020,
+  "origin": "importado",
+  "countryOfOrigin": "Coreia do Sul",
+  "fuel": "gasolina",
+  "displacement": "3.0",
+  "power": {
+    "value": 261,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 31,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "sedã",
+  "cylinders": 6,
+  "valves": 24,
+  "doors": 4,
+  "fipe": {
+    "value": 162808,
+    "referenceMonth": "2026-08",
+    "fipeCode": "015083-5"
+  },
+  "specSource": "icarros",
+  "active": true
+}

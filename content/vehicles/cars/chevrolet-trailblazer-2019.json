@@ -1,0 +1,34 @@
+{
+  "slug": "chevrolet-trailblazer-2019",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "TrailBlazer",
+  "version": "LTZ 3.6 V6",
+  "year": 2019,
+  "origin": "importado",
+  "countryOfOrigin": "Tailândia",
+  "fuel": "gasolina",
+  "displacement": "3.6",
+  "power": {
+    "value": 277,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 35.7,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
+  "cylinders": 6,
+  "valves": 24,
+  "doors": 5,
+  "fipe": {
+    "value": 149007,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004430-0"
+  },
+  "specSource": "icarros",
+  "active": true
+}

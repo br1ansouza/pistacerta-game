@@ -1,0 +1,35 @@
+{
+  "slug": "chevrolet-corvette-c6-2010",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Corvette",
+  "version": "C6 6.2 V8",
+  "year": 2010,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "gasolina",
+  "displacement": "6.2",
+  "power": {
+    "value": 430,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 58,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "traseira",
+  "bodyType": "cupê",
+  "engineCode": "LS3",
+  "cylinders": 8,
+  "valves": 16,
+  "doors": 2,
+  "fipe": {
+    "value": 446010,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004141-6"
+  },
+  "specSource": "icarros",
+  "active": true
+}

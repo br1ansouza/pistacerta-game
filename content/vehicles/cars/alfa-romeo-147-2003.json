@@ -12,7 +12,7 @@
     "value": 148,
     "unit": "cv"
   },
-  "transmission": "automático",
+  "transmission": "automatizado",
   "bodyType": "hatch",
   "doors": 4,
   "fipe": {
@@ -20,6 +20,16 @@
     "referenceMonth": "2026-08",
     "fipeCode": "006017-8"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "version": "2.0 TS Selespeed",
+  "torque": {
+    "value": 18.3,
+    "unit": "kgfm"
+  },
+  "engineCode": "Twin Spark",
+  "cylinders": 4,
+  "valves": 16,
+  "aspiration": "aspirado",
+  "drivetrain": "dianteira"
 }

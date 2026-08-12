@@ -14,7 +14,7 @@
     "fipeCode": "004069-0"
   },
   "specSource": "carros-na-web",
-  "active": true,
+  "active": false,
   "power": {
     "value": 162,
     "unit": "cv"

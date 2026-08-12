@@ -1,0 +1,34 @@
+{
+  "slug": "lamborghini-gallardo-2013",
+  "kind": "car",
+  "brand": "Lamborghini",
+  "model": "Gallardo",
+  "version": "LP560-4",
+  "year": 2013,
+  "origin": "importado",
+  "countryOfOrigin": "Itália",
+  "fuel": "gasolina",
+  "displacement": "5.2",
+  "power": {
+    "value": 560,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 55.1,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automatizado",
+  "drivetrain": "integral",
+  "bodyType": "cupê",
+  "cylinders": 10,
+  "valves": 40,
+  "doors": 2,
+  "fipe": {
+    "value": 1259211,
+    "referenceMonth": "2026-08",
+    "fipeCode": "078001-4"
+  },
+  "specSource": "fabricante",
+  "active": true
+}

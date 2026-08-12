@@ -8,7 +8,7 @@
   "fuel": "gasolina",
   "displacement": "1.6",
   "power": {
-    "value": 140,
+    "value": 128,
     "unit": "cv"
   },
   "transmission": "automático",
@@ -18,6 +18,15 @@
     "referenceMonth": "2026-08",
     "fipeCode": "015079-7"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "torque": {
+    "value": 16.1,
+    "unit": "kgfm"
+  },
+  "engineCode": "Gamma",
+  "cylinders": 4,
+  "valves": 16,
+  "aspiration": "aspirado",
+  "drivetrain": "dianteira"
 }

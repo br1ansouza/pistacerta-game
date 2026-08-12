@@ -16,6 +16,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "083001-1"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "power": {
+    "value": 365,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 110.6,
+    "unit": "kgfm"
+  },
+  "engineCode": "Cummins 6.7",
+  "cylinders": 6,
+  "valves": 24,
+  "transmission": "automático"
 }

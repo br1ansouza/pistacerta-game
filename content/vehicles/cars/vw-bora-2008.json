@@ -1,0 +1,33 @@
+{
+  "slug": "vw-bora-2008",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Bora",
+  "version": "2.0 8V Tiptronic",
+  "year": 2008,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "2.0",
+  "power": {
+    "value": 116,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 17.3,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "sedã",
+  "cylinders": 4,
+  "valves": 8,
+  "doors": 4,
+  "fipe": {
+    "value": 33066,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005154-3"
+  },
+  "specSource": "icarros",
+  "active": true
+}

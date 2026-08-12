@@ -1,0 +1,34 @@
+{
+  "slug": "fiat-doblo-adventure-2014",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "Doblò",
+  "version": "Adventure Xingu Locker 1.8",
+  "year": 2014,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.8",
+  "power": {
+    "value": 132,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 18.9,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "minivan",
+  "engineCode": "E.torQ",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 50647,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001383-8"
+  },
+  "specSource": "icarros",
+  "active": true
+}

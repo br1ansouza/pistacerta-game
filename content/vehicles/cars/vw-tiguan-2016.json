@@ -1,0 +1,35 @@
+{
+  "slug": "vw-tiguan-2016",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Tiguan",
+  "version": "2.0 TSI 4Motion",
+  "year": 2016,
+  "origin": "importado",
+  "countryOfOrigin": "Alemanha",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 200,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 28.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
+  "engineCode": "EA888",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 72219,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005291-4"
+  },
+  "specSource": "icarros",
+  "active": true
+}

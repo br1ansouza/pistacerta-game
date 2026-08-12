@@ -14,6 +14,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "025231-0"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "power": {
+    "value": 120,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 16.2,
+    "unit": "kgfm"
+  },
+  "cylinders": 4,
+  "valves": 16,
+  "aspiration": "aspirado",
+  "drivetrain": "dianteira"
 }

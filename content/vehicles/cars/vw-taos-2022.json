@@ -23,6 +23,7 @@
   "bodyType": "suv",
   "engineCode": "EA211",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
   "doors": 5,
   "fipe": {

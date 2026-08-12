@@ -7,16 +7,6 @@
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "1.6",
-  "transmission": "automático",
-  "bodyType": "suv",
-  "doors": 5,
-  "fipe": {
-    "value": 90054,
-    "referenceMonth": "2026-08",
-    "fipeCode": "023149-5"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 114,
     "unit": "cv"
@@ -26,7 +16,18 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "transmission": "automático",
+  "bodyType": "suv",
   "engineCode": "HR16DE",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 90054,
+    "referenceMonth": "2026-08",
+    "fipeCode": "023149-5"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

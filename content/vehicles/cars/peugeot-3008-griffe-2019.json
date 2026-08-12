@@ -7,17 +7,6 @@
   "origin": "importado",
   "fuel": "gasolina",
   "displacement": "1.6",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "bodyType": "suv",
-  "doors": 5,
-  "fipe": {
-    "value": 105413,
-    "referenceMonth": "2026-08",
-    "fipeCode": "024176-8"
-  },
-  "specSource": "icarros",
-  "active": true,
   "power": {
     "value": 165,
     "unit": "cv"
@@ -26,8 +15,20 @@
     "value": 24.5,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "suv",
   "engineCode": "THP",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
-  "drivetrain": "dianteira"
+  "doors": 5,
+  "fipe": {
+    "value": 105413,
+    "referenceMonth": "2026-08",
+    "fipeCode": "024176-8"
+  },
+  "specSource": "icarros",
+  "active": true
 }

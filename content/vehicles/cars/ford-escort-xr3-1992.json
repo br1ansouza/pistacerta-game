@@ -7,14 +7,6 @@
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "1.8",
-  "bodyType": "hatch",
-  "fipe": {
-    "value": 20232,
-    "referenceMonth": "2026-08",
-    "fipeCode": "003038-4"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 80,
     "unit": "cv"
@@ -24,7 +16,16 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "bodyType": "hatch",
   "engineCode": "AP-1800S",
   "cylinders": 4,
-  "valves": 8
+  "cylinderLayout": "em linha",
+  "valves": 8,
+  "fipe": {
+    "value": 20232,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003038-4"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

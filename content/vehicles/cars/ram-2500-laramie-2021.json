@@ -8,16 +8,6 @@
   "countryOfOrigin": "México",
   "fuel": "diesel",
   "displacement": "6.7",
-  "aspiration": "turbo",
-  "drivetrain": "integral",
-  "bodyType": "picape",
-  "fipe": {
-    "value": 320599,
-    "referenceMonth": "2026-08",
-    "fipeCode": "083001-1"
-  },
-  "specSource": "icarros",
-  "active": true,
   "power": {
     "value": 365,
     "unit": "cv"
@@ -26,8 +16,19 @@
     "value": 110.6,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "picape",
   "engineCode": "Cummins 6.7",
   "cylinders": 6,
+  "cylinderLayout": "em linha",
   "valves": 24,
-  "transmission": "automático"
+  "fipe": {
+    "value": 320599,
+    "referenceMonth": "2026-08",
+    "fipeCode": "083001-1"
+  },
+  "specSource": "icarros",
+  "active": true
 }

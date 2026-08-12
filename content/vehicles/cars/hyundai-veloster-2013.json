@@ -11,22 +11,23 @@
     "value": 128,
     "unit": "cv"
   },
+  "torque": {
+    "value": 16.1,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
   "transmission": "automático",
+  "drivetrain": "dianteira",
   "bodyType": "cupê",
+  "engineCode": "Gamma",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
   "fipe": {
     "value": 61491,
     "referenceMonth": "2026-08",
     "fipeCode": "015079-7"
   },
   "specSource": "icarros",
-  "active": true,
-  "torque": {
-    "value": 16.1,
-    "unit": "kgfm"
-  },
-  "engineCode": "Gamma",
-  "cylinders": 4,
-  "valves": 16,
-  "aspiration": "aspirado",
-  "drivetrain": "dianteira"
+  "active": true
 }

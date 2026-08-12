@@ -23,6 +23,7 @@
   "bodyType": "sedã",
   "engineCode": "Theta II",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
   "doors": 4,
   "fipe": {

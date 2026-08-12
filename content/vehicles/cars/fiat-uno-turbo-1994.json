@@ -20,7 +20,10 @@
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "hatch",
+  "engineCode": "176A",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 8,
   "doors": 2,
   "fipe": {
     "value": 25734,
@@ -28,7 +31,5 @@
     "fipeCode": "001056-1"
   },
   "specSource": "webmotors",
-  "active": true,
-  "engineCode": "176A",
-  "valves": 8
+  "active": true
 }

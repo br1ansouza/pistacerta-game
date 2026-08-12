@@ -7,17 +7,6 @@
   "origin": "importado",
   "fuel": "diesel",
   "displacement": "2.8",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "drivetrain": "integral",
-  "bodyType": "picape",
-  "fipe": {
-    "value": 229599,
-    "referenceMonth": "2026-08",
-    "fipeCode": "002141-5"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 204,
     "unit": "cv"
@@ -26,7 +15,19 @@
     "value": 50.9,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "picape",
   "engineCode": "1GD-FTV",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "fipe": {
+    "value": 229599,
+    "referenceMonth": "2026-08",
+    "fipeCode": "002141-5"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

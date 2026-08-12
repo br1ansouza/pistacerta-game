@@ -86,7 +86,23 @@ export const CAR_CLUE_DEFINITIONS: ClueDefinition<SafeCar>[] = [
     key: 'cylinders',
     label: 'Cilindros',
     group: 'progressive',
-    resolve: (vehicle) => (vehicle.cylinders ? String(vehicle.cylinders) : null),
+    resolve: (vehicle) => {
+      if (!vehicle.cylinders) {
+        return null;
+      }
+
+      if (vehicle.cylinderLayout === 'V' || vehicle.cylinderLayout === 'W') {
+        return `${vehicle.cylinderLayout}${vehicle.cylinders}`;
+      }
+
+      if (vehicle.cylinderLayout === 'boxer') {
+        return `${vehicle.cylinders} boxer`;
+      }
+
+      return vehicle.cylinderLayout
+        ? `${vehicle.cylinders} ${vehicle.cylinderLayout}`
+        : String(vehicle.cylinders);
+    },
   },
   {
     key: 'doors',
@@ -104,6 +120,18 @@ export const CAR_CLUE_DEFINITIONS: ClueDefinition<SafeCar>[] = [
     key: 'engineCode',
     label: 'Código do motor',
     group: 'progressive',
-    resolve: (vehicle) => vehicle.engineCode ?? null,
+    resolve: (vehicle) => {
+      if (!vehicle.engineCode) {
+        return null;
+      }
+
+      const displacement = vehicle.displacement;
+
+      if (!displacement || vehicle.engineCode.includes(displacement)) {
+        return vehicle.engineCode;
+      }
+
+      return `${displacement} ${vehicle.engineCode}`;
+    },
   },
 ];

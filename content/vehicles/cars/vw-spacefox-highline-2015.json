@@ -22,6 +22,7 @@
   "bodyType": "perua",
   "engineCode": "MSI",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
   "doors": 5,
   "fipe": {

@@ -8,16 +8,6 @@
   "countryOfOrigin": "Reino Unido",
   "fuel": "gasolina",
   "displacement": "2.0",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "bodyType": "suv",
-  "fipe": {
-    "value": 420619,
-    "referenceMonth": "2026-08",
-    "fipeCode": "033179-1"
-  },
-  "specSource": "icarros",
-  "active": true,
   "power": {
     "value": 300,
     "unit": "cv"
@@ -26,8 +16,19 @@
     "value": 40.8,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
   "engineCode": "Ingenium AJ200",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
-  "drivetrain": "integral"
+  "fipe": {
+    "value": 420619,
+    "referenceMonth": "2026-08",
+    "fipeCode": "033179-1"
+  },
+  "specSource": "icarros",
+  "active": true
 }

@@ -3,17 +3,11 @@
   "kind": "car",
   "brand": "Chevrolet",
   "model": "Corsa",
+  "version": "GSi 1.6 16V",
   "year": 1995,
   "origin": "nacional",
   "fuel": "gasolina",
-  "bodyType": "hatch",
-  "fipe": {
-    "value": 22937,
-    "referenceMonth": "2026-08",
-    "fipeCode": "004033-9"
-  },
-  "specSource": "icarros",
-  "active": true,
+  "displacement": "1.6",
   "power": {
     "value": 108,
     "unit": "cv"
@@ -23,11 +17,18 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
   "engineCode": "1.6 SFi 16V",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
-  "version": "GSi 1.6 16V",
-  "displacement": "1.6",
-  "transmission": "manual",
-  "drivetrain": "dianteira"
+  "fipe": {
+    "value": 22937,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004033-9"
+  },
+  "specSource": "icarros",
+  "active": true
 }

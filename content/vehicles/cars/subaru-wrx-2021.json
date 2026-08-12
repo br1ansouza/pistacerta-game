@@ -23,6 +23,7 @@
   "bodyType": "sedã",
   "engineCode": "FA20",
   "cylinders": 4,
+  "cylinderLayout": "boxer",
   "valves": 16,
   "doors": 4,
   "fipe": {

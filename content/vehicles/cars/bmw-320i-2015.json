@@ -21,6 +21,7 @@
   "drivetrain": "traseira",
   "bodyType": "sedã",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
   "doors": 4,
   "fipe": null,

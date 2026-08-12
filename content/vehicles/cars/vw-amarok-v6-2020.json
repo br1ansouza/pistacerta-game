@@ -7,17 +7,6 @@
   "origin": "importado",
   "fuel": "diesel",
   "displacement": "3.0",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "drivetrain": "integral",
-  "bodyType": "picape",
-  "fipe": {
-    "value": 161279,
-    "referenceMonth": "2026-08",
-    "fipeCode": "005506-9"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 258,
     "unit": "cv"
@@ -26,7 +15,19 @@
     "value": 59.1,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "picape",
   "engineCode": "EA897",
   "cylinders": 6,
-  "valves": 24
+  "cylinderLayout": "V",
+  "valves": 24,
+  "fipe": {
+    "value": 161279,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005506-9"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

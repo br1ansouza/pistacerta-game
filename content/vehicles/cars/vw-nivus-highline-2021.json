@@ -7,16 +7,6 @@
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "1.0",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "bodyType": "suv",
-  "fipe": {
-    "value": 102017,
-    "referenceMonth": "2026-08",
-    "fipeCode": "005526-3"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 128,
     "unit": "cv"
@@ -25,7 +15,18 @@
     "value": 20.4,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
   "engineCode": "EA211",
   "cylinders": 3,
-  "valves": 12
+  "cylinderLayout": "em linha",
+  "valves": 12,
+  "fipe": {
+    "value": 102017,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005526-3"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

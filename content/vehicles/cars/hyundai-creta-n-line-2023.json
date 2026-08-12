@@ -7,16 +7,6 @@
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "1.0",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "bodyType": "suv",
-  "fipe": {
-    "value": 127418,
-    "referenceMonth": "2026-08",
-    "fipeCode": "015212-9"
-  },
-  "specSource": "icarros",
-  "active": true,
   "power": {
     "value": 120,
     "unit": "cv"
@@ -25,7 +15,18 @@
     "value": 17.5,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "suv",
   "cylinders": 3,
+  "cylinderLayout": "em linha",
   "valves": 12,
-  "drivetrain": "dianteira"
+  "fipe": {
+    "value": 127418,
+    "referenceMonth": "2026-08",
+    "fipeCode": "015212-9"
+  },
+  "specSource": "icarros",
+  "active": true
 }

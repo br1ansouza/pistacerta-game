@@ -23,6 +23,7 @@
   "bodyType": "suv",
   "engineCode": "Vortec 5300",
   "cylinders": 8,
+  "cylinderLayout": "V",
   "valves": 16,
   "doors": 5,
   "fipe": {

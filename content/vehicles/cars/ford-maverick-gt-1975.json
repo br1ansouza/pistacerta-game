@@ -22,9 +22,10 @@
   "bodyType": "cupê",
   "engineCode": "Windsor 302",
   "cylinders": 8,
+  "cylinderLayout": "V",
+  "valves": 16,
   "doors": 2,
   "fipe": null,
   "specSource": "webmotors",
-  "active": true,
-  "valves": 16
+  "active": true
 }

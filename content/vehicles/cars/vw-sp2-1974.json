@@ -19,11 +19,12 @@
   "transmission": "manual",
   "drivetrain": "traseira",
   "bodyType": "cupê",
+  "engineCode": "BS 1.7",
   "cylinders": 4,
+  "cylinderLayout": "boxer",
+  "valves": 8,
   "doors": 2,
   "fipe": null,
   "specSource": "webmotors",
-  "active": true,
-  "engineCode": "BS 1.7",
-  "valves": 8
+  "active": true
 }

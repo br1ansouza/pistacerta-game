@@ -16,6 +16,7 @@ export const CLUE_FIELDS = [
   'bodyType',
   'engineCode',
   'cylinders',
+  'cylinderLayout',
   'valves',
   'doors',
 ] as const satisfies readonly (keyof Vehicle)[];

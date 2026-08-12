@@ -15,6 +15,7 @@ export const BODY_TYPES = [
   'minivan',
 ] as const;
 export const ORIGIN_TYPES = ['nacional', 'importado'] as const;
+export const CYLINDER_LAYOUTS = ['em linha', 'V', 'boxer', 'W'] as const;
 export const SPEC_SOURCES = [
   'webmotors',
   'icarros',
@@ -81,6 +82,7 @@ export const carSchema = z.object({
   bodyType: z.enum(BODY_TYPES).optional(),
   engineCode: z.string().min(1).optional(),
   cylinders: z.number().int().positive().optional(),
+  cylinderLayout: z.enum(CYLINDER_LAYOUTS).optional(),
   valves: z.number().int().positive().optional(),
   doors: z.number().int().positive().optional(),
 });

@@ -14,6 +14,20 @@
     "referenceMonth": "2026-08",
     "fipeCode": "005521-2"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "power": {
+    "value": 150,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 25.5,
+    "unit": "kgfm"
+  },
+  "engineCode": "EA211",
+  "cylinders": 4,
+  "valves": 16,
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "version": "GTS 1.4 TSI"
 }

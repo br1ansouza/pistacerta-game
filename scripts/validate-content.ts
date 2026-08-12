@@ -39,7 +39,14 @@ function report(vehicles: Vehicle[]): number {
     }
 
     if (!vehicle.image) {
-      warnings.push(`${vehicle.slug}: sem imagem (fallback será usado).`);
+      if (vehicle.active) {
+        console.error(`✖ ${vehicle.slug}: carro ativo sem foto verificada.`);
+        errors += 1;
+      } else {
+        warnings.push(`${vehicle.slug}: sem imagem (fallback será usado).`);
+      }
+    } else if (vehicle.image.market === 'global') {
+      warnings.push(`${vehicle.slug}: foto de mercado global — ${vehicle.image.depicts}.`);
     }
 
     if (!vehicle.fipe) {

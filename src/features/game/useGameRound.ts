@@ -2,7 +2,7 @@ import { useCallback, useEffect, useReducer, useRef } from 'react';
 import { initialRoundState, roundReducer } from '@/domain/round/round.reducer';
 import type { GameMode, Outcome } from '@/domain/round/round.types';
 import { revealVehicle, startRound } from '@/lib/api';
-import { readRecentTokens, rememberToken } from '@/lib/recent-rounds';
+import { readDeck, saveDeck } from '@/lib/deck-storage';
 
 export function useGameRound(mode: GameMode) {
   const [state, dispatch] = useReducer(roundReducer, initialRoundState);
@@ -16,8 +16,8 @@ export function useGameRound(mode: GameMode) {
     dispatch({ type: 'round/requested', mode });
 
     try {
-      const response = await startRound(mode, readRecentTokens(), controller.signal);
-      rememberToken(response.token);
+      const response = await startRound(mode, readDeck(), controller.signal);
+      saveDeck(response.deck);
 
       dispatch({
         type: 'round/started',

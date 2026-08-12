@@ -1,0 +1,35 @@
+{
+  "slug": "toyota-gr-yaris-2026",
+  "kind": "car",
+  "brand": "Toyota",
+  "model": "GR Yaris",
+  "version": "1.6 Turbo GR-Four",
+  "year": 2026,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "gasolina",
+  "displacement": "1.6",
+  "power": {
+    "value": 304,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 40.8,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "drivetrain": "integral",
+  "bodyType": "hatch",
+  "engineCode": "G16E-GTS",
+  "cylinders": 3,
+  "valves": 12,
+  "doors": 3,
+  "fipe": {
+    "value": 329978,
+    "referenceMonth": "2026-08",
+    "fipeCode": "002229-2"
+  },
+  "specSource": "fabricante",
+  "active": true
+}

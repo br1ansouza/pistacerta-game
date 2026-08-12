@@ -4,6 +4,8 @@ import type { SafeVehicle, VehicleIdentity } from '@/domain/vehicle/safe-vehicle
 
 export type RoundResponse = {
   token: string;
+  deck: string;
+  reshuffled: boolean;
   mode: GameMode;
   clues: SafeVehicle;
   identity: VehicleIdentity | null;
@@ -59,16 +61,16 @@ const STATIC = process.env.PUBLIC_STATIC === '1';
 
 export function startRound(
   mode: GameMode,
-  recentTokens: readonly string[],
+  deck: string | null,
   signal?: AbortSignal,
 ): Promise<RoundResponse> {
   if (STATIC) {
-    return import('./static-backend').then(({ startRoundStatic }) =>
-      startRoundStatic(mode, recentTokens),
+    return import('@/lib/static-backend').then(({ startRoundStatic }) =>
+      startRoundStatic(mode, deck),
     );
   }
 
-  return post<RoundResponse>('/api/round', { mode, recentTokens }, signal);
+  return post<RoundResponse>('/api/round', { mode, deck }, signal);
 }
 
 export function revealVehicle(
@@ -77,7 +79,7 @@ export function revealVehicle(
   signal?: AbortSignal,
 ): Promise<RevealResponse> {
   if (STATIC) {
-    return import('./static-backend').then(({ revealVehicleStatic }) =>
+    return import('@/lib/static-backend').then(({ revealVehicleStatic }) =>
       revealVehicleStatic(token, choiceId),
     );
   }
@@ -87,7 +89,7 @@ export function revealVehicle(
 
 export async function fetchCredits(signal?: AbortSignal): Promise<CreditsResponse> {
   if (STATIC) {
-    return fetchCreditsStatic();
+    return import('@/lib/static-backend').then(({ fetchCreditsStatic }) => fetchCreditsStatic());
   }
 
   const response = await fetch('/api/credits', { signal });
@@ -97,19 +99,4 @@ export async function fetchCredits(signal?: AbortSignal): Promise<CreditsRespons
   }
 
   return (await response.json()) as CreditsResponse;
-}
-
-export async function fetchCreditsStatic(): Promise<CreditsResponse> {
-  const [{ VEHICLES }, images] = await Promise.all([
-    import('@/generated/content'),
-    import('@/generated/credits'),
-  ]);
-
-  const bySlug = images.CREDITS;
-
-  return {
-    credits: VEHICLES.map((entry) => bySlug[entry.slug]).filter(
-      (credit): credit is ImageCredit => credit !== undefined,
-    ),
-  };
 }

@@ -14,6 +14,21 @@
     "referenceMonth": "2026-08",
     "fipeCode": "025260-3"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "power": {
+    "value": 145,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 20.9,
+    "unit": "kgfm"
+  },
+  "engineCode": "F4R",
+  "cylinders": 4,
+  "valves": 16,
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "version": "RS 2.0 Racing Spirit"
 }

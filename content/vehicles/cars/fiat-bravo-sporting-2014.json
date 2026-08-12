@@ -1,33 +1,34 @@
 {
-  "slug": "fiat-argo-hgt-2020",
+  "slug": "fiat-bravo-sporting-2014",
   "kind": "car",
   "brand": "Fiat",
-  "model": "Argo",
-  "year": 2020,
+  "model": "Bravo",
+  "year": 2014,
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "1.8",
-  "transmission": "automático",
+  "aspiration": "aspirado",
   "bodyType": "hatch",
+  "doors": 5,
   "fipe": {
-    "value": 70388,
+    "value": 43045,
     "referenceMonth": "2026-08",
-    "fipeCode": "001488-5"
+    "fipeCode": "001384-6"
   },
-  "specSource": "carros-na-web",
+  "specSource": "icarros",
   "active": true,
   "power": {
-    "value": 135,
+    "value": 132,
     "unit": "cv"
   },
   "torque": {
-    "value": 19.3,
+    "value": 18.9,
     "unit": "kgfm"
   },
   "engineCode": "E.torQ",
   "cylinders": 4,
   "valves": 16,
-  "aspiration": "aspirado",
-  "drivetrain": "dianteira",
-  "version": "HGT 1.8"
+  "version": "Sporting 1.8 16V",
+  "transmission": "manual",
+  "drivetrain": "dianteira"
 }

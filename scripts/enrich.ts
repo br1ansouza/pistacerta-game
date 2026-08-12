@@ -3,12 +3,21 @@ import { join } from 'node:path';
 import process from 'node:process';
 
 type Patch = {
+  version?: string;
+  fuel?: string;
+  displacement?: string;
   power?: number;
   torque?: number;
   aspiration?: string;
+  transmission?: string;
+  drivetrain?: string;
+  bodyType?: string;
   engineCode?: string;
   cylinders?: number;
   valves?: number;
+  doors?: number;
+  specSource?: string;
+  active?: boolean;
 };
 
 const [patchPath] = process.argv.slice(2);
@@ -34,11 +43,10 @@ const CLUES = [
   'transmission',
   'drivetrain',
   'bodyType',
-  'cylinders',
-  'doors',
-  'valves',
   'engineCode',
 ];
+
+const MEASUREMENTS: Record<string, string> = { power: 'cv', torque: 'kgfm' };
 
 let updated = 0;
 
@@ -53,15 +61,17 @@ for (const [slug, patch] of Object.entries(patches)) {
   const path = join(carsDir, fileName);
   const vehicle = JSON.parse(await readFile(path, 'utf8')) as Record<string, unknown>;
 
-  if (patch.power !== undefined) vehicle.power = { value: patch.power, unit: 'cv' };
-  if (patch.torque !== undefined) vehicle.torque = { value: patch.torque, unit: 'kgfm' };
-  if (patch.aspiration !== undefined) vehicle.aspiration = patch.aspiration;
-  if (patch.engineCode !== undefined) vehicle.engineCode = patch.engineCode;
-  if (patch.cylinders !== undefined) vehicle.cylinders = patch.cylinders;
-  if (patch.valves !== undefined) vehicle.valves = patch.valves;
+  for (const [key, value] of Object.entries(patch)) {
+    if (value === undefined) {
+      continue;
+    }
 
-  vehicle.specSource = 'webmotors';
-  vehicle.active = true;
+    const unit = MEASUREMENTS[key];
+    vehicle[key] = unit ? { value, unit } : value;
+  }
+
+  patch.specSource ??= 'carros-na-web';
+  vehicle.specSource = patch.specSource;
 
   await writeFile(path, `${JSON.stringify(vehicle, null, 2)}\n`, 'utf8');
 

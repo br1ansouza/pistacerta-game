@@ -1,0 +1,31 @@
+{
+  "slug": "cadillac-escalade-2021",
+  "kind": "car",
+  "brand": "Cadillac",
+  "model": "Escalade",
+  "version": "6.2 V8",
+  "year": 2021,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "gasolina",
+  "displacement": "6.2",
+  "power": {
+    "value": 420,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 63.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
+  "engineCode": "L87",
+  "cylinders": 8,
+  "valves": 16,
+  "doors": 5,
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

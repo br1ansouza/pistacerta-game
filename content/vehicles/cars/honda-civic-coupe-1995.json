@@ -1,0 +1,35 @@
+{
+  "slug": "honda-civic-coupe-1995",
+  "kind": "car",
+  "brand": "Honda",
+  "model": "Civic",
+  "version": "Coupé EX 1.6",
+  "year": 1995,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "gasolina",
+  "displacement": "1.6",
+  "power": {
+    "value": 125,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 14.6,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "cupê",
+  "engineCode": "D16Z6",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 2,
+  "fipe": {
+    "value": 33575,
+    "referenceMonth": "2026-08",
+    "fipeCode": "014019-8"
+  },
+  "specSource": "icarros",
+  "active": true
+}

@@ -1,9 +1,10 @@
 import { buildChoices, type RoundChoice } from '@/domain/round/choices';
+import { pickFromDeck } from '@/domain/round/deck';
 import type { GameMode } from '@/domain/round/round.types';
 import type { VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
 import type { Vehicle } from '@/domain/vehicle/vehicle.schema';
 import { VEHICLES, type SealedVehicle } from '@/generated/content';
-import type { RevealResponse, RoundResponse } from './api';
+import type { CreditsResponse, ImageCredit, RevealResponse, RoundResponse } from './api';
 
 const decoder = new TextDecoder();
 const rounds = new Map<string, SealedVehicle>();
@@ -41,51 +42,26 @@ async function unseal(entry: SealedVehicle): Promise<VehicleIdentity> {
   return JSON.parse(decoder.decode(plaintext)) as VehicleIdentity;
 }
 
-const BRAND_PENALTY = 0.18;
-const DECADE_PENALTY = 0.55;
-
-function pick(recentTokens: readonly string[]): SealedVehicle {
-  const recent = recentTokens
-    .map((token) => rounds.get(token))
-    .filter((entry): entry is SealedVehicle => entry !== undefined);
-
-  const excluded = new Set(recent.map((entry) => entry.slug));
-  const candidates = VEHICLES.filter((entry) => !excluded.has(entry.slug));
-  const pool = candidates.length > 0 ? candidates : VEHICLES;
-
-  const recentBrands = recent.slice(0, 6).map((entry) => entry.brand);
-  const recentDecades = new Set(
-    recent.slice(0, 3).map((entry) => Math.floor(entry.clues.year / 10)),
-  );
-
-  const weights = pool.map((entry) => {
-    let weight = 1;
-    const brandIndex = recentBrands.indexOf(entry.brand);
-
-    if (brandIndex !== -1) {
-      weight *= BRAND_PENALTY * (1 + brandIndex / recentBrands.length);
-    }
-
-    if (recentDecades.has(Math.floor(entry.clues.year / 10))) {
-      weight *= DECADE_PENALTY;
-    }
-
-    return Math.max(weight, 0.02);
-  });
-
-  const total = weights.reduce((sum, weight) => sum + weight, 0);
-  let cursor = Math.random() * total;
-
-  for (const [index, entry] of pool.entries()) {
-    cursor -= weights[index] ?? 0;
-
-    if (cursor <= 0) {
-      return entry;
-    }
+function readDeck(deck: string | null): string[] {
+  if (!deck) {
+    return [];
   }
 
-  return pool[0] as SealedVehicle;
+  try {
+    const parsed: unknown = JSON.parse(deck);
+    return Array.isArray(parsed) ? parsed.filter((slug) => typeof slug === 'string') : [];
+  } catch {
+    return [];
+  }
 }
+
+const CANDIDATES = VEHICLES.map((entry) => ({
+  slug: entry.slug,
+  brand: entry.brand,
+  year: entry.clues.year,
+}));
+
+const BY_SLUG = new Map(VEHICLES.map((entry) => [entry.slug, entry]));
 
 function asVehicle(entry: SealedVehicle): Vehicle {
   return { ...entry.clues, slug: entry.slug, brand: entry.brand, model: entry.model } as Vehicle;
@@ -100,14 +76,22 @@ function toChoices(answer: SealedVehicle): RoundChoice[] {
 
 export async function startRoundStatic(
   mode: GameMode,
-  recentTokens: readonly string[],
+  deck: string | null,
 ): Promise<RoundResponse> {
-  const entry = pick(recentTokens);
+  const picked = pickFromDeck(CANDIDATES, readDeck(deck));
+
+  if (!picked) {
+    throw new Error('Nenhum veículo disponível');
+  }
+
+  const entry = BY_SLUG.get(picked.vehicle.slug) as SealedVehicle;
   const token = crypto.randomUUID();
   rounds.set(token, entry);
 
   return {
     token,
+    deck: JSON.stringify(picked.seen),
+    reshuffled: picked.reshuffled,
     mode,
     clues: entry.clues,
     identity: mode === 'duo' ? await unseal(entry) : null,
@@ -128,5 +112,15 @@ export async function revealVehicleStatic(
   return {
     identity: await unseal(entry),
     correct: choiceId === null ? null : choiceId === entry.slug,
+  };
+}
+
+export async function fetchCreditsStatic(): Promise<CreditsResponse> {
+  const { CREDITS } = await import('@/generated/credits');
+
+  return {
+    credits: VEHICLES.map((entry) => CREDITS[entry.slug]).filter(
+      (credit): credit is ImageCredit => credit !== undefined,
+    ),
   };
 }

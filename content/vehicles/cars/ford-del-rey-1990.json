@@ -12,6 +12,23 @@
     "referenceMonth": "2026-08",
     "fipeCode": "003135-6"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "power": {
+    "value": 86,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 14.28,
+    "unit": "kgfm"
+  },
+  "engineCode": "AP-1800",
+  "cylinders": 4,
+  "valves": 8,
+  "displacement": "1.8",
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "doors": 4,
+  "version": "Ghia 1.8"
 }

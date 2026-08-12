@@ -140,8 +140,64 @@ export async function verifyRoundToken(token: string): Promise<RoundTokenPayload
   return payload;
 }
 
+const digestCache = new Map<string, string>();
+
+async function slugDigest(slug: string): Promise<string> {
+  const cached = digestCache.get(slug);
+
+  if (cached) {
+    return cached;
+  }
+
+  const hash = await crypto.subtle.digest('SHA-256', encoder.encode(slug));
+  const value = toBase64Url(new Uint8Array(hash).subarray(0, 4));
+  digestCache.set(slug, value);
+
+  return value;
+}
+
 export async function signDeckToken(seen: readonly string[]): Promise<string> {
-  return seal({ t: 'deck', seen: [...seen], expiresAt: Date.now() + DECK_TTL_MS });
+  const digests = await Promise.all(seen.map(slugDigest));
+
+  return seal({ t: 'deck', d: digests, expiresAt: Date.now() + DECK_TTL_MS });
+}
+
+export async function readDeckDigests(
+  token: string | null | undefined,
+  slugs: readonly string[],
+): Promise<string[]> {
+  if (!token) {
+    return [];
+  }
+
+  const payload = (await unseal(token)) as (DeckTokenPayload & { d?: string[] }) | null;
+
+  if (!payload || payload.t !== 'deck') {
+    return [];
+  }
+
+  if (typeof payload.expiresAt !== 'number' || Date.now() > payload.expiresAt) {
+    return [];
+  }
+
+  if (Array.isArray(payload.seen)) {
+    return payload.seen.filter((slug) => typeof slug === 'string');
+  }
+
+  if (!Array.isArray(payload.d)) {
+    return [];
+  }
+
+  const bySlug = new Map<string, string>();
+  await Promise.all(
+    slugs.map(async (slug) => {
+      bySlug.set(await slugDigest(slug), slug);
+    }),
+  );
+
+  return payload.d
+    .map((digest) => bySlug.get(digest))
+    .filter((slug): slug is string => slug !== undefined);
 }
 
 export async function readDeckToken(token: string | null | undefined): Promise<string[]> {

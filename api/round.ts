@@ -3,8 +3,14 @@ import { buildChoices } from '../src/domain/round/choices.ts';
 import { pickFromDeck } from '../src/domain/round/deck.ts';
 import { toSafeVehicle, toVehicleIdentity } from '../src/domain/vehicle/safe-vehicle.ts';
 import { getPlayableVehicles } from '../src/domain/vehicle/vehicle.repository.ts';
-import { errorResponse, jsonResponse, readJsonBody } from './_lib/http.ts';
-import { readDeckToken, signDeckToken, signRoundToken } from './_lib/round-token.ts';
+import {
+  deckCookie,
+  deckFromCookie,
+  errorResponse,
+  jsonResponse,
+  readJsonBody,
+} from './_lib/http.ts';
+import { readDeckDigests, signDeckToken, signRoundToken } from './_lib/round-token.ts';
 
 const requestSchema = z.object({
   mode: z.enum(['solo', 'duo']).default('solo'),
@@ -25,21 +31,31 @@ export async function handleRound(request: Request): Promise<Response> {
 
   const { mode, deck } = parsed.data;
   const pool = await getPlayableVehicles('car');
-  const picked = pickFromDeck(pool, await readDeckToken(deck));
+  const slugs = pool.map((vehicle) => vehicle.slug);
+  const [fromBody, fromCookie] = await Promise.all([
+    readDeckDigests(deck, slugs),
+    readDeckDigests(deckFromCookie(request), slugs),
+  ]);
+  const picked = pickFromDeck(pool, fromCookie.length > fromBody.length ? fromCookie : fromBody);
 
   if (!picked) {
     return errorResponse('Nenhum veículo disponível', 503);
   }
 
   const { vehicle } = picked;
+  const nextDeck = await signDeckToken(picked.seen);
 
-  return jsonResponse({
-    token: await signRoundToken(vehicle.slug),
-    deck: await signDeckToken(picked.seen),
-    reshuffled: picked.reshuffled,
-    mode,
-    clues: toSafeVehicle(vehicle),
-    identity: mode === 'duo' ? toVehicleIdentity(vehicle) : null,
-    choices: mode === 'solo' ? buildChoices(vehicle, pool) : null,
-  });
+  return jsonResponse(
+    {
+      token: await signRoundToken(vehicle.slug),
+      deck: nextDeck,
+      reshuffled: picked.reshuffled,
+      mode,
+      clues: toSafeVehicle(vehicle),
+      identity: mode === 'duo' ? toVehicleIdentity(vehicle) : null,
+      choices: mode === 'solo' ? buildChoices(vehicle, pool) : null,
+    },
+    200,
+    { 'Set-Cookie': deckCookie(nextDeck) },
+  );
 }

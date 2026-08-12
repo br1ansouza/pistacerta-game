@@ -136,21 +136,40 @@ export async function verifyRoundToken(
   return payload;
 }
 
-export async function signDeckToken(seen: readonly string[], secret: string): Promise<string> {
-  return seal({ t: 'deck', seen: [...seen], expiresAt: Date.now() + DECK_TTL_MS }, secret);
+const digestCache = new Map<string, string>();
+
+async function slugDigest(slug: string): Promise<string> {
+  const cached = digestCache.get(slug);
+
+  if (cached) {
+    return cached;
+  }
+
+  const hash = await crypto.subtle.digest('SHA-256', encoder.encode(slug));
+  const value = toBase64Url(new Uint8Array(hash).subarray(0, 4));
+  digestCache.set(slug, value);
+
+  return value;
 }
 
-export async function readDeckToken(
+export async function signDeckToken(seen: readonly string[], secret: string): Promise<string> {
+  const digests = await Promise.all(seen.map(slugDigest));
+
+  return seal({ t: 'deck', d: digests, expiresAt: Date.now() + DECK_TTL_MS }, secret);
+}
+
+export async function readDeckDigests(
   token: string | null | undefined,
   secret: string,
+  slugs: readonly string[],
 ): Promise<string[]> {
   if (!token) {
     return [];
   }
 
-  const payload = (await unseal(token, secret)) as DeckTokenPayload | null;
+  const payload = (await unseal(token, secret)) as (DeckTokenPayload & { d?: string[] }) | null;
 
-  if (!payload || payload.t !== 'deck' || !Array.isArray(payload.seen)) {
+  if (!payload || payload.t !== 'deck') {
     return [];
   }
 
@@ -158,5 +177,22 @@ export async function readDeckToken(
     return [];
   }
 
-  return payload.seen.filter((slug) => typeof slug === 'string');
+  if (Array.isArray(payload.seen)) {
+    return payload.seen.filter((slug) => typeof slug === 'string');
+  }
+
+  if (!Array.isArray(payload.d)) {
+    return [];
+  }
+
+  const bySlug = new Map<string, string>();
+  await Promise.all(
+    slugs.map(async (slug) => {
+      bySlug.set(await slugDigest(slug), slug);
+    }),
+  );
+
+  return payload.d
+    .map((digest) => bySlug.get(digest))
+    .filter((slug): slug is string => slug !== undefined);
 }

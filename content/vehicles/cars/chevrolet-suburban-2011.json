@@ -1,0 +1,35 @@
+{
+  "slug": "chevrolet-suburban-2011",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Suburban",
+  "version": "LTZ 5.3 V8",
+  "year": 2011,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "gasolina",
+  "displacement": "5.3",
+  "power": {
+    "value": 324,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 46.3,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
+  "engineCode": "Vortec 5300",
+  "cylinders": 8,
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 248343,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004153-0"
+  },
+  "specSource": "fabricante",
+  "active": true
+}

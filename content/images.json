@@ -17,6 +17,15 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Audi_RS3_TFSi_Quattro.jpg"
   },
+  "cadillac-escalade-2021": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/2021_Cadillac_Escalade_ESV%2C_front_6.2.21.jpg/960px-2021_Cadillac_Escalade_ESV%2C_front_6.2.21.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Cadillac Escalade ESV 2021",
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Cadillac_Escalade_ESV,_front_6.2.21.jpg"
+  },
   "chevrolet-camaro-ss-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Chevrolet_Camaro_SS_%2718_%28%21%29.jpg/960px-Chevrolet_Camaro_SS_%2718_%28%21%29.jpg",
     "source": "wikimedia",
@@ -80,6 +89,15 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chevrolet_Opala_SS_1978_Inca.jpg"
   },
+  "chevrolet-suburban-2011": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/2015_Chevrolet_Suburban_1500_LTZ%2C_front_4.18.19.jpg/960px-2015_Chevrolet_Suburban_1500_LTZ%2C_front_4.18.19.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Chevrolet Suburban 1500 LTZ",
+    "author": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Chevrolet_Suburban_1500_LTZ,_front_4.18.19.jpg"
+  },
   "chevrolet-tracker-premier-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Chevrolet_Tracker_003.jpg/960px-Chevrolet_Tracker_003.jpg",
     "source": "wikimedia",
@@ -134,11 +152,11 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiat_Argo_2020_Trekking_in_Uruguay_(front).jpg"
   },
-  "fiat-bravo-tjet-2014": {
+  "fiat-bravo-sporting-2014": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Fiat_Bravo_1.4_TJet_Sport_2014_%2813274775195%29.jpg/960px-Fiat_Bravo_1.4_TJet_Sport_2014_%2813274775195%29.jpg",
     "source": "wikimedia",
     "market": "br",
-    "depicts": "Fiat Bravo 1.4 TJet Sport 2014 (13274775195)",
+    "depicts": "Fiat Bravo 1.4 T-Jet Sport brasileiro, mesma carroceria do Sporting",
     "author": "order_242 from Chile",
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiat_Bravo_1.4_TJet_Sport_2014_(13274775195).jpg"
@@ -241,6 +259,24 @@
     "author": "Renzo Maia ; cropped and adjusted by uploader Mr.choppers",
     "license": "CC BY 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Brasil_Maverick_302.jpg"
+  },
+  "honda-civic-coupe-1995": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Tuned_Honda_Civic_Coup%C3%A9_%28EJ%29_in_Thailand_01.jpg/960px-Tuned_Honda_Civic_Coup%C3%A9_%28EJ%29_in_Thailand_01.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Honda Civic Coupé da geração EJ",
+    "author": "Jirapat Chroenkeskij",
+    "license": "CC0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tuned_Honda_Civic_Coupé_(EJ)_in_Thailand_01.jpg"
+  },
+  "honda-civic-si-2010": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/2009_Honda_Civic_Si_sedan_--_10-05-2009.jpg/960px-2009_Honda_Civic_Si_sedan_--_10-05-2009.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Honda Civic Si sedã da oitava geração",
+    "author": "IFCAR",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009_Honda_Civic_Si_sedan_--_10-05-2009.jpg"
   },
   "honda-civic-si-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Honda_Civic_Coupe_SI_P4220691.jpg/960px-Honda_Civic_Coupe_SI_P4220691.jpg",
@@ -430,6 +466,24 @@
     "author": "JustAnotherCarDesigner",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_Corolla_Altis_GR_Sport_(front).jpg"
+  },
+  "toyota-gr-corolla-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/2024_Toyota_GR_Corolla.jpg/960px-2024_Toyota_GR_Corolla.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Toyota GR Corolla 2024",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2024_Toyota_GR_Corolla.jpg"
+  },
+  "toyota-gr-yaris-2026": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2024_Toyota_GR_Yaris_Hayakawa.jpg/960px-2024_Toyota_GR_Yaris_Hayakawa.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Toyota GR Yaris reestilizado",
+    "author": "TTTNIS",
+    "license": "CC0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2024_Toyota_GR_Yaris_Hayakawa.jpg"
   },
   "toyota-hilux-srx-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x2.jpg/960px-2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x2.jpg",

@@ -1,0 +1,35 @@
+{
+  "slug": "toyota-gr-corolla-2024",
+  "kind": "car",
+  "brand": "Toyota",
+  "model": "GR Corolla",
+  "version": "Core 1.6 Turbo",
+  "year": 2024,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "gasolina",
+  "displacement": "1.6",
+  "power": {
+    "value": 304,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 37.7,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "drivetrain": "integral",
+  "bodyType": "hatch",
+  "engineCode": "G16E-GTS",
+  "cylinders": 3,
+  "valves": 12,
+  "doors": 5,
+  "fipe": {
+    "value": 319931,
+    "referenceMonth": "2026-08",
+    "fipeCode": "002212-8"
+  },
+  "specSource": "fabricante",
+  "active": true
+}

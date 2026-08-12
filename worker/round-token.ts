@@ -136,27 +136,83 @@ export async function verifyRoundToken(
   return payload;
 }
 
-export async function signDeckToken(seen: readonly string[], secret: string): Promise<string> {
-  return seal({ t: 'deck', seen: [...seen], expiresAt: Date.now() + DECK_TTL_MS }, secret);
-}
+const digestCache = new Map<string, string>();
 
-export async function readDeckToken(
-  token: string | null | undefined,
-  secret: string,
-): Promise<string[]> {
-  if (!token) {
-    return [];
+async function slugDigest(slug: string): Promise<string> {
+  const cached = digestCache.get(slug);
+
+  if (cached) {
+    return cached;
   }
 
-  const payload = (await unseal(token, secret)) as DeckTokenPayload | null;
+  const hash = await crypto.subtle.digest('SHA-256', encoder.encode(slug));
+  const value = toBase64Url(new Uint8Array(hash).subarray(0, 4));
+  digestCache.set(slug, value);
 
-  if (!payload || payload.t !== 'deck' || !Array.isArray(payload.seen)) {
-    return [];
+  return value;
+}
+
+export async function signDeckToken(
+  seen: readonly string[],
+  secret: string,
+  carry: readonly string[] = [],
+): Promise<string> {
+  const digests = await Promise.all(seen.map(slugDigest));
+
+  return seal(
+    { t: 'deck', d: [...digests, ...carry], expiresAt: Date.now() + DECK_TTL_MS },
+    secret,
+  );
+}
+
+export type DeckState = { seen: string[]; carry: string[] };
+
+export async function readDeckDigests(
+  token: string | null | undefined,
+  secret: string,
+  slugs: readonly string[],
+): Promise<DeckState> {
+  if (!token) {
+    return { seen: [], carry: [] };
+  }
+
+  const payload = (await unseal(token, secret)) as (DeckTokenPayload & { d?: string[] }) | null;
+
+  if (!payload || payload.t !== 'deck') {
+    return { seen: [], carry: [] };
   }
 
   if (typeof payload.expiresAt !== 'number' || Date.now() > payload.expiresAt) {
-    return [];
+    return { seen: [], carry: [] };
   }
 
-  return payload.seen.filter((slug) => typeof slug === 'string');
+  if (Array.isArray(payload.seen)) {
+    return { seen: payload.seen.filter((slug) => typeof slug === 'string'), carry: [] };
+  }
+
+  if (!Array.isArray(payload.d)) {
+    return { seen: [], carry: [] };
+  }
+
+  const bySlug = new Map<string, string>();
+  await Promise.all(
+    slugs.map(async (slug) => {
+      bySlug.set(await slugDigest(slug), slug);
+    }),
+  );
+
+  const seen: string[] = [];
+  const carry: string[] = [];
+
+  for (const digest of payload.d) {
+    const slug = bySlug.get(digest);
+
+    if (slug) {
+      seen.push(slug);
+    } else {
+      carry.push(digest);
+    }
+  }
+
+  return { seen, carry };
 }

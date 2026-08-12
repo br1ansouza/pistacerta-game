@@ -3,7 +3,7 @@ import { buildChoices } from '@/domain/round/choices';
 import { pickFromDeck } from '@/domain/round/deck';
 import { describeVehicle, toSafeVehicle, toVehicleIdentity } from '@/domain/vehicle/safe-vehicle';
 import { VEHICLES } from '@/generated/vehicles';
-import { readDeckToken, signDeckToken, signRoundToken, verifyRoundToken } from './round-token';
+import { readDeckDigests, signDeckToken, signRoundToken, verifyRoundToken } from './round-token';
 
 type RateLimiter = { limit: (options: { key: string }) => Promise<{ success: boolean }> };
 
@@ -15,9 +15,34 @@ type Env = {
 };
 
 const NO_STORE = { 'Cache-Control': 'no-store' } as const;
+const DECK_COOKIE = 'pc_deck';
+const DECK_COOKIE_MAX_AGE = 180 * 24 * 60 * 60;
+const SLUGS = VEHICLES.map((vehicle) => vehicle.slug);
 
-function json(body: unknown, status = 200): Response {
-  return Response.json(body, { status, headers: NO_STORE });
+function deckFromCookie(request: Request): string | null {
+  const header = request.headers.get('cookie');
+
+  if (!header) {
+    return null;
+  }
+
+  for (const part of header.split(';')) {
+    const [name, ...rest] = part.trim().split('=');
+
+    if (name === DECK_COOKIE && rest.length > 0) {
+      return rest.join('=');
+    }
+  }
+
+  return null;
+}
+
+function json(body: unknown, status = 200, extraHeaders?: Record<string, string>): Response {
+  return Response.json(body, { status, headers: { ...NO_STORE, ...extraHeaders } });
+}
+
+function deckCookie(deck: string): string {
+  return `${DECK_COOKIE}=${deck}; Path=/; Max-Age=${DECK_COOKIE_MAX_AGE}; SameSite=Lax; Secure; HttpOnly`;
 }
 
 const roundSchema = z.object({
@@ -38,23 +63,33 @@ async function handleRound(request: Request, secret: string): Promise<Response> 
   }
 
   const { mode, deck } = parsed.data;
-  const picked = pickFromDeck(VEHICLES, await readDeckToken(deck, secret));
+  const [fromBody, fromCookie] = await Promise.all([
+    readDeckDigests(deck, secret, SLUGS),
+    readDeckDigests(deckFromCookie(request), secret, SLUGS),
+  ]);
+  const state = fromCookie.seen.length > fromBody.seen.length ? fromCookie : fromBody;
+  const picked = pickFromDeck(VEHICLES, state.seen);
 
   if (!picked) {
     return json({ error: 'Nenhum veículo disponível' }, 503);
   }
 
   const { vehicle } = picked;
+  const nextDeck = await signDeckToken(picked.seen, secret, state.carry);
 
-  return json({
-    token: await signRoundToken(vehicle.slug, secret),
-    deck: await signDeckToken(picked.seen, secret),
-    reshuffled: picked.reshuffled,
-    mode,
-    clues: toSafeVehicle(vehicle),
-    identity: mode === 'duo' ? toVehicleIdentity(vehicle) : null,
-    choices: mode === 'solo' ? buildChoices(vehicle, VEHICLES) : null,
-  });
+  return json(
+    {
+      token: await signRoundToken(vehicle.slug, secret),
+      deck: nextDeck,
+      reshuffled: picked.reshuffled,
+      mode,
+      clues: toSafeVehicle(vehicle),
+      identity: mode === 'duo' ? toVehicleIdentity(vehicle) : null,
+      choices: mode === 'solo' ? buildChoices(vehicle, VEHICLES) : null,
+    },
+    200,
+    { 'Set-Cookie': deckCookie(nextDeck) },
+  );
 }
 
 async function handleReveal(request: Request, secret: string): Promise<Response> {

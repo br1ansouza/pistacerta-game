@@ -1,4 +1,4 @@
-const CACHE = 'pistacerta-v1';
+const CACHE = 'pistacerta-v2';
 const SHELL = '/index.html';
 
 self.addEventListener('install', (event) => {
@@ -36,7 +36,16 @@ self.addEventListener('fetch', (event) => {
 
   if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(request).catch(() => caches.match(SHELL).then((hit) => hit ?? Response.error())),
+      fetch(request)
+        .then((response) => {
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE).then((cache) => cache.put(SHELL, copy));
+          }
+
+          return response;
+        })
+        .catch(() => caches.match(SHELL).then((hit) => hit ?? Response.error())),
     );
     return;
   }

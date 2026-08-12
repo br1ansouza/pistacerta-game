@@ -207,13 +207,11 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Chevrolet_Trailblazer_4x4_LTZ_Z71_(10).jpg"
   },
   "chevrolet-vectra-gsi-1995": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/1990_Opel_Vectra_GLS_%2819384050978%29.jpg/960px-1990_Opel_Vectra_GLS_%2819384050978%29.jpg",
-    "source": "wikimedia",
-    "market": "global",
-    "depicts": "Opel Vectra A sedã europeu — o Vectra GSi brasileiro era importado, é o mesmo carro",
-    "author": "Riley from Christchurch, New Zealand",
-    "license": "CC BY 2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1990_Opel_Vectra_GLS_(19384050978).jpg"
+    "src": "/vehicles/chevrolet-vectra-gsi-1995.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Chevrolet Vectra GSi 2.0 16V brasileiro",
+    "sourceUrl": "https://www.pinterest.com/pin/790874384551026130/"
   },
   "chevrolet-veraneio-1990": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Chevrolet_Veraneio_-_Pol%C3%ADcia_Civil_S%C3%A3o_Paulo_%281995%29.jpg/960px-Chevrolet_Veraneio_-_Pol%C3%ADcia_Civil_S%C3%A3o_Paulo_%281995%29.jpg",
@@ -457,13 +455,12 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_F-1000_cabine_dupla.jpg"
   },
   "ford-fiesta-supercharger-2005": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Ford_Fiesta_2005_Kofferraum.jpg/960px-Ford_Fiesta_2005_Kofferraum.jpg",
-    "source": "wikimedia",
+    "src": "/vehicles/ford-fiesta-supercharger-2005.jpg",
+    "source": "press-kit",
     "market": "br",
-    "depicts": "Ford Fiesta hatch da geração do Supercharger",
-    "author": "Norbert Schnitzler",
-    "license": "CC BY-SA 3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Fiesta_2005_Kofferraum.jpg"
+    "depicts": "Ford Fiesta hatch brasileiro da fase do Supercharger",
+    "author": "Carros na Web",
+    "sourceUrl": "https://www.carrosnaweb.com.br/"
   },
   "ford-maverick-gt-1975": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Ford_Brasil_Maverick_302.jpg/960px-Ford_Brasil_Maverick_302.jpg",
@@ -545,6 +542,14 @@
     "author": "Chanokchon",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Hyundai_Creta_Smart.jpg"
+  },
+  "hyundai-hd80-2019": {
+    "src": "/vehicles/hyundai-hd80-2019.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Hyundai HD 80",
+    "author": "Transporte Mundial",
+    "sourceUrl": "https://transportemundial.com.br/hyundai-hd-80/"
   },
   "hyundai-sonata-2014": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/HYUNDAI_SONATA_YF_2013_01.JPG/960px-HYUNDAI_SONATA_YF_2013_01.JPG",

@@ -76,12 +76,20 @@ export function HomeScreen({ kind, onToggleKind, onSelectMode, onOpenCredits }: 
             transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
             className="relative"
           >
-            <div className="from-flame-600/25 absolute inset-0 -z-10 rounded-full bg-gradient-to-t to-transparent blur-2xl" />
+            <div
+              className={`absolute inset-0 -z-10 rounded-full bg-gradient-to-t to-transparent blur-2xl ${
+                kind === 'truck' ? 'from-emerald-500/25' : 'from-flame-600/25'
+              }`}
+            />
             <img
-              src={asset('car.gif')}
+              src={asset(kind === 'truck' ? 'truck.gif' : 'car.gif')}
               alt=""
               aria-hidden
-              className="pixelated h-36 w-36 object-contain drop-shadow-[0_10px_24px_rgba(232,69,44,0.35)]"
+              className={`pixelated h-36 w-36 object-contain ${
+                kind === 'truck'
+                  ? 'drop-shadow-[0_10px_24px_rgba(16,185,129,0.35)]'
+                  : 'drop-shadow-[0_10px_24px_rgba(232,69,44,0.35)]'
+              }`}
             />
           </motion.div>
 

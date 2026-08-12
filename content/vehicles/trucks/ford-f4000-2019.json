@@ -1,0 +1,30 @@
+{
+  "slug": "ford-f4000-2019",
+  "kind": "truck",
+  "brand": "Ford",
+  "model": "F-4000",
+  "year": 2019,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "2.8",
+  "power": {
+    "value": 150,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 360,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2", "4x4"],
+  "cabins": ["Simples"],
+  "gvwr": 6800,
+  "gcwr": 10400,
+  "engineCode": "Cummins ISF 2.8",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

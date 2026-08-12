@@ -10,17 +10,19 @@ import { CluePages } from './CluePages';
 import { ExtraInfoPanel } from './ExtraInfoPanel';
 import { ScoreBoard } from './ScoreBoard';
 import { useScore } from './useScore';
+import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
 import { useGameRound } from './useGameRound';
 import { VehicleReveal } from './VehicleReveal';
 
 type GameScreenProps = {
   mode: GameMode;
+  kind: VehicleKind;
   onBackHome: () => void;
 };
 
-export function GameScreen({ mode, onBackHome }: GameScreenProps) {
+export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
   const { state, beginRound, revealNextClue, selectChoice, submitChoice, selfReport } =
-    useGameRound(mode);
+    useGameRound(mode, kind);
   const [sheetOpen, setSheetOpen] = useState(false);
   const { score, record, reset } = useScore(mode);
   const scoredToken = useRef<string | null>(null);
@@ -80,7 +82,7 @@ export function GameScreen({ mode, onBackHome }: GameScreenProps) {
           transition={{ duration: 1.3, repeat: Infinity }}
           className="text-chalk-500 py-10 text-center text-sm"
         >
-          Sorteando um carro…
+          Sorteando {kind === 'truck' ? 'um caminhão' : 'um carro'}…
         </motion.p>
       )}
 

@@ -23,6 +23,7 @@
   "bodyType": "hatch",
   "engineCode": "T-Jet",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
   "doors": 3,
   "fipe": {

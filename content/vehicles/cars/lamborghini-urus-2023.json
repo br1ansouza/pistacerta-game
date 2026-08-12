@@ -22,6 +22,7 @@
   "drivetrain": "integral",
   "bodyType": "suv",
   "cylinders": 8,
+  "cylinderLayout": "V",
   "valves": 32,
   "doors": 5,
   "fipe": {

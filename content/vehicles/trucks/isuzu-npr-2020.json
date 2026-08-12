@@ -1,0 +1,29 @@
+{
+  "slug": "isuzu-npr-2020",
+  "kind": "truck",
+  "brand": "Isuzu",
+  "model": "NPR",
+  "year": 2020,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "diesel",
+  "displacement": "5.2",
+  "power": {
+    "value": 210,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 637,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "gvwr": 7000,
+  "engineCode": "4HK1-TCS",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

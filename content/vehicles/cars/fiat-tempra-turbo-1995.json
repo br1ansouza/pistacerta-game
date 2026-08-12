@@ -3,19 +3,11 @@
   "kind": "car",
   "brand": "Fiat",
   "model": "Tempra",
+  "version": "Turbo 2.0 i.e.",
   "year": 1995,
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "2.0",
-  "bodyType": "sedã",
-  "doors": 2,
-  "fipe": {
-    "value": 9585,
-    "referenceMonth": "2026-08",
-    "fipeCode": "001037-5"
-  },
-  "specSource": "carros-na-web",
-  "active": true,
   "power": {
     "value": 155,
     "unit": "cv"
@@ -24,10 +16,19 @@
     "value": 26.5,
     "unit": "kgfm"
   },
-  "cylinders": 4,
-  "valves": 8,
   "aspiration": "turbo",
   "transmission": "manual",
   "drivetrain": "dianteira",
-  "version": "Turbo 2.0 i.e."
+  "bodyType": "sedã",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 8,
+  "doors": 2,
+  "fipe": {
+    "value": 9585,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001037-5"
+  },
+  "specSource": "carros-na-web",
+  "active": true
 }

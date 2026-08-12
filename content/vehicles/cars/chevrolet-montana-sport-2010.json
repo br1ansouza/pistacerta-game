@@ -21,6 +21,7 @@
   "drivetrain": "dianteira",
   "bodyType": "picape",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 8,
   "doors": 2,
   "fipe": {

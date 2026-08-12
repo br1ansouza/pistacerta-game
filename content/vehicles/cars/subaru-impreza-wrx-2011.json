@@ -8,17 +8,6 @@
   "countryOfOrigin": "Japão",
   "fuel": "gasolina",
   "displacement": "2.5",
-  "aspiration": "turbo",
-  "drivetrain": "integral",
-  "bodyType": "sedã",
-  "doors": 5,
-  "fipe": {
-    "value": 133006,
-    "referenceMonth": "2026-08",
-    "fipeCode": "027050-4"
-  },
-  "specSource": "icarros",
-  "active": true,
   "power": {
     "value": 265,
     "unit": "cv"
@@ -27,8 +16,20 @@
     "value": 38,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "drivetrain": "integral",
+  "bodyType": "sedã",
   "engineCode": "EJ25",
   "cylinders": 4,
+  "cylinderLayout": "boxer",
   "valves": 16,
-  "transmission": "manual"
+  "doors": 5,
+  "fipe": {
+    "value": 133006,
+    "referenceMonth": "2026-08",
+    "fipeCode": "027050-4"
+  },
+  "specSource": "icarros",
+  "active": true
 }

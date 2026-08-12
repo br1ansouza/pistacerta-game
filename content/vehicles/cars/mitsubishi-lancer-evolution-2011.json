@@ -12,20 +12,21 @@
     "value": 295,
     "unit": "cv"
   },
+  "torque": {
+    "value": 40.7,
+    "unit": "kgfm"
+  },
   "aspiration": "turbo",
   "bodyType": "sedã",
+  "engineCode": "4B11T",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
   "fipe": {
     "value": 196984,
     "referenceMonth": "2026-08",
     "fipeCode": "022112-0"
   },
   "specSource": "webmotors",
-  "active": true,
-  "torque": {
-    "value": 40.7,
-    "unit": "kgfm"
-  },
-  "engineCode": "4B11T",
-  "cylinders": 4,
-  "valves": 16
+  "active": true
 }

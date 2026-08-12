@@ -20,7 +20,10 @@
   "transmission": "automático",
   "drivetrain": "integral",
   "bodyType": "suv",
+  "engineCode": "Multijet II",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
   "doors": 4,
   "fipe": {
     "value": 84974,
@@ -28,7 +31,5 @@
     "fipeCode": "017037-2"
   },
   "specSource": "webmotors",
-  "active": true,
-  "engineCode": "Multijet II",
-  "valves": 16
+  "active": true
 }

@@ -3,19 +3,11 @@
   "kind": "car",
   "brand": "Ford",
   "model": "F-1000",
+  "version": "3.9 Turbo Diesel 4x4",
   "year": 1995,
   "origin": "nacional",
   "fuel": "diesel",
   "displacement": "3.9",
-  "bodyType": "picape",
-  "fipe": {
-    "value": 84202,
-    "referenceMonth": "2026-08",
-    "fipeCode": "003163-1"
-  },
-  "specSource": "carros-na-web",
-  "active": true,
-  "version": "3.9 Turbo Diesel 4x4",
   "power": {
     "value": 122,
     "unit": "cv"
@@ -24,10 +16,19 @@
     "value": 37,
     "unit": "kgfm"
   },
-  "engineCode": "MWM D-229-4",
-  "cylinders": 4,
-  "valves": 8,
   "aspiration": "turbo",
   "transmission": "manual",
-  "drivetrain": "integral"
+  "drivetrain": "integral",
+  "bodyType": "picape",
+  "engineCode": "MWM D-229-4",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 8,
+  "fipe": {
+    "value": 84202,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003163-1"
+  },
+  "specSource": "carros-na-web",
+  "active": true
 }

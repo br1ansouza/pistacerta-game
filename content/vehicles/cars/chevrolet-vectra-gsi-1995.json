@@ -3,18 +3,11 @@
   "kind": "car",
   "brand": "Chevrolet",
   "model": "Vectra",
+  "version": "GSi 2.0 16V",
   "year": 1995,
   "origin": "importado",
   "fuel": "gasolina",
   "displacement": "2.0",
-  "bodyType": "sedã",
-  "fipe": {
-    "value": 26716,
-    "referenceMonth": "2026-08",
-    "fipeCode": "004069-0"
-  },
-  "specSource": "carros-na-web",
-  "active": false,
   "power": {
     "value": 162,
     "unit": "cv"
@@ -23,12 +16,20 @@
     "value": 20,
     "unit": "kgfm"
   },
-  "engineCode": "C20XE",
-  "cylinders": 4,
-  "valves": 16,
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "dianteira",
+  "bodyType": "sedã",
+  "engineCode": "C20XE",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
   "doors": 4,
-  "version": "GSi 2.0 16V"
+  "fipe": {
+    "value": 26716,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004069-0"
+  },
+  "specSource": "carros-na-web",
+  "active": true
 }

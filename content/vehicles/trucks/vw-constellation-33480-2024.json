@@ -1,0 +1,34 @@
+{
+  "slug": "vw-constellation-33480-2024",
+  "kind": "truck",
+  "brand": "Volkswagen",
+  "model": "Constellation 33.480",
+  "version": "6x4",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "12.4",
+  "power": {
+    "value": 475,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2400,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x4"],
+  "cabins": ["Estendida", "Leito teto baixo"],
+  "gvwr": 23000,
+  "gcwr": 74000,
+  "engineCode": "MAN D2676LFAG",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": {
+    "value": 945725,
+    "referenceMonth": "2024-05"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

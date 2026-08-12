@@ -12,9 +12,17 @@
     "value": 193,
     "unit": "cv"
   },
+  "torque": {
+    "value": 24.5,
+    "unit": "kgfm"
+  },
   "aspiration": "turbo",
   "transmission": "manual",
   "bodyType": "hatch",
+  "engineCode": "AUM",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 20,
   "doors": 4,
   "fipe": {
     "value": 42872,
@@ -22,12 +30,5 @@
     "fipeCode": "005171-3"
   },
   "specSource": "webmotors",
-  "active": true,
-  "torque": {
-    "value": 24.5,
-    "unit": "kgfm"
-  },
-  "engineCode": "AUM",
-  "cylinders": 4,
-  "valves": 20
+  "active": true
 }

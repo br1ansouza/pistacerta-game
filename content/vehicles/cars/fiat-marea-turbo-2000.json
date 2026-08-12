@@ -7,16 +7,6 @@
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "2.0",
-  "aspiration": "turbo",
-  "bodyType": "sedã",
-  "doors": 4,
-  "fipe": {
-    "value": 27350,
-    "referenceMonth": "2026-08",
-    "fipeCode": "001083-9"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 182,
     "unit": "cv"
@@ -25,7 +15,18 @@
     "value": 27,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "bodyType": "sedã",
   "engineCode": "182B",
   "cylinders": 5,
-  "valves": 20
+  "cylinderLayout": "em linha",
+  "valves": 20,
+  "doors": 4,
+  "fipe": {
+    "value": 27350,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001083-9"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

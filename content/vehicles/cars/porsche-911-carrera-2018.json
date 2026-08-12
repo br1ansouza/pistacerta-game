@@ -8,14 +8,6 @@
   "countryOfOrigin": "Alemanha",
   "fuel": "gasolina",
   "displacement": "3.0",
-  "bodyType": "cupê",
-  "fipe": {
-    "value": 618153,
-    "referenceMonth": "2026-08",
-    "fipeCode": "035073-7"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 370,
     "unit": "cv"
@@ -25,7 +17,16 @@
     "unit": "kgfm"
   },
   "aspiration": "turbo",
+  "bodyType": "cupê",
   "engineCode": "9A2",
   "cylinders": 6,
-  "valves": 24
+  "cylinderLayout": "boxer",
+  "valves": 24,
+  "fipe": {
+    "value": 618153,
+    "referenceMonth": "2026-08",
+    "fipeCode": "035073-7"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

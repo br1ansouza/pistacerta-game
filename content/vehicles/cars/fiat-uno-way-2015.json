@@ -7,16 +7,6 @@
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "1.4",
-  "transmission": "automatizado",
-  "bodyType": "hatch",
-  "doors": 5,
-  "fipe": {
-    "value": 40356,
-    "referenceMonth": "2026-08",
-    "fipeCode": "001427-3"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 88,
     "unit": "cv"
@@ -26,7 +16,18 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "transmission": "automatizado",
+  "bodyType": "hatch",
   "engineCode": "Fire Evo",
   "cylinders": 4,
-  "valves": 8
+  "cylinderLayout": "em linha",
+  "valves": 8,
+  "doors": 5,
+  "fipe": {
+    "value": 40356,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001427-3"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

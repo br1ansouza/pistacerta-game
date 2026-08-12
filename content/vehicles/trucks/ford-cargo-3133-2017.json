@@ -1,0 +1,30 @@
+{
+  "slug": "ford-cargo-3133-2017",
+  "kind": "truck",
+  "brand": "Ford",
+  "model": "Cargo 3133",
+  "version": "6x4",
+  "year": 2017,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "8.9",
+  "power": {
+    "value": 334,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 132.6,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["6x4"],
+  "gvwr": 23000,
+  "gcwr": 57000,
+  "engineCode": "Cummins ISL 8.9",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "carros-na-web",
+  "active": true
+}

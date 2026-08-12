@@ -1,0 +1,24 @@
+{
+  "slug": "mercedes-l1113-1978",
+  "kind": "truck",
+  "brand": "Mercedes-Benz",
+  "model": "L 1113",
+  "year": 1978,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "5.7",
+  "power": {
+    "value": 130,
+    "unit": "cv"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "gvwr": 11000,
+  "engineCode": "OM 352",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "quatro-rodas",
+  "active": true
+}

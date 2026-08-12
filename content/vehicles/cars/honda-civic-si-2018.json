@@ -21,7 +21,10 @@
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "cupê",
+  "engineCode": "L15B7",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
   "doors": 2,
   "fipe": {
     "value": 153299,
@@ -29,7 +32,5 @@
     "fipeCode": "014099-6"
   },
   "specSource": "webmotors",
-  "active": true,
-  "engineCode": "L15B7",
-  "valves": 16
+  "active": true
 }

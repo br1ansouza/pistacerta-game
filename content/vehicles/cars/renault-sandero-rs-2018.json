@@ -3,19 +3,11 @@
   "kind": "car",
   "brand": "Renault",
   "model": "Sandero",
+  "version": "RS 2.0 Racing Spirit",
   "year": 2018,
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "2.0",
-  "bodyType": "hatch",
-  "doors": 5,
-  "fipe": {
-    "value": 66608,
-    "referenceMonth": "2026-08",
-    "fipeCode": "025260-3"
-  },
-  "specSource": "carros-na-web",
-  "active": true,
   "power": {
     "value": 145,
     "unit": "cv"
@@ -24,11 +16,20 @@
     "value": 20.9,
     "unit": "kgfm"
   },
-  "engineCode": "F4R",
-  "cylinders": 4,
-  "valves": 16,
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "dianteira",
-  "version": "RS 2.0 Racing Spirit"
+  "bodyType": "hatch",
+  "engineCode": "F4R",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 66608,
+    "referenceMonth": "2026-08",
+    "fipeCode": "025260-3"
+  },
+  "specSource": "carros-na-web",
+  "active": true
 }

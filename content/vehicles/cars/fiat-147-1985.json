@@ -3,18 +3,10 @@
   "kind": "car",
   "brand": "Fiat",
   "model": "147",
+  "version": "Spazio CL 1.3",
   "year": 1985,
   "origin": "nacional",
   "fuel": "gasolina",
-  "bodyType": "hatch",
-  "fipe": {
-    "value": 4851,
-    "referenceMonth": "2026-08",
-    "fipeCode": "001124-0"
-  },
-  "specSource": "icarros",
-  "active": true,
-  "version": "Spazio CL 1.3",
   "displacement": "1.3",
   "power": {
     "value": 60,
@@ -24,9 +16,18 @@
     "value": 9.6,
     "unit": "kgfm"
   },
-  "cylinders": 4,
-  "valves": 8,
   "aspiration": "aspirado",
   "transmission": "manual",
-  "drivetrain": "dianteira"
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 8,
+  "fipe": {
+    "value": 4851,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001124-0"
+  },
+  "specSource": "icarros",
+  "active": true
 }

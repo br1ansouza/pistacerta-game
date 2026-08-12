@@ -1,0 +1,34 @@
+{
+  "slug": "daf-xf-530-2024",
+  "kind": "truck",
+  "brand": "DAF",
+  "model": "XF 530",
+  "version": "FTS 6x2",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "12.9",
+  "power": {
+    "value": 530,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2500,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["4x2", "6x2", "6x4"],
+  "cabins": ["Simples", "Estendida", "Leito teto baixo", "Leito teto alto"],
+  "gvwr": 23000,
+  "gcwr": 60000,
+  "engineCode": "Paccar MX-13",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": {
+    "value": 940125,
+    "referenceMonth": "2024-04"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

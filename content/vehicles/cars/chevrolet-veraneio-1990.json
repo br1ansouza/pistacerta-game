@@ -3,18 +3,11 @@
   "kind": "car",
   "brand": "Chevrolet",
   "model": "Veraneio",
+  "version": "Custom 4.1",
   "year": 1990,
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "4.1",
-  "bodyType": "perua",
-  "fipe": {
-    "value": 32009,
-    "referenceMonth": "2026-08",
-    "fipeCode": "004070-3"
-  },
-  "specSource": "carros-na-web",
-  "active": true,
   "power": {
     "value": 128,
     "unit": "cv"
@@ -23,12 +16,20 @@
     "value": 28,
     "unit": "kgfm"
   },
-  "engineCode": "250",
-  "cylinders": 6,
-  "valves": 12,
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "traseira",
+  "bodyType": "perua",
+  "engineCode": "250",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "valves": 12,
   "doors": 4,
-  "version": "Custom 4.1"
+  "fipe": {
+    "value": 32009,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004070-3"
+  },
+  "specSource": "carros-na-web",
+  "active": true
 }

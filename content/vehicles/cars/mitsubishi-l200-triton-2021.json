@@ -7,15 +7,6 @@
   "origin": "nacional",
   "fuel": "diesel",
   "displacement": "2.4",
-  "transmission": "automático",
-  "bodyType": "picape",
-  "fipe": {
-    "value": 135066,
-    "referenceMonth": "2026-08",
-    "fipeCode": "022164-3"
-  },
-  "specSource": "icarros",
-  "active": true,
   "power": {
     "value": 190,
     "unit": "cv"
@@ -24,8 +15,18 @@
     "value": 43.9,
     "unit": "kgfm"
   },
-  "cylinders": 4,
-  "valves": 16,
   "aspiration": "turbo",
-  "drivetrain": "integral"
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "picape",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "fipe": {
+    "value": 135066,
+    "referenceMonth": "2026-08",
+    "fipeCode": "022164-3"
+  },
+  "specSource": "icarros",
+  "active": true
 }

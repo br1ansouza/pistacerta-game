@@ -1,0 +1,29 @@
+{
+  "slug": "iveco-daily-55170-2022",
+  "kind": "truck",
+  "brand": "Iveco",
+  "model": "Daily 55-170",
+  "year": 2022,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "3.0",
+  "power": {
+    "value": 170,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 430,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "cabins": ["Simples"],
+  "gvwr": 5500,
+  "engineCode": "FPT F1C",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

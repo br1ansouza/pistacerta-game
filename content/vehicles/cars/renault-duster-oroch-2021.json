@@ -7,15 +7,6 @@
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "1.6",
-  "transmission": "manual",
-  "bodyType": "picape",
-  "fipe": {
-    "value": 79034,
-    "referenceMonth": "2026-08",
-    "fipeCode": "025231-0"
-  },
-  "specSource": "icarros",
-  "active": true,
   "power": {
     "value": 120,
     "unit": "cv"
@@ -24,8 +15,18 @@
     "value": 16.2,
     "unit": "kgfm"
   },
-  "cylinders": 4,
-  "valves": 16,
   "aspiration": "aspirado",
-  "drivetrain": "dianteira"
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "picape",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "fipe": {
+    "value": 79034,
+    "referenceMonth": "2026-08",
+    "fipeCode": "025231-0"
+  },
+  "specSource": "icarros",
+  "active": true
 }

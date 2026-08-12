@@ -7,17 +7,6 @@
   "origin": "importado",
   "fuel": "gasolina",
   "displacement": "2.0",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "bodyType": "sedã",
-  "doors": 4,
-  "fipe": {
-    "value": 146885,
-    "referenceMonth": "2026-08",
-    "fipeCode": "005517-4"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 230,
     "unit": "cv"
@@ -26,7 +15,19 @@
     "value": 35.7,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "sedã",
   "engineCode": "EA888",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 4,
+  "fipe": {
+    "value": 146885,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005517-4"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

@@ -3,17 +3,11 @@
   "kind": "car",
   "brand": "Ford",
   "model": "Del Rey",
+  "version": "Ghia 1.8",
   "year": 1990,
   "origin": "nacional",
   "fuel": "gasolina",
-  "bodyType": "sedã",
-  "fipe": {
-    "value": 7067,
-    "referenceMonth": "2026-08",
-    "fipeCode": "003135-6"
-  },
-  "specSource": "carros-na-web",
-  "active": true,
+  "displacement": "1.8",
   "power": {
     "value": 86,
     "unit": "cv"
@@ -22,13 +16,20 @@
     "value": 14.28,
     "unit": "kgfm"
   },
-  "engineCode": "AP-1800",
-  "cylinders": 4,
-  "valves": 8,
-  "displacement": "1.8",
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "dianteira",
+  "bodyType": "sedã",
+  "engineCode": "AP-1800",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 8,
   "doors": 4,
-  "version": "Ghia 1.8"
+  "fipe": {
+    "value": 7067,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003135-6"
+  },
+  "specSource": "carros-na-web",
+  "active": true
 }

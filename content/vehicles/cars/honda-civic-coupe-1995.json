@@ -23,6 +23,7 @@
   "bodyType": "cupê",
   "engineCode": "D16Z6",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
   "doors": 2,
   "fipe": {

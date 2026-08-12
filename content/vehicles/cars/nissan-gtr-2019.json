@@ -23,6 +23,7 @@
   "bodyType": "cupê",
   "engineCode": "VR38DETT",
   "cylinders": 6,
+  "cylinderLayout": "V",
   "valves": 24,
   "doors": 2,
   "fipe": {

@@ -26,6 +26,15 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Audi_RS3_TFSi_Quattro.jpg"
   },
+  "audi-tt-2003": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/2000_Audi_TT_1.8_Front.jpg/960px-2000_Audi_TT_1.8_Front.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Audi TT 8N cupê",
+    "author": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2000_Audi_TT_1.8_Front.jpg"
+  },
   "bmw-320i-2015": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BMW_F30_LCI_320i_Luxury_Line_Alpine_White_%281%29.jpg/960px-BMW_F30_LCI_320i_Luxury_Line_Alpine_White_%281%29.jpg",
     "source": "wikimedia",
@@ -198,13 +207,11 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Chevrolet_Trailblazer_4x4_LTZ_Z71_(10).jpg"
   },
   "chevrolet-vectra-gsi-1995": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/1990_Opel_Vectra_GLS_%2819384050978%29.jpg/960px-1990_Opel_Vectra_GLS_%2819384050978%29.jpg",
-    "source": "wikimedia",
-    "market": "global",
-    "depicts": "Opel Vectra A sedã europeu — o Vectra GSi brasileiro era importado, é o mesmo carro",
-    "author": "Riley from Christchurch, New Zealand",
-    "license": "CC BY 2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1990_Opel_Vectra_GLS_(19384050978).jpg"
+    "src": "/vehicles/chevrolet-vectra-gsi-1995.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Chevrolet Vectra GSi 2.0 16V brasileiro",
+    "sourceUrl": "https://www.pinterest.com/pin/790874384551026130/"
   },
   "chevrolet-veraneio-1990": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Chevrolet_Veraneio_-_Pol%C3%ADcia_Civil_S%C3%A3o_Paulo_%281995%29.jpg/960px-Chevrolet_Veraneio_-_Pol%C3%ADcia_Civil_S%C3%A3o_Paulo_%281995%29.jpg",
@@ -223,6 +230,42 @@
     "author": "Calreyn88",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013_Citro%C3%ABn_DS3_D-Sport_Airdream_E-HDi.jpg"
+  },
+  "daf-cf-450-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DAF_CF%2C_Bloemplus.JPG/960px-DAF_CF%2C_Bloemplus.JPG",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "DAF CF",
+    "author": "Alf van Beem",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DAF_CF,_Bloemplus.JPG"
+  },
+  "daf-xf-480-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/DAF_XF_480_%282021%29_Sattelzug_in_Berlin.jpg/960px-DAF_XF_480_%282021%29_Sattelzug_in_Berlin.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "DAF XF 480",
+    "author": "JoachimKohler-HB",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DAF_XF_480_(2021)_Sattelzug_in_Berlin.jpg"
+  },
+  "daf-xf-530-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/DAF_XFC%2C_IAA_2024%2C_Hanover_%28P1190923%29.jpg/960px-DAF_XFC%2C_IAA_2024%2C_Hanover_%28P1190923%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "DAF XF da geração atual",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DAF_XFC,_IAA_2024,_Hanover_(P1190923).jpg"
+  },
+  "daf-xf-530-4x2-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/DAF_XF_480_%282021%29_Sattelzug_in_Berlin.jpg/960px-DAF_XF_480_%282021%29_Sattelzug_in_Berlin.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "DAF XF",
+    "author": "JoachimKohler-HB",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DAF_XF_480_(2021)_Sattelzug_in_Berlin.jpg"
   },
   "ferrari-purosangue-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ferrari_Purosangue%2C_Auto_2025%2C_Zurich_%2820251029-P1074508%29.jpg/960px-Ferrari_Purosangue%2C_Auto_2025%2C_Zurich_%2820251029-P1074508%29.jpg",
@@ -341,6 +384,50 @@
     "license": "CC BY 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Fiat_Uno_1.4_Sporting.jpg"
   },
+  "ford-cargo-2429-2017": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Ford Cargo da mesma geração",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
+  },
+  "ford-cargo-2623-2017": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Ford Cargo da mesma geração",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
+  },
+  "ford-cargo-2629-2017": {
+    "src": "https://www.fordcaminhoes.com.br/storage/images/mobile/c-2629-6x4.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Ford Cargo 2629 6x4 basculante",
+    "author": "Ford Caminhões",
+    "sourceUrl": "https://www.fordcaminhoes.com.br/especificacoes-de-produto/cargo/c-2629-6x4"
+  },
+  "ford-cargo-2842-2017": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Ford Cargo da mesma geração",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
+  },
+  "ford-cargo-3133-2017": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Ford Cargo 3133 6x4",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
+  },
   "ford-del-rey-1990": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ford_Del_Rey_1982_%2810546603165%29.jpg/960px-Ford_Del_Rey_1982_%2810546603165%29.jpg",
     "source": "wikimedia",
@@ -368,14 +455,20 @@
     "license": "CC BY-SA 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_F-1000_cabine_dupla.jpg"
   },
-  "ford-fiesta-supercharger-2005": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Ford_Fiesta_2005_Kofferraum.jpg/960px-Ford_Fiesta_2005_Kofferraum.jpg",
+  "ford-f4000-2019": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Ford_F4000_stakebed.jpg",
     "source": "wikimedia",
     "market": "br",
-    "depicts": "Ford Fiesta hatch da geração do Supercharger",
-    "author": "Norbert Schnitzler",
-    "license": "CC BY-SA 3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Fiesta_2005_Kofferraum.jpg"
+    "depicts": "Ford F-4000 brasileira da mesma geração",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_F4000_stakebed.jpg"
+  },
+  "ford-fiesta-supercharger-2005": {
+    "src": "/vehicles/ford-fiesta-supercharger-2005.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Ford Fiesta hatch brasileiro da fase do Supercharger",
+    "author": "Carros na Web",
+    "sourceUrl": "https://www.carrosnaweb.com.br/"
   },
   "ford-maverick-gt-1975": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Ford_Brasil_Maverick_302.jpg/960px-Ford_Brasil_Maverick_302.jpg",
@@ -458,6 +551,14 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Hyundai_Creta_Smart.jpg"
   },
+  "hyundai-hd80-2019": {
+    "src": "https://1.bp.blogspot.com/-j1mTACWdJzs/XnONIIvOthI/AAAAAAAAJXI/zLVbvyvNKLsHgg1BHY6ImcfyGwyJEUyggCLcBGAsYHQ/s1600/HYUNDAI%2BHD%2B80%2B14.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Hyundai HD 80",
+    "author": "Ciência & Tecnologia em Foco",
+    "sourceUrl": "https://cienciatecnologiafoco.blogspot.com/2023/01/familia-hyundai-hd.html"
+  },
   "hyundai-sonata-2014": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/HYUNDAI_SONATA_YF_2013_01.JPG/960px-HYUNDAI_SONATA_YF_2013_01.JPG",
     "source": "wikimedia",
@@ -475,6 +576,86 @@
     "author": "Navigator84",
     "license": "CC BY-SA 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hyundai_Veloster_FS_China_2013-03-04.jpg"
+  },
+  "international-9800i-2012": {
+    "src": "https://www.lexicarbrasil.com.br/wp-content/uploads/2015/04/nc2-capa.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "International 9800i produzido no Brasil",
+    "author": "International Caminhões",
+    "sourceUrl": "https://www.lexicarbrasil.com.br/nc2/"
+  },
+  "isuzu-fvr-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Isuzu_FVR_Fire_Truck_%28Cabanatuan_City_Fire_Station%29.jpg/960px-Isuzu_FVR_Fire_Truck_%28Cabanatuan_City_Fire_Station%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Isuzu FVR",
+    "author": "Captainmorlypogi1959",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isuzu_FVR_Fire_Truck_(Cabanatuan_City_Fire_Station).jpg"
+  },
+  "isuzu-npr-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/2012_Isuzu_NPR_Turbo_hauling_truck%2C_06-12-2024.jpg/960px-2012_Isuzu_NPR_Turbo_hauling_truck%2C_06-12-2024.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Isuzu NPR",
+    "author": "Ethan Llamas",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012_Isuzu_NPR_Turbo_hauling_truck,_06-12-2024.jpg"
+  },
+  "isuzu-nqr75-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Isuzu_NQR%2C_White_Truck%2C.jpg/960px-Isuzu_NQR%2C_White_Truck%2C.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Isuzu NQR",
+    "author": "Mj-bird",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isuzu_NQR,_White_Truck,.jpg"
+  },
+  "iveco-daily-55170-2022": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/2022_Iveco_Daily_3.0_55-170_%28Brazil%29.jpg/960px-2022_Iveco_Daily_3.0_55-170_%28Brazil%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Iveco Daily 55-170 brasileira",
+    "author": "Maxi-Napo-99",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Iveco_Daily_3.0_55-170_(Brazil).jpg"
+  },
+  "iveco-sway-480-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IVECO_S-Way_Front.jpg/960px-IVECO_S-Way_Front.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Iveco S-Way",
+    "author": "WDHOSS",
+    "license": "CC0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:IVECO_S-Way_Front.jpg"
+  },
+  "iveco-tector-11190-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/AySa_Iveco_Tector.jpg/960px-AySa_Iveco_Tector.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Iveco Tector",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AySa_Iveco_Tector.jpg"
+  },
+  "iveco-tector-24320-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/AySa_Iveco_Tector.jpg/960px-AySa_Iveco_Tector.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Iveco Tector",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AySa_Iveco_Tector.jpg"
+  },
+  "iveco-tector-27320-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/AySa_Iveco_Tector.jpg/960px-AySa_Iveco_Tector.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Iveco Tector",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AySa_Iveco_Tector.jpg"
   },
   "jeep-compass-diesel-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg/960px-2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg",
@@ -539,6 +720,67 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_(L663)_Auto_Zuerich_2021_IMG_0432.jpg"
   },
+  "mercedes-actros-2651-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/BANEX_Transport_Mercedes_Actros_MP5.jpg/960px-BANEX_Transport_Mercedes_Actros_MP5.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Mercedes-Benz Actros MP5, a geração do 2651",
+    "author": "BANEX Transport",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BANEX_Transport_Mercedes_Actros_MP5.jpg"
+  },
+  "mercedes-actros-2653-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/BANEX_Transport_Mercedes_Actros_MP5_New_2019.jpg/960px-BANEX_Transport_Mercedes_Actros_MP5_New_2019.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Mercedes-Benz Actros MP5, a geração do 2653",
+    "author": "BANEX Transport",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BANEX_Transport_Mercedes_Actros_MP5_New_2019.jpg"
+  },
+  "mercedes-atego-3133-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Mercedes-Benz_Atego_%28P1032721%29.jpg/960px-Mercedes-Benz_Atego_%28P1032721%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Mercedes-Benz Atego",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Atego_(P1032721).jpg"
+  },
+  "mercedes-axor-2545-2025": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Mercedes-Axor-1843LH-Gardinenplanensattelzug.jpg/960px-Mercedes-Axor-1843LH-Gardinenplanensattelzug.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Mercedes-Benz Axor",
+    "author": "ONordsieck 19:53, 25. Jun. 2008 (CEST)",
+    "license": "CC BY-SA 2.0 de",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Axor-1843LH-Gardinenplanensattelzug.jpg"
+  },
+  "mercedes-axor-3131-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mercedes-Banz_Axor_1833_mit_Abrollmulde_%282022%29.jpg/960px-Mercedes-Banz_Axor_1833_mit_Abrollmulde_%282022%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Mercedes-Benz Axor de obra",
+    "author": "JoachimKohler-HB",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Banz_Axor_1833_mit_Abrollmulde_(2022).jpg"
+  },
+  "mercedes-l1113-1978": {
+    "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2024/10/mercedes-benz-1113-e1729131032680.webp",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Mercedes-Benz 1113 brasileiro",
+    "author": "Quatro Rodas",
+    "sourceUrl": "https://quatrorodas.abril.com.br/noticias/mercedes-accelo-tenta-homenagear-o-antigo-muricoca-1113-em-nova-geracao/"
+  },
+  "mercedes-l1620-2008": {
+    "src": "https://i.pinimg.com/736x/ad/94/be/ad94be13987322a00960aeac797bab89.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Mercedes-Benz L 1620 6x2 brasileiro",
+    "author": "Pinterest",
+    "sourceUrl": "https://br.pinterest.com/pin/679058450052535788/"
+  },
   "mini-cooper-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg/960px-2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg",
     "source": "wikimedia",
@@ -593,6 +835,14 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peugeot_3008_BlueHDi_Allure_2019.jpg"
   },
+  "peterbilt-389-legendary-2021": {
+    "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2022/03/Peterbilt-389-Legendary-Edition-3.jpg?quality=70&strip=info",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Peterbilt 389 Legendary de uma das dez unidades importadas ao Brasil",
+    "author": "Quatro Rodas",
+    "sourceUrl": "https://quatrorodas.abril.com.br/testes/peterbilt-389-dirigimos-caminhao-de-630-cv-com-quarto-com-tv-e-geladeira/"
+  },
   "porsche-911-carrera-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/2018_Porsche_911_Carrera_GTS_Cabriolet.jpg/960px-2018_Porsche_911_Carrera_GTS_Cabriolet.jpg",
     "source": "wikimedia",
@@ -646,6 +896,96 @@
     "author": "Maxi-Napo-99",
     "license": "CC BY 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Renault_Sandero_RS_2.0.jpg"
+  },
+  "scania-l111-jacare-1978": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/1978_Scania_LS111.jpg/960px-1978_Scania_LS111.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania LS111 de 1978, a série do Jacaré",
+    "author": "Herranderssvensson",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1978_Scania_LS111.jpg"
+  },
+  "scania-r450-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Blue_Scania_M%C3%A4kel%C3%A4.jpg/960px-Blue_Scania_M%C3%A4kel%C3%A4.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania da série R",
+    "author": "Kotivalo",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_Scania_Mäkelä.jpg"
+  },
+  "scania-r460-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/2023-10-30-lidoga-volvo-fh3-scania-r450s-2163.jpg/960px-2023-10-30-lidoga-volvo-fh3-scania-r450s-2163.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania R 450 S da série R",
+    "author": "I13Robin",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023-10-30-lidoga-volvo-fh3-scania-r450s-2163.jpg"
+  },
+  "scania-r500-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Scania_R500%2C_North_Fremantle%2C_2020_%2805%29.jpg/960px-Scania_R500%2C_North_Fremantle%2C_2020_%2805%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania R 500",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scania_R500,_North_Fremantle,_2020_(05).jpg"
+  },
+  "scania-r540-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Blue_Scania_M%C3%A4kel%C3%A4.jpg/960px-Blue_Scania_M%C3%A4kel%C3%A4.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania da série R",
+    "author": "Kotivalo",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_Scania_Mäkelä.jpg"
+  },
+  "scania-r560-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Blue_Scania_M%C3%A4kel%C3%A4.jpg/960px-Blue_Scania_M%C3%A4kel%C3%A4.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania da série R",
+    "author": "Kotivalo",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_Scania_Mäkelä.jpg"
+  },
+  "scania-s460-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Scania_Next_Gen_S_500_Topline_Streamline_Euro6_A_6X2_NA_%28S-Series_1%29.jpg/960px-Scania_Next_Gen_S_500_Topline_Streamline_Euro6_A_6X2_NA_%28S-Series_1%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania Next Gen série S",
+    "author": "Lav Ulv",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scania_Next_Gen_S_500_Topline_Streamline_Euro6_A_6X2_NA_(S-Series_1).jpg"
+  },
+  "scania-s770-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Scania_Next_Gen_S_650_V8_Topline_Streamline_Euro6_A_6X2_NB_%28S-Series_1%29.jpg/960px-Scania_Next_Gen_S_650_V8_Topline_Streamline_Euro6_A_6X2_NB_%28S-Series_1%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania Next Gen série S com motor V8",
+    "author": "Lav Ulv",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scania_Next_Gen_S_650_V8_Topline_Streamline_Euro6_A_6X2_NB_(S-Series_1).jpg"
+  },
+  "scania-t112h-1988": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/1978_Scania_LS111.jpg/960px-1978_Scania_LS111.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania da série 2, antecessora do T 112",
+    "author": "Herranderssvensson",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1978_Scania_LS111.jpg"
+  },
+  "scania-t113h-360-1995": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Scania_113_H.jpg/960px-Scania_113_H.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania 113 H",
+    "author": "Lmportella",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scania_113_H.jpg"
   },
   "subaru-impreza-wrx-2011": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/2011_Subaru_Impreza_%28GRE_MY11%29_WRX_hatchback_%282011-11-18%29.jpg/960px-2011_Subaru_Impreza_%28GRE_MY11%29_WRX_hatchback_%282011-11-18%29.jpg",
@@ -702,13 +1042,13 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2024_Toyota_GR_Yaris_Hayakawa.jpg"
   },
   "toyota-hilux-srx-2021": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x2.jpg/960px-2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x2.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/2021_Toyota_HiLux_IMG_3883.jpg/960px-2021_Toyota_HiLux_IMG_3883.jpg",
     "source": "wikimedia",
     "market": "global",
-    "depicts": "Toyota Hilux cabine dupla da geração da SRX brasileira, aqui na versão asiática",
-    "author": "Chanokchon",
+    "depicts": "Toyota Hilux 2021 cabine dupla, mesma fase da SRX brasileira",
+    "author": "Alexander Migl",
     "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x2.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Toyota_HiLux_IMG_3883.jpg"
   },
   "toyota-sw4-srx-2020": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Toyota_SW4_SRX_2023_%2854539868792%29.jpg/960px-Toyota_SW4_SRX_2023_%2854539868792%29.jpg",
@@ -718,6 +1058,50 @@
     "author": "RL GNZLZ from Chile",
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_SW4_SRX_2023_(54539868792).jpg"
+  },
+  "volvo-fh-420-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2011_Volvo_FH_460.jpg/960px-2011_Volvo_FH_460.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Volvo FH",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011_Volvo_FH_460.jpg"
+  },
+  "volvo-fh-460-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2011_Volvo_FH_460.jpg/960px-2011_Volvo_FH_460.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Volvo FH 460",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011_Volvo_FH_460.jpg"
+  },
+  "volvo-fh-500-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg/960px-Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Volvo FH da geração atual",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volvo_FH_540,_North_Fremantle,_2020_(01).jpg"
+  },
+  "volvo-fh-540-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg/960px-Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Volvo FH 540",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volvo_FH_540,_North_Fremantle,_2020_(01).jpg"
+  },
+  "volvo-nl12-400-1992": {
+    "src": "https://autolivraria.com.br/bc/wp-content/uploads/2021/06/Volvo-NL12-400-1.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volvo NL12 400 em catálogo brasileiro de época",
+    "author": "Volvo do Brasil",
+    "sourceUrl": "https://autolivraria.com.br/bc/auto-livraria/al-volvo/volvo-catalogos-folders-caminhoes-nl12-globetrotter/"
   },
   "vw-amarok-v6-2020": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/2024_Volkswagen_Amarok_Highline_3.0_V6_%28facelift%2C_Argentina%29_%281-3%29.jpg/960px-2024_Volkswagen_Amarok_Highline_3.0_V6_%28facelift%2C_Argentina%29_%281-3%29.jpg",
@@ -736,6 +1120,38 @@
     "author": "Bull-Doser",
     "license": "Public domain",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:'99-'03_Volkswagen_Jetta_Sedan_(Orange_Julep).jpg"
+  },
+  "vw-constellation-25480-2024": {
+    "src": "https://images.squarespace-cdn.com/content/v1/63c947fb2408fa6d17658c5c/23f31e03-7fcf-46ca-9e03-8ec325370ffb/25.480-6x2.jpeg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Constellation 25.480",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://www.granfercaminhoes.com.br/vw-novo-25480-6x2"
+  },
+  "vw-constellation-33260-2024": {
+    "src": "https://www.novomundocaminhoes.com.br/public/imagens-caminhoes/64/33.260.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Constellation 33.260 8x4",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://www.novomundocaminhoes.com.br/novos/constellation"
+  },
+  "vw-constellation-33480-2024": {
+    "src": "https://www.volkscaminhoes.com.br/img/dibracam/novos/constellation/33.480-6x4/constellation-33_480_6x4-top-dibracam.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Constellation 33.480 6x4",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://www.volkscaminhoes.com.br/constellation_33_480_6x4"
+  },
+  "vw-delivery-9180-2024": {
+    "src": "https://vwcamionesybuses.com.mx/wp-content/uploads/2024/12/08-galeria-delivery-2-850x850-4.jpg",
+    "source": "press-kit",
+    "market": "global",
+    "depicts": "Volkswagen Delivery 9.180",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://vwcamionesybuses.com.mx/camiones-euro-6/familia-delivery-euro-6/delivery-9-180/"
   },
   "vw-gol-gti-1995": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Vermelho2.jpg",
@@ -765,13 +1181,29 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2003_Volkswagen_Golf_GTI,_Rear_Left,_07-28-2020.jpg"
   },
   "vw-jetta-gli-2019": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Volkswagen_Jetta_09-21-2019_1.jpg/960px-Volkswagen_Jetta_09-21-2019_1.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/%2719_Volkswagen_Jetta.jpg/960px-%2719_Volkswagen_Jetta.jpg",
     "source": "wikimedia",
     "market": "global",
-    "depicts": "Volkswagen Jetta da sétima geração, mesma carroceria do GLI brasileiro",
-    "author": "SsmIntrigue",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Jetta_09-21-2019_1.jpg"
+    "depicts": "Volkswagen Jetta 2019 da sétima geração, mesma carroceria do GLI",
+    "author": "Bull-Doser",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:'19_Volkswagen_Jetta.jpg"
+  },
+  "vw-meteor-28480-2024": {
+    "src": "https://images.squarespace-cdn.com/content/v1/63c947fb2408fa6d17658c5c/fd9e20d3-5370-462d-90e8-b5c61d55b249/28480-capa.jpeg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Meteor 28.480",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://www.granfercaminhoes.com.br/vw-novo-28480"
+  },
+  "vw-meteor-29530-2024": {
+    "src": "https://ofertas.vwco.com.br/assets/images/familiameteor/card.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Meteor 29.530",
+    "author": "Volkswagen Caminhões e Ônibus",
+    "sourceUrl": "https://ofertas.vwco.com.br/familiameteor"
   },
   "vw-nivus-highline-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg/960px-2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg",
@@ -782,11 +1214,11 @@
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg"
   },
-  "vw-parati-gti-1996": {
+  "vw-parati-gti-2000": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VW_Parati-Tandil-mar2016.jpg/960px-VW_Parati-Tandil-mar2016.jpg",
     "source": "wikimedia",
     "market": "br",
-    "depicts": "VW Parati-Tandil-mar2016",
+    "depicts": "Volkswagen Parati G3, a geração da GTi 16V de 2000",
     "author": "Ezarate",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:VW_Parati-Tandil-mar2016.jpg"
@@ -853,5 +1285,14 @@
     "author": "Greg Gjerdingen from Willmar, USA",
     "license": "CC BY 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:13_Volkswagen_Tiguan_(9343545739).jpg"
+  },
+  "vw-worker-13180-2010": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/2010_IZOD_IndyCar_Series_-_S%C3%A3o_Paulo_Indy_300_Caminh%C3%A3o_Volkswagen_Worker_13.180_guinchando_o_carro_danificado_de_Mario_Moraes_-_Volkswagen_Worker_13.180_Truck_screeching_Mario_Moraes_damaged_car_%2826479335864%29.jpg/960px-thumbnail.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Volkswagen Worker 13.180 guincho na Indy 300 de São Paulo",
+    "author": "Deni Williams from São Paulo, Brasil / Brazil",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010_IZOD_IndyCar_Series_-_São_Paulo_Indy_300_Caminhão_Volkswagen_Worker_13.180_guinchando_o_carro_danificado_de_Mario_Moraes_-_Volkswagen_Worker_13.180_Truck_screeching_Mario_Moraes_damaged_car_(26479335864).jpg"
   }
 }

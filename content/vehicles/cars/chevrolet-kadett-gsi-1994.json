@@ -7,14 +7,6 @@
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "2.0",
-  "bodyType": "hatch",
-  "fipe": {
-    "value": 25416,
-    "referenceMonth": "2026-08",
-    "fipeCode": "004044-4"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 121,
     "unit": "cv"
@@ -24,7 +16,16 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "bodyType": "hatch",
   "engineCode": "2.0 MPFI",
   "cylinders": 4,
-  "valves": 8
+  "cylinderLayout": "em linha",
+  "valves": 8,
+  "fipe": {
+    "value": 25416,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004044-4"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

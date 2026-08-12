@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import process from 'node:process';
 import { getPlayableVehicles } from '../src/domain/vehicle/vehicle.repository.ts';
 
-const vehicles = await getPlayableVehicles('car');
+const vehicles = await getPlayableVehicles();
 
 if (vehicles.length === 0) {
   console.error('Nenhum veículo ativo.');

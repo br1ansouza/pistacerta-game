@@ -8,14 +8,6 @@
   "countryOfOrigin": "Estados Unidos",
   "fuel": "gasolina",
   "displacement": "6.2",
-  "bodyType": "cupê",
-  "fipe": {
-    "value": 352296,
-    "referenceMonth": "2026-08",
-    "fipeCode": "004371-0"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 461,
     "unit": "cv"
@@ -25,7 +17,16 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "bodyType": "cupê",
   "engineCode": "LT1",
   "cylinders": 8,
-  "valves": 16
+  "cylinderLayout": "V",
+  "valves": 16,
+  "fipe": {
+    "value": 352296,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004371-0"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

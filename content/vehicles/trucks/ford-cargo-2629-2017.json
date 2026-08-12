@@ -1,0 +1,30 @@
+{
+  "slug": "ford-cargo-2629-2017",
+  "kind": "truck",
+  "brand": "Ford",
+  "model": "Cargo 2629",
+  "version": "6x4",
+  "year": 2017,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "6.7",
+  "power": {
+    "value": 290,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 96.9,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["6x4"],
+  "gvwr": 23000,
+  "gcwr": 42000,
+  "engineCode": "Cummins ISB 6.7",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "carros-na-web",
+  "active": true
+}

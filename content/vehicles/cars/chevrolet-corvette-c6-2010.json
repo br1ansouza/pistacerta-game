@@ -23,6 +23,7 @@
   "bodyType": "cupê",
   "engineCode": "LS3",
   "cylinders": 8,
+  "cylinderLayout": "V",
   "valves": 16,
   "doors": 2,
   "fipe": {

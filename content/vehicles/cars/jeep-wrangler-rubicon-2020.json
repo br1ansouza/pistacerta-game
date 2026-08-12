@@ -8,18 +8,6 @@
   "countryOfOrigin": "Estados Unidos",
   "fuel": "gasolina",
   "displacement": "2.0",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "drivetrain": "integral",
-  "bodyType": "suv",
-  "doors": 4,
-  "fipe": {
-    "value": 325361,
-    "referenceMonth": "2026-08",
-    "fipeCode": "017068-2"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 272,
     "unit": "cv"
@@ -28,7 +16,20 @@
     "value": 40.8,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
   "engineCode": "GME T4",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 4,
+  "fipe": {
+    "value": 325361,
+    "referenceMonth": "2026-08",
+    "fipeCode": "017068-2"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

@@ -1,7 +1,9 @@
 const STORAGE_KEY = 'pistacerta:deck';
 const LEGACY_KEY = 'pistacerta:recent-rounds';
 
-export function readDeck(): string | null {
+let memoryDeck: string | null = null;
+
+function fromStorage(): string | null {
   try {
     globalThis.localStorage?.removeItem(LEGACY_KEY);
 
@@ -11,7 +13,13 @@ export function readDeck(): string | null {
   }
 }
 
+export function readDeck(): string | null {
+  return memoryDeck ?? fromStorage();
+}
+
 export function saveDeck(deck: string): void {
+  memoryDeck = deck;
+
   try {
     globalThis.localStorage?.setItem(STORAGE_KEY, deck);
   } catch {
@@ -20,6 +28,8 @@ export function saveDeck(deck: string): void {
 }
 
 export function clearDeck(): void {
+  memoryDeck = null;
+
   try {
     globalThis.localStorage?.removeItem(STORAGE_KEY);
   } catch {

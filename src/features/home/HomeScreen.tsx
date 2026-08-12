@@ -85,7 +85,7 @@ export function HomeScreen({ kind, onToggleKind, onSelectMode, onOpenCredits }: 
               src={asset(kind === 'truck' ? 'truck.gif' : 'car.gif')}
               alt=""
               aria-hidden
-              className={`pixelated h-36 w-36 object-contain ${
+              className={`pixelated object-contain ${kind === 'truck' ? 'h-44 w-44' : 'h-36 w-36'} ${
                 kind === 'truck'
                   ? 'drop-shadow-[0_10px_24px_rgba(16,185,129,0.35)]'
                   : 'drop-shadow-[0_10px_24px_rgba(232,69,44,0.35)]'

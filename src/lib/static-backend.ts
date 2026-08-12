@@ -4,7 +4,7 @@ import type { GameMode } from '@/domain/round/round.types';
 import type { VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
 import type { Vehicle } from '@/domain/vehicle/vehicle.schema';
 import { VEHICLES, type SealedVehicle } from '@/generated/content';
-import type { RevealResponse, RoundResponse } from './api';
+import type { CreditsResponse, ImageCredit, RevealResponse, RoundResponse } from './api';
 
 const decoder = new TextDecoder();
 const rounds = new Map<string, SealedVehicle>();
@@ -112,5 +112,15 @@ export async function revealVehicleStatic(
   return {
     identity: await unseal(entry),
     correct: choiceId === null ? null : choiceId === entry.slug,
+  };
+}
+
+export async function fetchCreditsStatic(): Promise<CreditsResponse> {
+  const { CREDITS } = await import('@/generated/credits');
+
+  return {
+    credits: VEHICLES.map((entry) => CREDITS[entry.slug]).filter(
+      (credit): credit is ImageCredit => credit !== undefined,
+    ),
   };
 }

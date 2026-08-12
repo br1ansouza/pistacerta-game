@@ -65,7 +65,9 @@ export function startRound(
   signal?: AbortSignal,
 ): Promise<RoundResponse> {
   if (STATIC) {
-    return import('./static-backend').then(({ startRoundStatic }) => startRoundStatic(mode, deck));
+    return import('@/lib/static-backend').then(({ startRoundStatic }) =>
+      startRoundStatic(mode, deck),
+    );
   }
 
   return post<RoundResponse>('/api/round', { mode, deck }, signal);
@@ -77,7 +79,7 @@ export function revealVehicle(
   signal?: AbortSignal,
 ): Promise<RevealResponse> {
   if (STATIC) {
-    return import('./static-backend').then(({ revealVehicleStatic }) =>
+    return import('@/lib/static-backend').then(({ revealVehicleStatic }) =>
       revealVehicleStatic(token, choiceId),
     );
   }
@@ -87,7 +89,7 @@ export function revealVehicle(
 
 export async function fetchCredits(signal?: AbortSignal): Promise<CreditsResponse> {
   if (STATIC) {
-    return fetchCreditsStatic();
+    return import('@/lib/static-backend').then(({ fetchCreditsStatic }) => fetchCreditsStatic());
   }
 
   const response = await fetch('/api/credits', { signal });
@@ -97,19 +99,4 @@ export async function fetchCredits(signal?: AbortSignal): Promise<CreditsRespons
   }
 
   return (await response.json()) as CreditsResponse;
-}
-
-export async function fetchCreditsStatic(): Promise<CreditsResponse> {
-  const [{ VEHICLES }, images] = await Promise.all([
-    import('@/generated/content'),
-    import('@/generated/credits'),
-  ]);
-
-  const bySlug = images.CREDITS;
-
-  return {
-    credits: VEHICLES.map((entry) => bySlug[entry.slug]).filter(
-      (credit): credit is ImageCredit => credit !== undefined,
-    ),
-  };
 }

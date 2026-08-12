@@ -17,6 +17,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      ...(IS_STATIC
+        ? {}
+        : { '@/lib/static-backend': resolve(rootDir, 'src/lib/static-backend.stub.ts') }),
       '@': resolve(rootDir, 'src'),
     },
   },

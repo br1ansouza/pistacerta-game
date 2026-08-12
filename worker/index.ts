@@ -1,9 +1,9 @@
 import { z } from 'zod';
 import { buildChoices } from '@/domain/round/choices';
+import { pickFromDeck } from '@/domain/round/deck';
 import { describeVehicle, toSafeVehicle, toVehicleIdentity } from '@/domain/vehicle/safe-vehicle';
-import type { Vehicle } from '@/domain/vehicle/vehicle.schema';
 import { VEHICLES } from '@/generated/vehicles';
-import { signRoundToken, slugsFromTokens, verifyRoundToken } from './round-token';
+import { readDeckToken, signDeckToken, signRoundToken, verifyRoundToken } from './round-token';
 
 type Env = {
   ASSETS: { fetch: (request: Request) => Promise<Response> };
@@ -18,58 +18,13 @@ function json(body: unknown, status = 200): Response {
 
 const roundSchema = z.object({
   mode: z.enum(['solo', 'duo']).default('solo'),
-  recentTokens: z.array(z.string()).max(50).default([]),
+  deck: z.string().nullish().default(null),
 });
 
 const revealSchema = z.object({
   token: z.string().min(1),
   choiceId: z.string().min(1).nullable().default(null),
 });
-
-const BRAND_PENALTY = 0.18;
-const DECADE_PENALTY = 0.55;
-
-function pickVehicle(excludeSlugs: readonly string[]): Vehicle | null {
-  const excluded = new Set(excludeSlugs);
-  const candidates = VEHICLES.filter((vehicle) => !excluded.has(vehicle.slug));
-  const pool = candidates.length > 0 ? candidates : VEHICLES;
-
-  const recent = excludeSlugs
-    .map((slug) => VEHICLES.find((vehicle) => vehicle.slug === slug))
-    .filter((vehicle): vehicle is Vehicle => vehicle !== undefined)
-    .slice(0, 6);
-
-  const recentBrands = recent.map((vehicle) => vehicle.brand);
-  const recentDecades = new Set(recent.slice(0, 3).map((vehicle) => Math.floor(vehicle.year / 10)));
-
-  const weights = pool.map((vehicle) => {
-    let weight = 1;
-    const brandIndex = recentBrands.indexOf(vehicle.brand);
-
-    if (brandIndex !== -1) {
-      weight *= BRAND_PENALTY * (1 + brandIndex / recentBrands.length);
-    }
-
-    if (recentDecades.has(Math.floor(vehicle.year / 10))) {
-      weight *= DECADE_PENALTY;
-    }
-
-    return Math.max(weight, 0.02);
-  });
-
-  const total = weights.reduce((sum, weight) => sum + weight, 0);
-  let cursor = Math.random() * total;
-
-  for (const [index, vehicle] of pool.entries()) {
-    cursor -= weights[index] ?? 0;
-
-    if (cursor <= 0) {
-      return vehicle;
-    }
-  }
-
-  return pool.at(-1) ?? null;
-}
 
 async function handleRound(request: Request, secret: string): Promise<Response> {
   const parsed = roundSchema.safeParse(await request.json().catch(() => ({})));
@@ -78,15 +33,19 @@ async function handleRound(request: Request, secret: string): Promise<Response> 
     return json({ error: 'Requisição inválida' }, 400);
   }
 
-  const { mode, recentTokens } = parsed.data;
-  const vehicle = pickVehicle(await slugsFromTokens(recentTokens, secret));
+  const { mode, deck } = parsed.data;
+  const picked = pickFromDeck(VEHICLES, await readDeckToken(deck, secret));
 
-  if (!vehicle) {
+  if (!picked) {
     return json({ error: 'Nenhum veículo disponível' }, 503);
   }
 
+  const { vehicle } = picked;
+
   return json({
     token: await signRoundToken(vehicle.slug, secret),
+    deck: await signDeckToken(picked.seen, secret),
+    reshuffled: picked.reshuffled,
     mode,
     clues: toSafeVehicle(vehicle),
     identity: mode === 'duo' ? toVehicleIdentity(vehicle) : null,

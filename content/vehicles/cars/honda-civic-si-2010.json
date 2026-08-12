@@ -1,0 +1,34 @@
+{
+  "slug": "honda-civic-si-2010",
+  "kind": "car",
+  "brand": "Honda",
+  "model": "Civic",
+  "version": "Si 2.0",
+  "year": 2010,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 192,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 19.2,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "sedã",
+  "engineCode": "K20Z3",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 4,
+  "fipe": {
+    "value": 93541,
+    "referenceMonth": "2026-08",
+    "fipeCode": "014052-0"
+  },
+  "specSource": "icarros",
+  "active": true
+}

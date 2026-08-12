@@ -13,6 +13,22 @@
     "referenceMonth": "2026-08",
     "fipeCode": "005053-9"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "power": {
+    "value": 160,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 18.5,
+    "unit": "kgfm"
+  },
+  "engineCode": "EA827",
+  "cylinders": 4,
+  "valves": 16,
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "doors": 2,
+  "version": "GTi 2.0 16V"
 }

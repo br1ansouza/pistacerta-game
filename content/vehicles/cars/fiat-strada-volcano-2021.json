@@ -13,6 +13,21 @@
     "referenceMonth": "2026-08",
     "fipeCode": "001528-8"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "power": {
+    "value": 101,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 14.2,
+    "unit": "kgfm"
+  },
+  "engineCode": "Firefly",
+  "cylinders": 4,
+  "valves": 8,
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "version": "Volcano 1.3 CD"
 }

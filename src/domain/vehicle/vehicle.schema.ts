@@ -23,7 +23,8 @@ export const SPEC_SOURCES = [
   'fipe',
   'carros-na-web',
 ] as const;
-export const IMAGE_SOURCES = ['wikimedia', 'press-kit', 'placeholder'] as const;
+export const IMAGE_SOURCES = ['wikimedia', 'flickr', 'press-kit', 'placeholder'] as const;
+export const IMAGE_MARKETS = ['br', 'global'] as const;
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const referenceMonthPattern = /^\d{4}-(?:0[1-9]|1[0-2])$/;
@@ -31,6 +32,8 @@ const referenceMonthPattern = /^\d{4}-(?:0[1-9]|1[0-2])$/;
 export const imageSchema = z.object({
   src: z.string().min(1),
   source: z.enum(IMAGE_SOURCES),
+  market: z.enum(IMAGE_MARKETS),
+  depicts: z.string().min(3),
   author: z.string().min(1).optional(),
   license: z.string().min(1).optional(),
   sourceUrl: z.url().optional(),

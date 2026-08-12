@@ -41,7 +41,7 @@ export async function handleRound(request: Request): Promise<Response> {
   const picked = pickFromDeck(pool, state.seen);
 
   if (!picked) {
-    return errorResponse('Nenhum veículo disponível', 503);
+    return errorResponse('Nenhum automóvel disponível', 503);
   }
 
   const { vehicle } = picked;

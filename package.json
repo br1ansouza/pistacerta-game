@@ -1,9 +1,9 @@
 {
   "name": "pistacerta-game",
-  "version": "1.3.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
-  "description": "Jogo de adivinhação de veículos com pistas progressivas.",
+  "description": "Jogo de adivinhação de automóveis com pistas progressivas.",
   "repository": {
     "type": "git",
     "url": "https://github.com/br1ansouza/pistacerta-game.git"

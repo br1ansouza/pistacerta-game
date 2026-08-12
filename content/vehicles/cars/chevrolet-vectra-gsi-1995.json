@@ -13,6 +13,22 @@
     "referenceMonth": "2026-08",
     "fipeCode": "004069-0"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "power": {
+    "value": 162,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 20,
+    "unit": "kgfm"
+  },
+  "engineCode": "C20XE",
+  "cylinders": 4,
+  "valves": 16,
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "doors": 4,
+  "version": "GSi 2.0 16V"
 }

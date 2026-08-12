@@ -14,6 +14,20 @@
     "referenceMonth": "2026-08",
     "fipeCode": "001488-5"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "power": {
+    "value": 135,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 19.3,
+    "unit": "kgfm"
+  },
+  "engineCode": "E.torQ",
+  "cylinders": 4,
+  "valves": 16,
+  "aspiration": "aspirado",
+  "drivetrain": "dianteira",
+  "version": "HGT 1.8"
 }

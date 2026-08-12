@@ -7,6 +7,8 @@ type CreditsScreenProps = {
   onBack: () => void;
 };
 
+const APP_VERSION = process.env.PUBLIC_APP_VERSION ?? '';
+
 export function CreditsScreen({ onBack }: CreditsScreenProps) {
   const [credits, setCredits] = useState<ImageCredit[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -76,6 +78,10 @@ export function CreditsScreen({ onBack }: CreditsScreenProps) {
           ))}
         </ul>
       )}
+
+      <p className="font-display text-chalk-500 mt-auto pt-6 text-center text-[0.625rem]">
+        Versão {APP_VERSION}
+      </p>
     </main>
   );
 }

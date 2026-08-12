@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from '@rsbuild/core';
@@ -9,6 +10,10 @@ const API_PORT = Number(process.env.API_PORT ?? 3001);
 const WEB_PORT = Number(process.env.PORT ?? 3000);
 const IS_STATIC = process.env.PUBLIC_STATIC === '1';
 const BASE = process.env.ASSET_PREFIX ?? '/';
+const { version } = JSON.parse(readFileSync(resolve(rootDir, 'package.json'), 'utf8')) as {
+  version: string;
+};
+const APP_VERSION = version.replace(/\.0$/, '');
 
 export default defineConfig({
   plugins: [pluginReact(), pluginTailwindcss()],
@@ -30,6 +35,7 @@ export default defineConfig({
     define: {
       'process.env.PUBLIC_STATIC': JSON.stringify(IS_STATIC ? '1' : '0'),
       'process.env.PUBLIC_BASE': JSON.stringify(BASE),
+      'process.env.PUBLIC_APP_VERSION': JSON.stringify(APP_VERSION),
     },
   },
   html: {

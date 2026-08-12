@@ -1,0 +1,32 @@
+{
+  "slug": "scania-r450-2024",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "R 450",
+  "version": "6x2",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "power": {
+    "value": 450,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2350,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x2", "4x2"],
+  "gvwr": 26100,
+  "gcwr": 58500,
+  "engineCode": "DC13 164",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": {
+    "value": 958300,
+    "referenceMonth": "2024-05"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

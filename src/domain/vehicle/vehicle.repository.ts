@@ -3,18 +3,21 @@ import { join } from 'node:path';
 import {
   imageDictionarySchema,
   vehicleSchema,
+  type Car,
   type Image,
+  type Truck,
   type Vehicle,
   type VehicleKind,
 } from './vehicle.schema.ts';
 
-type VehicleRecord = Omit<Vehicle, 'image'>;
+type VehicleRecord = Omit<Car, 'image'> | Omit<Truck, 'image'>;
 
 const CONTENT_ROOT = join(process.cwd(), 'content', 'vehicles');
 const IMAGES_PATH = join(process.cwd(), 'content', 'images.json');
 
 const DIRECTORY_BY_KIND: Record<VehicleKind, string> = {
   car: 'cars',
+  truck: 'trucks',
 };
 
 export class VehicleContentError extends Error {

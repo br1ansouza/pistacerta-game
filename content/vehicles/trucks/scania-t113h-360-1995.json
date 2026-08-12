@@ -1,0 +1,28 @@
+{
+  "slug": "scania-t113h-360-1995",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "T 113 H",
+  "version": "360 Top Line",
+  "year": 1995,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "11.0",
+  "power": {
+    "value": 360,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 162,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2", "6x2"],
+  "engineCode": "DSC11",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "quatro-rodas",
+  "active": true
+}

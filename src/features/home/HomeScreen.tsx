@@ -1,27 +1,41 @@
 import { motion } from 'motion/react';
+import { Car01, Truck01 } from '@untitledui/icons';
 import { asset } from '@/lib/asset';
 import type { GameMode } from '@/domain/round/round.types';
+import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
 
 const APP_VERSION = process.env.PUBLIC_APP_VERSION ?? '';
 
 type HomeScreenProps = {
+  kind: VehicleKind;
+  onToggleKind: () => void;
   onSelectMode: (mode: GameMode) => void;
   onOpenCredits: () => void;
 };
 
-const MODES: { mode: GameMode; title: string; description: string; accent: string }[] = [
-  {
-    mode: 'solo',
-    title: 'Sozinho',
-    description: 'Quatro alternativas no fim. O carro só aparece quando você responde.',
-    accent: 'text-flame-400',
+const KIND_COPY: Record<
+  VehicleKind,
+  { noun: string; tagline: string; solo: string; duo: string; next: string }
+> = {
+  car: {
+    noun: 'carro',
+    tagline: 'Doze pistas. Um carro. Descubra antes que elas acabem.',
+    solo: 'Quatro alternativas no fim. O carro só aparece quando você responde.',
+    duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
+    next: 'Trocar para caminhões',
   },
-  {
-    mode: 'duo',
-    title: 'Em dupla',
-    description: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
-    accent: 'text-sky-400',
+  truck: {
+    noun: 'caminhão',
+    tagline: 'Doze pistas. Um caminhão. Descubra antes que elas acabem.',
+    solo: 'Quatro alternativas no fim. O caminhão só aparece quando você responde.',
+    duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
+    next: 'Trocar para carros',
   },
+};
+
+const MODES: { mode: GameMode; title: string; accent: string }[] = [
+  { mode: 'solo', title: 'Sozinho', accent: 'text-flame-400' },
+  { mode: 'duo', title: 'Em dupla', accent: 'text-sky-400' },
 ];
 
 const container = {
@@ -34,9 +48,22 @@ const item = {
   show: { opacity: 1, y: 0, transition: { type: 'spring' as const, stiffness: 380, damping: 30 } },
 };
 
-export function HomeScreen({ onSelectMode, onOpenCredits }: HomeScreenProps) {
+export function HomeScreen({ kind, onToggleKind, onSelectMode, onOpenCredits }: HomeScreenProps) {
+  const copy = KIND_COPY[kind];
+  const NextIcon = kind === 'car' ? Truck01 : Car01;
+
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col justify-center gap-9 px-5 py-10">
+    <main className="relative mx-auto flex min-h-dvh w-full max-w-md flex-col justify-center gap-9 px-5 py-10">
+      <button
+        type="button"
+        onClick={onToggleKind}
+        aria-label={copy.next}
+        title={copy.next}
+        className="border-ink-700 text-chalk-500 hover:text-flame-400 hover:border-flame-500 focus-visible:outline-flame-500 shadow-hard-sm absolute top-6 right-5 flex size-10 items-center justify-center border-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+      >
+        <NextIcon className="size-5" />
+      </button>
+
       <motion.div
         variants={container}
         initial="hidden"
@@ -63,14 +90,12 @@ export function HomeScreen({ onSelectMode, onOpenCredits }: HomeScreenProps) {
               Pista<span className="text-flame-500">Certa</span>
             </h1>
             <div className="via-flame-500/70 h-px w-24 bg-gradient-to-r from-transparent to-transparent" />
-            <p className="text-chalk-300 text-sm text-balance">
-              Doze pistas. Um carro. Descubra antes que elas acabem.
-            </p>
+            <p className="text-chalk-300 text-sm text-balance">{copy.tagline}</p>
           </div>
         </motion.header>
 
         <section className="flex flex-col gap-3">
-          {MODES.map(({ mode, title, description, accent }) => (
+          {MODES.map(({ mode, title, accent }) => (
             <motion.button
               key={mode}
               variants={item}
@@ -89,7 +114,9 @@ export function HomeScreen({ onSelectMode, onOpenCredits }: HomeScreenProps) {
                   >
                     {title}
                   </span>
-                  <span className="text-chalk-300 text-sm">{description}</span>
+                  <span className="text-chalk-300 text-sm">
+                    {mode === 'solo' ? copy.solo : copy.duo}
+                  </span>
                 </span>
                 <span
                   aria-hidden

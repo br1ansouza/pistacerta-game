@@ -43,7 +43,7 @@ export const imageSchema = z.object({
 export const fipeSchema = z.object({
   value: z.number().positive(),
   referenceMonth: z.string().regex(referenceMonthPattern, 'Use o formato AAAA-MM.'),
-  fipeCode: z.string().min(1),
+  fipeCode: z.string().min(1).optional(),
 });
 
 export const measurementSchema = <const U extends string>(unit: U) =>
@@ -87,14 +87,38 @@ export const carSchema = z.object({
   doors: z.number().int().positive().optional(),
 });
 
-export const vehicleSchema = z.discriminatedUnion('kind', [carSchema]);
+export const AXLE_CONFIGS = ['4x2', '6x2', '6x4', '8x2', '8x4'] as const;
+export const truckSchema = z.object({
+  ...vehicleBaseShape,
+  kind: z.literal('truck'),
+  fuel: z.enum(FUEL_TYPES).optional(),
+  displacement: z
+    .string()
+    .regex(/^\d+\.\d$/, 'Use o formato 12.8, 13.0…')
+    .optional(),
+  power: measurementSchema('cv').optional(),
+  torque: z.object({ value: z.number().positive(), unit: z.enum(['kgfm', 'Nm']) }).optional(),
+  aspiration: z.enum(ASPIRATION_TYPES).optional(),
+  transmission: z.enum(TRANSMISSION_TYPES).optional(),
+  axleConfigs: z.array(z.enum(AXLE_CONFIGS)).min(1).optional(),
+  cabins: z.array(z.string().min(1)).min(1).optional(),
+  gvwr: z.number().positive().optional(),
+  gcwr: z.number().positive().optional(),
+  engineCode: z.string().min(1).optional(),
+  cylinders: z.number().int().positive().optional(),
+  cylinderLayout: z.enum(CYLINDER_LAYOUTS).optional(),
+  valves: z.number().int().positive().optional(),
+});
+
+export const vehicleSchema = z.discriminatedUnion('kind', [carSchema, truckSchema]);
 
 export type Image = z.infer<typeof imageSchema>;
 export type Fipe = z.infer<typeof fipeSchema>;
 export const imageDictionarySchema = z.record(z.string(), imageSchema);
 
 export type Car = z.infer<typeof carSchema> & { image: Image | null };
-export type Vehicle = Car;
+export type Truck = z.infer<typeof truckSchema> & { image: Image | null };
+export type Vehicle = Car | Truck;
 export type VehicleKind = Vehicle['kind'];
 
 export const IDENTITY_FIELDS = ['brand', 'model', 'generation', 'image'] as const;

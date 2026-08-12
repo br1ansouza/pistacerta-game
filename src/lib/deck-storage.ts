@@ -1,37 +1,28 @@
-const STORAGE_KEY = 'pistacerta:deck';
-const LEGACY_KEY = 'pistacerta:recent-rounds';
+const LEGACY_KEYS = ['pistacerta:recent-rounds', 'pistacerta:deck'];
 
-let memoryDeck: string | null = null;
+const memoryDecks = new Map<string, string>();
 
-function fromStorage(): string | null {
+function storageKey(kind: string): string {
+  return `pistacerta:deck:${kind}`;
+}
+
+export function readDeck(kind: string): string | null {
   try {
-    globalThis.localStorage?.removeItem(LEGACY_KEY);
+    for (const key of LEGACY_KEYS) {
+      globalThis.localStorage?.removeItem(key);
+    }
 
-    return globalThis.localStorage?.getItem(STORAGE_KEY) ?? null;
+    return memoryDecks.get(kind) ?? globalThis.localStorage?.getItem(storageKey(kind)) ?? null;
   } catch {
-    return null;
+    return memoryDecks.get(kind) ?? null;
   }
 }
 
-export function readDeck(): string | null {
-  return memoryDeck ?? fromStorage();
-}
-
-export function saveDeck(deck: string): void {
-  memoryDeck = deck;
+export function saveDeck(kind: string, deck: string): void {
+  memoryDecks.set(kind, deck);
 
   try {
-    globalThis.localStorage?.setItem(STORAGE_KEY, deck);
-  } catch {
-    return;
-  }
-}
-
-export function clearDeck(): void {
-  memoryDeck = null;
-
-  try {
-    globalThis.localStorage?.removeItem(STORAGE_KEY);
+    globalThis.localStorage?.setItem(storageKey(kind), deck);
   } catch {
     return;
   }

@@ -14,6 +14,7 @@ import { readDeckDigests, signDeckToken, signRoundToken } from './_lib/round-tok
 
 const requestSchema = z.object({
   mode: z.enum(['solo', 'duo']).default('solo'),
+  kind: z.enum(['car', 'truck']).default('car'),
   deck: z.string().nullish().default(null),
 });
 
@@ -29,12 +30,12 @@ export async function handleRound(request: Request): Promise<Response> {
     return errorResponse('Requisição inválida', 400);
   }
 
-  const { mode, deck } = parsed.data;
-  const pool = await getPlayableVehicles('car');
+  const { mode, kind, deck } = parsed.data;
+  const pool = await getPlayableVehicles(kind);
   const slugs = pool.map((vehicle) => vehicle.slug);
   const [fromBody, fromCookie] = await Promise.all([
     readDeckDigests(deck, slugs),
-    readDeckDigests(deckFromCookie(request), slugs),
+    readDeckDigests(deckFromCookie(request, kind), slugs),
   ]);
   const state = fromCookie.seen.length > fromBody.seen.length ? fromCookie : fromBody;
   const picked = pickFromDeck(pool, state.seen);
@@ -57,6 +58,6 @@ export async function handleRound(request: Request): Promise<Response> {
       choices: mode === 'solo' ? buildChoices(vehicle, pool) : null,
     },
     200,
-    { 'Set-Cookie': deckCookie(nextDeck) },
+    { 'Set-Cookie': deckCookie(kind, nextDeck) },
   );
 }

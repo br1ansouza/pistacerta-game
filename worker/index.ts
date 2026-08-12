@@ -15,21 +15,25 @@ type Env = {
 };
 
 const NO_STORE = { 'Cache-Control': 'no-store' } as const;
-const DECK_COOKIE = 'pc_deck';
 const DECK_COOKIE_MAX_AGE = 180 * 24 * 60 * 60;
-const SLUGS = VEHICLES.map((vehicle) => vehicle.slug);
 
-function deckFromCookie(request: Request): string | null {
+function deckCookieName(kind: string): string {
+  return `pc_deck_${kind}`;
+}
+
+function deckFromCookie(request: Request, kind: string): string | null {
   const header = request.headers.get('cookie');
 
   if (!header) {
     return null;
   }
 
+  const wanted = deckCookieName(kind);
+
   for (const part of header.split(';')) {
     const [name, ...rest] = part.trim().split('=');
 
-    if (name === DECK_COOKIE && rest.length > 0) {
+    if (name === wanted && rest.length > 0) {
       return rest.join('=');
     }
   }
@@ -41,12 +45,13 @@ function json(body: unknown, status = 200, extraHeaders?: Record<string, string>
   return Response.json(body, { status, headers: { ...NO_STORE, ...extraHeaders } });
 }
 
-function deckCookie(deck: string): string {
-  return `${DECK_COOKIE}=${deck}; Path=/; Max-Age=${DECK_COOKIE_MAX_AGE}; SameSite=Lax; Secure; HttpOnly`;
+function deckCookie(kind: string, deck: string): string {
+  return `${deckCookieName(kind)}=${deck}; Path=/; Max-Age=${DECK_COOKIE_MAX_AGE}; SameSite=Lax; Secure; HttpOnly`;
 }
 
 const roundSchema = z.object({
   mode: z.enum(['solo', 'duo']).default('solo'),
+  kind: z.enum(['car', 'truck']).default('car'),
   deck: z.string().nullish().default(null),
 });
 
@@ -62,13 +67,15 @@ async function handleRound(request: Request, secret: string): Promise<Response> 
     return json({ error: 'Requisição inválida' }, 400);
   }
 
-  const { mode, deck } = parsed.data;
+  const { mode, kind, deck } = parsed.data;
+  const pool = VEHICLES.filter((vehicle) => vehicle.kind === kind);
+  const slugs = pool.map((vehicle) => vehicle.slug);
   const [fromBody, fromCookie] = await Promise.all([
-    readDeckDigests(deck, secret, SLUGS),
-    readDeckDigests(deckFromCookie(request), secret, SLUGS),
+    readDeckDigests(deck, secret, slugs),
+    readDeckDigests(deckFromCookie(request, kind), secret, slugs),
   ]);
   const state = fromCookie.seen.length > fromBody.seen.length ? fromCookie : fromBody;
-  const picked = pickFromDeck(VEHICLES, state.seen);
+  const picked = pickFromDeck(pool, state.seen);
 
   if (!picked) {
     return json({ error: 'Nenhum veículo disponível' }, 503);
@@ -85,10 +92,10 @@ async function handleRound(request: Request, secret: string): Promise<Response> 
       mode,
       clues: toSafeVehicle(vehicle),
       identity: mode === 'duo' ? toVehicleIdentity(vehicle) : null,
-      choices: mode === 'solo' ? buildChoices(vehicle, VEHICLES) : null,
+      choices: mode === 'solo' ? buildChoices(vehicle, pool) : null,
     },
     200,
-    { 'Set-Cookie': deckCookie(nextDeck) },
+    { 'Set-Cookie': deckCookie(kind, nextDeck) },
   );
 }
 
@@ -206,7 +213,14 @@ export default {
     }
 
     if (pathname === '/api/health') {
-      return json({ ok: true, vehicleCount: VEHICLES.length });
+      return json({
+        ok: true,
+        vehicleCount: VEHICLES.length,
+        byKind: VEHICLES.reduce<Record<string, number>>((acc, vehicle) => {
+          acc[vehicle.kind] = (acc[vehicle.kind] ?? 0) + 1;
+          return acc;
+        }, {}),
+      });
     }
 
     if (pathname === '/api/credits') {

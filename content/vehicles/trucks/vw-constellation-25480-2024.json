@@ -1,0 +1,33 @@
+{
+  "slug": "vw-constellation-25480-2024",
+  "kind": "truck",
+  "brand": "Volkswagen",
+  "model": "Constellation 25.480",
+  "version": "6x2",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "12.4",
+  "power": {
+    "value": 475,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2400,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x2"],
+  "gvwr": 23000,
+  "gcwr": 56000,
+  "engineCode": "MAN D2676LFAG",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": {
+    "value": 785560,
+    "referenceMonth": "2024-05"
+  },
+  "specSource": "carros-na-web",
+  "active": false
+}

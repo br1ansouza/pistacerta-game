@@ -12,15 +12,15 @@ const CLUE_FIELDS = [
   'torque',
   'aspiration',
   'transmission',
-  'drivetrain',
-  'bodyType',
   'engineCode',
-] as const satisfies readonly (keyof Vehicle)[];
+] as const;
 
 const MINIMUM_CLUES = 5;
 
 function countAvailableClues(vehicle: Vehicle): number {
-  return CLUE_FIELDS.filter((field) => vehicle[field] !== undefined && vehicle[field] !== null)
+  const record = vehicle as unknown as Record<string, unknown>;
+
+  return CLUE_FIELDS.filter((field) => record[field] !== undefined && record[field] !== null)
     .length;
 }
 

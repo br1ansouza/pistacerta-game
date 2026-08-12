@@ -1,0 +1,29 @@
+{
+  "slug": "isuzu-nqr75-2020",
+  "kind": "truck",
+  "brand": "Isuzu",
+  "model": "NQR 75",
+  "year": 2020,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "diesel",
+  "displacement": "5.2",
+  "power": {
+    "value": 155,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 42,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "gvwr": 7500,
+  "engineCode": "4HK1-TCN",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

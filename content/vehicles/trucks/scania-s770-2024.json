@@ -1,0 +1,31 @@
+{
+  "slug": "scania-s770-2024",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "S 770",
+  "version": "6x4",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "power": {
+    "value": 770,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 3700,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x4"],
+  "cabins": ["S"],
+  "gvwr": 28100,
+  "gcwr": 74000,
+  "engineCode": "DC16 123",
+  "fipe": {
+    "value": 1446442,
+    "referenceMonth": "2024-05"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "hyundai-hd80-2019",
+  "kind": "truck",
+  "brand": "Hyundai",
+  "model": "HD 80",
+  "year": 2019,
+  "origin": "importado",
+  "countryOfOrigin": "Coreia do Sul",
+  "fuel": "diesel",
+  "displacement": "3.0",
+  "power": {
+    "value": 170,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 40.8,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "gvwr": 8000,
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "icarros",
+  "active": false
+}

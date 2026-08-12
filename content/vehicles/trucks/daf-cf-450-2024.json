@@ -1,0 +1,34 @@
+{
+  "slug": "daf-cf-450-2024",
+  "kind": "truck",
+  "brand": "DAF",
+  "model": "CF 450",
+  "version": "FTS 6x2",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "10.8",
+  "power": {
+    "value": 450,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2200,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x2"],
+  "cabins": ["Simples", "Estendida", "Leito"],
+  "gvwr": 23000,
+  "gcwr": 56900,
+  "engineCode": "Paccar MX-11",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": {
+    "value": 861444,
+    "referenceMonth": "2024-04"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

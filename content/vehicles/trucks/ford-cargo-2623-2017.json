@@ -1,0 +1,30 @@
+{
+  "slug": "ford-cargo-2623-2017",
+  "kind": "truck",
+  "brand": "Ford",
+  "model": "Cargo 2623",
+  "version": "6x4",
+  "year": 2017,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "6.7",
+  "power": {
+    "value": 230,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 83.7,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["6x4"],
+  "cabins": ["Simples"],
+  "gcwr": 37000,
+  "engineCode": "Cummins ISB 6.7",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "carros-na-web",
+  "active": true
+}

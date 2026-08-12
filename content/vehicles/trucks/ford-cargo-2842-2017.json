@@ -1,0 +1,30 @@
+{
+  "slug": "ford-cargo-2842-2017",
+  "kind": "truck",
+  "brand": "Ford",
+  "model": "Cargo 2842",
+  "version": "6x2",
+  "year": 2017,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "10.3",
+  "power": {
+    "value": 420,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 194,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x2"],
+  "cabins": ["Leito"],
+  "gvwr": 23000,
+  "engineCode": "FPT Cursor 10",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "carros-na-web",
+  "active": true
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "mercedes-axor-2545-2025",
+  "kind": "truck",
+  "brand": "Mercedes-Benz",
+  "model": "Axor 2545",
+  "version": "6x2",
+  "year": 2025,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "12.8",
+  "power": {
+    "value": 449,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2200,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x2"],
+  "cabins": ["Leito baixo", "Leito alto"],
+  "gvwr": 30100,
+  "engineCode": "OM 460 LA",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": {
+    "value": 738000,
+    "referenceMonth": "2025-08"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

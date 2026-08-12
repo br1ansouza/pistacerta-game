@@ -1,0 +1,31 @@
+{
+  "slug": "vw-worker-13180-2010",
+  "kind": "truck",
+  "brand": "Volkswagen",
+  "model": "Worker 13.180",
+  "version": "Guincho",
+  "year": 2010,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "6.1",
+  "power": {
+    "value": 173,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 61,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "cabins": ["Simples"],
+  "gvwr": 13000,
+  "gcwr": 20700,
+  "engineCode": "MWM 6.10 TCA",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "carros-na-web",
+  "active": true
+}

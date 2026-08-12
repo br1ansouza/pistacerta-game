@@ -233,6 +233,15 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013_Citro%C3%ABn_DS3_D-Sport_Airdream_E-HDi.jpg"
   },
+  "daf-cf-450-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DAF_CF%2C_Bloemplus.JPG/960px-DAF_CF%2C_Bloemplus.JPG",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "DAF CF",
+    "author": "Alf van Beem",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DAF_CF,_Bloemplus.JPG"
+  },
   "daf-xf-480-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/DAF_XF_480_%282021%29_Sattelzug_in_Berlin.jpg/960px-DAF_XF_480_%282021%29_Sattelzug_in_Berlin.jpg",
     "source": "wikimedia",
@@ -250,6 +259,15 @@
     "author": "Matti Blume",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:DAF_XFC,_IAA_2024,_Hanover_(P1190923).jpg"
+  },
+  "daf-xf-530-4x2-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/DAF_XF_480_%282021%29_Sattelzug_in_Berlin.jpg/960px-DAF_XF_480_%282021%29_Sattelzug_in_Berlin.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "DAF XF",
+    "author": "JoachimKohler-HB",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DAF_XF_480_(2021)_Sattelzug_in_Berlin.jpg"
   },
   "ferrari-purosangue-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ferrari_Purosangue%2C_Auto_2025%2C_Zurich_%2820251029-P1074508%29.jpg/960px-Ferrari_Purosangue%2C_Auto_2025%2C_Zurich_%2820251029-P1074508%29.jpg",
@@ -367,6 +385,33 @@
     "author": "Maxi-Napo-99",
     "license": "CC BY 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Fiat_Uno_1.4_Sporting.jpg"
+  },
+  "ford-cargo-2429-2017": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Ford Cargo da mesma geração",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
+  },
+  "ford-cargo-2623-2017": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Ford Cargo da mesma geração",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
+  },
+  "ford-cargo-2842-2017": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Ford Cargo da mesma geração",
+    "author": "order_242 from Chile",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
   },
   "ford-cargo-3133-2017": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
@@ -512,6 +557,15 @@
     "license": "CC BY-SA 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hyundai_Veloster_FS_China_2013-03-04.jpg"
   },
+  "isuzu-nqr75-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Isuzu_NQR%2C_White_Truck%2C.jpg/960px-Isuzu_NQR%2C_White_Truck%2C.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Isuzu NQR",
+    "author": "Mj-bird",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Isuzu_NQR,_White_Truck,.jpg"
+  },
   "iveco-sway-480-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IVECO_S-Way_Front.jpg/960px-IVECO_S-Way_Front.jpg",
     "source": "wikimedia",
@@ -601,6 +655,33 @@
     "author": "BANEX Transport",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:BANEX_Transport_Mercedes_Actros_MP5_New_2019.jpg"
+  },
+  "mercedes-atego-3133-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Mercedes-Benz_Atego_%28P1032721%29.jpg/960px-Mercedes-Benz_Atego_%28P1032721%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Mercedes-Benz Atego",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Atego_(P1032721).jpg"
+  },
+  "mercedes-axor-2545-2025": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Mercedes-Axor-1843LH-Gardinenplanensattelzug.jpg/960px-Mercedes-Axor-1843LH-Gardinenplanensattelzug.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Mercedes-Benz Axor",
+    "author": "ONordsieck 19:53, 25. Jun. 2008 (CEST)",
+    "license": "CC BY-SA 2.0 de",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Axor-1843LH-Gardinenplanensattelzug.jpg"
+  },
+  "mercedes-axor-3131-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Mercedes-Banz_Axor_1833_mit_Abrollmulde_%282022%29.jpg/960px-Mercedes-Banz_Axor_1833_mit_Abrollmulde_%282022%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Mercedes-Benz Axor de obra",
+    "author": "JoachimKohler-HB",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Banz_Axor_1833_mit_Abrollmulde_(2022).jpg"
   },
   "mini-cooper-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg/960px-2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg",
@@ -737,6 +818,60 @@
     "license": "CC BY 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023-10-30-lidoga-volvo-fh3-scania-r450s-2163.jpg"
   },
+  "scania-r500-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Scania_R500%2C_North_Fremantle%2C_2020_%2805%29.jpg/960px-Scania_R500%2C_North_Fremantle%2C_2020_%2805%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania R 500",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scania_R500,_North_Fremantle,_2020_(05).jpg"
+  },
+  "scania-r540-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Blue_Scania_M%C3%A4kel%C3%A4.jpg/960px-Blue_Scania_M%C3%A4kel%C3%A4.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania da série R",
+    "author": "Kotivalo",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_Scania_Mäkelä.jpg"
+  },
+  "scania-r560-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Blue_Scania_M%C3%A4kel%C3%A4.jpg/960px-Blue_Scania_M%C3%A4kel%C3%A4.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania da série R",
+    "author": "Kotivalo",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_Scania_Mäkelä.jpg"
+  },
+  "scania-s460-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Scania_Next_Gen_S_500_Topline_Streamline_Euro6_A_6X2_NA_%28S-Series_1%29.jpg/960px-Scania_Next_Gen_S_500_Topline_Streamline_Euro6_A_6X2_NA_%28S-Series_1%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania Next Gen série S",
+    "author": "Lav Ulv",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scania_Next_Gen_S_500_Topline_Streamline_Euro6_A_6X2_NA_(S-Series_1).jpg"
+  },
+  "scania-s770-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Scania_Next_Gen_S_650_V8_Topline_Streamline_Euro6_A_6X2_NB_%28S-Series_1%29.jpg/960px-Scania_Next_Gen_S_650_V8_Topline_Streamline_Euro6_A_6X2_NB_%28S-Series_1%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania Next Gen série S com motor V8",
+    "author": "Lav Ulv",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scania_Next_Gen_S_650_V8_Topline_Streamline_Euro6_A_6X2_NB_(S-Series_1).jpg"
+  },
+  "scania-t112h-1988": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/1978_Scania_LS111.jpg/960px-1978_Scania_LS111.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Scania da série 2, antecessora do T 112",
+    "author": "Herranderssvensson",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:1978_Scania_LS111.jpg"
+  },
   "scania-t113h-360-1995": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Scania_113_H.jpg/960px-Scania_113_H.jpg",
     "source": "wikimedia",
@@ -818,6 +953,15 @@
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_SW4_SRX_2023_(54539868792).jpg"
   },
+  "volvo-fh-420-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2011_Volvo_FH_460.jpg/960px-2011_Volvo_FH_460.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Volvo FH",
+    "author": "Calreyn88",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011_Volvo_FH_460.jpg"
+  },
   "volvo-fh-460-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2011_Volvo_FH_460.jpg/960px-2011_Volvo_FH_460.jpg",
     "source": "wikimedia",
@@ -826,6 +970,15 @@
     "author": "Calreyn88",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011_Volvo_FH_460.jpg"
+  },
+  "volvo-fh-500-2024": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg/960px-Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Volvo FH da geração atual",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volvo_FH_540,_North_Fremantle,_2020_(01).jpg"
   },
   "volvo-fh-540-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg/960px-Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg",
@@ -970,5 +1123,14 @@
     "author": "Greg Gjerdingen from Willmar, USA",
     "license": "CC BY 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:13_Volkswagen_Tiguan_(9343545739).jpg"
+  },
+  "vw-worker-13180-2010": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/2010_IZOD_IndyCar_Series_-_S%C3%A3o_Paulo_Indy_300_Caminh%C3%A3o_Volkswagen_Worker_13.180_guinchando_o_carro_danificado_de_Mario_Moraes_-_Volkswagen_Worker_13.180_Truck_screeching_Mario_Moraes_damaged_car_%2826479335864%29.jpg/960px-thumbnail.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Volkswagen Worker 13.180 guincho na Indy 300 de São Paulo",
+    "author": "Deni Williams from São Paulo, Brasil / Brazil",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010_IZOD_IndyCar_Series_-_São_Paulo_Indy_300_Caminhão_Volkswagen_Worker_13.180_guinchando_o_carro_danificado_de_Mario_Moraes_-_Volkswagen_Worker_13.180_Truck_screeching_Mario_Moraes_damaged_car_(26479335864).jpg"
   }
 }

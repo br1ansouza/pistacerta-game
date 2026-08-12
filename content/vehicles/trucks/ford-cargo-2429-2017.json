@@ -1,0 +1,30 @@
+{
+  "slug": "ford-cargo-2429-2017",
+  "kind": "truck",
+  "brand": "Ford",
+  "model": "Cargo 2429",
+  "version": "6x2",
+  "year": 2017,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "6.7",
+  "power": {
+    "value": 290,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 96.9,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["6x2"],
+  "cabins": ["Simples", "Leito"],
+  "gcwr": 35000,
+  "engineCode": "Cummins ISB 6.7",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "carros-na-web",
+  "active": true
+}

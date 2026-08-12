@@ -7,17 +7,6 @@
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "1.5",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "bodyType": "suv",
-  "doors": 5,
-  "fipe": {
-    "value": 130553,
-    "referenceMonth": "2026-08",
-    "fipeCode": "014102-0"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 173,
     "unit": "cv"
@@ -26,7 +15,19 @@
     "value": 22.4,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
   "engineCode": "L15B7",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 130553,
+    "referenceMonth": "2026-08",
+    "fipeCode": "014102-0"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

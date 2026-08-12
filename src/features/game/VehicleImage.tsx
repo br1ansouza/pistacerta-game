@@ -24,7 +24,7 @@ export function VehicleImage({ identity }: VehicleImageProps) {
   return (
     <div className="border-ink-700 bg-ink-900 shadow-hard relative overflow-hidden border-2">
       <img
-        src={identity.image.src}
+        src={identity.image.src.startsWith('http') ? identity.image.src : asset(identity.image.src)}
         alt={`${identity.brand} ${identity.model}`}
         loading="lazy"
         className="aspect-video w-full object-cover"

@@ -7,16 +7,6 @@
   "origin": "nacional",
   "fuel": "diesel",
   "displacement": "2.0",
-  "transmission": "automático",
-  "drivetrain": "integral",
-  "bodyType": "suv",
-  "fipe": {
-    "value": 118167,
-    "referenceMonth": "2026-08",
-    "fipeCode": "017051-8"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 170,
     "unit": "cv"
@@ -26,7 +16,18 @@
     "unit": "kgfm"
   },
   "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
   "engineCode": "Multijet II",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "fipe": {
+    "value": 118167,
+    "referenceMonth": "2026-08",
+    "fipeCode": "017051-8"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

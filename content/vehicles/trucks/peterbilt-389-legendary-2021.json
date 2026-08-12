@@ -1,0 +1,29 @@
+{
+  "slug": "peterbilt-389-legendary-2021",
+  "kind": "truck",
+  "brand": "Peterbilt",
+  "model": "389 Legendary",
+  "year": 2021,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "diesel",
+  "displacement": "14.9",
+  "power": {
+    "value": 630,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 283.2,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x4"],
+  "cabins": ["Leito estendido de 78 polegadas"],
+  "engineCode": "Cummins X15",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "quatro-rodas",
+  "active": true
+}

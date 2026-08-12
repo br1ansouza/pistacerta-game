@@ -23,6 +23,7 @@
   "bodyType": "hatch",
   "engineCode": "G16E-GTS",
   "cylinders": 3,
+  "cylinderLayout": "em linha",
   "valves": 12,
   "doors": 5,
   "fipe": {

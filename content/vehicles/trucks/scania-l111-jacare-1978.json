@@ -1,0 +1,28 @@
+{
+  "slug": "scania-l111-jacare-1978",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "L 111",
+  "version": "Jacaré",
+  "year": 1978,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "11.0",
+  "power": {
+    "value": 296,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 111,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2", "6x2"],
+  "engineCode": "DS11",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "quatro-rodas",
+  "active": true
+}

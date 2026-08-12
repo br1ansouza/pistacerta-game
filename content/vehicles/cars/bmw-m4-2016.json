@@ -22,6 +22,7 @@
   "drivetrain": "traseira",
   "bodyType": "cupê",
   "cylinders": 6,
+  "cylinderLayout": "em linha",
   "valves": 24,
   "doors": 2,
   "fipe": null,

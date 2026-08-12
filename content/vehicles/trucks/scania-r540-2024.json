@@ -1,0 +1,31 @@
+{
+  "slug": "scania-r540-2024",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "R 540",
+  "version": "6x4",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "power": {
+    "value": 540,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2700,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x4"],
+  "cabins": ["Leito normal (CR20N)", "Leito alta (CR20H)"],
+  "gvwr": 28100,
+  "gcwr": 74000,
+  "engineCode": "DC13 166",
+  "fipe": {
+    "value": 996766,
+    "referenceMonth": "2024-05"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

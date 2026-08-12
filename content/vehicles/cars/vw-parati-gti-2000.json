@@ -1,0 +1,31 @@
+{
+  "slug": "vw-parati-gti-2000",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Parati",
+  "version": "GTi 2.0 16V",
+  "year": 2000,
+  "origin": "nacional",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 145,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 17.8,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "perua",
+  "engineCode": "EA827",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 2,
+  "fipe": null,
+  "specSource": "icarros",
+  "active": true
+}

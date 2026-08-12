@@ -8,23 +8,27 @@ export function jsonResponse(
   return Response.json(body, { status, headers: { ...NO_STORE, ...extraHeaders } });
 }
 
-export const DECK_COOKIE = 'pc_deck';
-
-export function deckCookie(deck: string): string {
-  return `${DECK_COOKIE}=${deck}; Path=/; Max-Age=${180 * 24 * 60 * 60}; SameSite=Lax`;
+function deckCookieName(kind: string): string {
+  return `pc_deck_${kind}`;
 }
 
-export function deckFromCookie(request: Request): string | null {
+export function deckCookie(kind: string, deck: string): string {
+  return `${deckCookieName(kind)}=${deck}; Path=/; Max-Age=${180 * 24 * 60 * 60}; SameSite=Lax`;
+}
+
+export function deckFromCookie(request: Request, kind: string): string | null {
   const header = request.headers.get('cookie');
 
   if (!header) {
     return null;
   }
 
+  const wanted = deckCookieName(kind);
+
   for (const part of header.split(';')) {
     const [name, ...rest] = part.trim().split('=');
 
-    if (name === DECK_COOKIE && rest.length > 0) {
+    if (name === wanted && rest.length > 0) {
       return rest.join('=');
     }
   }

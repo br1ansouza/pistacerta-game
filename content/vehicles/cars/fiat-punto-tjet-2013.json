@@ -7,16 +7,6 @@
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "1.4",
-  "aspiration": "turbo",
-  "bodyType": "hatch",
-  "doors": 5,
-  "fipe": {
-    "value": 53808,
-    "referenceMonth": "2026-08",
-    "fipeCode": "001271-8"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 152,
     "unit": "cv"
@@ -25,7 +15,18 @@
     "value": 21.1,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "bodyType": "hatch",
   "engineCode": "T-Jet",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 53808,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001271-8"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

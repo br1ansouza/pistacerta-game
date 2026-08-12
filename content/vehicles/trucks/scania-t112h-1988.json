@@ -1,0 +1,27 @@
+{
+  "slug": "scania-t112h-1988",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "T 112 H",
+  "year": 1988,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "11.0",
+  "power": {
+    "value": 305,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 126,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2", "6x2"],
+  "engineCode": "DS11 15",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "quatro-rodas",
+  "active": true
+}

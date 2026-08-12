@@ -1,0 +1,31 @@
+{
+  "slug": "mercedes-atego-3133-2024",
+  "kind": "truck",
+  "brand": "Mercedes-Benz",
+  "model": "Atego 3133",
+  "version": "6x4",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "7.2",
+  "power": {
+    "value": 321,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 1250,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x4"],
+  "cabins": ["Curta", "Estendida"],
+  "gvwr": 30500,
+  "gcwr": 63000,
+  "engineCode": "OM 926 LA",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "carros-na-web",
+  "active": true
+}

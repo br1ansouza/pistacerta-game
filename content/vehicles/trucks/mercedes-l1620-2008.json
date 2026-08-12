@@ -1,0 +1,30 @@
+{
+  "slug": "mercedes-l1620-2008",
+  "kind": "truck",
+  "brand": "Mercedes-Benz",
+  "model": "L 1620 Classic",
+  "year": 2008,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "6.0",
+  "power": {
+    "value": 211,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 700,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2", "6x2"],
+  "cabins": ["Simples"],
+  "gvwr": 22000,
+  "gcwr": 32000,
+  "engineCode": "OM 366 LA",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

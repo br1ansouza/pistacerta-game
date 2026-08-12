@@ -8,16 +8,6 @@
   "countryOfOrigin": "Alemanha",
   "fuel": "gasolina",
   "displacement": "2.5",
-  "aspiration": "turbo",
-  "drivetrain": "integral",
-  "bodyType": "hatch",
-  "fipe": {
-    "value": 376124,
-    "referenceMonth": "2026-08",
-    "fipeCode": "008221-0"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 400,
     "unit": "cv"
@@ -26,7 +16,18 @@
     "value": 48.9,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "drivetrain": "integral",
+  "bodyType": "hatch",
   "engineCode": "2.5 TFSI",
   "cylinders": 5,
-  "valves": 20
+  "cylinderLayout": "em linha",
+  "valves": 20,
+  "fipe": {
+    "value": 376124,
+    "referenceMonth": "2026-08",
+    "fipeCode": "008221-0"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

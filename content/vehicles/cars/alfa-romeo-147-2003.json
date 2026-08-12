@@ -3,6 +3,7 @@
   "kind": "car",
   "brand": "Alfa Romeo",
   "model": "147",
+  "version": "2.0 TS Selespeed",
   "year": 2003,
   "origin": "importado",
   "countryOfOrigin": "Itália",
@@ -12,8 +13,18 @@
     "value": 148,
     "unit": "cv"
   },
+  "torque": {
+    "value": 18.3,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
   "transmission": "automatizado",
+  "drivetrain": "dianteira",
   "bodyType": "hatch",
+  "engineCode": "Twin Spark",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
   "doors": 4,
   "fipe": {
     "value": 94484,
@@ -21,15 +32,5 @@
     "fipeCode": "006017-8"
   },
   "specSource": "icarros",
-  "active": true,
-  "version": "2.0 TS Selespeed",
-  "torque": {
-    "value": 18.3,
-    "unit": "kgfm"
-  },
-  "engineCode": "Twin Spark",
-  "cylinders": 4,
-  "valves": 16,
-  "aspiration": "aspirado",
-  "drivetrain": "dianteira"
+  "active": true
 }

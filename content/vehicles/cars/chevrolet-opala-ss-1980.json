@@ -20,11 +20,12 @@
   "transmission": "manual",
   "drivetrain": "traseira",
   "bodyType": "cupê",
+  "engineCode": "250-S",
   "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "valves": 12,
   "doors": 2,
   "fipe": null,
   "specSource": "webmotors",
-  "active": true,
-  "engineCode": "250-S",
-  "valves": 12
+  "active": true
 }

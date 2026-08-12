@@ -1,0 +1,33 @@
+{
+  "slug": "scania-r460-2024",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "R 460",
+  "version": "6x2",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "power": {
+    "value": 460,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2500,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "axleConfigs": ["6x2"],
+  "cabins": ["Leito normal (CR20N)", "Leito alta (CR20H)"],
+  "gvwr": 26100,
+  "gcwr": 58500,
+  "engineCode": "DC13 175",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": {
+    "value": 1095455,
+    "referenceMonth": "2024-05"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

@@ -19,10 +19,11 @@
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "traseira",
+  "engineCode": "OHV 1.6",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 8,
   "fipe": null,
   "specSource": "webmotors",
-  "active": true,
-  "engineCode": "OHV 1.6",
-  "valves": 8
+  "active": true
 }

@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useReducer, useRef } from 'react';
 import { initialRoundState, roundReducer } from '@/domain/round/round.reducer';
 import type { GameMode, Outcome } from '@/domain/round/round.types';
+import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
 import { revealVehicle, startRound } from '@/lib/api';
 import { readDeck, saveDeck } from '@/lib/deck-storage';
 
-export function useGameRound(mode: GameMode) {
+export function useGameRound(mode: GameMode, kind: VehicleKind) {
   const [state, dispatch] = useReducer(roundReducer, initialRoundState);
   const inFlight = useRef(false);
 
@@ -18,8 +19,8 @@ export function useGameRound(mode: GameMode) {
     dispatch({ type: 'round/requested', mode });
 
     try {
-      const response = await startRound(mode, readDeck());
-      saveDeck(response.deck);
+      const response = await startRound(mode, kind, readDeck(kind));
+      saveDeck(kind, response.deck);
 
       dispatch({
         type: 'round/started',
@@ -38,7 +39,7 @@ export function useGameRound(mode: GameMode) {
     } finally {
       inFlight.current = false;
     }
-  }, [mode]);
+  }, [mode, kind]);
 
   useEffect(() => {
     void beginRound();

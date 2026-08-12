@@ -1,0 +1,30 @@
+{
+  "slug": "international-9800i-2012",
+  "kind": "truck",
+  "brand": "International",
+  "model": "9800i",
+  "year": 2012,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "10.8",
+  "power": {
+    "value": 410,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2000,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["6x2", "6x4"],
+  "cabins": ["Leito teto alto"],
+  "gvwr": 23000,
+  "gcwr": 74000,
+  "engineCode": "Cummins ISM 420 P7",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

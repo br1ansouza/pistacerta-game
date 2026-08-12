@@ -1,6 +1,6 @@
-import type { Vehicle } from './vehicle.schema.ts';
+import type { Car, Truck, Vehicle } from './vehicle.schema.ts';
 
-export const CLUE_FIELDS = [
+const SHARED_FIELDS = [
   'kind',
   'year',
   'origin',
@@ -12,17 +12,33 @@ export const CLUE_FIELDS = [
   'torque',
   'aspiration',
   'transmission',
-  'drivetrain',
-  'bodyType',
   'engineCode',
   'cylinders',
+  'cylinderLayout',
   'valves',
-  'doors',
-] as const satisfies readonly (keyof Vehicle)[];
+] as const;
 
-export type ClueField = (typeof CLUE_FIELDS)[number];
+const CAR_ONLY_FIELDS = ['drivetrain', 'bodyType', 'doors'] as const;
+const TRUCK_ONLY_FIELDS = ['axleConfigs', 'cabins', 'gvwr', 'gcwr'] as const;
 
-export type SafeVehicle = Pick<Vehicle, ClueField>;
+export const CAR_CLUE_FIELDS = [
+  ...SHARED_FIELDS,
+  ...CAR_ONLY_FIELDS,
+] as const satisfies readonly (keyof Car)[];
+
+export const TRUCK_CLUE_FIELDS = [
+  ...SHARED_FIELDS,
+  ...TRUCK_ONLY_FIELDS,
+] as const satisfies readonly (keyof Truck)[];
+
+export const CLUE_FIELDS_BY_KIND = {
+  car: CAR_CLUE_FIELDS,
+  truck: TRUCK_CLUE_FIELDS,
+} as const;
+
+export type SafeCar = Pick<Car, (typeof CAR_CLUE_FIELDS)[number]>;
+export type SafeTruck = Pick<Truck, (typeof TRUCK_CLUE_FIELDS)[number]>;
+export type SafeVehicle = SafeCar | SafeTruck;
 
 export type VehicleIdentity = {
   brand: string;
@@ -34,10 +50,10 @@ export type VehicleIdentity = {
 };
 
 export function toSafeVehicle(vehicle: Vehicle): SafeVehicle {
-  const safe: Partial<Record<ClueField, unknown>> = {};
+  const safe: Record<string, unknown> = {};
 
-  for (const field of CLUE_FIELDS) {
-    const value = vehicle[field];
+  for (const field of CLUE_FIELDS_BY_KIND[vehicle.kind]) {
+    const value = (vehicle as Record<string, unknown>)[field];
 
     if (value !== undefined) {
       safe[field] = value;

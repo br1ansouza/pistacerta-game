@@ -17,9 +17,13 @@ export type ClueKey =
   | 'valves'
   | 'cylinders'
   | 'doors'
-  | 'engineCode';
+  | 'engineCode'
+  | 'axles'
+  | 'gvwr'
+  | 'gcwr'
+  | 'cabin';
 
-export type ClueDefinition<V extends SafeVehicle = SafeVehicle> = {
+export type ClueDefinition<V = SafeVehicle> = {
   key: ClueKey;
   label: string;
   group: ClueGroup;

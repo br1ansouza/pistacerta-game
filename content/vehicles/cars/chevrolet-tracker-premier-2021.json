@@ -7,16 +7,6 @@
   "origin": "nacional",
   "fuel": "flex",
   "displacement": "1.0",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "bodyType": "suv",
-  "fipe": {
-    "value": 92087,
-    "referenceMonth": "2026-08",
-    "fipeCode": "004533-0"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 133,
     "unit": "cv"
@@ -25,7 +15,18 @@
     "value": 21.4,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "bodyType": "suv",
   "engineCode": "CSS",
   "cylinders": 3,
-  "valves": 12
+  "cylinderLayout": "em linha",
+  "valves": 12,
+  "fipe": {
+    "value": 92087,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004533-0"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

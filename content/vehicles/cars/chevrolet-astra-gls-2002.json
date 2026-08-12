@@ -17,6 +17,7 @@
   "drivetrain": "dianteira",
   "bodyType": "hatch",
   "cylinders": 4,
+  "cylinderLayout": "em linha",
   "valves": 16,
   "doors": 3,
   "fipe": {

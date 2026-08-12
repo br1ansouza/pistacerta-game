@@ -2,7 +2,7 @@
 
 # PistaCerta
 
-**Jogo de adivinhação de veículos. Doze pistas, um carro.**
+**Jogo de adivinhação de veículos. Doze pistas, um carro — ou um caminhão.**
 
 [**jogar →**](https://pistacerta.br1ansouza.workers.dev)
 
@@ -15,9 +15,11 @@
 
 </div>
 
-O sistema sorteia um carro e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, aspiração, câmbio, tração, carroceria e, por último, o código do motor. Quanto antes você acertar, melhor.
+O sistema sorteia um veículo e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, aspiração, câmbio, tração, carroceria, arranjo dos cilindros e, por último, o código do motor. Quanto antes você acertar, melhor.
 
-Só carros com presença real no Brasil. Nada de catálogo mundial.
+Duas categorias, com baralhos separados: **96 carros** e **50 caminhões**, todos com presença real no Brasil ou na América do Sul. O ícone no canto superior direito troca de uma para a outra.
+
+Nos caminhões as pistas mudam de acordo: trações disponíveis (4x2, 4x4, 6x2, 6x4, 8x2, 8x4), PBT, PBTC e as cabines disponíveis.
 
 ## Como joga
 
@@ -51,6 +53,10 @@ Só carros com presença real no Brasil. Nada de catálogo mundial.
     </td>
   </tr>
 </table>
+
+## Nunca repete veículo
+
+O sorteio é um baralho, não um dado. Um veículo só volta a aparecer depois que todos os outros da categoria já apareceram — e o baralho vive num cookie assinado pelo servidor, então sobrevive a recarregar a página, minimizar o navegador no celular e até a um bundle velho em cache.
 
 ## Os dois modos
 
@@ -86,16 +92,18 @@ bun run deploy           # publica no Cloudflare Workers
 
 ## Os dados
 
-Cada carro é um JSON em `content/vehicles/cars/`. Preço e identificação vêm da tabela FIPE; torque, potência e código do motor não existem lá, então foram pesquisados carro a carro no Webmotors, iCarros e Carros na Web — a fonte fica registrada em `specSource`.
+Cada veículo é um JSON em `content/vehicles/cars/` ou `content/vehicles/trucks/`. Preço e identificação vêm da tabela FIPE; torque, potência e código do motor não existem lá, então foram pesquisados um a um no Carros na Web, iCarros e Webmotors — e, nos caminhões, no Blog do Caminhoneiro. A fonte fica registrada em `specSource`.
 
 **Campo sem fonte confiável fica ausente**, e o motor de pistas pula a pista correspondente em silêncio. Nunca aparece "não informado", e nada é inventado para preencher buraco. Carro que não junta pistas suficientes fica inativo em vez de render uma rodada curta.
 
-As fotos são links para o Wikimedia Commons em `content/images.json`. Nenhuma imagem é versionada: com trezentos carros seriam dezenas de MB, e git guarda toda versão de binário para sempre.
+As fotos ficam em `content/images.json`, quase todas apontando para o Wikimedia Commons ou Flickr sob licença livre. Cada uma declara `market` (`br` ou `global`) e `depicts` — o que a imagem mostra de verdade —, e o validador reprova veículo ativo sem foto conferida. Foi assim que caíram um Escort RS Cosworth europeu passando por XR3 e um Camaro 1969 no lugar do SS 2018.
+
+As fotos de caminhão usam somente URLs HTTPS externas. Dois carros sem nenhuma foto externa adequada ainda usam imagem de imprensa hospedada em `public/vehicles/`, com autor e origem registrados.
 
 ## Arquitetura
 
 `src/domain/` não conhece React e é importado tanto pelo cliente quanto pelo worker — as regras do jogo vivem num lugar só.
 
-`Vehicle` já nasce como união discriminada por `kind` e o motor de pistas é genérico sobre a lista de definições. Adicionar motos é conteúdo, um tipo e uma lista de pistas nova: nenhuma tela muda.
+`Vehicle` é uma união discriminada por `kind`, e o motor de pistas é genérico sobre a lista de definições. Foi assim que os caminhões entraram: um schema, uma lista de pistas e um diretório de conteúdo — nenhuma tela precisou ser reescrita. Motos entram do mesmo jeito.
 
-Sem banco de dados. As rotas são handlers `(Request) => Response` sem estado — rodam no `Bun.serve` local, no Cloudflare Workers em produção, e em qualquer outro provedor serverless sem reescrita.
+Sem banco de dados. As rotas são handlers `(Request) => Response` sem estado — rodam no `Bun.serve` local, no Cloudflare Workers em produção, e em qualquer outro provedor serverless sem reescrita. O baralho de cada categoria viaja cifrado no cookie, então nem o histórico precisa de estado no servidor.

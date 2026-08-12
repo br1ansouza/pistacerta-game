@@ -7,17 +7,6 @@
   "origin": "importado",
   "fuel": "diesel",
   "displacement": "2.8",
-  "aspiration": "turbo",
-  "transmission": "automático",
-  "drivetrain": "integral",
-  "bodyType": "suv",
-  "fipe": {
-    "value": 236446,
-    "referenceMonth": "2026-08",
-    "fipeCode": "002146-6"
-  },
-  "specSource": "webmotors",
-  "active": true,
   "power": {
     "value": 177,
     "unit": "cv"
@@ -26,7 +15,19 @@
     "value": 45.9,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "suv",
   "engineCode": "1GD-FTV",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "fipe": {
+    "value": 236446,
+    "referenceMonth": "2026-08",
+    "fipeCode": "002146-6"
+  },
+  "specSource": "webmotors",
+  "active": true
 }

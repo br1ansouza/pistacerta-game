@@ -9,15 +9,17 @@ type CluePagesProps = {
 };
 
 function ClueCell({ clue, fresh }: { clue: ResolvedClue; fresh: boolean }) {
+  const width = clue.key === 'cabin' && clue.value.length > 36 ? 'col-span-full lg:col-span-2' : '';
+
   return (
     <motion.div
       layout
       initial={{ opacity: 0, x: -12 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ type: 'spring', stiffness: 460, damping: 32 }}
-      className={
+      className={`${
         fresh ? 'border-flame-500 border-l-[3px] pl-3' : 'border-ink-700 border-l-[3px] pl-3'
-      }
+      } ${width}`}
     >
       <dt className="text-chalk-500 font-display text-[0.6rem] leading-tight tracking-[0.14em] uppercase">
         {clue.label}

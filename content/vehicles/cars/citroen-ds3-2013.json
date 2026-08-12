@@ -3,22 +3,11 @@
   "kind": "car",
   "brand": "Citroën",
   "model": "DS3",
+  "version": "1.6 THP 165",
   "year": 2013,
   "origin": "importado",
   "fuel": "gasolina",
   "displacement": "1.6",
-  "aspiration": "turbo",
-  "transmission": "manual",
-  "bodyType": "hatch",
-  "doors": 3,
-  "fipe": {
-    "value": 57435,
-    "referenceMonth": "2026-08",
-    "fipeCode": "011113-9"
-  },
-  "specSource": "icarros",
-  "active": true,
-  "version": "1.6 THP 165",
   "power": {
     "value": 165,
     "unit": "cv"
@@ -27,8 +16,20 @@
     "value": 24.5,
     "unit": "kgfm"
   },
+  "aspiration": "turbo",
+  "transmission": "manual",
   "drivetrain": "dianteira",
+  "bodyType": "hatch",
   "engineCode": "EP6",
   "cylinders": 4,
-  "valves": 16
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 3,
+  "fipe": {
+    "value": 57435,
+    "referenceMonth": "2026-08",
+    "fipeCode": "011113-9"
+  },
+  "specSource": "icarros",
+  "active": true
 }

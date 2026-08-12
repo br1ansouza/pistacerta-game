@@ -1,0 +1,29 @@
+{
+  "slug": "isuzu-fvr-2020",
+  "kind": "truck",
+  "brand": "Isuzu",
+  "model": "FVR",
+  "year": 2020,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "diesel",
+  "displacement": "7.8",
+  "power": {
+    "value": 275,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 981,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2", "6x4"],
+  "gvwr": 16000,
+  "engineCode": "6HK1-TCS",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

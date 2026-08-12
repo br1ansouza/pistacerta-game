@@ -1,0 +1,31 @@
+{
+  "slug": "vw-constellation-33260-2024",
+  "kind": "truck",
+  "brand": "Volkswagen",
+  "model": "Constellation 33.260",
+  "version": "8x4",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "8.4",
+  "power": {
+    "value": 255,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 950,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["8x4"],
+  "cabins": ["Estendida", "Teto baixo"],
+  "gvwr": 29000,
+  "gcwr": 36000,
+  "engineCode": "MAN D0836LF18",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "fipe": null,
+  "specSource": "carros-na-web",
+  "active": true
+}

@@ -1,6 +1,7 @@
 import type { GameMode } from '@/domain/round/round.types';
 import type { RoundChoice } from '@/domain/round/choices';
 import type { SafeVehicle, VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
+import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
 
 export type RoundResponse = {
   token: string;
@@ -61,16 +62,17 @@ const STATIC = process.env.PUBLIC_STATIC === '1';
 
 export function startRound(
   mode: GameMode,
+  kind: VehicleKind,
   deck: string | null,
   signal?: AbortSignal,
 ): Promise<RoundResponse> {
   if (STATIC) {
     return import('@/lib/static-backend').then(({ startRoundStatic }) =>
-      startRoundStatic(mode, deck),
+      startRoundStatic(mode, kind, deck),
     );
   }
 
-  return post<RoundResponse>('/api/round', { mode, deck }, signal);
+  return post<RoundResponse>('/api/round', { mode, kind, deck }, signal);
 }
 
 export function revealVehicle(

@@ -1,0 +1,34 @@
+{
+  "slug": "vw-delivery-9180-2024",
+  "kind": "truck",
+  "brand": "Volkswagen",
+  "model": "Delivery 9-180",
+  "version": "4x2",
+  "year": 2024,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "3.8",
+  "power": {
+    "value": 175,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 600,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "cabins": ["Simples"],
+  "gvwr": 9200,
+  "gcwr": 11500,
+  "engineCode": "Cummins ISF 3.8",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "fipe": {
+    "value": 417450,
+    "referenceMonth": "2024-05"
+  },
+  "specSource": "carros-na-web",
+  "active": true
+}

@@ -16,7 +16,7 @@ function toBase64(bytes: Uint8Array): string {
   return btoa(binary);
 }
 
-const vehicles = await getPlayableVehicles('car');
+const vehicles = await getPlayableVehicles();
 
 if (vehicles.length === 0) {
   console.error('Nenhum veículo ativo — nada a gerar.');
@@ -43,6 +43,7 @@ const entries = await Promise.all(
 
     return {
       slug: vehicle.slug,
+      kind: vehicle.kind,
       brand: vehicle.brand,
       model: vehicle.model,
       clues: toSafeVehicle(vehicle),
@@ -58,9 +59,11 @@ await writeFile(
   join(outputDir, 'content.ts'),
   `// Gerado por scripts/build-static-content.ts — não editar à mão.
 import type { SafeVehicle } from '@/domain/vehicle/safe-vehicle';
+import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
 
 export type SealedVehicle = {
   slug: string;
+  kind: VehicleKind;
   brand: string;
   model: string;
   clues: SafeVehicle;

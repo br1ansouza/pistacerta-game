@@ -8,14 +8,21 @@
   "origin": "nacional",
   "fuel": "gasolina",
   "displacement": "1.6",
-  "power": { "value": 70, "unit": "cv" },
-  "torque": { "value": 12.2, "unit": "kgfm" },
+  "power": {
+    "value": 70,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 12.2,
+    "unit": "kgfm"
+  },
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "traseira",
   "bodyType": "cupê",
   "engineCode": "VW boxer 1600",
   "cylinders": 4,
+  "cylinderLayout": "boxer",
   "valves": 8,
   "doors": 2,
   "fipe": null,

@@ -67,15 +67,15 @@ async function handleRound(request: Request, secret: string): Promise<Response> 
     readDeckDigests(deck, secret, SLUGS),
     readDeckDigests(deckFromCookie(request), secret, SLUGS),
   ]);
-  const seen = fromCookie.length > fromBody.length ? fromCookie : fromBody;
-  const picked = pickFromDeck(VEHICLES, seen);
+  const state = fromCookie.seen.length > fromBody.seen.length ? fromCookie : fromBody;
+  const picked = pickFromDeck(VEHICLES, state.seen);
 
   if (!picked) {
     return json({ error: 'Nenhum veículo disponível' }, 503);
   }
 
   const { vehicle } = picked;
-  const nextDeck = await signDeckToken(picked.seen, secret);
+  const nextDeck = await signDeckToken(picked.seen, secret, state.carry);
 
   return json(
     {

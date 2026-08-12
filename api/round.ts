@@ -36,14 +36,15 @@ export async function handleRound(request: Request): Promise<Response> {
     readDeckDigests(deck, slugs),
     readDeckDigests(deckFromCookie(request), slugs),
   ]);
-  const picked = pickFromDeck(pool, fromCookie.length > fromBody.length ? fromCookie : fromBody);
+  const state = fromCookie.seen.length > fromBody.seen.length ? fromCookie : fromBody;
+  const picked = pickFromDeck(pool, state.seen);
 
   if (!picked) {
     return errorResponse('Nenhum veículo disponível', 503);
   }
 
   const { vehicle } = picked;
-  const nextDeck = await signDeckToken(picked.seen);
+  const nextDeck = await signDeckToken(picked.seen, state.carry);
 
   return jsonResponse(
     {

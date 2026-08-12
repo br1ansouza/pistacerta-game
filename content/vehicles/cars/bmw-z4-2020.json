@@ -1,0 +1,30 @@
+{
+  "slug": "bmw-z4-2020",
+  "kind": "car",
+  "brand": "BMW",
+  "model": "Z4",
+  "version": "sDrive 30i 2.0",
+  "year": 2020,
+  "origin": "importado",
+  "countryOfOrigin": "Alemanha",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 258,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 40.7,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "traseira",
+  "bodyType": "conversível",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 2,
+  "fipe": null,
+  "specSource": "icarros",
+  "active": true
+}

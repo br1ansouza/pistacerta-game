@@ -26,6 +26,42 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Audi_RS3_TFSi_Quattro.jpg"
   },
+  "bmw-320i-2015": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BMW_F30_LCI_320i_Luxury_Line_Alpine_White_%281%29.jpg/960px-BMW_F30_LCI_320i_Luxury_Line_Alpine_White_%281%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "BMW 320i F30, o mesmo feito em Araquari",
+    "author": "Damian B Oh",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMW_F30_LCI_320i_Luxury_Line_Alpine_White_(1).jpg"
+  },
+  "bmw-m4-2016": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2015_BMW_M4_%28F82%29_coupe_%2824220553394%29.jpg/960px-2015_BMW_M4_%28F82%29_coupe_%2824220553394%29.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "BMW M4 F82 cupê",
+    "author": "Jeremy from Sydney, Australia",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_BMW_M4_(F82)_coupe_(24220553394).jpg"
+  },
+  "bmw-m5-2019": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/2018_BMW_M5_Automatic_4.4.jpg/960px-2018_BMW_M5_Automatic_4.4.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "BMW M5 F90",
+    "author": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_BMW_M5_Automatic_4.4.jpg"
+  },
+  "bmw-z4-2020": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BMW_G29_%28Facelift%29_1X7A7373.jpg/960px-BMW_G29_%28Facelift%29_1X7A7373.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "BMW Z4 G29 roadster",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMW_G29_(Facelift)_1X7A7373.jpg"
+  },
   "cadillac-escalade-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/2021_Cadillac_Escalade_ESV%2C_front_6.2.21.jpg/960px-2021_Cadillac_Escalade_ESV%2C_front_6.2.21.jpg",
     "source": "wikimedia",

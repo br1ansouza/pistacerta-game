@@ -152,37 +152,46 @@ async function slugDigest(slug: string): Promise<string> {
   return value;
 }
 
-export async function signDeckToken(seen: readonly string[], secret: string): Promise<string> {
+export async function signDeckToken(
+  seen: readonly string[],
+  secret: string,
+  carry: readonly string[] = [],
+): Promise<string> {
   const digests = await Promise.all(seen.map(slugDigest));
 
-  return seal({ t: 'deck', d: digests, expiresAt: Date.now() + DECK_TTL_MS }, secret);
+  return seal(
+    { t: 'deck', d: [...digests, ...carry], expiresAt: Date.now() + DECK_TTL_MS },
+    secret,
+  );
 }
+
+export type DeckState = { seen: string[]; carry: string[] };
 
 export async function readDeckDigests(
   token: string | null | undefined,
   secret: string,
   slugs: readonly string[],
-): Promise<string[]> {
+): Promise<DeckState> {
   if (!token) {
-    return [];
+    return { seen: [], carry: [] };
   }
 
   const payload = (await unseal(token, secret)) as (DeckTokenPayload & { d?: string[] }) | null;
 
   if (!payload || payload.t !== 'deck') {
-    return [];
+    return { seen: [], carry: [] };
   }
 
   if (typeof payload.expiresAt !== 'number' || Date.now() > payload.expiresAt) {
-    return [];
+    return { seen: [], carry: [] };
   }
 
   if (Array.isArray(payload.seen)) {
-    return payload.seen.filter((slug) => typeof slug === 'string');
+    return { seen: payload.seen.filter((slug) => typeof slug === 'string'), carry: [] };
   }
 
   if (!Array.isArray(payload.d)) {
-    return [];
+    return { seen: [], carry: [] };
   }
 
   const bySlug = new Map<string, string>();
@@ -192,7 +201,18 @@ export async function readDeckDigests(
     }),
   );
 
-  return payload.d
-    .map((digest) => bySlug.get(digest))
-    .filter((slug): slug is string => slug !== undefined);
+  const seen: string[] = [];
+  const carry: string[] = [];
+
+  for (const digest of payload.d) {
+    const slug = bySlug.get(digest);
+
+    if (slug) {
+      seen.push(slug);
+    } else {
+      carry.push(digest);
+    }
+  }
+
+  return { seen, carry };
 }

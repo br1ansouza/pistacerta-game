@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import { Car01, Truck01 } from '@untitledui/icons';
 import { asset } from '@/lib/asset';
 import type { GameMode } from '@/domain/round/round.types';
@@ -54,15 +54,27 @@ export function HomeScreen({ kind, onToggleKind, onSelectMode, onOpenCredits }: 
 
   return (
     <main className="relative mx-auto flex min-h-dvh w-full max-w-md flex-col justify-center gap-9 px-5 py-10">
-      <button
+      <motion.button
         type="button"
         onClick={onToggleKind}
         aria-label={copy.next}
         title={copy.next}
-        className="border-ink-700 text-chalk-500 hover:text-flame-400 hover:border-flame-500 focus-visible:outline-flame-500 shadow-hard-sm absolute top-6 right-5 flex size-10 items-center justify-center border-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"
+        whileTap={{ scale: 0.88, rotate: -12 }}
+        transition={{ type: 'spring', stiffness: 600, damping: 20 }}
+        className="border-ink-700 text-chalk-500 hover:text-flame-400 hover:border-flame-500 focus-visible:outline-flame-500 shadow-hard-sm absolute top-6 right-5 flex size-10 items-center justify-center overflow-hidden border-2 transition focus-visible:outline-2 focus-visible:outline-offset-2"
       >
-        <NextIcon className="size-5" />
-      </button>
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.span
+            key={kind}
+            initial={{ y: 18, opacity: 0, rotate: 20 }}
+            animate={{ y: 0, opacity: 1, rotate: 0 }}
+            exit={{ y: -18, opacity: 0, rotate: -20 }}
+            transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+          >
+            <NextIcon className="size-5" />
+          </motion.span>
+        </AnimatePresence>
+      </motion.button>
 
       <motion.div
         variants={container}
@@ -74,23 +86,34 @@ export function HomeScreen({ kind, onToggleKind, onSelectMode, onOpenCredits }: 
           <motion.div
             animate={{ y: [0, -7, 0] }}
             transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
-            className="relative"
+            className="relative flex h-44 items-center justify-center"
           >
-            <div
+            <motion.div
+              key={`brilho-${kind}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.35 }}
               className={`absolute inset-0 -z-10 rounded-full bg-gradient-to-t to-transparent blur-2xl ${
                 kind === 'truck' ? 'from-emerald-500/25' : 'from-flame-600/25'
               }`}
             />
-            <img
-              src={asset(kind === 'truck' ? 'truck.gif' : 'car.gif')}
-              alt=""
-              aria-hidden
-              className={`pixelated object-contain ${kind === 'truck' ? 'h-44 w-44' : 'h-36 w-36'} ${
-                kind === 'truck'
-                  ? 'drop-shadow-[0_10px_24px_rgba(16,185,129,0.35)]'
-                  : 'drop-shadow-[0_10px_24px_rgba(232,69,44,0.35)]'
-              }`}
-            />
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.img
+                key={kind}
+                src={asset(kind === 'truck' ? 'truck.gif' : 'car.gif')}
+                alt=""
+                aria-hidden
+                initial={{ x: 120, opacity: 0, scale: 0.9 }}
+                animate={{ x: 0, opacity: 1, scale: 1 }}
+                exit={{ x: -120, opacity: 0, scale: 0.9 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                className={`pixelated object-contain ${kind === 'truck' ? 'h-44 w-44' : 'h-36 w-36'} ${
+                  kind === 'truck'
+                    ? 'drop-shadow-[0_10px_24px_rgba(16,185,129,0.35)]'
+                    : 'drop-shadow-[0_10px_24px_rgba(232,69,44,0.35)]'
+                }`}
+              />
+            </AnimatePresence>
           </motion.div>
 
           <div className="flex flex-col items-center gap-2">
@@ -98,7 +121,18 @@ export function HomeScreen({ kind, onToggleKind, onSelectMode, onOpenCredits }: 
               Pista<span className="text-flame-500">Certa</span>
             </h1>
             <div className="via-flame-500/70 h-px w-24 bg-gradient-to-r from-transparent to-transparent" />
-            <p className="text-chalk-300 text-sm text-balance">{copy.tagline}</p>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.p
+                key={kind}
+                initial={{ y: 8, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -8, opacity: 0 }}
+                transition={{ duration: 0.22 }}
+                className="text-chalk-300 text-sm text-balance"
+              >
+                {copy.tagline}
+              </motion.p>
+            </AnimatePresence>
           </div>
         </motion.header>
 

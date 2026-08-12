@@ -5,9 +5,13 @@ import { describeVehicle, toSafeVehicle, toVehicleIdentity } from '@/domain/vehi
 import { VEHICLES } from '@/generated/vehicles';
 import { readDeckToken, signDeckToken, signRoundToken, verifyRoundToken } from './round-token';
 
+type RateLimiter = { limit: (options: { key: string }) => Promise<{ success: boolean }> };
+
 type Env = {
   ASSETS: { fetch: (request: Request) => Promise<Response> };
   ROUND_TOKEN_SECRET?: string;
+  ALLOWED_COUNTRIES?: string;
+  ROUND_LIMIT?: RateLimiter;
 };
 
 const NO_STORE = { 'Cache-Control': 'no-store' } as const;
@@ -91,9 +95,70 @@ function handleCredits(): Response {
   return json({ credits });
 }
 
+const DEFAULT_COUNTRIES = 'BR';
+
+const BLOCK_PAGE = `<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PistaCerta</title>
+<style>
+  body{margin:0;min-height:100dvh;display:grid;place-items:center;background:#12101a;color:#e8e6f0;
+       font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-align:center;padding:2rem}
+  h1{font-size:1rem;letter-spacing:.08em;margin:0 0 .75rem}
+  p{font-size:.75rem;color:#8e89a6;margin:0;max-width:26rem;line-height:1.6}
+</style></head>
+<body><div><h1>PISTACERTA</h1>
+<p>Este jogo só atende acessos do Brasil.</p></div></body></html>`;
+
+function requestCountry(request: Request): string | null {
+  return (request as { cf?: { country?: string } }).cf?.country ?? null;
+}
+
+function countryAllowed(request: Request, env: Env): boolean {
+  const country = requestCountry(request);
+
+  if (!country) {
+    return true;
+  }
+
+  return (env.ALLOWED_COUNTRIES ?? DEFAULT_COUNTRIES)
+    .split(',')
+    .map((entry) => entry.trim().toUpperCase())
+    .filter(Boolean)
+    .includes(country.toUpperCase());
+}
+
+function blocked(pathname: string): Response {
+  if (pathname.startsWith('/api/')) {
+    return json({ error: 'Acesso permitido apenas do Brasil' }, 403);
+  }
+
+  return new Response(BLOCK_PAGE, {
+    status: 403,
+    headers: { 'content-type': 'text/html; charset=utf-8', ...NO_STORE },
+  });
+}
+
+async function withinRateLimit(request: Request, env: Env): Promise<boolean> {
+  const limiter = env.ROUND_LIMIT;
+
+  if (!limiter) {
+    return true;
+  }
+
+  const key = request.headers.get('cf-connecting-ip') ?? 'sem-ip';
+  const { success } = await limiter.limit({ key });
+
+  return success;
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const { pathname } = new URL(request.url);
+
+    if (!countryAllowed(request, env)) {
+      return blocked(pathname);
+    }
 
     if (!pathname.startsWith('/api/')) {
       return env.ASSETS.fetch(request);
@@ -115,6 +180,10 @@ export default {
 
     if (request.method !== 'POST') {
       return json({ error: 'Método não permitido' }, 405);
+    }
+
+    if (!(await withinRateLimit(request, env))) {
+      return json({ error: 'Muitas rodadas seguidas. Espere um pouco.' }, 429);
     }
 
     if (pathname === '/api/round') {

@@ -87,7 +87,7 @@ export const carSchema = z.object({
   doors: z.number().int().positive().optional(),
 });
 
-export const AXLE_CONFIGS = ['4x2', '6x2', '6x4', '8x2', '8x4'] as const;
+export const AXLE_CONFIGS = ['4x2', '4x4', '6x2', '6x4', '8x2', '8x4'] as const;
 export const truckSchema = z.object({
   ...vehicleBaseShape,
   kind: z.literal('truck'),
@@ -101,7 +101,7 @@ export const truckSchema = z.object({
   aspiration: z.enum(ASPIRATION_TYPES).optional(),
   transmission: z.enum(TRANSMISSION_TYPES).optional(),
   axleConfigs: z.array(z.enum(AXLE_CONFIGS)).min(1).optional(),
-  cabins: z.array(z.string().min(1)).min(1).optional(),
+  cabins: z.array(z.string().min(3)).min(1).optional(),
   gvwr: z.number().positive().optional(),
   gcwr: z.number().positive().optional(),
   engineCode: z.string().min(1).optional(),

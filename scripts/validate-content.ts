@@ -40,13 +40,18 @@ function report(vehicles: Vehicle[]): number {
 
     if (!vehicle.image) {
       if (vehicle.active) {
-        console.error(`✖ ${vehicle.slug}: carro ativo sem foto verificada.`);
+        console.error(`✖ ${vehicle.slug}: veículo ativo sem foto verificada.`);
         errors += 1;
       } else {
         warnings.push(`${vehicle.slug}: sem imagem (fallback será usado).`);
       }
     } else if (vehicle.image.market === 'global') {
       warnings.push(`${vehicle.slug}: foto de mercado global — ${vehicle.image.depicts}.`);
+    }
+
+    if (vehicle.kind === 'truck' && vehicle.image && !vehicle.image.src.startsWith('https://')) {
+      console.error(`✖ ${vehicle.slug}: foto de caminhão deve usar uma URL HTTPS externa.`);
+      errors += 1;
     }
 
     if (!vehicle.fipe) {

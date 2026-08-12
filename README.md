@@ -17,9 +17,9 @@
 
 O sistema sorteia um veículo e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, aspiração, câmbio, tração, carroceria, arranjo dos cilindros e, por último, o código do motor. Quanto antes você acertar, melhor.
 
-Duas categorias, com baralhos separados: **96 carros** e **45 caminhões**, todos com presença real no Brasil. O ícone no canto superior direito troca de uma para a outra.
+Duas categorias, com baralhos separados: **96 carros** e **50 caminhões**, todos com presença real no Brasil ou na América do Sul. O ícone no canto superior direito troca de uma para a outra.
 
-Nos caminhões as pistas mudam de acordo: configuração de eixos (4x2, 6x2, 6x4), PBT, PBTC e as cabines disponíveis.
+Nos caminhões as pistas mudam de acordo: trações disponíveis (4x2, 4x4, 6x2, 6x4, 8x2, 8x4), PBT, PBTC e as cabines disponíveis.
 
 ## Como joga
 
@@ -54,7 +54,7 @@ Nos caminhões as pistas mudam de acordo: configuração de eixos (4x2, 6x2, 6x4
   </tr>
 </table>
 
-## Nunca repete carro
+## Nunca repete veículo
 
 O sorteio é um baralho, não um dado. Um veículo só volta a aparecer depois que todos os outros da categoria já apareceram — e o baralho vive num cookie assinado pelo servidor, então sobrevive a recarregar a página, minimizar o navegador no celular e até a um bundle velho em cache.
 
@@ -98,7 +98,7 @@ Cada veículo é um JSON em `content/vehicles/cars/` ou `content/vehicles/trucks
 
 As fotos ficam em `content/images.json`, quase todas apontando para o Wikimedia Commons ou Flickr sob licença livre. Cada uma declara `market` (`br` ou `global`) e `depicts` — o que a imagem mostra de verdade —, e o validador reprova veículo ativo sem foto conferida. Foi assim que caíram um Escort RS Cosworth europeu passando por XR3 e um Camaro 1969 no lugar do SS 2018.
 
-Meia dúzia de veículos sem nenhuma foto livre disponível usa imagem de imprensa hospedada em `public/vehicles/`, com autor e origem registrados.
+As fotos de caminhão usam somente URLs HTTPS externas. Dois carros sem nenhuma foto externa adequada ainda usam imagem de imprensa hospedada em `public/vehicles/`, com autor e origem registrados.
 
 ## Arquitetura
 

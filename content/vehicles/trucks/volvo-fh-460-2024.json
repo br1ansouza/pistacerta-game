@@ -18,7 +18,7 @@
   },
   "aspiration": "turbo",
   "transmission": "automatizado",
-  "axleConfigs": ["6x2"],
+  "axleConfigs": ["4x2", "6x2", "6x4", "8x2", "8x4"],
   "cabins": ["Leito baixa", "Leito alta (Globetrotter)", "Leito extra alta (Globetrotter XL)"],
   "gvwr": 28000,
   "gcwr": 60000,

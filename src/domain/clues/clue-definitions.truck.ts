@@ -44,7 +44,7 @@ export const TRUCK_CLUE_DEFINITIONS: ClueDefinition<SafeTruck>[] = [
   },
   {
     key: 'axles',
-    label: 'Tração',
+    label: 'Trações disponíveis',
     group: 'progressive',
     resolve: (vehicle) => vehicle.axleConfigs?.join(' · ') ?? null,
   },

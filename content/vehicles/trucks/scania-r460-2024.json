@@ -18,6 +18,7 @@
   "aspiration": "turbo",
   "transmission": "automatizado",
   "axleConfigs": ["6x2"],
+  "cabins": ["Leito normal (CR20N)", "Leito alta (CR20H)"],
   "gvwr": 26100,
   "gcwr": 58500,
   "engineCode": "DC13 175",

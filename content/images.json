@@ -403,11 +403,12 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Cargo_3133_6x4_(14054060110).jpg"
   },
   "ford-cargo-2629-2017": {
-    "src": "/vehicles/ford-cargo-2629-2017.jpg",
+    "src": "https://www.fordcaminhoes.com.br/storage/images/mobile/c-2629-6x4.jpg",
     "source": "press-kit",
     "market": "br",
     "depicts": "Ford Cargo 2629 6x4 basculante",
-    "sourceUrl": "https://br.pinterest.com/pin/10555380363909522/"
+    "author": "Ford Caminhões",
+    "sourceUrl": "https://www.fordcaminhoes.com.br/especificacoes-de-produto/cargo/c-2629-6x4"
   },
   "ford-cargo-2842-2017": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ford_Cargo_3133_6x4_%2814054060110%29.jpg/960px-Ford_Cargo_3133_6x4_%2814054060110%29.jpg",
@@ -453,6 +454,13 @@
     "author": "Fernando Cesar Nox ; cropped and lightly adjusted by uploade",
     "license": "CC BY-SA 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_F-1000_cabine_dupla.jpg"
+  },
+  "ford-f4000-2019": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Ford_F4000_stakebed.jpg",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Ford F-4000 brasileira da mesma geração",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_F4000_stakebed.jpg"
   },
   "ford-fiesta-supercharger-2005": {
     "src": "/vehicles/ford-fiesta-supercharger-2005.jpg",
@@ -544,12 +552,12 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Hyundai_Creta_Smart.jpg"
   },
   "hyundai-hd80-2019": {
-    "src": "/vehicles/hyundai-hd80-2019.jpg",
+    "src": "https://1.bp.blogspot.com/-j1mTACWdJzs/XnONIIvOthI/AAAAAAAAJXI/zLVbvyvNKLsHgg1BHY6ImcfyGwyJEUyggCLcBGAsYHQ/s1600/HYUNDAI%2BHD%2B80%2B14.jpg",
     "source": "press-kit",
     "market": "br",
     "depicts": "Hyundai HD 80",
-    "author": "Transporte Mundial",
-    "sourceUrl": "https://transportemundial.com.br/hyundai-hd-80/"
+    "author": "Ciência & Tecnologia em Foco",
+    "sourceUrl": "https://cienciatecnologiafoco.blogspot.com/2023/01/familia-hyundai-hd.html"
   },
   "hyundai-sonata-2014": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/HYUNDAI_SONATA_YF_2013_01.JPG/960px-HYUNDAI_SONATA_YF_2013_01.JPG",
@@ -568,6 +576,14 @@
     "author": "Navigator84",
     "license": "CC BY-SA 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hyundai_Veloster_FS_China_2013-03-04.jpg"
+  },
+  "international-9800i-2012": {
+    "src": "https://www.lexicarbrasil.com.br/wp-content/uploads/2015/04/nc2-capa.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "International 9800i produzido no Brasil",
+    "author": "International Caminhões",
+    "sourceUrl": "https://www.lexicarbrasil.com.br/nc2/"
   },
   "isuzu-fvr-2020": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Isuzu_FVR_Fire_Truck_%28Cabanatuan_City_Fire_Station%29.jpg/960px-Isuzu_FVR_Fire_Truck_%28Cabanatuan_City_Fire_Station%29.jpg",
@@ -750,12 +766,20 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Banz_Axor_1833_mit_Abrollmulde_(2022).jpg"
   },
   "mercedes-l1113-1978": {
-    "src": "/vehicles/mercedes-l1113-1978.jpg",
+    "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2024/10/mercedes-benz-1113-e1729131032680.webp",
     "source": "press-kit",
     "market": "br",
     "depicts": "Mercedes-Benz 1113 brasileiro",
-    "author": "AutoPapo",
-    "sourceUrl": "https://autopapo.com.br/noticia/mercedes-benz-l1111-l1113/"
+    "author": "Quatro Rodas",
+    "sourceUrl": "https://quatrorodas.abril.com.br/noticias/mercedes-accelo-tenta-homenagear-o-antigo-muricoca-1113-em-nova-geracao/"
+  },
+  "mercedes-l1620-2008": {
+    "src": "https://i.pinimg.com/736x/ad/94/be/ad94be13987322a00960aeac797bab89.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Mercedes-Benz L 1620 6x2 brasileiro",
+    "author": "Pinterest",
+    "sourceUrl": "https://br.pinterest.com/pin/679058450052535788/"
   },
   "mini-cooper-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg/960px-2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg",
@@ -810,6 +834,14 @@
     "author": "RL GNZLZ",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peugeot_3008_BlueHDi_Allure_2019.jpg"
+  },
+  "peterbilt-389-legendary-2021": {
+    "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2022/03/Peterbilt-389-Legendary-Edition-3.jpg?quality=70&strip=info",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Peterbilt 389 Legendary de uma das dez unidades importadas ao Brasil",
+    "author": "Quatro Rodas",
+    "sourceUrl": "https://quatrorodas.abril.com.br/testes/peterbilt-389-dirigimos-caminhao-de-630-cv-com-quarto-com-tv-e-geladeira/"
   },
   "porsche-911-carrera-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/2018_Porsche_911_Carrera_GTS_Cabriolet.jpg/960px-2018_Porsche_911_Carrera_GTS_Cabriolet.jpg",
@@ -1063,6 +1095,14 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volvo_FH_540,_North_Fremantle,_2020_(01).jpg"
   },
+  "volvo-nl12-400-1992": {
+    "src": "https://autolivraria.com.br/bc/wp-content/uploads/2021/06/Volvo-NL12-400-1.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volvo NL12 400 em catálogo brasileiro de época",
+    "author": "Volvo do Brasil",
+    "sourceUrl": "https://autolivraria.com.br/bc/auto-livraria/al-volvo/volvo-catalogos-folders-caminhoes-nl12-globetrotter/"
+  },
   "vw-amarok-v6-2020": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/2024_Volkswagen_Amarok_Highline_3.0_V6_%28facelift%2C_Argentina%29_%281-3%29.jpg/960px-2024_Volkswagen_Amarok_Highline_3.0_V6_%28facelift%2C_Argentina%29_%281-3%29.jpg",
     "source": "wikimedia",
@@ -1082,36 +1122,36 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:'99-'03_Volkswagen_Jetta_Sedan_(Orange_Julep).jpg"
   },
   "vw-constellation-25480-2024": {
-    "src": "/vehicles/vw-constellation-25480-2024.jpg",
+    "src": "https://images.squarespace-cdn.com/content/v1/63c947fb2408fa6d17658c5c/23f31e03-7fcf-46ca-9e03-8ec325370ffb/25.480-6x2.jpeg",
     "source": "press-kit",
     "market": "br",
     "depicts": "Volkswagen Constellation 25.480",
     "author": "Volkswagen Caminhões e Ônibus",
-    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+    "sourceUrl": "https://www.granfercaminhoes.com.br/vw-novo-25480-6x2"
   },
   "vw-constellation-33260-2024": {
-    "src": "/vehicles/vw-constellation-25480-2024.jpg",
+    "src": "https://www.novomundocaminhoes.com.br/public/imagens-caminhoes/64/33.260.jpg",
     "source": "press-kit",
     "market": "br",
-    "depicts": "Volkswagen Constellation",
+    "depicts": "Volkswagen Constellation 33.260 8x4",
     "author": "Volkswagen Caminhões e Ônibus",
-    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+    "sourceUrl": "https://www.novomundocaminhoes.com.br/novos/constellation"
   },
   "vw-constellation-33480-2024": {
-    "src": "/vehicles/vw-constellation-25480-2024.jpg",
+    "src": "https://www.volkscaminhoes.com.br/img/dibracam/novos/constellation/33.480-6x4/constellation-33_480_6x4-top-dibracam.jpg",
     "source": "press-kit",
     "market": "br",
-    "depicts": "Volkswagen Constellation, mesma linha do 33.480",
+    "depicts": "Volkswagen Constellation 33.480 6x4",
     "author": "Volkswagen Caminhões e Ônibus",
-    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+    "sourceUrl": "https://www.volkscaminhoes.com.br/constellation_33_480_6x4"
   },
   "vw-delivery-9180-2024": {
-    "src": "/vehicles/vw-meteor.jpg",
+    "src": "https://vwcamionesybuses.com.mx/wp-content/uploads/2024/12/08-galeria-delivery-2-850x850-4.jpg",
     "source": "press-kit",
-    "market": "br",
-    "depicts": "Linha de caminhões Volkswagen",
+    "market": "global",
+    "depicts": "Volkswagen Delivery 9.180",
     "author": "Volkswagen Caminhões e Ônibus",
-    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+    "sourceUrl": "https://vwcamionesybuses.com.mx/camiones-euro-6/familia-delivery-euro-6/delivery-9-180/"
   },
   "vw-gol-gti-1995": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Vermelho2.jpg",
@@ -1150,20 +1190,20 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:'19_Volkswagen_Jetta.jpg"
   },
   "vw-meteor-28480-2024": {
-    "src": "/vehicles/vw-meteor.jpg",
+    "src": "https://images.squarespace-cdn.com/content/v1/63c947fb2408fa6d17658c5c/fd9e20d3-5370-462d-90e8-b5c61d55b249/28480-capa.jpeg",
     "source": "press-kit",
     "market": "br",
-    "depicts": "Volkswagen Meteor",
+    "depicts": "Volkswagen Meteor 28.480",
     "author": "Volkswagen Caminhões e Ônibus",
-    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+    "sourceUrl": "https://www.granfercaminhoes.com.br/vw-novo-28480"
   },
   "vw-meteor-29530-2024": {
-    "src": "/vehicles/vw-meteor.jpg",
+    "src": "https://ofertas.vwco.com.br/assets/images/familiameteor/card.jpg",
     "source": "press-kit",
     "market": "br",
-    "depicts": "Volkswagen Meteor",
+    "depicts": "Volkswagen Meteor 29.530",
     "author": "Volkswagen Caminhões e Ônibus",
-    "sourceUrl": "https://transportemundial.com.br/linha-2023-de-caminhoes-volkswagen-propoe-reducao-de-custo-da-operacao/"
+    "sourceUrl": "https://ofertas.vwco.com.br/familiameteor"
   },
   "vw-nivus-highline-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg/960px-2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg",

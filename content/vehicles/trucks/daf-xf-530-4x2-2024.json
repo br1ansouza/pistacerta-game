@@ -18,7 +18,7 @@
   },
   "aspiration": "turbo",
   "transmission": "automatizado",
-  "axleConfigs": ["4x2"],
+  "axleConfigs": ["4x2", "6x2", "6x4"],
   "cabins": ["Simples", "Estendida", "Leito"],
   "gvwr": 18100,
   "gcwr": 53000,

@@ -207,11 +207,12 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Chevrolet_Trailblazer_4x4_LTZ_Z71_(10).jpg"
   },
   "chevrolet-vectra-gsi-1995": {
-    "src": "/vehicles/chevrolet-vectra-gsi-1995.jpg",
+    "src": "https://cdn.flatout.com.br/wp-content/uploads/2016/08/foto-10-1.jpg",
     "source": "press-kit",
     "market": "br",
     "depicts": "Chevrolet Vectra GSi 2.0 16V brasileiro",
-    "sourceUrl": "https://www.pinterest.com/pin/790874384551026130/"
+    "author": "FlatOut",
+    "sourceUrl": "https://flatout.com.br/project-cars-374-a-historia-do-meu-chevrolet-vectra-gsi/"
   },
   "chevrolet-veraneio-1990": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Chevrolet_Veraneio_-_Pol%C3%ADcia_Civil_S%C3%A3o_Paulo_%281995%29.jpg/960px-Chevrolet_Veraneio_-_Pol%C3%ADcia_Civil_S%C3%A3o_Paulo_%281995%29.jpg",
@@ -463,12 +464,12 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_F4000_stakebed.jpg"
   },
   "ford-fiesta-supercharger-2005": {
-    "src": "/vehicles/ford-fiesta-supercharger-2005.jpg",
+    "src": "https://i.pinimg.com/originals/75/d5/91/75d5913892fb3ee56fa86cda4fdddbec.jpg",
     "source": "press-kit",
     "market": "br",
     "depicts": "Ford Fiesta hatch brasileiro da fase do Supercharger",
     "author": "Carros na Web",
-    "sourceUrl": "https://www.carrosnaweb.com.br/"
+    "sourceUrl": "https://br.pinterest.com/pin/1116892776341970438/"
   },
   "ford-maverick-gt-1975": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Ford_Brasil_Maverick_302.jpg/960px-Ford_Brasil_Maverick_302.jpg",
@@ -826,6 +827,14 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:NissanKicks-Carilo-06281.jpg"
   },
+  "peterbilt-389-legendary-2021": {
+    "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2022/03/Peterbilt-389-Legendary-Edition-3.jpg?quality=70&strip=info",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Peterbilt 389 Legendary de uma das dez unidades importadas ao Brasil",
+    "author": "Quatro Rodas",
+    "sourceUrl": "https://quatrorodas.abril.com.br/testes/peterbilt-389-dirigimos-caminhao-de-630-cv-com-quarto-com-tv-e-geladeira/"
+  },
   "peugeot-3008-griffe-2019": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Peugeot_3008_BlueHDi_Allure_2019.jpg/960px-Peugeot_3008_BlueHDi_Allure_2019.jpg",
     "source": "wikimedia",
@@ -834,14 +843,6 @@
     "author": "RL GNZLZ",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peugeot_3008_BlueHDi_Allure_2019.jpg"
-  },
-  "peterbilt-389-legendary-2021": {
-    "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2022/03/Peterbilt-389-Legendary-Edition-3.jpg?quality=70&strip=info",
-    "source": "press-kit",
-    "market": "br",
-    "depicts": "Peterbilt 389 Legendary de uma das dez unidades importadas ao Brasil",
-    "author": "Quatro Rodas",
-    "sourceUrl": "https://quatrorodas.abril.com.br/testes/peterbilt-389-dirigimos-caminhao-de-630-cv-com-quarto-com-tv-e-geladeira/"
   },
   "porsche-911-carrera-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/2018_Porsche_911_Carrera_GTS_Cabriolet.jpg/960px-2018_Porsche_911_Carrera_GTS_Cabriolet.jpg",

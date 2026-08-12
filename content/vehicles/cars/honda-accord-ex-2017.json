@@ -1,0 +1,34 @@
+{
+  "slug": "honda-accord-ex-2017",
+  "kind": "car",
+  "brand": "Honda",
+  "model": "Accord",
+  "version": "EX 3.5 V6",
+  "year": 2017,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "gasolina",
+  "displacement": "3.5",
+  "power": {
+    "value": 280,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 34.6,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "sedã",
+  "cylinders": 6,
+  "valves": 24,
+  "doors": 4,
+  "fipe": {
+    "value": 120303,
+    "referenceMonth": "2026-08",
+    "fipeCode": "014055-4"
+  },
+  "specSource": "icarros",
+  "active": true
+}

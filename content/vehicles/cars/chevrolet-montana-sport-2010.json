@@ -1,0 +1,33 @@
+{
+  "slug": "chevrolet-montana-sport-2010",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Montana",
+  "version": "Sport 1.8",
+  "year": 2010,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.8",
+  "power": {
+    "value": 114,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 17.7,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "picape",
+  "cylinders": 4,
+  "valves": 8,
+  "doors": 2,
+  "fipe": {
+    "value": 43837,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004240-4"
+  },
+  "specSource": "icarros",
+  "active": true
+}

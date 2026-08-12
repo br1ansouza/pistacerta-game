@@ -1,0 +1,35 @@
+{
+  "slug": "nissan-gtr-2019",
+  "kind": "car",
+  "brand": "Nissan",
+  "model": "GT-R",
+  "version": "3.8 V6 biturbo",
+  "year": 2019,
+  "origin": "importado",
+  "countryOfOrigin": "Japão",
+  "fuel": "gasolina",
+  "displacement": "3.8",
+  "power": {
+    "value": 572,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 64.9,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automatizado",
+  "drivetrain": "integral",
+  "bodyType": "cupê",
+  "engineCode": "VR38DETT",
+  "cylinders": 6,
+  "valves": 24,
+  "doors": 2,
+  "fipe": {
+    "value": 1408411,
+    "referenceMonth": "2026-08",
+    "fipeCode": "023151-7"
+  },
+  "specSource": "icarros",
+  "active": true
+}

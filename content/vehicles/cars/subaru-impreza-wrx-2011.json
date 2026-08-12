@@ -17,6 +17,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "027050-4"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "power": {
+    "value": 265,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 38,
+    "unit": "kgfm"
+  },
+  "engineCode": "EJ25",
+  "cylinders": 4,
+  "valves": 16,
+  "transmission": "manual"
 }

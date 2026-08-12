@@ -1,0 +1,35 @@
+{
+  "slug": "hyundai-sonata-2014",
+  "kind": "car",
+  "brand": "Hyundai",
+  "model": "Sonata",
+  "version": "2.4 16V",
+  "year": 2014,
+  "origin": "importado",
+  "countryOfOrigin": "Coreia do Sul",
+  "fuel": "gasolina",
+  "displacement": "2.4",
+  "power": {
+    "value": 182,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 23.3,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "sedã",
+  "engineCode": "Theta II",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 4,
+  "fipe": {
+    "value": 78977,
+    "referenceMonth": "2026-08",
+    "fipeCode": "015078-9"
+  },
+  "specSource": "icarros",
+  "active": true
+}

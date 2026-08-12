@@ -1,0 +1,34 @@
+{
+  "slug": "chevrolet-equinox-lt-2019",
+  "kind": "car",
+  "brand": "Chevrolet",
+  "model": "Equinox",
+  "version": "LT 2.0 Turbo",
+  "year": 2019,
+  "origin": "importado",
+  "countryOfOrigin": "México",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 262,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 37,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "suv",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 102396,
+    "referenceMonth": "2026-08",
+    "fipeCode": "004487-3"
+  },
+  "specSource": "icarros",
+  "active": true
+}

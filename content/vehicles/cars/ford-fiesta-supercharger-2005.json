@@ -18,6 +18,16 @@
     "referenceMonth": "2026-08",
     "fipeCode": "003260-3"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "torque": {
+    "value": 12.6,
+    "unit": "kgfm"
+  },
+  "engineCode": "Zetec Rocam",
+  "cylinders": 4,
+  "valves": 8,
+  "aspiration": "compressor",
+  "transmission": "manual",
+  "drivetrain": "dianteira"
 }

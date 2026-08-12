@@ -5,14 +5,29 @@
   "model": "F-1000",
   "year": 1995,
   "origin": "nacional",
-  "fuel": "gasolina",
-  "displacement": "3.6",
+  "fuel": "diesel",
+  "displacement": "3.9",
   "bodyType": "picape",
   "fipe": {
-    "value": 16938,
+    "value": 84202,
     "referenceMonth": "2026-08",
-    "fipeCode": "003162-3"
+    "fipeCode": "003163-1"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "carros-na-web",
+  "active": true,
+  "version": "3.9 Turbo Diesel 4x4",
+  "power": {
+    "value": 122,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 37,
+    "unit": "kgfm"
+  },
+  "engineCode": "MWM D-229-4",
+  "cylinders": 4,
+  "valves": 8,
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "drivetrain": "integral"
 }

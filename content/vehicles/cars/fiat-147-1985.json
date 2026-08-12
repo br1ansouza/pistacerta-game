@@ -12,6 +12,21 @@
     "referenceMonth": "2026-08",
     "fipeCode": "001124-0"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "version": "Spazio CL 1.3",
+  "displacement": "1.3",
+  "power": {
+    "value": 60,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 9.6,
+    "unit": "kgfm"
+  },
+  "cylinders": 4,
+  "valves": 8,
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira"
 }

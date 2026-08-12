@@ -1,0 +1,34 @@
+{
+  "slug": "audi-r8-v10-2022",
+  "kind": "car",
+  "brand": "Audi",
+  "model": "R8",
+  "version": "5.2 V10 quattro",
+  "year": 2022,
+  "origin": "importado",
+  "countryOfOrigin": "Alemanha",
+  "fuel": "gasolina",
+  "displacement": "5.2",
+  "power": {
+    "value": 620,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 59.1,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automatizado",
+  "drivetrain": "integral",
+  "bodyType": "cupê",
+  "cylinders": 10,
+  "valves": 40,
+  "doors": 2,
+  "fipe": {
+    "value": 1946788,
+    "referenceMonth": "2026-08",
+    "fipeCode": "008146-9"
+  },
+  "specSource": "fabricante",
+  "active": true
+}

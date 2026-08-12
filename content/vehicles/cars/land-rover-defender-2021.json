@@ -16,6 +16,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "033179-1"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "power": {
+    "value": 300,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 40.8,
+    "unit": "kgfm"
+  },
+  "engineCode": "Ingenium AJ200",
+  "cylinders": 4,
+  "valves": 16,
+  "drivetrain": "integral"
 }

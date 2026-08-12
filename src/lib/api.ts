@@ -68,7 +68,7 @@ export function startRound(
 ): Promise<RoundResponse> {
   if (STATIC) {
     return import('@/lib/static-backend').then(({ startRoundStatic }) =>
-      startRoundStatic(mode, deck),
+      startRoundStatic(mode, kind, deck),
     );
   }
 

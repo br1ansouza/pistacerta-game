@@ -2,7 +2,7 @@ import { buildChoices, type RoundChoice } from '@/domain/round/choices';
 import { pickFromDeck } from '@/domain/round/deck';
 import type { GameMode } from '@/domain/round/round.types';
 import type { VehicleIdentity } from '@/domain/vehicle/safe-vehicle';
-import type { Vehicle } from '@/domain/vehicle/vehicle.schema';
+import type { Vehicle, VehicleKind } from '@/domain/vehicle/vehicle.schema';
 import { VEHICLES, type SealedVehicle } from '@/generated/content';
 import type { CreditsResponse, ImageCredit, RevealResponse, RoundResponse } from './api';
 
@@ -59,6 +59,7 @@ const CANDIDATES = VEHICLES.map((entry) => ({
   slug: entry.slug,
   brand: entry.brand,
   year: entry.clues.year,
+  kind: entry.kind,
 }));
 
 const BY_SLUG = new Map(VEHICLES.map((entry) => [entry.slug, entry]));
@@ -70,15 +71,17 @@ function asVehicle(entry: SealedVehicle): Vehicle {
 function toChoices(answer: SealedVehicle): RoundChoice[] {
   return buildChoices(
     asVehicle(answer),
-    VEHICLES.map((entry) => asVehicle(entry)),
+    VEHICLES.filter((entry) => entry.kind === answer.kind).map((entry) => asVehicle(entry)),
   );
 }
 
 export async function startRoundStatic(
   mode: GameMode,
+  kind: VehicleKind,
   deck: string | null,
 ): Promise<RoundResponse> {
-  const picked = pickFromDeck(CANDIDATES, readDeck(deck));
+  const candidates = CANDIDATES.filter((entry) => entry.kind === kind);
+  const picked = pickFromDeck(candidates, readDeck(deck));
 
   if (!picked) {
     throw new Error('Nenhum veículo disponível');

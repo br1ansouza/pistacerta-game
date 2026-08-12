@@ -42,7 +42,7 @@ export default defineConfig({
     title: 'PistaCerta',
     meta: {
       viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-      description: 'Descubra qual é o carro a partir das pistas.',
+      description: 'Descubra automóveis a partir de pistas progressivas.',
       'theme-color': '#7f56d9',
     },
     tags: [

@@ -30,7 +30,7 @@ export async function handleReveal(request: Request): Promise<Response> {
   const vehicle = await getVehicleBySlug(payload.slug);
 
   if (!vehicle) {
-    return errorResponse('Veículo não encontrado', 404);
+    return errorResponse('Automóvel não encontrado', 404);
   }
 
   const { choiceId } = parsed.data;

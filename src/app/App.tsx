@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, MotionConfig, motion } from 'motion/react';
 import type { GameMode } from '@/domain/round/round.types';
 import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
 import { CreditsScreen } from '@/features/credits/CreditsScreen';
@@ -8,36 +8,38 @@ import { HomeScreen } from '@/features/home/HomeScreen';
 
 type View = { name: 'home' } | { name: 'game'; mode: GameMode } | { name: 'credits' };
 
-const transition = { duration: 0.24, ease: [0.4, 0, 0.2, 1] as const };
+const transition = { duration: 0.2, ease: [0.22, 1, 0.36, 1] as const };
 
 export function App() {
   const [view, setView] = useState<View>({ name: 'home' });
   const [kind, setKind] = useState<VehicleKind>('car');
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={view.name === 'game' ? `game-${view.mode}-${kind}` : view.name}
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -8 }}
-        transition={transition}
-      >
-        {view.name === 'home' && (
-          <HomeScreen
-            kind={kind}
-            onToggleKind={() => setKind((current) => (current === 'car' ? 'truck' : 'car'))}
-            onSelectMode={(mode) => setView({ name: 'game', mode })}
-            onOpenCredits={() => setView({ name: 'credits' })}
-          />
-        )}
+    <MotionConfig reducedMotion="user">
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={view.name === 'game' ? `game-${view.mode}-${kind}` : view.name}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={transition}
+        >
+          {view.name === 'home' && (
+            <HomeScreen
+              kind={kind}
+              onSelectKind={setKind}
+              onSelectMode={(mode) => setView({ name: 'game', mode })}
+              onOpenCredits={() => setView({ name: 'credits' })}
+            />
+          )}
 
-        {view.name === 'game' && (
-          <GameScreen mode={view.mode} kind={kind} onBackHome={() => setView({ name: 'home' })} />
-        )}
+          {view.name === 'game' && (
+            <GameScreen mode={view.mode} kind={kind} onBackHome={() => setView({ name: 'home' })} />
+          )}
 
-        {view.name === 'credits' && <CreditsScreen onBack={() => setView({ name: 'home' })} />}
-      </motion.div>
-    </AnimatePresence>
+          {view.name === 'credits' && <CreditsScreen onBack={() => setView({ name: 'home' })} />}
+        </motion.div>
+      </AnimatePresence>
+    </MotionConfig>
   );
 }

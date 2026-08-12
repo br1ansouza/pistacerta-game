@@ -82,7 +82,7 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
           transition={{ duration: 1.3, repeat: Infinity }}
           className="text-chalk-500 py-10 text-center text-sm"
         >
-          Sorteando {kind === 'truck' ? 'um caminhão' : 'um carro'}…
+          Sorteando um automóvel…
         </motion.p>
       )}
 
@@ -132,7 +132,6 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
                 type="button"
                 onClick={revealNextClue}
                 whileTap={{ scale: 0.98 }}
-                whileHover={{ x: 2, y: 2 }}
                 className="border-chalk-500/40 bg-ink-900 text-chalk-100 hover:border-flame-500 hover:text-flame-400 focus-visible:outline-flame-500 font-display shadow-hard border-2 px-5 py-3.5 text-xs font-bold tracking-[0.15em] uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
               >
                 Próxima pista
@@ -146,7 +145,6 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
                 type="button"
                 onClick={() => setSheetOpen(true)}
                 whileTap={{ scale: 0.98 }}
-                whileHover={{ x: 2, y: 2 }}
                 className="from-flame-600 to-flame-400 text-ink-950 font-display border-flame-400 shadow-hard focus-visible:outline-flame-400 border-2 bg-gradient-to-r px-5 py-4 text-sm font-bold tracking-[0.15em] uppercase focus-visible:outline-2 focus-visible:outline-offset-2"
               >
                 Responder

@@ -65,7 +65,7 @@ export function useGameRound(mode: GameMode, kind: VehicleKind) {
     } catch (error) {
       dispatch({
         type: 'reveal/failed',
-        message: error instanceof Error ? error.message : 'Não foi possível revelar o veículo.',
+        message: error instanceof Error ? error.message : 'Não foi possível revelar o automóvel.',
       });
     }
   }, []);

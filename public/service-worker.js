@@ -1,5 +1,5 @@
-const CACHE = 'pistacerta-v2';
-const SHELL = '/index.html';
+const CACHE = 'pistacerta-v2.1';
+const SHELL = new URL('index.html', self.registration.scope).pathname;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

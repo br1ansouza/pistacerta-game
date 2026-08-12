@@ -16,18 +16,24 @@ export function VehicleImage({ identity }: VehicleImageProps) {
           aria-hidden
           className="pixelated relative h-20 w-20 opacity-25"
         />
-        <p className="text-chalk-500 relative text-[0.7rem]">sem foto para este</p>
+        <p className="text-chalk-500 relative text-[0.7rem]">sem foto para este automóvel</p>
       </div>
     );
   }
 
   return (
-    <div className="border-ink-700 bg-ink-900 shadow-hard relative overflow-hidden border-2">
+    <div className="border-ink-700 bg-ink-900 shadow-hard relative aspect-video overflow-hidden border-2">
+      <img
+        src={identity.image.src.startsWith('http') ? identity.image.src : asset(identity.image.src)}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-35 blur-xl"
+      />
       <img
         src={identity.image.src.startsWith('http') ? identity.image.src : asset(identity.image.src)}
         alt={`${identity.brand} ${identity.model}`}
         loading="lazy"
-        className="aspect-video w-full object-cover"
+        className="relative h-full w-full object-contain"
       />
       <div className="from-ink-950/50 pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent" />
     </div>

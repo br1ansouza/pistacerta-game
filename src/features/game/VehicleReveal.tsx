@@ -71,7 +71,6 @@ export function VehicleReveal({
           type="button"
           onClick={onNextRound}
           whileTap={{ scale: 0.98 }}
-          whileHover={{ x: 2, y: 2 }}
           className="from-flame-600 to-flame-400 text-ink-950 font-display border-flame-400 shadow-hard focus-visible:outline-flame-400 border-2 bg-gradient-to-r px-5 py-4 text-sm font-bold tracking-[0.15em] uppercase focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           Próxima rodada

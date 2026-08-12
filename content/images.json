@@ -26,6 +26,15 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Audi_RS3_TFSi_Quattro.jpg"
   },
+  "audi-tt-2003": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/2000_Audi_TT_1.8_Front.jpg/960px-2000_Audi_TT_1.8_Front.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Audi TT 8N cupê",
+    "author": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2000_Audi_TT_1.8_Front.jpg"
+  },
   "bmw-320i-2015": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BMW_F30_LCI_320i_Luxury_Line_Alpine_White_%281%29.jpg/960px-BMW_F30_LCI_320i_Luxury_Line_Alpine_White_%281%29.jpg",
     "source": "wikimedia",
@@ -702,13 +711,13 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2024_Toyota_GR_Yaris_Hayakawa.jpg"
   },
   "toyota-hilux-srx-2021": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x2.jpg/960px-2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x2.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/2021_Toyota_HiLux_IMG_3883.jpg/960px-2021_Toyota_HiLux_IMG_3883.jpg",
     "source": "wikimedia",
     "market": "global",
-    "depicts": "Toyota Hilux cabine dupla da geração da SRX brasileira, aqui na versão asiática",
-    "author": "Chanokchon",
+    "depicts": "Toyota Hilux 2021 cabine dupla, mesma fase da SRX brasileira",
+    "author": "Alexander Migl",
     "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x2.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Toyota_HiLux_IMG_3883.jpg"
   },
   "toyota-sw4-srx-2020": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Toyota_SW4_SRX_2023_%2854539868792%29.jpg/960px-Toyota_SW4_SRX_2023_%2854539868792%29.jpg",
@@ -765,13 +774,13 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2003_Volkswagen_Golf_GTI,_Rear_Left,_07-28-2020.jpg"
   },
   "vw-jetta-gli-2019": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Volkswagen_Jetta_09-21-2019_1.jpg/960px-Volkswagen_Jetta_09-21-2019_1.jpg",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/%2719_Volkswagen_Jetta.jpg/960px-%2719_Volkswagen_Jetta.jpg",
     "source": "wikimedia",
     "market": "global",
-    "depicts": "Volkswagen Jetta da sétima geração, mesma carroceria do GLI brasileiro",
-    "author": "SsmIntrigue",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volkswagen_Jetta_09-21-2019_1.jpg"
+    "depicts": "Volkswagen Jetta 2019 da sétima geração, mesma carroceria do GLI",
+    "author": "Bull-Doser",
+    "license": "Public domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:'19_Volkswagen_Jetta.jpg"
   },
   "vw-nivus-highline-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg/960px-2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg",
@@ -782,11 +791,11 @@
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Volkswagen_Nivus_200_TSi_Comfortline.jpg"
   },
-  "vw-parati-gti-1996": {
+  "vw-parati-gti-2000": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VW_Parati-Tandil-mar2016.jpg/960px-VW_Parati-Tandil-mar2016.jpg",
     "source": "wikimedia",
     "market": "br",
-    "depicts": "VW Parati-Tandil-mar2016",
+    "depicts": "Volkswagen Parati G3, a geração da GTi 16V de 2000",
     "author": "Ezarate",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:VW_Parati-Tandil-mar2016.jpg"

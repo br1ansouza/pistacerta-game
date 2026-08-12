@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { asset } from '@/lib/asset';
 import type { GameMode } from '@/domain/round/round.types';
 
+const APP_VERSION = process.env.PUBLIC_APP_VERSION ?? '';
+
 type HomeScreenProps = {
   onSelectMode: (mode: GameMode) => void;
   onOpenCredits: () => void;
@@ -100,14 +102,19 @@ export function HomeScreen({ onSelectMode, onOpenCredits }: HomeScreenProps) {
           ))}
         </section>
 
-        <motion.button
-          variants={item}
-          type="button"
-          onClick={onOpenCredits}
-          className="text-chalk-500 hover:text-chalk-300 focus-visible:outline-flame-500 self-center text-xs focus-visible:outline-2 focus-visible:outline-offset-2"
-        >
-          Créditos das imagens
-        </motion.button>
+        <motion.div variants={item} className="flex flex-col items-center gap-2">
+          <button
+            type="button"
+            onClick={onOpenCredits}
+            className="text-chalk-500 hover:text-chalk-300 focus-visible:outline-flame-500 text-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            Créditos das imagens
+          </button>
+
+          <p className="font-display text-chalk-500/60 text-[0.625rem] tracking-[0.18em]">
+            Versão {APP_VERSION}
+          </p>
+        </motion.div>
       </motion.div>
     </main>
   );

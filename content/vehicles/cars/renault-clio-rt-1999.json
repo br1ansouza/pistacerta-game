@@ -14,6 +14,21 @@
     "referenceMonth": "2026-08",
     "fipeCode": "025005-8"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "version": "RT 1.6 8V",
+  "power": {
+    "value": 74,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 13.3,
+    "unit": "kgfm"
+  },
+  "engineCode": "E7J",
+  "cylinders": 4,
+  "valves": 8,
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira"
 }

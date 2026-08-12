@@ -14,6 +14,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "022164-3"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "power": {
+    "value": 190,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 43.9,
+    "unit": "kgfm"
+  },
+  "cylinders": 4,
+  "valves": 16,
+  "aspiration": "turbo",
+  "drivetrain": "integral"
 }

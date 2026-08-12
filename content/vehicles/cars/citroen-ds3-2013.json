@@ -16,6 +16,19 @@
     "referenceMonth": "2026-08",
     "fipeCode": "011113-9"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "version": "1.6 THP 165",
+  "power": {
+    "value": 165,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 24.5,
+    "unit": "kgfm"
+  },
+  "drivetrain": "dianteira",
+  "engineCode": "EP6",
+  "cylinders": 4,
+  "valves": 16
 }

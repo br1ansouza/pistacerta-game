@@ -1,0 +1,34 @@
+{
+  "slug": "vw-saveiro-cross-2023",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Saveiro",
+  "version": "Cross 1.6 16V CD",
+  "year": 2023,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.6",
+  "power": {
+    "value": 116,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 16.1,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "picape",
+  "engineCode": "MSI",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 4,
+  "fipe": {
+    "value": 89320,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005408-9"
+  },
+  "specSource": "icarros",
+  "active": true
+}

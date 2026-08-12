@@ -1,0 +1,34 @@
+{
+  "slug": "mini-cooper-2021",
+  "kind": "car",
+  "brand": "Mini",
+  "model": "Cooper",
+  "version": "1.5 Turbo 3 portas",
+  "year": 2021,
+  "origin": "importado",
+  "countryOfOrigin": "Reino Unido",
+  "fuel": "gasolina",
+  "displacement": "1.5",
+  "power": {
+    "value": 136,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 22.4,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "cylinders": 3,
+  "valves": 12,
+  "doors": 3,
+  "fipe": {
+    "value": 129923,
+    "referenceMonth": "2026-08",
+    "fipeCode": "071029-6"
+  },
+  "specSource": "icarros",
+  "active": true
+}

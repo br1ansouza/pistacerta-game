@@ -1,0 +1,35 @@
+{
+  "slug": "fiat-500-abarth-2015",
+  "kind": "car",
+  "brand": "Fiat",
+  "model": "500",
+  "version": "Abarth 1.4 T-Jet",
+  "year": 2015,
+  "origin": "importado",
+  "countryOfOrigin": "México",
+  "fuel": "gasolina",
+  "displacement": "1.4",
+  "power": {
+    "value": 167,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 23,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "engineCode": "T-Jet",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 3,
+  "fipe": {
+    "value": 121588,
+    "referenceMonth": "2026-08",
+    "fipeCode": "001429-0"
+  },
+  "specSource": "icarros",
+  "active": true
+}

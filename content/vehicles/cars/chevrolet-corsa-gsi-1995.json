@@ -12,7 +12,7 @@
     "referenceMonth": "2026-08",
     "fipeCode": "004033-9"
   },
-  "specSource": "webmotors",
+  "specSource": "icarros",
   "active": true,
   "power": {
     "value": 108,
@@ -25,5 +25,9 @@
   "aspiration": "aspirado",
   "engineCode": "1.6 SFi 16V",
   "cylinders": 4,
-  "valves": 16
+  "valves": 16,
+  "version": "GSi 1.6 16V",
+  "displacement": "1.6",
+  "transmission": "manual",
+  "drivetrain": "dianteira"
 }

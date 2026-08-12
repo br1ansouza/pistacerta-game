@@ -1,0 +1,35 @@
+{
+  "slug": "ford-mustang-gt-2019",
+  "kind": "car",
+  "brand": "Ford",
+  "model": "Mustang",
+  "version": "GT Premium 5.0 V8",
+  "year": 2019,
+  "origin": "importado",
+  "countryOfOrigin": "Estados Unidos",
+  "fuel": "gasolina",
+  "displacement": "5.0",
+  "power": {
+    "value": 466,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 56.7,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "automático",
+  "drivetrain": "traseira",
+  "bodyType": "cupê",
+  "engineCode": "Coyote",
+  "cylinders": 8,
+  "valves": 32,
+  "doors": 2,
+  "fipe": {
+    "value": 364463,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003453-3"
+  },
+  "specSource": "icarros",
+  "active": true
+}

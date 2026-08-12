@@ -1,0 +1,34 @@
+{
+  "slug": "vw-spacefox-highline-2015",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "SpaceFox",
+  "version": "Highline 1.6 16V",
+  "year": 2015,
+  "origin": "nacional",
+  "fuel": "flex",
+  "displacement": "1.6",
+  "power": {
+    "value": 120,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 16.8,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "perua",
+  "engineCode": "MSI",
+  "cylinders": 4,
+  "valves": 16,
+  "doors": 5,
+  "fipe": {
+    "value": 49727,
+    "referenceMonth": "2026-08",
+    "fipeCode": "005279-5"
+  },
+  "specSource": "icarros",
+  "active": true
+}

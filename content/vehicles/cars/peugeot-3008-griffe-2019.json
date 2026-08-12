@@ -16,6 +16,18 @@
     "referenceMonth": "2026-08",
     "fipeCode": "024176-8"
   },
-  "specSource": "fipe",
-  "active": false
+  "specSource": "icarros",
+  "active": true,
+  "power": {
+    "value": 165,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 24.5,
+    "unit": "kgfm"
+  },
+  "engineCode": "THP",
+  "cylinders": 4,
+  "valves": 16,
+  "drivetrain": "dianteira"
 }

@@ -1,4 +1,4 @@
-import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import { motion } from 'motion/react';
 import { InfoCircle } from '@untitledui/icons';
@@ -129,20 +129,18 @@ function ClueHelp({ label, children }: { label: string; children: string }) {
   );
 }
 
-function ClueCell({ clue, fresh }: { clue: ResolvedClue; fresh: boolean }) {
-  const width = clue.key === 'cabin' && clue.value.length > 36 ? 'col-span-full lg:col-span-2' : '';
-
+function ClueCell({ clue, fresh, width }: { clue: ResolvedClue; fresh: boolean; width: string }) {
   return (
     <motion.div
       layout
       initial={{ opacity: 0, scale: 0.97 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={motionSpring}
-      className={`${
+      className={`min-h-10 py-0.5 ${
         fresh ? 'border-flame-500 border-l-[3px] pl-3' : 'border-ink-700 border-l-[3px] pl-3'
       } ${width}`}
     >
-      <dt className="text-chalk-500 font-display flex items-center gap-1 text-[0.6rem] leading-tight tracking-[0.14em] uppercase">
+      <dt className="text-chalk-300 font-display flex items-center gap-1 text-[0.6rem] leading-tight tracking-[0.14em] uppercase">
         <span>{clue.label}</span>
         {clue.help && <ClueHelp label={clue.label}>{clue.help}</ClueHelp>}
       </dt>
@@ -159,9 +157,40 @@ function ClueCell({ clue, fresh }: { clue: ResolvedClue; fresh: boolean }) {
   );
 }
 
+function clueWidth(
+  clue: ResolvedClue,
+  pageIndex: number,
+  pageLength: number,
+  globalIndex: number,
+  total: number,
+): string {
+  if (clue.key === 'cabin' && clue.value.length > 36) {
+    return 'col-span-full col-start-auto lg:col-span-2';
+  }
+
+  const lastOnPage = pageIndex === pageLength - 1;
+  const lastOverall = globalIndex === total - 1;
+  const startsFinalPair = total % 4 === 2 && globalIndex === total - 2;
+
+  const desktopWidth = lastOverall && total % 4 === 1 ? 'lg:col-span-2' : 'lg:col-span-1';
+  const desktopStart =
+    (lastOverall && total % 4 === 1) || startsFinalPair ? 'lg:col-start-2' : 'lg:col-start-auto';
+
+  return [
+    lastOnPage && pageLength % 2 === 1 ? 'col-span-2' : 'col-span-1',
+    lastOnPage && pageLength % 3 === 1
+      ? 'sm:col-start-2 sm:col-span-1'
+      : 'sm:col-start-auto sm:col-span-1',
+    desktopStart,
+    desktopWidth,
+  ].join(' ');
+}
+
 export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
   const trackRef = useRef<HTMLDivElement>(null);
+  const pageRefs = useRef<(HTMLDListElement | null)[]>([]);
   const [page, setPage] = useState(0);
+  const [trackHeight, setTrackHeight] = useState<number | null>(null);
 
   const pages: ResolvedClue[][] = [];
 
@@ -170,6 +199,33 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
   }
 
   const previousCount = useRef(pages.length);
+
+  useLayoutEffect(() => {
+    const activePage = Math.min(page, Math.max(pages.length - 1, 0));
+    const pageElement = pageRefs.current[activePage];
+
+    if (!pageElement) {
+      setTrackHeight(null);
+      return;
+    }
+
+    const observedPage = pageElement;
+
+    function updateHeight() {
+      if (globalThis.matchMedia('(width >= 64rem)').matches) {
+        setTrackHeight(null);
+        return;
+      }
+
+      setTrackHeight(observedPage.offsetHeight);
+    }
+
+    updateHeight();
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(observedPage);
+
+    return () => observer.disconnect();
+  }, [clues.length, page, pages.length]);
 
   useEffect(() => {
     if (pages.length === previousCount.current) {
@@ -210,15 +266,34 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
       <div
         ref={trackRef}
         onScroll={onScroll}
-        className="scrollbar-hide flex snap-x snap-mandatory items-stretch overflow-x-auto overscroll-x-contain lg:grid lg:auto-rows-min lg:grid-cols-4 lg:gap-x-3 lg:gap-y-4 lg:overflow-visible"
+        style={
+          {
+            '--clue-track-height': trackHeight === null ? 'auto' : `${trackHeight}px`,
+          } as CSSProperties
+        }
+        className="scrollbar-hide flex snap-x snap-mandatory items-start overflow-x-auto overscroll-x-contain transition-[height] duration-200 [height:var(--clue-track-height)] lg:grid lg:h-auto lg:auto-rows-min lg:grid-cols-4 lg:gap-x-3 lg:gap-y-4 lg:overflow-visible"
       >
         {pages.map((entries, index) => (
           <dl
             key={entries[0]?.key ?? index}
+            ref={(element) => {
+              pageRefs.current[index] = element;
+            }}
             className="grid w-full shrink-0 snap-start auto-rows-min content-start grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-3 lg:contents"
           >
-            {entries.map((clue) => (
-              <ClueCell key={clue.key} clue={clue} fresh={clue.key === freshKey} />
+            {entries.map((clue, entryIndex) => (
+              <ClueCell
+                key={clue.key}
+                clue={clue}
+                fresh={clue.key === freshKey}
+                width={clueWidth(
+                  clue,
+                  entryIndex,
+                  entries.length,
+                  index * pageSize + entryIndex,
+                  clues.length,
+                )}
+              />
             ))}
           </dl>
         ))}

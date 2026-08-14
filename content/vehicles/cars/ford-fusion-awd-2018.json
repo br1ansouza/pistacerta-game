@@ -1,0 +1,36 @@
+{
+  "slug": "ford-fusion-awd-2018",
+  "kind": "car",
+  "brand": "Ford",
+  "model": "Fusion",
+  "version": "Titanium 2.0 EcoBoost AWD",
+  "year": 2018,
+  "origin": "importado",
+  "countryOfOrigin": "México",
+  "fuel": "gasolina",
+  "displacement": "2.0",
+  "power": {
+    "value": 248,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 39,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "integral",
+  "bodyType": "sedã",
+  "engineCode": "EcoBoost",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "doors": 4,
+  "fipe": {
+    "value": 99263,
+    "referenceMonth": "2026-08",
+    "fipeCode": "003376-6"
+  },
+  "specSource": "webmotors",
+  "active": true
+}

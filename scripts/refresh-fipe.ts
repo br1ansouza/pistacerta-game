@@ -16,11 +16,17 @@ type PriceByCode = {
 
 type Vehicle = {
   slug: string;
+  kind: 'car' | 'truck';
   brand: string;
   model: string;
   year: number;
   fipe: { value: number; referenceMonth: string; fipeCode: string } | null;
 };
+
+const catalogs = [
+  { directory: 'cars', apiType: 'cars', fuelCode: '1' },
+  { directory: 'trucks', apiType: 'trucks', fuelCode: '3' },
+] as const;
 
 function parsePrice(price: string): number {
   return Number(price.replace(/[^\d,]/g, '').replace(',', '.'));
@@ -72,49 +78,51 @@ async function api<T>(path: string): Promise<T | null> {
   throw new Error(`${path} -> esgotou as tentativas (429)`);
 }
 
-const carsDir = join(process.cwd(), 'content', 'vehicles', 'cars');
-const fileNames = (await readdir(carsDir)).filter((name) => name.endsWith('.json')).toSorted();
-
 const changes: string[] = [];
 const gone: string[] = [];
 let checked = 0;
 
-for (const fileName of fileNames) {
-  const path = join(carsDir, fileName);
-  const vehicle = JSON.parse(await readFile(path, 'utf8')) as Vehicle;
+for (const catalog of catalogs) {
+  const directory = join(process.cwd(), 'content', 'vehicles', catalog.directory);
+  const fileNames = (await readdir(directory)).filter((name) => name.endsWith('.json')).toSorted();
 
-  if (!vehicle.fipe) {
-    continue;
+  for (const fileName of fileNames) {
+    const path = join(directory, fileName);
+    const vehicle = JSON.parse(await readFile(path, 'utf8')) as Vehicle;
+
+    if (!vehicle.fipe) {
+      continue;
+    }
+
+    checked += 1;
+
+    const prices = await api<PriceByCode[]>(
+      `/${catalog.apiType}/${vehicle.fipe.fipeCode}/years/${vehicle.year}-${catalog.fuelCode}/history`,
+    );
+
+    const current = prices?.[0];
+
+    if (!current) {
+      gone.push(`${vehicle.slug}: código ${vehicle.fipe.fipeCode} não retornou preço`);
+      continue;
+    }
+
+    const value = parsePrice(current.price);
+    const referenceMonth = toReferenceMonth(current.referenceMonth) ?? vehicle.fipe.referenceMonth;
+
+    if (value === vehicle.fipe.value && referenceMonth === vehicle.fipe.referenceMonth) {
+      continue;
+    }
+
+    const before = vehicle.fipe.value;
+    vehicle.fipe = { value, referenceMonth, fipeCode: vehicle.fipe.fipeCode };
+
+    await writeFile(path, `${JSON.stringify(vehicle, null, 2)}\n`, 'utf8');
+
+    const delta = value - before;
+    const sign = delta > 0 ? '+' : '';
+    changes.push(`${vehicle.slug}: ${before} -> ${value} (${sign}${delta}) · ${referenceMonth}`);
   }
-
-  checked += 1;
-
-  const prices = await api<PriceByCode[]>(
-    `/cars/${vehicle.fipe.fipeCode}/years/${vehicle.year}-1/history`,
-  );
-
-  const current = prices?.[0];
-
-  if (!current) {
-    gone.push(`${vehicle.slug}: código ${vehicle.fipe.fipeCode} não retornou preço`);
-    continue;
-  }
-
-  const value = parsePrice(current.price);
-  const referenceMonth = toReferenceMonth(current.referenceMonth) ?? vehicle.fipe.referenceMonth;
-
-  if (value === vehicle.fipe.value && referenceMonth === vehicle.fipe.referenceMonth) {
-    continue;
-  }
-
-  const before = vehicle.fipe.value;
-  vehicle.fipe = { value, referenceMonth, fipeCode: vehicle.fipe.fipeCode };
-
-  await writeFile(path, `${JSON.stringify(vehicle, null, 2)}\n`, 'utf8');
-
-  const delta = value - before;
-  const sign = delta > 0 ? '+' : '';
-  changes.push(`${vehicle.slug}: ${before} -> ${value} (${sign}${delta}) · ${referenceMonth}`);
 }
 
 console.log(`${checked} veículo(s) com FIPE conferido(s).`);

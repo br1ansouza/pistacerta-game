@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'motion/react';
+import { InfoCircle } from '@untitledui/icons';
 import type { ResolvedClue } from '@/domain/clues/clue.types';
 import { motionSpring } from '@/lib/motion';
 
@@ -8,6 +10,124 @@ type CluePagesProps = {
   pageSize: number;
   freshKey: string | null;
 };
+
+function ClueHelp({ label, children }: { label: string; children: string }) {
+  const [pinned, setPinned] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const [position, setPosition] = useState<{ left: number; top: number } | null>(null);
+  const rootRef = useRef<HTMLSpanElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const tooltipId = useId();
+  const open = pinned || hovered || focused;
+
+  useLayoutEffect(() => {
+    if (!open) {
+      setPosition(null);
+      return;
+    }
+
+    function updatePosition() {
+      const button = buttonRef.current;
+
+      if (!button) {
+        return;
+      }
+
+      const rect = button.getBoundingClientRect();
+      const tooltipHalfWidth = 96;
+      const viewportMargin = 16;
+      const centered = rect.left + rect.width / 2;
+      const left = Math.min(
+        Math.max(centered, viewportMargin + tooltipHalfWidth),
+        globalThis.innerWidth - viewportMargin - tooltipHalfWidth,
+      );
+
+      setPosition({ left, top: rect.bottom + 8 });
+    }
+
+    updatePosition();
+    globalThis.addEventListener('resize', updatePosition);
+    globalThis.addEventListener('scroll', updatePosition, true);
+
+    return () => {
+      globalThis.removeEventListener('resize', updatePosition);
+      globalThis.removeEventListener('scroll', updatePosition, true);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!pinned) {
+      return;
+    }
+
+    function closeOnOutsidePress(event: PointerEvent) {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setPinned(false);
+        buttonRef.current?.blur();
+      }
+    }
+
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setPinned(false);
+        buttonRef.current?.blur();
+      }
+    }
+
+    globalThis.addEventListener('pointerdown', closeOnOutsidePress);
+    globalThis.addEventListener('keydown', closeOnEscape);
+
+    return () => {
+      globalThis.removeEventListener('pointerdown', closeOnOutsidePress);
+      globalThis.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [pinned]);
+
+  return (
+    <span ref={rootRef} className="group relative inline-flex">
+      <button
+        ref={buttonRef}
+        type="button"
+        aria-label={`O que significa ${label}?`}
+        aria-describedby={open ? tooltipId : undefined}
+        aria-expanded={open}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onFocus={() => setFocused(true)}
+        onBlur={() => {
+          setFocused(false);
+          setPinned(false);
+        }}
+        onClick={() => {
+          if (pinned) {
+            setPinned(false);
+            buttonRef.current?.blur();
+          } else {
+            setPinned(true);
+          }
+        }}
+        className="text-chalk-500 hover:text-flame-400 focus-visible:outline-flame-500 inline-flex size-4 items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-offset-1"
+      >
+        <InfoCircle className="size-3.5" />
+      </button>
+
+      {open &&
+        position &&
+        createPortal(
+          <span
+            id={tooltipId}
+            role="tooltip"
+            style={{ left: position.left, top: position.top }}
+            className="border-ink-600 bg-ink-950 text-chalk-300 shadow-hard-sm pointer-events-none fixed z-[60] w-48 -translate-x-1/2 border-2 px-3 py-2 text-[0.7rem] leading-relaxed font-normal tracking-normal normal-case"
+          >
+            {children}
+          </span>,
+          globalThis.document.body,
+        )}
+    </span>
+  );
+}
 
 function ClueCell({ clue, fresh }: { clue: ResolvedClue; fresh: boolean }) {
   const width = clue.key === 'cabin' && clue.value.length > 36 ? 'col-span-full lg:col-span-2' : '';
@@ -22,8 +142,9 @@ function ClueCell({ clue, fresh }: { clue: ResolvedClue; fresh: boolean }) {
         fresh ? 'border-flame-500 border-l-[3px] pl-3' : 'border-ink-700 border-l-[3px] pl-3'
       } ${width}`}
     >
-      <dt className="text-chalk-500 font-display text-[0.6rem] leading-tight tracking-[0.14em] uppercase">
-        {clue.label}
+      <dt className="text-chalk-500 font-display flex items-center gap-1 text-[0.6rem] leading-tight tracking-[0.14em] uppercase">
+        <span>{clue.label}</span>
+        {clue.help && <ClueHelp label={clue.label}>{clue.help}</ClueHelp>}
       </dt>
       <dd
         className={

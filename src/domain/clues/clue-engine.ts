@@ -29,6 +29,7 @@ export function buildClueBoard(vehicle: SafeVehicle): ClueBoard {
         key: definition.key,
         label: definition.label,
         group: definition.group,
+        ...(definition.help ? { help: definition.help } : {}),
         value,
       },
     ];

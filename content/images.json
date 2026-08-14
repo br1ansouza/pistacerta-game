@@ -471,6 +471,15 @@
     "author": "Carros na Web",
     "sourceUrl": "https://br.pinterest.com/pin/1116892776341970438/"
   },
+  "ford-fusion-awd-2018": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/2018_Ford_Fusion_Titanium_in_White_Platinum_Metallic_Tri-coat%2C_Front_Right%2C_08-20-2022.jpg/960px-2018_Ford_Fusion_Titanium_in_White_Platinum_Metallic_Tri-coat%2C_Front_Right%2C_08-20-2022.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Ford Fusion Titanium 2018, mesma versão vendida no Brasil",
+    "author": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Ford_Fusion_Titanium_in_White_Platinum_Metallic_Tri-coat,_Front_Right,_08-20-2022.jpg"
+  },
   "ford-maverick-gt-1975": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Ford_Brasil_Maverick_302.jpg/960px-Ford_Brasil_Maverick_302.jpg",
     "source": "wikimedia",
@@ -534,14 +543,14 @@
     "license": "CC BY 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Honda_HR-V_1.8_EX_2WD_CVT.jpg"
   },
-  "hyundai-azera-2020": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/0_Hyundai_Grandeur_%28IG%29_1.jpg/960px-0_Hyundai_Grandeur_%28IG%29_1.jpg",
+  "hyundai-azera-2015": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Hyundai_Azera_%2831661573170%29.jpg/960px-Hyundai_Azera_%2831661573170%29.jpg",
     "source": "wikimedia",
     "market": "global",
-    "depicts": "Hyundai Grandeur (IG)",
-    "author": "Benespit",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:0_Hyundai_Grandeur_(IG)_1.jpg"
+    "depicts": "Hyundai Azera HG reestilizado, mesma geração vendida no Brasil em 2015",
+    "author": "Jason Lawrence",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hyundai_Azera_(31661573170).jpg"
   },
   "hyundai-creta-n-line-2023": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2023_Hyundai_Creta_Smart.jpg/960px-2023_Hyundai_Creta_Smart.jpg",
@@ -1162,6 +1171,14 @@
     "author": "Vfronza",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vermelho2.jpg"
+  },
+  "vw-gol-sr-souza-ramos-1986": {
+    "src": "https://i0.statig.com.br/bancodeimagens/12/xq/wh/12xqwhyzyb2xkvxiz5f13psbz.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volkswagen Gol SR 1986 customizado pela Souza Ramos",
+    "author": "Renato Bellote/iG",
+    "sourceUrl": "https://carros.ig.com.br/colunas/garagem-do-bellote/2018-10-17/vw-gol-copa.html"
   },
   "vw-golf-gti-2018": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Volkswagen_Golf_VII_GTI_%28KW_P_36%29.jpg/960px-Volkswagen_Golf_VII_GTI_%28KW_P_36%29.jpg",

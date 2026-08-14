@@ -25,10 +25,7 @@
   "engineCode": "Paccar MX-11",
   "cylinders": 6,
   "cylinderLayout": "em linha",
-  "fipe": {
-    "value": 861444,
-    "referenceMonth": "2024-04"
-  },
+  "fipe": null,
   "specSource": "carros-na-web",
   "active": true
 }

@@ -46,27 +46,27 @@ export const TRUCK_CLUE_DEFINITIONS: ClueDefinition<SafeTruck>[] = [
     key: 'axles',
     label: 'Trações disponíveis',
     group: 'progressive',
+    help: 'Ex.: 6x2 tem três eixos e um eixo motriz; 6x4 tem três eixos e dois motrizes.',
     resolve: (vehicle) => vehicle.axleConfigs?.join(' · ') ?? null,
   },
   {
     key: 'origin',
     label: 'Procedência',
     group: 'progressive',
-    resolve: (vehicle) =>
-      vehicle.countryOfOrigin
-        ? `${capitalize(vehicle.origin)} (${vehicle.countryOfOrigin})`
-        : capitalize(vehicle.origin),
+    resolve: (vehicle) => capitalize(vehicle.origin),
   },
   {
     key: 'gvwr',
     label: 'PBT',
     group: 'progressive',
+    help: 'Peso Bruto Total: peso máximo do caminhão com ocupantes e carga.',
     resolve: (vehicle) => (vehicle.gvwr ? formatWeight(vehicle.gvwr) : null),
   },
   {
     key: 'gcwr',
     label: 'PBTC',
     group: 'progressive',
+    help: 'Peso Bruto Total Combinado: peso máximo do caminhão, reboque ou implemento e toda a carga.',
     resolve: (vehicle) => (vehicle.gcwr ? formatWeight(vehicle.gcwr) : null),
   },
   {

@@ -58,6 +58,7 @@ const vehicleBaseShape = {
   model: z.string().min(1),
   version: z.string().min(1).optional(),
   generation: z.string().min(1).optional(),
+  story: z.string().min(1).max(240).optional(),
   year: z.number().int().min(1900).max(2100),
   origin: z.enum(ORIGIN_TYPES),
   countryOfOrigin: z.string().min(1).optional(),
@@ -121,6 +122,6 @@ export type Truck = z.infer<typeof truckSchema> & { image: Image | null };
 export type Vehicle = Car | Truck;
 export type VehicleKind = Vehicle['kind'];
 
-export const IDENTITY_FIELDS = ['brand', 'model', 'generation', 'image'] as const;
+export const IDENTITY_FIELDS = ['brand', 'model', 'generation', 'story', 'image'] as const;
 
 export type IdentityField = (typeof IDENTITY_FIELDS)[number];

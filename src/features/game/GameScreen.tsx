@@ -2,12 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowLeft } from '@untitledui/icons';
 import { hasMoreClues, visibleClues } from '@/domain/clues/clue-engine';
+import { earnedPoints, pointsForRemainingClues } from '@/domain/round/points';
 import type { GameMode } from '@/domain/round/round.types';
 import { AnswerControls } from './AnswerControls';
 import { AnswerRevealBar } from './AnswerRevealBar';
 import { AnswerSheet } from './AnswerSheet';
 import { CluePages } from './CluePages';
 import { ScoreBoard } from './ScoreBoard';
+import { RoundProgress } from './RoundProgress';
 import { useScore } from './useScore';
 import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
 import { useGameRound } from './useGameRound';
@@ -36,7 +38,10 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
     }
 
     scoredToken.current = state.round.token;
-    record(state.outcome);
+    record(
+      state.outcome,
+      pointsForRemainingClues(state.round.revealedCount, state.round.board.progressive.length),
+    );
   }, [state, record]);
 
   const playing = state.status === 'playing' || state.status === 'revealing';
@@ -112,21 +117,10 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
             <CluePages clues={shown} pageSize={pageSize} freshKey={freshKey} />
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="border-ink-700 bg-ink-900 h-3 flex-1 overflow-hidden border-2">
-              <motion.div
-                className="from-flame-600 to-flame-400 h-full bg-gradient-to-r"
-                animate={{ width: total > 0 ? `${(revealed / total) * 100}%` : '0%' }}
-                transition={{ type: 'spring', stiffness: 260, damping: 30 }}
-              />
-            </div>
-            <span className="text-chalk-500 font-display text-[0.65rem] tabular-nums">
-              {revealed}/{total}
-            </span>
-          </div>
+          <RoundProgress revealed={revealed} total={total} />
 
-          <div className="flex flex-col gap-3">
-            {hasMoreClues(state.round.board, revealed) ? (
+          <div className="border-ink-800 bg-ink-900/35 shadow-hard-sm flex flex-col gap-3 border-2 p-3 sm:p-4">
+            {hasMoreClues(state.round.board, revealed) && (
               <motion.button
                 type="button"
                 onClick={revealNextClue}
@@ -135,8 +129,6 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
               >
                 Próxima pista
               </motion.button>
-            ) : (
-              <p className="text-chalk-500 py-2 text-center text-xs">Acabaram as pistas.</p>
             )}
 
             {state.round.choices ? (
@@ -175,6 +167,11 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
         <VehicleReveal
           identity={state.identity}
           outcome={state.outcome}
+          pointsAwarded={earnedPoints(
+            state.outcome,
+            state.round.revealedCount,
+            state.round.board.progressive.length,
+          )}
           clues={visibleClues(state.round.board, state.round.board.progressive.length)}
           onNextRound={startNextRound}
           onBackHome={onBackHome}

@@ -8,6 +8,7 @@ import { VehicleImage } from './VehicleImage';
 type VehicleRevealProps = {
   identity: VehicleIdentity;
   outcome: Outcome;
+  pointsAwarded: number;
   clues: ResolvedClue[];
   onNextRound: () => void;
   onBackHome: () => void;
@@ -16,6 +17,7 @@ type VehicleRevealProps = {
 export function VehicleReveal({
   identity,
   outcome,
+  pointsAwarded,
   clues,
   onNextRound,
   onBackHome,
@@ -41,7 +43,9 @@ export function VehicleReveal({
               : 'border-chalk-500/40 bg-ink-900 text-chalk-500 font-display shadow-hard-sm self-start border-2 px-3 py-1 text-[0.65rem] font-bold tracking-[0.18em] uppercase'
           }
         >
-          {correct ? 'Acertou' : 'Era esse'}
+          {correct
+            ? `Acertou · +${pointsAwarded} ${pointsAwarded === 1 ? 'pt' : 'pts'}`
+            : 'Era esse'}
         </motion.span>
 
         <motion.h2

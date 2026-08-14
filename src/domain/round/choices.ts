@@ -25,6 +25,10 @@ export function choiceLabel(vehicle: Vehicle): string {
   return `${vehicle.brand} ${vehicle.model}`;
 }
 
+function choiceKey(vehicle: Vehicle): string {
+  return choiceLabel(vehicle).trim().replace(/\s+/g, ' ').toLocaleLowerCase('pt-BR');
+}
+
 function shuffle<T>(items: T[], random: () => number): T[] {
   const result = [...items];
 
@@ -95,6 +99,33 @@ function technicalDistance(answer: Vehicle, candidate: Vehicle): number {
   return distance;
 }
 
+function uniqueByLabel(answer: Vehicle, candidates: Vehicle[]): Vehicle[] {
+  const representatives = new Map<string, Vehicle>();
+
+  for (const candidate of candidates) {
+    const key = choiceKey(candidate);
+    const current = representatives.get(key);
+
+    if (!current) {
+      representatives.set(key, candidate);
+      continue;
+    }
+
+    const candidateTier = categoryTier(answer, candidate);
+    const currentTier = categoryTier(answer, current);
+
+    if (
+      candidateTier < currentTier ||
+      (candidateTier === currentTier &&
+        technicalDistance(answer, candidate) < technicalDistance(answer, current))
+    ) {
+      representatives.set(key, candidate);
+    }
+  }
+
+  return [...representatives.values()];
+}
+
 function rankBySimilarity(answer: Vehicle, candidates: Vehicle[], random: () => number): Vehicle[] {
   return candidates
     .map((vehicle) => ({
@@ -110,13 +141,16 @@ export function buildChoices(
   pool: readonly Vehicle[],
   random: () => number = Math.random,
 ): RoundChoice[] {
-  const answerLabel = choiceLabel(answer);
+  const answerKey = choiceKey(answer);
 
-  const others = pool.filter(
-    (vehicle) =>
-      vehicle.kind === answer.kind &&
-      vehicle.slug !== answer.slug &&
-      choiceLabel(vehicle) !== answerLabel,
+  const others = uniqueByLabel(
+    answer,
+    pool.filter(
+      (vehicle) =>
+        vehicle.kind === answer.kind &&
+        vehicle.slug !== answer.slug &&
+        choiceKey(vehicle) !== answerKey,
+    ),
   );
 
   const distractors = [0, 1, 2]

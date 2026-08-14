@@ -22,6 +22,7 @@
   "drivetrain": "dianteira",
   "bodyType": "hatch",
   "engineCode": "BP",
+  "engineFamily": "EA827 (AP)",
   "cylinders": 4,
   "cylinderLayout": "boxer",
   "valves": 8,

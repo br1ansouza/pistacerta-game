@@ -1,0 +1,34 @@
+{
+  "slug": "alfa-romeo-giulia-quadrifoglio-2020",
+  "kind": "car",
+  "brand": "Alfa Romeo",
+  "model": "Giulia",
+  "version": "Quadrifoglio 2.9 V6 Bi-Turbo",
+  "year": 2020,
+  "origin": "importado",
+  "countryOfOrigin": "Itália",
+  "fuel": "gasolina",
+  "displacement": "2.9",
+  "power": {
+    "value": 510,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 61.2,
+    "unit": "kgfm"
+  },
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "drivetrain": "traseira",
+  "drivetrainSystem": "Active Torque Vectoring",
+  "bodyType": "sedã",
+  "engineCode": "690T",
+  "engineFamily": "V6 Bi-Turbo",
+  "cylinders": 6,
+  "cylinderLayout": "V",
+  "valves": 24,
+  "doors": 4,
+  "fipe": null,
+  "specSource": "fabricante",
+  "active": true
+}

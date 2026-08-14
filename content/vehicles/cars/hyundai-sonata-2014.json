@@ -21,7 +21,7 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "sedã",
-  "engineCode": "Theta II",
+  "engineFamily": "Theta II",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

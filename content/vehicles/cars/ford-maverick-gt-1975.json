@@ -20,7 +20,7 @@
   "transmission": "manual",
   "drivetrain": "traseira",
   "bodyType": "cupê",
-  "engineCode": "Windsor 302",
+  "engineFamily": "Windsor",
   "cylinders": 8,
   "cylinderLayout": "V",
   "valves": 16,

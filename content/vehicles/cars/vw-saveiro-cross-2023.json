@@ -20,7 +20,7 @@
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "picape",
-  "engineCode": "MSI",
+  "engineFamily": "EA211",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

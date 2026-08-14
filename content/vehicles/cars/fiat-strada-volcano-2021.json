@@ -20,7 +20,7 @@
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "picape",
-  "engineCode": "Firefly",
+  "engineFamily": "GSE (Firefly)",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

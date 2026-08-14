@@ -22,6 +22,7 @@
   "drivetrain": "traseira",
   "bodyType": "cupê",
   "engineCode": "LS3",
+  "engineFamily": "Small Block — 4ª geração",
   "cylinders": 8,
   "cylinderLayout": "V",
   "valves": 16,

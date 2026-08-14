@@ -17,8 +17,9 @@
     "unit": "kgfm"
   },
   "aspiration": "turbo",
+  "drivetrain": "traseira",
   "bodyType": "cupê",
-  "engineCode": "9A2",
+  "engineFamily": "9A2",
   "cylinders": 6,
   "cylinderLayout": "boxer",
   "valves": 24,

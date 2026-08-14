@@ -19,7 +19,7 @@
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "hatch",
-  "engineCode": "Zetec Rocam",
+  "engineFamily": "Zetec Rocam",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

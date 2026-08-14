@@ -20,6 +20,7 @@
   "drivetrain": "traseira",
   "bodyType": "cupê",
   "engineCode": "BS 1.7",
+  "engineFamily": "Type 1 boxer",
   "cylinders": 4,
   "cylinderLayout": "boxer",
   "valves": 8,

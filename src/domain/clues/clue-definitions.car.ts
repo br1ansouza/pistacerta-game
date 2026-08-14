@@ -73,7 +73,11 @@ export const CAR_CLUE_DEFINITIONS: ClueDefinition<SafeCar>[] = [
     key: 'drivetrain',
     label: 'Tração',
     group: 'progressive',
-    resolve: (vehicle) => (vehicle.drivetrain ? capitalize(vehicle.drivetrain) : null),
+    resolve: (vehicle) => {
+      const drivetrain = vehicle.drivetrain ? capitalize(vehicle.drivetrain) : null;
+
+      return [drivetrain, vehicle.drivetrainSystem].filter(Boolean).join(' · ') || null;
+    },
   },
   {
     key: 'bodyType',
@@ -118,20 +122,12 @@ export const CAR_CLUE_DEFINITIONS: ClueDefinition<SafeCar>[] = [
   },
   {
     key: 'engineCode',
-    label: 'Código do motor',
+    label: 'Motor',
     group: 'progressive',
     resolve: (vehicle) => {
-      if (!vehicle.engineCode) {
-        return null;
-      }
+      const details = [vehicle.engineCode, vehicle.engineFamily].filter(Boolean);
 
-      const displacement = vehicle.displacement;
-
-      if (!displacement || vehicle.engineCode.includes(displacement)) {
-        return vehicle.engineCode;
-      }
-
-      return `${displacement} ${vehicle.engineCode}`;
+      return [...new Set(details)].join(' · ') || null;
     },
   },
 ];

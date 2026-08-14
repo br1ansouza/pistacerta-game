@@ -16,8 +16,9 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "drivetrain": "dianteira",
   "bodyType": "hatch",
-  "engineCode": "2.0 MPFI",
+  "engineFamily": "Família II",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

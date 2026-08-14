@@ -17,7 +17,13 @@ const SHARED_FIELDS = [
   'valves',
 ] as const;
 
-const CAR_ONLY_FIELDS = ['drivetrain', 'bodyType', 'doors'] as const;
+const CAR_ONLY_FIELDS = [
+  'drivetrain',
+  'drivetrainSystem',
+  'bodyType',
+  'engineFamily',
+  'doors',
+] as const;
 const TRUCK_ONLY_FIELDS = ['axleConfigs', 'cabins', 'gvwr', 'gcwr'] as const;
 
 export const CAR_CLUE_FIELDS = [

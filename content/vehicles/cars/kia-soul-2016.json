@@ -19,6 +19,7 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "hatch",
+  "engineFamily": "Gamma",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

@@ -16,8 +16,10 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "drivetrain": "dianteira",
   "bodyType": "hatch",
   "engineCode": "AP-1800S",
+  "engineFamily": "EA827 (AP)",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

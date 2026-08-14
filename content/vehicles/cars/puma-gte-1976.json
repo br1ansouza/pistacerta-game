@@ -20,7 +20,7 @@
   "transmission": "manual",
   "drivetrain": "traseira",
   "bodyType": "cupê",
-  "engineCode": "VW boxer 1600",
+  "engineFamily": "Type 1 boxer",
   "cylinders": 4,
   "cylinderLayout": "boxer",
   "valves": 8,

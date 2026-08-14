@@ -20,6 +20,7 @@
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "picape",
+  "engineFamily": "Família 1",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

@@ -22,6 +22,7 @@
   "drivetrain": "dianteira",
   "bodyType": "cupê",
   "engineCode": "L15B7",
+  "engineFamily": "Série L",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

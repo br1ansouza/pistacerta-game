@@ -21,6 +21,7 @@
   "transmission": "automatizado",
   "drivetrain": "traseira",
   "bodyType": "cupê",
+  "engineFamily": "S55",
   "cylinders": 6,
   "cylinderLayout": "em linha",
   "valves": 24,

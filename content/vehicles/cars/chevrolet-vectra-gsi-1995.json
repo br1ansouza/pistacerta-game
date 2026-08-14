@@ -21,6 +21,7 @@
   "drivetrain": "dianteira",
   "bodyType": "sedã",
   "engineCode": "C20XE",
+  "engineFamily": "Ecotec (Família II)",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

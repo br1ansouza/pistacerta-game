@@ -21,7 +21,7 @@
   "transmission": "automatizado",
   "drivetrain": "dianteira",
   "bodyType": "hatch",
-  "engineCode": "EA888",
+  "engineFamily": "EA888",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "doors": 4,

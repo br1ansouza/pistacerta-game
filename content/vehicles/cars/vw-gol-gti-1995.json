@@ -21,6 +21,7 @@
   "drivetrain": "dianteira",
   "bodyType": "hatch",
   "engineCode": "AP-2000",
+  "engineFamily": "EA827 (AP)",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

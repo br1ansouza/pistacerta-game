@@ -22,7 +22,7 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "sedã",
-  "engineCode": "Lambda II",
+  "engineFamily": "Lambda II",
   "cylinders": 6,
   "cylinderLayout": "V",
   "valves": 24,

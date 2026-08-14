@@ -19,6 +19,7 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "suv",
+  "engineFamily": "Kappa II",
   "cylinders": 3,
   "cylinderLayout": "em linha",
   "valves": 12,

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { pointsForRemainingClues } from '@/domain/round/points';
+import { motionSpring } from '@/lib/motion';
 
 type RoundProgressProps = {
   revealed: number;
@@ -38,7 +39,9 @@ export function RoundProgress({ revealed, total }: RoundProgressProps) {
   const percentage = total > 0 ? (revealed / total) * 100 : 0;
 
   return (
-    <section
+    <motion.section
+      layout="position"
+      transition={motionSpring}
       aria-label="Progresso das pistas e pontos da rodada"
       className="border-ink-700 bg-ink-900/55 shadow-hard-sm flex flex-col gap-3 border-2 px-3 py-3"
     >
@@ -73,6 +76,6 @@ export function RoundProgress({ revealed, total }: RoundProgressProps) {
       <p className="text-chalk-500 text-[0.68rem] leading-relaxed">
         {progressMessage(revealed, total)}
       </p>
-    </section>
+    </motion.section>
   );
 }

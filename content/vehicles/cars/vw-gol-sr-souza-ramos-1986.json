@@ -1,0 +1,32 @@
+{
+  "slug": "vw-gol-sr-souza-ramos-1986",
+  "kind": "car",
+  "brand": "Volkswagen",
+  "model": "Gol SR",
+  "version": "Souza Ramos 1.6",
+  "story": "Extremamente raro: a brasileira Souza Ramos transformou apenas 53 Gol BX para uma promoção da Philips na Copa de 1986.",
+  "year": 1986,
+  "origin": "nacional",
+  "fuel": "etanol",
+  "displacement": "1.6",
+  "power": {
+    "value": 51,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 10.5,
+    "unit": "kgfm"
+  },
+  "aspiration": "aspirado",
+  "transmission": "manual",
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "engineCode": "BP",
+  "cylinders": 4,
+  "cylinderLayout": "boxer",
+  "valves": 8,
+  "doors": 2,
+  "fipe": null,
+  "specSource": "quatro-rodas",
+  "active": true
+}

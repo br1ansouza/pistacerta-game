@@ -19,6 +19,7 @@
   "aspiration": "aspirado",
   "transmission": "manual",
   "drivetrain": "traseira",
+  "bodyType": "sedã",
   "engineCode": "OHV 1.6",
   "cylinders": 4,
   "cylinderLayout": "em linha",

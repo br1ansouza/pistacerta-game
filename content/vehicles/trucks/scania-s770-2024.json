@@ -23,8 +23,9 @@
   "gcwr": 74000,
   "engineCode": "DC16 123",
   "fipe": {
-    "value": 1446442,
-    "referenceMonth": "2024-05"
+    "value": 1179029,
+    "referenceMonth": "2026-08",
+    "fipeCode": "513424-2"
   },
   "specSource": "carros-na-web",
   "active": true

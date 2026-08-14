@@ -24,10 +24,7 @@
   "engineCode": "OM 460 LA",
   "cylinders": 6,
   "cylinderLayout": "em linha",
-  "fipe": {
-    "value": 738000,
-    "referenceMonth": "2025-08"
-  },
+  "fipe": null,
   "specSource": "carros-na-web",
   "active": true
 }

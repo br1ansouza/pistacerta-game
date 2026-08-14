@@ -27,6 +27,7 @@ export type ClueDefinition<V = SafeVehicle> = {
   key: ClueKey;
   label: string;
   group: ClueGroup;
+  help?: string;
   resolve: (vehicle: V) => string | null;
 };
 
@@ -34,5 +35,6 @@ export type ResolvedClue = {
   key: ClueKey;
   label: string;
   group: ClueGroup;
+  help?: string;
   value: string;
 };

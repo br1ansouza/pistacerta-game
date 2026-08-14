@@ -1,32 +1,34 @@
 {
-  "slug": "hyundai-azera-2020",
+  "slug": "hyundai-azera-2015",
   "kind": "car",
   "brand": "Hyundai",
   "model": "Azera",
   "version": "3.0 V6",
-  "year": 2020,
+  "generation": "HG",
+  "year": 2015,
   "origin": "importado",
   "countryOfOrigin": "Coreia do Sul",
   "fuel": "gasolina",
   "displacement": "3.0",
   "power": {
-    "value": 261,
+    "value": 250,
     "unit": "cv"
   },
   "torque": {
-    "value": 31,
+    "value": 28.8,
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "sedã",
+  "engineCode": "Lambda II",
   "cylinders": 6,
   "cylinderLayout": "V",
   "valves": 24,
   "doors": 4,
   "fipe": {
-    "value": 162808,
+    "value": 80654,
     "referenceMonth": "2026-08",
     "fipeCode": "015083-5"
   },

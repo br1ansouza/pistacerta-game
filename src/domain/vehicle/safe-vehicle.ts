@@ -4,7 +4,6 @@ const SHARED_FIELDS = [
   'kind',
   'year',
   'origin',
-  'countryOfOrigin',
   'fipe',
   'fuel',
   'displacement',
@@ -45,6 +44,7 @@ export type VehicleIdentity = {
   model: string;
   version: string | null;
   generation: string | null;
+  story: string | null;
   year: number;
   image: Vehicle['image'];
 };
@@ -69,6 +69,7 @@ export function toVehicleIdentity(vehicle: Vehicle): VehicleIdentity {
     model: vehicle.model,
     version: vehicle.version ?? null,
     generation: vehicle.generation ?? null,
+    story: vehicle.story ?? null,
     year: vehicle.year,
     image: vehicle.image,
   };

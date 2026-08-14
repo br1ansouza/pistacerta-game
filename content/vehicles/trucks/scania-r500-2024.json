@@ -23,8 +23,9 @@
   "gcwr": 58500,
   "engineCode": "DC13 174",
   "fipe": {
-    "value": 1127000,
-    "referenceMonth": "2024-05"
+    "value": 757659,
+    "referenceMonth": "2026-08",
+    "fipeCode": "513396-3"
   },
   "specSource": "carros-na-web",
   "active": true

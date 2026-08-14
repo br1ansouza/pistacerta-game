@@ -26,8 +26,9 @@
   "cylinders": 6,
   "cylinderLayout": "em linha",
   "fipe": {
-    "value": 940125,
-    "referenceMonth": "2024-04"
+    "value": 723220,
+    "referenceMonth": "2026-08",
+    "fipeCode": "530052-5"
   },
   "specSource": "carros-na-web",
   "active": true

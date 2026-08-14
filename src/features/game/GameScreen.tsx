@@ -7,7 +7,6 @@ import { AnswerControls } from './AnswerControls';
 import { AnswerRevealBar } from './AnswerRevealBar';
 import { AnswerSheet } from './AnswerSheet';
 import { CluePages } from './CluePages';
-import { ExtraInfoPanel } from './ExtraInfoPanel';
 import { ScoreBoard } from './ScoreBoard';
 import { useScore } from './useScore';
 import type { VehicleKind } from '@/domain/vehicle/vehicle.schema';
@@ -155,8 +154,6 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
                 disabled={state.status === 'revealing'}
               />
             )}
-
-            <ExtraInfoPanel vehicle={state.round.vehicle} />
           </div>
         </motion.div>
       )}

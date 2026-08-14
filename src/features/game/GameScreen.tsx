@@ -4,6 +4,7 @@ import { ArrowLeft } from '@untitledui/icons';
 import { hasMoreClues, visibleClues } from '@/domain/clues/clue-engine';
 import { earnedPoints, pointsForRemainingClues } from '@/domain/round/points';
 import type { GameMode } from '@/domain/round/round.types';
+import { motionSpring } from '@/lib/motion';
 import { AnswerControls } from './AnswerControls';
 import { AnswerRevealBar } from './AnswerRevealBar';
 import { AnswerSheet } from './AnswerSheet';
@@ -119,7 +120,11 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
 
           <RoundProgress revealed={revealed} total={total} />
 
-          <div className="border-ink-800 bg-ink-900/35 shadow-hard-sm flex flex-col gap-3 border-2 p-3 sm:p-4">
+          <motion.div
+            layout="position"
+            transition={motionSpring}
+            className="border-ink-800 bg-ink-900/35 shadow-hard-sm flex flex-col gap-3 border-2 p-3 sm:p-4"
+          >
             {hasMoreClues(state.round.board, revealed) && (
               <motion.button
                 type="button"
@@ -146,7 +151,7 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
                 disabled={state.status === 'revealing'}
               />
             )}
-          </div>
+          </motion.div>
         </motion.div>
       )}
 

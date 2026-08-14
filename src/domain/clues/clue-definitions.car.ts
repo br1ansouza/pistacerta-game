@@ -53,6 +53,16 @@ export const CAR_CLUE_DEFINITIONS: ClueDefinition<SafeCar>[] = [
       vehicle.torque ? `${formatDecimal(vehicle.torque.value)} ${vehicle.torque.unit}` : null,
   },
   {
+    key: 'engineCode',
+    label: 'Motor',
+    group: 'progressive',
+    resolve: (vehicle) => {
+      const details = [vehicle.engineCode, vehicle.engineFamily].filter(Boolean);
+
+      return [...new Set(details)].join(' · ') || null;
+    },
+  },
+  {
     key: 'aspiration',
     label: 'Aspiração',
     group: 'progressive',
@@ -119,15 +129,5 @@ export const CAR_CLUE_DEFINITIONS: ClueDefinition<SafeCar>[] = [
     label: 'Válvulas',
     group: 'progressive',
     resolve: (vehicle) => (vehicle.valves ? `${vehicle.valves}V` : null),
-  },
-  {
-    key: 'engineCode',
-    label: 'Motor',
-    group: 'progressive',
-    resolve: (vehicle) => {
-      const details = [vehicle.engineCode, vehicle.engineFamily].filter(Boolean);
-
-      return [...new Set(details)].join(' · ') || null;
-    },
   },
 ];

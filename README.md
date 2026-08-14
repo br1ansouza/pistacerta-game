@@ -15,7 +15,7 @@
 
 </div>
 
-O sistema sorteia um veículo e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, aspiração, câmbio, tração, carroceria, arranjo dos cilindros e, por último, o código do motor. Quanto antes você acertar, melhor.
+O sistema sorteia um veículo e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, motor, aspiração, câmbio, tração, carroceria e arranjo dos cilindros. Quanto antes você acertar, melhor.
 
 Duas categorias, com baralhos separados: **96 carros** e **50 caminhões**, todos com presença real no Brasil ou na América do Sul. O ícone no canto superior direito troca de uma para a outra.
 

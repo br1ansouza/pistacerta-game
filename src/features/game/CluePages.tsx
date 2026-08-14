@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { motion } from 'motion/react';
 import { InfoCircle } from '@untitledui/icons';
 import type { ResolvedClue } from '@/domain/clues/clue.types';
-import { motionSpring } from '@/lib/motion';
+import { motionEase } from '@/lib/motion';
 
 type CluePagesProps = {
   clues: ResolvedClue[];
@@ -132,10 +132,9 @@ function ClueHelp({ label, children }: { label: string; children: string }) {
 function ClueCell({ clue, fresh, width }: { clue: ResolvedClue; fresh: boolean; width: string }) {
   return (
     <motion.div
-      layout
-      initial={{ opacity: 0, scale: 0.97 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={motionSpring}
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.18, ease: motionEase }}
       className={`min-h-10 py-0.5 ${
         fresh ? 'border-flame-500 border-l-[3px] pl-3' : 'border-ink-700 border-l-[3px] pl-3'
       } ${width}`}
@@ -201,15 +200,14 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
   const previousCount = useRef(pages.length);
 
   useLayoutEffect(() => {
-    const activePage = Math.min(page, Math.max(pages.length - 1, 0));
-    const pageElement = pageRefs.current[activePage];
+    const pageElements = pageRefs.current
+      .slice(0, pages.length)
+      .filter((element) => element !== null);
 
-    if (!pageElement) {
+    if (pageElements.length === 0) {
       setTrackHeight(null);
       return;
     }
-
-    const observedPage = pageElement;
 
     function updateHeight() {
       if (globalThis.matchMedia('(width >= 64rem)').matches) {
@@ -217,15 +215,15 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
         return;
       }
 
-      setTrackHeight(observedPage.offsetHeight);
+      setTrackHeight(Math.max(...pageElements.map((element) => element.offsetHeight)));
     }
 
     updateHeight();
     const observer = new ResizeObserver(updateHeight);
-    observer.observe(observedPage);
+    pageElements.forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
-  }, [clues.length, page, pages.length]);
+  }, [clues.length, pages.length]);
 
   useEffect(() => {
     if (pages.length === previousCount.current) {
@@ -271,7 +269,7 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
             '--clue-track-height': trackHeight === null ? 'auto' : `${trackHeight}px`,
           } as CSSProperties
         }
-        className="scrollbar-hide flex snap-x snap-mandatory items-start overflow-x-auto overscroll-x-contain transition-[height] duration-200 [height:var(--clue-track-height)] lg:grid lg:h-auto lg:auto-rows-min lg:grid-cols-4 lg:gap-x-3 lg:gap-y-4 lg:overflow-visible"
+        className="scrollbar-hide flex snap-x snap-mandatory items-start overflow-x-auto overscroll-x-contain [height:var(--clue-track-height)] lg:grid lg:h-auto lg:auto-rows-min lg:grid-cols-4 lg:gap-x-3 lg:gap-y-4 lg:overflow-visible"
       >
         {pages.map((entries, index) => (
           <dl

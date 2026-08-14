@@ -19,7 +19,7 @@ function progressMessage(revealed: number, total: number): string {
   const nextPoints = pointsForRevealedClues(revealed + 1);
 
   if (revealed === 0) {
-    return 'A primeira pista extra não reduz seus pontos.';
+    return 'As duas primeiras pistas extras não reduzem seus pontos.';
   }
 
   if (nextPoints < points) {

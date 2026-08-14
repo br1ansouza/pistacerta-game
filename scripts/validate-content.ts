@@ -12,7 +12,7 @@ const CLUE_FIELDS = [
   'torque',
   'aspiration',
   'transmission',
-  'engineCode',
+  'engineFamily',
 ] as const;
 
 const MINIMUM_CLUES = 5;

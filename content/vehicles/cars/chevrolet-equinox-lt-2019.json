@@ -21,6 +21,8 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "suv",
+  "engineCode": "LTG",
+  "engineFamily": "Ecotec — 3ª geração",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

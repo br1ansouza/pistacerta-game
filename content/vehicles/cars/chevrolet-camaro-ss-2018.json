@@ -17,8 +17,10 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "drivetrain": "traseira",
   "bodyType": "cupê",
   "engineCode": "LT1",
+  "engineFamily": "Small Block — 5ª geração",
   "cylinders": 8,
   "cylinderLayout": "V",
   "valves": 16,

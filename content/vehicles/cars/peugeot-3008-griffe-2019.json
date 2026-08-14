@@ -20,6 +20,7 @@
   "drivetrain": "dianteira",
   "bodyType": "suv",
   "engineCode": "THP",
+  "engineFamily": "Prince",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

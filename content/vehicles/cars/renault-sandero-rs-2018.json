@@ -21,6 +21,7 @@
   "drivetrain": "dianteira",
   "bodyType": "hatch",
   "engineCode": "F4R",
+  "engineFamily": "Série F",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

@@ -16,8 +16,9 @@
     "unit": "kgfm"
   },
   "aspiration": "aspirado",
+  "drivetrain": "traseira",
   "bodyType": "sedã",
-  "engineCode": "4.1 SFi",
+  "engineFamily": "250 — seis cilindros nacional",
   "cylinders": 6,
   "cylinderLayout": "em linha",
   "valves": 12,

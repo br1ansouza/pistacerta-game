@@ -21,6 +21,7 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "sedã",
+  "engineFamily": "Série J",
   "cylinders": 6,
   "cylinderLayout": "V",
   "valves": 24,

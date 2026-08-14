@@ -16,6 +16,8 @@
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "hatch",
+  "engineCode": "X20XEV",
+  "engineFamily": "Ecotec (Família II)",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

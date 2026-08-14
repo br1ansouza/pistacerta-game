@@ -21,6 +21,7 @@
   "drivetrain": "dianteira",
   "bodyType": "sedã",
   "engineCode": "AP-1800",
+  "engineFamily": "EA827 (AP)",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

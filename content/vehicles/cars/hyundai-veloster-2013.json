@@ -19,7 +19,7 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "cupê",
-  "engineCode": "Gamma",
+  "engineFamily": "Gamma",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

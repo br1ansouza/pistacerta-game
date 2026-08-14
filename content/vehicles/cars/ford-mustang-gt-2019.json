@@ -21,7 +21,7 @@
   "transmission": "automático",
   "drivetrain": "traseira",
   "bodyType": "cupê",
-  "engineCode": "Coyote",
+  "engineFamily": "Modular (Coyote)",
   "cylinders": 8,
   "cylinderLayout": "V",
   "valves": 32,

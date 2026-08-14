@@ -16,8 +16,10 @@
     "unit": "kgfm"
   },
   "aspiration": "turbo",
+  "drivetrain": "dianteira",
   "bodyType": "sedã",
   "engineCode": "182B",
+  "engineFamily": "Pratola Serra",
   "cylinders": 5,
   "cylinderLayout": "em linha",
   "valves": 20,

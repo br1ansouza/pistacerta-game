@@ -21,6 +21,7 @@
   "drivetrain": "dianteira",
   "bodyType": "hatch",
   "engineCode": "E7J",
+  "engineFamily": "Série E",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

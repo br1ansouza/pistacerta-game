@@ -18,8 +18,11 @@
     "unit": "kgfm"
   },
   "aspiration": "turbo",
+  "drivetrain": "integral",
+  "drivetrainSystem": "S-AWC",
   "bodyType": "sedã",
   "engineCode": "4B11T",
+  "engineFamily": "4B1",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

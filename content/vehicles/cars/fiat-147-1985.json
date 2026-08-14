@@ -20,6 +20,7 @@
   "transmission": "manual",
   "drivetrain": "dianteira",
   "bodyType": "hatch",
+  "engineFamily": "Fiasa",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

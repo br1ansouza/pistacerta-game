@@ -21,6 +21,7 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "hatch",
+  "engineFamily": "B38",
   "cylinders": 3,
   "cylinderLayout": "em linha",
   "valves": 12,

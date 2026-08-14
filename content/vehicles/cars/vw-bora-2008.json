@@ -20,6 +20,7 @@
   "transmission": "automático",
   "drivetrain": "dianteira",
   "bodyType": "sedã",
+  "engineFamily": "EA113",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 8,

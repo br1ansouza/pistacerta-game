@@ -11,8 +11,10 @@ type Patch = {
   aspiration?: string;
   transmission?: string;
   drivetrain?: string;
+  drivetrainSystem?: string;
   bodyType?: string;
   engineCode?: string;
+  engineFamily?: string;
   cylinders?: number;
   valves?: number;
   doors?: number;
@@ -43,7 +45,7 @@ const CLUES = [
   'transmission',
   'drivetrain',
   'bodyType',
-  'engineCode',
+  'engineFamily',
 ];
 
 const MEASUREMENTS: Record<string, string> = { power: 'cv', torque: 'kgfm' };

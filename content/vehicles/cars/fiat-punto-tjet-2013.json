@@ -16,8 +16,9 @@
     "unit": "kgfm"
   },
   "aspiration": "turbo",
+  "drivetrain": "dianteira",
   "bodyType": "hatch",
-  "engineCode": "T-Jet",
+  "engineFamily": "FIRE (T-Jet)",
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,

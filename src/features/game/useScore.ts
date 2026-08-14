@@ -1,5 +1,4 @@
 import { useCallback, useState } from 'react';
-import type { RoundPoints } from '@/domain/round/points';
 import type { GameMode, Outcome } from '@/domain/round/round.types';
 
 export type Score = { points: number; correct: number; incorrect: number };
@@ -45,7 +44,7 @@ export function useScore(mode: GameMode) {
   const [score, setScore] = useState<Score>(() => read(mode));
 
   const record = useCallback(
-    (outcome: Outcome, roundPoints: RoundPoints) => {
+    (outcome: Outcome, roundPoints: number) => {
       setScore((current) => {
         const next: Score =
           outcome === 'correct'

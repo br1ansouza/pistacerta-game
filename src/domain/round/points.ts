@@ -1,19 +1,12 @@
 import type { Outcome } from './round.types';
 
-export type RoundPoints = 1 | 2 | 3;
+export function pointsForRemainingClues(revealedCount: number, totalCount: number): number {
+  const total = Math.max(0, Math.floor(totalCount));
+  const revealed = Math.max(0, Math.min(Math.floor(revealedCount), total));
 
-export function pointsForRevealedClues(revealedCount: number): RoundPoints {
-  if (revealedCount <= 2) {
-    return 3;
-  }
-
-  if (revealedCount <= 4) {
-    return 2;
-  }
-
-  return 1;
+  return Math.max(1, total - revealed);
 }
 
-export function earnedPoints(outcome: Outcome, revealedCount: number): number {
-  return outcome === 'correct' ? pointsForRevealedClues(revealedCount) : 0;
+export function earnedPoints(outcome: Outcome, revealedCount: number, totalCount: number): number {
+  return outcome === 'correct' ? pointsForRemainingClues(revealedCount, totalCount) : 0;
 }

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowLeft } from '@untitledui/icons';
 import { hasMoreClues, visibleClues } from '@/domain/clues/clue-engine';
-import { earnedPoints, pointsForRevealedClues } from '@/domain/round/points';
+import { earnedPoints, pointsForRemainingClues } from '@/domain/round/points';
 import type { GameMode } from '@/domain/round/round.types';
 import { AnswerControls } from './AnswerControls';
 import { AnswerRevealBar } from './AnswerRevealBar';
@@ -38,7 +38,10 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
     }
 
     scoredToken.current = state.round.token;
-    record(state.outcome, pointsForRevealedClues(state.round.revealedCount));
+    record(
+      state.outcome,
+      pointsForRemainingClues(state.round.revealedCount, state.round.board.progressive.length),
+    );
   }, [state, record]);
 
   const playing = state.status === 'playing' || state.status === 'revealing';
@@ -164,7 +167,11 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
         <VehicleReveal
           identity={state.identity}
           outcome={state.outcome}
-          pointsAwarded={earnedPoints(state.outcome, state.round.revealedCount)}
+          pointsAwarded={earnedPoints(
+            state.outcome,
+            state.round.revealedCount,
+            state.round.board.progressive.length,
+          )}
           clues={visibleClues(state.round.board, state.round.board.progressive.length)}
           onNextRound={startNextRound}
           onBackHome={onBackHome}

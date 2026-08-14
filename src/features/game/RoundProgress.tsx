@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { pointsForRevealedClues } from '@/domain/round/points';
+import { pointsForRemainingClues } from '@/domain/round/points';
 
 type RoundProgressProps = {
   revealed: number;
@@ -11,26 +11,30 @@ function pointLabel(points: number): string {
 }
 
 function progressMessage(revealed: number, total: number): string {
-  if (revealed >= total) {
-    return 'Todas as pistas foram reveladas.';
+  if (total <= 0) {
+    return 'Esta rodada não possui pistas extras; o acerto vale 1 ponto.';
   }
 
-  const points = pointsForRevealedClues(revealed);
-  const nextPoints = pointsForRevealedClues(revealed + 1);
+  if (revealed >= total) {
+    return 'Todas as pistas foram reveladas; o acerto ainda vale 1 ponto.';
+  }
+
+  const points = pointsForRemainingClues(revealed, total);
+  const nextPoints = pointsForRemainingClues(revealed + 1, total);
 
   if (revealed === 0) {
-    return 'As duas primeiras pistas extras não reduzem seus pontos.';
+    return 'Cada pista extra que sobrar vale 1 ponto; todo acerto vale ao menos 1.';
   }
 
   if (nextPoints < points) {
     return `A próxima pista reduz a rodada para ${pointLabel(nextPoints)}.`;
   }
 
-  return `A próxima pista mantém a rodada em ${pointLabel(points)}.`;
+  return 'A pontuação já está no mínimo de 1 ponto.';
 }
 
 export function RoundProgress({ revealed, total }: RoundProgressProps) {
-  const points = pointsForRevealedClues(revealed);
+  const points = pointsForRemainingClues(revealed, total);
   const percentage = total > 0 ? (revealed / total) * 100 : 0;
 
   return (

@@ -53,14 +53,13 @@ function report(vehicles: Vehicle[]): number {
       warnings.push(`${vehicle.slug}: foto de mercado global — ${vehicle.image.depicts}.`);
     }
 
-    const isBundledPressImage =
-      vehicle.image?.source === 'press-kit' && vehicle.image.src.startsWith('vehicles/');
+    const isBundledVehicleImage = vehicle.image?.src.startsWith('vehicles/');
 
     if (
       vehicle.kind !== 'car' &&
       vehicle.image &&
       !vehicle.image.src.startsWith('https://') &&
-      !isBundledPressImage
+      !isBundledVehicleImage
     ) {
       console.error(`✖ ${vehicle.slug}: foto deve usar uma URL HTTPS externa.`);
       errors += 1;

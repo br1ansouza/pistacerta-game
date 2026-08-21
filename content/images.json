@@ -971,7 +971,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Continental_GT_650.jpg"
   },
   "royal-enfield-hunter-350-2024": {
-    "src": "vehicles/royal-enfield-hunter-350-florianopolis.jpg",
+    "src": "vehicles/royal-enfield-hunter-350-florianopolis-game.jpg",
     "source": "press-kit",
     "market": "br",
     "depicts": "Royal Enfield Hunter 350 fotografada em Florianópolis, Santa Catarina",
@@ -1440,11 +1440,11 @@
     "sourceUrl": "https://www.press.bmwgroup.com/brazil/article/detail/T0297618PT/novas-bmw-r-1250-gs-e-r-1250-gs-adventure-chegam-na-rede-bmw-motorrad-no-brasil"
   },
   "triumph-tiger-900-rally-pro-2024": {
-    "src": "https://img.olx.com.br/images/65/654603381887826.jpg",
-    "source": "classified",
+    "src": "vehicles/triumph-tiger-900-rally-pro-2024.jpg",
+    "source": "editorial",
     "market": "br",
-    "depicts": "Triumph Tiger 900 Rally Pro 2024 no mercado brasileiro",
-    "sourceUrl": "https://pr.olx.com.br/regiao-de-maringa/autos-e-pecas/motos/triumph-tiger-900-rallyp-2024-1486224669"
+    "depicts": "Triumph Tiger 900 Rally Pro 2024 em configuração off-road divulgada pela MotoMais",
+    "sourceUrl": "https://motomais.motosport.com.pt/wp-content/uploads/2023/12/triumph-tiger-900-rally-pro-offroad-statics-2024-044-1024x683.jpeg"
   },
   "kawasaki-z1000-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2014_Kawasaki_Z1000.JPG/1280px-2014_Kawasaki_Z1000.JPG",
@@ -1456,11 +1456,11 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014_Kawasaki_Z1000.JPG"
   },
   "suzuki-intruder-125-2016": {
-    "src": "https://img.olx.com.br/images/35/357626258072293.jpg",
-    "source": "classified",
+    "src": "vehicles/suzuki-intruder-125-2016.jpg",
+    "source": "editorial",
     "market": "br",
-    "depicts": "Suzuki Intruder 125 2016 oferecida no mercado brasileiro",
-    "sourceUrl": "https://sp.olx.com.br/sao-paulo-e-regiao/autos-e-pecas/motos/suzuki-intruder-125-2016-1475748416"
+    "depicts": "Suzuki Intruder 125 nacional fotografada no Brasil",
+    "sourceUrl": "https://motonline.com.br/noticia/wp-content/uploads/2021/02/Suzuki-Intruder-125.jpg"
   },
   "yamaha-dt-180z-1991": {
     "src": "https://static.suporteleiloes.com.br/consorciorioparkingcariocacom/bens/1818/arquivos/sl-bem-1818-68d0bc2c06076-68d0bc2c159e0.jpg",
@@ -1491,11 +1491,11 @@
     "sourceUrl": "https://quatrorodas.abril.com.br/noticias/galeria-xt-660r/"
   },
   "bmw-s1000rr-2024": {
-    "src": "https://mediapool.bmwgroup.com/cache/P9/202305/P90504400/P90504400-bmw-s-1000-rr-05-2023-2004px.jpg",
-    "source": "press-kit",
+    "src": "vehicles/bmw-s1000rr-2024.jpg",
+    "source": "editorial",
     "market": "br",
-    "depicts": "BMW S 1000 RR da geração 2023–2024 divulgada pela BMW Motorrad Brasil",
-    "sourceUrl": "https://www.press.bmwgroup.com/brazil/photo/detail/P90504400/BMW-S-1000-RR-05-2023"
+    "depicts": "BMW S 1000 RR da geração K67 2023–2024 em uso na pista",
+    "sourceUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXK98qMtUslh5_a7PJ4K_Cnt4JKlVhwulo-64fdU1dDUy2g9W6p2ZXW1En&s=10"
   },
   "triumph-daytona-675r-2015": {
     "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2016/11/20130515-triumph-daytona-01.jpeg",

@@ -16,7 +16,7 @@ export function VehicleImage({ identity }: VehicleImageProps) {
           aria-hidden
           className="pixelated relative h-20 w-20 opacity-25"
         />
-        <p className="text-chalk-500 relative text-[0.7rem]">sem foto para este automóvel</p>
+        <p className="text-chalk-500 relative text-[0.7rem]">sem foto para este veículo</p>
       </div>
     );
   }

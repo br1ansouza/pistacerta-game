@@ -1,0 +1,33 @@
+{
+  "slug": "yamaha-dt-180z-1991",
+  "kind": "motorcycle",
+  "brand": "Yamaha",
+  "model": "DT 180Z",
+  "story": "Leve, valente e dona do cheiro inconfundível do dois-tempos, abriu trilhas e ruas para uma geração de brasileiros.",
+  "year": 1991,
+  "origin": "nacional",
+  "countryOfOrigin": "Japão",
+  "style": "trail",
+  "fuel": "gasolina",
+  "displacement": { "value": 176.4, "unit": "cm³" },
+  "power": { "value": 16.7, "unit": "cv" },
+  "torque": { "value": 1.74, "unit": "kgfm" },
+  "transmission": "manual",
+  "finalDrive": "corrente",
+  "engineCycle": "2 tempos",
+  "cooling": "ar",
+  "cylinders": 1,
+  "cylinderLayout": "em linha",
+  "weight": { "value": 102, "unit": "kg" },
+  "weightCondition": "seco",
+  "seatHeight": { "value": 860, "unit": "mm" },
+  "abs": false,
+  "fipe": {
+    "value": 5639,
+    "referenceMonth": "2026-08",
+    "fipeCode": "827006-6"
+  },
+  "specSource": "motonline",
+  "specSourceUrl": "https://motonline.com.br/noticia/dt-180-ficha-tecnica-e-review-da-precursora-das-trilhas/",
+  "active": true
+}

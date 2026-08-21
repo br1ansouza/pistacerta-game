@@ -92,7 +92,7 @@ export function CreditsScreen({ onBack }: CreditsScreenProps) {
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Buscar automóvel, autor ou licença"
+              placeholder="Buscar veículo, autor ou licença"
               className="text-chalk-100 placeholder:text-chalk-500 min-w-0 flex-1 bg-transparent text-sm outline-none"
             />
             <span className="text-chalk-500 font-display text-[0.65rem] tabular-nums">

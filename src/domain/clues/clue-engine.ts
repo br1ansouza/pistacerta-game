@@ -1,12 +1,14 @@
 import type { SafeVehicle } from '../vehicle/safe-vehicle.ts';
 import type { VehicleKind } from '../vehicle/vehicle.schema.ts';
 import { CAR_CLUE_DEFINITIONS } from './clue-definitions.car.ts';
+import { MOTORCYCLE_CLUE_DEFINITIONS } from './clue-definitions.motorcycle.ts';
 import { TRUCK_CLUE_DEFINITIONS } from './clue-definitions.truck.ts';
 import type { ClueDefinition, ResolvedClue } from './clue.types.ts';
 
 const DEFINITIONS_BY_KIND: Record<VehicleKind, ClueDefinition<never>[]> = {
   car: CAR_CLUE_DEFINITIONS as ClueDefinition<never>[],
   truck: TRUCK_CLUE_DEFINITIONS as ClueDefinition<never>[],
+  motorcycle: MOTORCYCLE_CLUE_DEFINITIONS as ClueDefinition<never>[],
 };
 
 export type ClueBoard = {

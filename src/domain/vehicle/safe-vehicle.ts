@@ -1,4 +1,4 @@
-import type { Car, Truck, Vehicle } from './vehicle.schema.ts';
+import type { Car, Motorcycle, Truck, Vehicle } from './vehicle.schema.ts';
 
 const SHARED_FIELDS = [
   'kind',
@@ -25,6 +25,16 @@ const CAR_ONLY_FIELDS = [
   'doors',
 ] as const;
 const TRUCK_ONLY_FIELDS = ['axleConfigs', 'cabins', 'gvwr', 'gcwr'] as const;
+const MOTORCYCLE_ONLY_FIELDS = [
+  'style',
+  'engineCycle',
+  'cooling',
+  'finalDrive',
+  'weight',
+  'weightCondition',
+  'seatHeight',
+  'abs',
+] as const;
 
 export const CAR_CLUE_FIELDS = [
   ...SHARED_FIELDS,
@@ -36,14 +46,33 @@ export const TRUCK_CLUE_FIELDS = [
   ...TRUCK_ONLY_FIELDS,
 ] as const satisfies readonly (keyof Truck)[];
 
+export const MOTORCYCLE_CLUE_FIELDS = [
+  'kind',
+  'year',
+  'origin',
+  'fipe',
+  'fuel',
+  'displacement',
+  'power',
+  'torque',
+  'transmission',
+  'engineCode',
+  'cylinders',
+  'cylinderLayout',
+  'valves',
+  ...MOTORCYCLE_ONLY_FIELDS,
+] as const satisfies readonly (keyof Motorcycle)[];
+
 export const CLUE_FIELDS_BY_KIND = {
   car: CAR_CLUE_FIELDS,
   truck: TRUCK_CLUE_FIELDS,
+  motorcycle: MOTORCYCLE_CLUE_FIELDS,
 } as const;
 
 export type SafeCar = Pick<Car, (typeof CAR_CLUE_FIELDS)[number]>;
 export type SafeTruck = Pick<Truck, (typeof TRUCK_CLUE_FIELDS)[number]>;
-export type SafeVehicle = SafeCar | SafeTruck;
+export type SafeMotorcycle = Pick<Motorcycle, (typeof MOTORCYCLE_CLUE_FIELDS)[number]>;
+export type SafeVehicle = SafeCar | SafeTruck | SafeMotorcycle;
 
 export type VehicleIdentity = {
   brand: string;

@@ -13,6 +13,10 @@ const CLUE_FIELDS = [
   'aspiration',
   'transmission',
   'engineFamily',
+  'style',
+  'engineCycle',
+  'cooling',
+  'finalDrive',
 ] as const;
 
 const MINIMUM_CLUES = 5;
@@ -49,8 +53,8 @@ function report(vehicles: Vehicle[]): number {
       warnings.push(`${vehicle.slug}: foto de mercado global — ${vehicle.image.depicts}.`);
     }
 
-    if (vehicle.kind === 'truck' && vehicle.image && !vehicle.image.src.startsWith('https://')) {
-      console.error(`✖ ${vehicle.slug}: foto de caminhão deve usar uma URL HTTPS externa.`);
+    if (vehicle.kind !== 'car' && vehicle.image && !vehicle.image.src.startsWith('https://')) {
+      console.error(`✖ ${vehicle.slug}: foto deve usar uma URL HTTPS externa.`);
       errors += 1;
     }
 

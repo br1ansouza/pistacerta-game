@@ -2,7 +2,13 @@ import { z } from 'zod';
 
 export const FUEL_TYPES = ['gasolina', 'etanol', 'flex', 'diesel', 'elétrico', 'híbrido'] as const;
 export const ASPIRATION_TYPES = ['aspirado', 'turbo', 'compressor'] as const;
-export const TRANSMISSION_TYPES = ['manual', 'automático', 'automatizado', 'cvt'] as const;
+export const TRANSMISSION_TYPES = [
+  'manual',
+  'automático',
+  'automatizado',
+  'semiautomático',
+  'cvt',
+] as const;
 export const DRIVETRAIN_TYPES = ['dianteira', 'traseira', 'integral'] as const;
 export const BODY_TYPES = [
   'hatch',
@@ -23,8 +29,24 @@ export const SPEC_SOURCES = [
   'fabricante',
   'fipe',
   'carros-na-web',
+  'motonline',
+  'moto-adventure',
+  'moto-com-br',
+  'motoo',
+  'flatout',
+  'o-carreteiro',
+  'literatura-especializada',
+  'concessionária',
 ] as const;
-export const IMAGE_SOURCES = ['wikimedia', 'flickr', 'press-kit', 'placeholder'] as const;
+export const IMAGE_SOURCES = [
+  'wikimedia',
+  'flickr',
+  'press-kit',
+  'editorial',
+  'classified',
+  'pinterest',
+  'placeholder',
+] as const;
 export const IMAGE_MARKETS = ['br', 'global'] as const;
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -64,6 +86,7 @@ const vehicleBaseShape = {
   countryOfOrigin: z.string().min(1).optional(),
   fipe: fipeSchema.nullable(),
   specSource: z.enum(SPEC_SOURCES),
+  specSourceUrl: z.url().optional(),
   active: z.boolean(),
 };
 
@@ -113,7 +136,48 @@ export const truckSchema = z.object({
   valves: z.number().int().positive().optional(),
 });
 
-export const vehicleSchema = z.discriminatedUnion('kind', [carSchema, truckSchema]);
+export const MOTORCYCLE_STYLES = [
+  'custom',
+  'café racer',
+  'big trail',
+  'speed',
+  'naked',
+  'clássica',
+  'trail',
+  'urbana',
+] as const;
+export const ENGINE_CYCLES = ['2 tempos', '4 tempos'] as const;
+export const COOLING_TYPES = ['ar', 'ar e óleo', 'ar e líquido', 'líquida'] as const;
+export const FINAL_DRIVE_TYPES = ['corrente', 'correia', 'cardã'] as const;
+export const WEIGHT_CONDITIONS = ['seco', 'ordem de marcha'] as const;
+
+export const motorcycleSchema = z.object({
+  ...vehicleBaseShape,
+  kind: z.literal('motorcycle'),
+  style: z.enum(MOTORCYCLE_STYLES),
+  fuel: z.enum(FUEL_TYPES).optional(),
+  displacement: measurementSchema('cm³'),
+  power: measurementSchema('cv').optional(),
+  torque: z.object({ value: z.number().positive(), unit: z.enum(['kgfm', 'Nm']) }).optional(),
+  transmission: z.enum(TRANSMISSION_TYPES).optional(),
+  finalDrive: z.enum(FINAL_DRIVE_TYPES).optional(),
+  engineCycle: z.enum(ENGINE_CYCLES),
+  cooling: z.enum(COOLING_TYPES).optional(),
+  engineCode: z.string().min(1).optional(),
+  cylinders: z.number().int().positive().optional(),
+  cylinderLayout: z.enum(CYLINDER_LAYOUTS).optional(),
+  valves: z.number().int().positive().optional(),
+  weight: measurementSchema('kg').optional(),
+  weightCondition: z.enum(WEIGHT_CONDITIONS).optional(),
+  seatHeight: measurementSchema('mm').optional(),
+  abs: z.boolean().optional(),
+});
+
+export const vehicleSchema = z.discriminatedUnion('kind', [
+  carSchema,
+  truckSchema,
+  motorcycleSchema,
+]);
 
 export type Image = z.infer<typeof imageSchema>;
 export type Fipe = z.infer<typeof fipeSchema>;
@@ -121,7 +185,8 @@ export const imageDictionarySchema = z.record(z.string(), imageSchema);
 
 export type Car = z.infer<typeof carSchema> & { image: Image | null };
 export type Truck = z.infer<typeof truckSchema> & { image: Image | null };
-export type Vehicle = Car | Truck;
+export type Motorcycle = z.infer<typeof motorcycleSchema> & { image: Image | null };
+export type Vehicle = Car | Truck | Motorcycle;
 export type VehicleKind = Vehicle['kind'];
 
 export const IDENTITY_FIELDS = ['brand', 'model', 'generation', 'story', 'image'] as const;

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ComponentType, type SVGProps } from 'react';
 import { flushSync } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Car01, Truck01 } from '@untitledui/icons';
@@ -36,6 +36,32 @@ const KIND_COPY: Record<
     duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
     sprite: 'truck.gif',
   },
+  motorcycle: {
+    label: 'Motos',
+    garage: 'Garagem de motos',
+    tagline: 'Pistas progressivas. Uma moto. Descubra antes que elas acabem.',
+    solo: 'Quatro alternativas no fim. A moto só aparece quando você responde.',
+    duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
+    sprite: 'motorcycle.gif',
+  },
+};
+
+const KIND_GLOW: Record<VehicleKind, string> = {
+  car: 'from-flame-600/15',
+  truck: 'from-mint-400/15',
+  motorcycle: 'from-sky-400/15',
+};
+
+const KIND_MARKER: Record<VehicleKind, string> = {
+  car: 'bg-flame-500',
+  truck: 'bg-mint-400',
+  motorcycle: 'bg-sky-400',
+};
+
+const KIND_SPRITE: Record<VehicleKind, string> = {
+  car: 'h-44 w-44 drop-shadow-[0_12px_24px_rgba(232,69,44,0.32)] sm:h-52 sm:w-52',
+  truck: 'h-48 w-48 drop-shadow-[0_12px_24px_rgba(61,220,151,0.28)] sm:h-56 sm:w-56',
+  motorcycle: 'h-48 w-48 drop-shadow-[0_12px_24px_rgba(127,212,245,0.3)] sm:h-56 sm:w-56',
 };
 
 const MODES: { mode: GameMode; title: string; accent: string }[] = [
@@ -43,9 +69,20 @@ const MODES: { mode: GameMode; title: string; accent: string }[] = [
   { mode: 'duo', title: 'Em dupla', accent: 'text-sky-400' },
 ];
 
-const CATEGORIES: { kind: VehicleKind; icon: typeof Car01 }[] = [
+function MotorcycleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
+      <circle cx="5" cy="17" r="3" />
+      <circle cx="19" cy="17" r="3" />
+      <path d="M8 17h3l2.5-5H17l2 5M9 17l-2.5-7H4m4-1h4l2 3m1-3h3" />
+    </svg>
+  );
+}
+
+const CATEGORIES: { kind: VehicleKind; icon: ComponentType<{ className?: string }> }[] = [
   { kind: 'car', icon: Car01 },
   { kind: 'truck', icon: Truck01 },
+  { kind: 'motorcycle', icon: MotorcycleIcon },
 ];
 
 function playShutter(shutter: HTMLDivElement, from: number, to: number, duration: number) {
@@ -133,16 +170,11 @@ export function HomeScreen({ kind, onSelectKind, onSelectMode, onOpenCredits }: 
           <div className="border-ink-700 bg-ink-900/70 shadow-hard relative h-52 overflow-hidden border-2 sm:h-60">
             <div className="garage-grid pointer-events-none absolute inset-0" />
             <div
-              className={`pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent ${
-                kind === 'truck' ? 'from-mint-400/15' : 'from-flame-600/15'
-              }`}
+              className={`pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent ${KIND_GLOW[kind]}`}
             />
 
             <div className="absolute top-3 left-3 z-20 flex items-center gap-2">
-              <span
-                className={`size-2 ${kind === 'truck' ? 'bg-mint-400' : 'bg-flame-500'}`}
-                aria-hidden
-              />
+              <span className={`size-2 ${KIND_MARKER[kind]}`} aria-hidden />
               <span className="text-chalk-500 font-display text-[0.6rem] tracking-[0.18em] uppercase">
                 <span className="sm:hidden">{copy.label}</span>
                 <span className="hidden sm:inline">{copy.garage}</span>
@@ -180,18 +212,14 @@ export function HomeScreen({ kind, onSelectKind, onSelectMode, onOpenCredits }: 
                   : { opacity: 0, y: 10, scale: 0.98 }
               }
               transition={{ ...motionSpring, delay: 0.05 }}
-              className={`pixelated absolute inset-0 m-auto object-contain ${
-                kind === 'truck'
-                  ? 'h-48 w-48 drop-shadow-[0_12px_24px_rgba(61,220,151,0.28)] sm:h-56 sm:w-56'
-                  : 'h-44 w-44 drop-shadow-[0_12px_24px_rgba(232,69,44,0.32)] sm:h-52 sm:w-52'
-              }`}
+              className={`pixelated absolute inset-0 m-auto object-contain ${KIND_SPRITE[kind]}`}
             />
 
             <AnimatePresence>
               {loadedSprite !== kind && (
                 <motion.div
                   role="status"
-                  aria-label="Carregando automóvel"
+                  aria-label="Carregando veículo"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}

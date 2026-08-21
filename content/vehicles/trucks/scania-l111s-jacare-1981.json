@@ -1,0 +1,37 @@
+{
+  "slug": "scania-l111s-jacare-1981",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "L 111 S",
+  "version": "Jacaré",
+  "story": "O S identificava o DS11 turbo. Foi um dos cavalos mecânicos que transformaram o “Jacaré” em lenda das estradas brasileiras.",
+  "year": 1981,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "11.0",
+  "power": {
+    "value": 296,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 1090,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "cabins": ["Simples", "Leito"],
+  "gcwr": 45000,
+  "engineCode": "DS 11 L05",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "valves": 12,
+  "fipe": {
+    "value": 25521,
+    "referenceMonth": "2026-08",
+    "fipeCode": "513001-8"
+  },
+  "specSource": "o-carreteiro",
+  "specSourceUrl": "https://ocarreteiro.com.br/artigos-revistas/o-fator-jacare/",
+  "active": true
+}

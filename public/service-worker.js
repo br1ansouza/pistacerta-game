@@ -1,4 +1,4 @@
-const CACHE = 'pistacerta-v3.0';
+const CACHE = 'pistacerta-v3.0-local-images';
 const SHELL = new URL('index.html', self.registration.scope).pathname;
 
 self.addEventListener('install', (event) => {
@@ -61,7 +61,9 @@ self.addEventListener('fetch', (event) => {
       }
 
       return fetch(request).then((response) => {
-        if (response.ok) {
+        const contentType = response.headers.get('content-type') ?? '';
+
+        if (response.ok && !contentType.includes('text/html')) {
           const copy = response.clone();
           caches.open(CACHE).then((cache) => cache.put(request, copy));
         }

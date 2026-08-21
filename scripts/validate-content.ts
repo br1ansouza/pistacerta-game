@@ -1,3 +1,5 @@
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { loadAllVehicles, VehicleContentError } from '../src/domain/vehicle/vehicle.repository.ts';
 import { describeVehicle } from '../src/domain/vehicle/safe-vehicle.ts';
 import type { Vehicle } from '../src/domain/vehicle/vehicle.schema.ts';
@@ -54,6 +56,20 @@ function report(vehicles: Vehicle[]): number {
     }
 
     const isBundledVehicleImage = vehicle.image?.src.startsWith('vehicles/');
+
+    if (vehicle.kind === 'motorcycle' && vehicle.image && !isBundledVehicleImage) {
+      console.error(`✖ ${vehicle.slug}: moto deve usar uma imagem local em public/vehicles/.`);
+      errors += 1;
+    }
+
+    if (
+      isBundledVehicleImage &&
+      vehicle.image &&
+      !existsSync(join(process.cwd(), 'public', vehicle.image.src))
+    ) {
+      console.error(`✖ ${vehicle.slug}: asset local não encontrado (${vehicle.image.src}).`);
+      errors += 1;
+    }
 
     if (
       vehicle.kind !== 'car' &&

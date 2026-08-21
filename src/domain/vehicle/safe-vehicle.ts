@@ -75,6 +75,7 @@ export type SafeMotorcycle = Pick<Motorcycle, (typeof MOTORCYCLE_CLUE_FIELDS)[nu
 export type SafeVehicle = SafeCar | SafeTruck | SafeMotorcycle;
 
 export type VehicleIdentity = {
+  kind: Vehicle['kind'];
   brand: string;
   model: string;
   version: string | null;
@@ -100,6 +101,7 @@ export function toSafeVehicle(vehicle: Vehicle): SafeVehicle {
 
 export function toVehicleIdentity(vehicle: Vehicle): VehicleIdentity {
   return {
+    kind: vehicle.kind,
     brand: vehicle.brand,
     model: vehicle.model,
     version: vehicle.version ?? null,

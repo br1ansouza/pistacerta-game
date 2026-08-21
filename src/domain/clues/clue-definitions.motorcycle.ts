@@ -26,13 +26,6 @@ export const MOTORCYCLE_CLUE_DEFINITIONS: ClueDefinition<SafeMotorcycle>[] = [
         : null,
   },
   {
-    key: 'displacement',
-    label: 'Cilindrada',
-    group: 'initial',
-    resolve: (vehicle) =>
-      `${vehicle.displacement.value.toLocaleString('pt-BR')} ${vehicle.displacement.unit}`,
-  },
-  {
     key: 'power',
     label: 'Potência',
     group: 'initial',
@@ -45,6 +38,12 @@ export const MOTORCYCLE_CLUE_DEFINITIONS: ClueDefinition<SafeMotorcycle>[] = [
     group: 'initial',
     help: 'Ex.: custom, café racer, big trail, speed, naked, clássica, trail ou urbana.',
     resolve: (vehicle) => formatStyle(vehicle.style),
+  },
+  {
+    key: 'fuel',
+    label: 'Combustível',
+    group: 'initial',
+    resolve: (vehicle) => (vehicle.fuel ? capitalize(vehicle.fuel) : null),
   },
   {
     key: 'origin',
@@ -135,6 +134,13 @@ export const MOTORCYCLE_CLUE_DEFINITIONS: ClueDefinition<SafeMotorcycle>[] = [
     label: 'Freios ABS',
     group: 'progressive',
     resolve: (vehicle) => (vehicle.abs === undefined ? null : vehicle.abs ? 'Sim' : 'Não'),
+  },
+  {
+    key: 'displacement',
+    label: 'Cilindrada',
+    group: 'progressive',
+    resolve: (vehicle) =>
+      `${vehicle.displacement.value.toLocaleString('pt-BR')} ${vehicle.displacement.unit}`,
   },
   {
     key: 'engineCode',

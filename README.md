@@ -17,7 +17,7 @@
 
 O sistema sorteia um veículo e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, motor, aspiração, câmbio, tração, carroceria e arranjo dos cilindros. Quanto antes você acertar, melhor.
 
-Três categorias, com baralhos separados: **98 carros**, **52 caminhões** e **26 motos**, todos com presença real no Brasil ou na América do Sul. Os ícones no canto superior direito trocam de garagem.
+Três categorias, com baralhos separados: **98 carros**, **52 caminhões** e **27 motos**, todos com presença real no Brasil ou na América do Sul. Os ícones no canto superior direito trocam de garagem.
 
 Nos caminhões as pistas mudam de acordo: trações disponíveis (4x2, 4x4, 6x2, 6x4, 8x2, 8x4), PBT, PBTC e as cabines disponíveis.
 
@@ -100,7 +100,7 @@ Cada veículo é um JSON em `content/vehicles/cars/`, `content/vehicles/trucks/`
 
 As fotos ficam em `content/images.json`, quase todas apontando para o Wikimedia Commons ou Flickr sob licença livre. Cada uma declara `market` (`br` ou `global`) e `depicts` — o que a imagem mostra de verdade —, e o validador reprova veículo ativo sem foto conferida. Foi assim que caíram um Escort RS Cosworth europeu passando por XR3 e um Camaro 1969 no lugar do SS 2018.
 
-As fotos de caminhões e motos usam somente URLs HTTPS externas. Dois carros sem nenhuma foto externa adequada ainda usam imagem de imprensa hospedada em `public/vehicles/`, com autor e origem registrados.
+As fotos de caminhões e motos priorizam URLs HTTPS externas. A Hunter 350 usa uma foto brasileira cedida para o jogo e hospedada em `public/vehicles/`; dois carros sem foto externa adequada também usam imagens de imprensa locais, sempre com autor e origem registrados.
 
 ## Arquitetura
 

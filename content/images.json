@@ -971,13 +971,12 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Enfield_Continental_GT_650.jpg"
   },
   "royal-enfield-hunter-350-2024": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Hunter_350_side_view_India_Model.png/960px-Hunter_350_side_view_India_Model.png",
-    "source": "wikimedia",
-    "market": "global",
-    "depicts": "Royal Enfield Hunter 350 Dapper, mesma configuração-base vendida no Brasil",
-    "author": "Pintu dasaundhi",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hunter_350_side_view_India_Model.png"
+    "src": "vehicles/royal-enfield-hunter-350-florianopolis.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Royal Enfield Hunter 350 fotografada em Florianópolis, Santa Catarina",
+    "author": "Brian de Souza",
+    "sourceUrl": "https://drive.google.com/file/d/1W3Kj_ZN8EuD9rVW1kwsR8PsXWB_MbGzS/view"
   },
   "scania-l111-jacare-1978": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/1978_Scania_LS111.jpg/960px-1978_Scania_LS111.jpg",
@@ -1418,25 +1417,27 @@
     "sourceUrl": "https://autopapo.com.br/noticia/5-caminhoes-bicudos-brasil/"
   },
   "honda-cbx-750f-indy-1990": {
-    "src": "https://img.olx.com.br/images/45/453557836768094.jpg",
-    "source": "classified",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/7Galo_Indy_94.jpg",
+    "source": "wikimedia",
     "market": "br",
-    "depicts": "Honda CBX 750F Indy 1990, a Sete Galo brasileira",
-    "sourceUrl": "https://ma.olx.com.br/regiao-de-sao-luis/autos-e-pecas/motos/honda-cbx-750f-indy-7-galo-documentacao-ok-1464604108"
+    "depicts": "Honda CBX 750F Indy nacional, da geração 1990–1994",
+    "author": "Marcoscm",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:7Galo_Indy_94.jpg"
   },
   "yamaha-rd-350r-viuva-negra-1992": {
-    "src": "https://armazemdovovo.com.br/images/anuncio/avv-yamaha-rd-350-r-venda-h8ba5e9/foto-seq-23-644499080-avv-185548164-dt-17-img-1018-70049191.jpg?capa=1761251538",
+    "src": "https://i0.wp.com/velocemotori.com.br/wp-content/uploads/2025/09/YAMAHA-01.jpg?fit=1200%2C800&ssl=1",
     "source": "classified",
     "market": "br",
-    "depicts": "Yamaha RD 350R 1992 brasileira, conhecida como Viúva Negra",
-    "sourceUrl": "https://armazemdovovo.com.br/anuncio/avv-yamaha-rd-350-r-venda-h8ba5e9"
+    "depicts": "Yamaha RD 350R 1992 nacional, a última evolução brasileira da Viúva Negra",
+    "sourceUrl": "https://velocemotori.com.br/carros/yamaha-rd-350-r-1992/"
   },
   "bmw-r1250gs-adventure-premium-2020": {
-    "src": "https://img.olx.com.br/images/12/129551570883040.jpg",
-    "source": "classified",
+    "src": "https://mediapool.bmwgroup.com/cache/P9/202009/P90401160/P90401160-studio-takes-of-the-new-bmw-r-1250-gs-adventure-style-rallye-10-2020-2121px.jpg",
+    "source": "press-kit",
     "market": "br",
-    "depicts": "BMW R 1250 GS Adventure Premium 2020 no mercado brasileiro",
-    "sourceUrl": "https://am.olx.com.br/regiao-de-manaus/autos-e-pecas/motos/bmw-gs-1250-adventure-gs-1250-1448968477"
+    "depicts": "BMW R 1250 GS Adventure 2020, geração oferecida na configuração Premium brasileira",
+    "sourceUrl": "https://www.press.bmwgroup.com/brazil/article/detail/T0297618PT/novas-bmw-r-1250-gs-e-r-1250-gs-adventure-chegam-na-rede-bmw-motorrad-no-brasil"
   },
   "triumph-tiger-900-rally-pro-2024": {
     "src": "https://img.olx.com.br/images/65/654603381887826.jpg",
@@ -1446,11 +1447,13 @@
     "sourceUrl": "https://pr.olx.com.br/regiao-de-maringa/autos-e-pecas/motos/triumph-tiger-900-rallyp-2024-1486224669"
   },
   "kawasaki-z1000-2024": {
-    "src": "https://www.motoragora.com.br/wp-content/uploads/2023/08/kawasaki-z1000-2024-destaque.jpg",
-    "source": "editorial",
-    "market": "br",
-    "depicts": "Kawasaki Z1000 2024 em publicação brasileira",
-    "sourceUrl": "https://www.motoragora.com.br/web-stories/kawasaki-z-1000-2024/"
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2014_Kawasaki_Z1000.JPG/1280px-2014_Kawasaki_Z1000.JPG",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Kawasaki Z1000 de quarta geração, a mesma configuração-base comercializada no Brasil em 2024",
+    "author": "Dennis Bratland",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014_Kawasaki_Z1000.JPG"
   },
   "suzuki-intruder-125-2016": {
     "src": "https://img.olx.com.br/images/35/357626258072293.jpg",
@@ -1474,32 +1477,41 @@
     "sourceUrl": "https://www.usadosbr.com/motos-e-quadriciclos/honda/cg-125/titan-1404318610/1999-verde-itapolis-sao-paulo"
   },
   "honda-cbr600rr-2012": {
-    "src": "https://img.olx.com.br/images/33/338513114324849.jpg",
+    "src": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2026/202601/20260126/hondacbr_600rrwmimagem12535432128.jpg",
     "source": "classified",
     "market": "br",
-    "depicts": "Honda CBR 600RR 2012 original no mercado brasileiro",
-    "sourceUrl": "https://rs.olx.com.br/regioes-de-porto-alegre-torres-e-santa-cruz-do-sul/autos-e-pecas/motos/cbr-600rr-2012-honda-1379582202"
+    "depicts": "Honda CBR 600RR da geração 2009–2012 oferecida no mercado brasileiro",
+    "sourceUrl": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2026/202601/20260126/hondacbr_600rrwmimagem12535432128.jpg"
   },
   "yamaha-xt660r-tratorzao-2015": {
-    "src": "https://img.olx.com.br/images/22/225641867481384.jpg",
-    "source": "classified",
+    "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2016/10/624_yamaha_13.jpeg",
+    "source": "editorial",
     "market": "br",
-    "depicts": "Yamaha XT 660R 2015 produzida e comercializada no Brasil",
-    "sourceUrl": "https://sp.olx.com.br/sao-paulo-e-regiao/autos-e-pecas/motos/yamaha-xt-660-r-2015-branca-1490093898"
+    "depicts": "Yamaha XT 660R nacional em avaliação da Quatro Rodas",
+    "sourceUrl": "https://quatrorodas.abril.com.br/noticias/galeria-xt-660r/"
   },
   "bmw-s1000rr-2024": {
-    "src": "https://img.olx.com.br/images/66/667503957202072.jpg",
-    "source": "classified",
+    "src": "https://mediapool.bmwgroup.com/cache/P9/202305/P90504400/P90504400-bmw-s-1000-rr-05-2023-2004px.jpg",
+    "source": "press-kit",
     "market": "br",
-    "depicts": "BMW S 1000 RR 2024 no mercado brasileiro",
-    "sourceUrl": "https://sp.olx.com.br/sao-paulo-e-regiao/autos-e-pecas/motos/bmw-s1000rr-2024-baixo-km-1410049425"
+    "depicts": "BMW S 1000 RR da geração 2023–2024 divulgada pela BMW Motorrad Brasil",
+    "sourceUrl": "https://www.press.bmwgroup.com/brazil/photo/detail/P90504400/BMW-S-1000-RR-05-2023"
   },
   "triumph-daytona-675r-2015": {
-    "src": "https://img.olx.com.br/images/32/325634743031937.jpg",
-    "source": "classified",
+    "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2016/11/20130515-triumph-daytona-01.jpeg",
+    "source": "editorial",
     "market": "br",
-    "depicts": "Triumph Daytona 675R 2015 anunciada em São Paulo",
-    "sourceUrl": "https://sp.olx.com.br/sao-paulo-e-regiao/autos-e-pecas/motos/triumph-daytona-675-128cv-1482511497"
+    "depicts": "Triumph Daytona 675R da geração 2013–2016 lançada no Brasil",
+    "sourceUrl": "https://quatrorodas.abril.com.br/noticias/galeria-triumph-daytona-675r/"
+  },
+  "ducati-996-matrix-reloaded-2001": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ducati_996_Matrix.jpg/1280px-Ducati_996_Matrix.jpg",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Ducati 996 pilotada por Trinity em Matrix Reloaded",
+    "author": "Shannon Hobbs",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ducati_996_Matrix.jpg"
   },
   "suzuki-gsxr750-srad-biker-boyz-2001": {
     "src": "https://i.pinimg.com/736x/cf/3e/24/cf3e24b5ece61d9cad72f6f1ef2caf86.jpg",

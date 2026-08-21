@@ -49,19 +49,25 @@ const KIND_COPY: Record<
 const KIND_GLOW: Record<VehicleKind, string> = {
   car: 'from-flame-600/15',
   truck: 'from-mint-400/15',
-  motorcycle: 'from-sky-400/15',
+  motorcycle: 'from-crimson-700/20',
 };
 
 const KIND_MARKER: Record<VehicleKind, string> = {
   car: 'bg-flame-500',
   truck: 'bg-mint-400',
-  motorcycle: 'bg-sky-400',
+  motorcycle: 'bg-flame-500',
+};
+
+const KIND_GARAGE_TINT: Record<VehicleKind, string> = {
+  car: '',
+  truck: '',
+  motorcycle: 'bg-crimson-700/10',
 };
 
 const KIND_SPRITE: Record<VehicleKind, string> = {
   car: 'h-44 w-44 drop-shadow-[0_12px_24px_rgba(232,69,44,0.32)] sm:h-52 sm:w-52',
   truck: 'h-48 w-48 drop-shadow-[0_12px_24px_rgba(61,220,151,0.28)] sm:h-56 sm:w-56',
-  motorcycle: 'h-48 w-48 drop-shadow-[0_12px_24px_rgba(127,212,245,0.3)] sm:h-56 sm:w-56',
+  motorcycle: 'h-48 w-48 drop-shadow-[0_12px_24px_rgba(232,69,44,0.36)] sm:h-56 sm:w-56',
 };
 
 const MODES: { mode: GameMode; title: string; accent: string }[] = [
@@ -168,6 +174,7 @@ export function HomeScreen({ kind, onSelectKind, onSelectMode, onOpenCredits }: 
 
         <section className="flex flex-col gap-4" aria-label="Categoria do jogo">
           <div className="border-ink-700 bg-ink-900/70 shadow-hard relative h-52 overflow-hidden border-2 sm:h-60">
+            <div className={`pointer-events-none absolute inset-0 ${KIND_GARAGE_TINT[kind]}`} />
             <div className="garage-grid pointer-events-none absolute inset-0" />
             <div
               className={`pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent ${KIND_GLOW[kind]}`}
@@ -181,7 +188,7 @@ export function HomeScreen({ kind, onSelectKind, onSelectMode, onOpenCredits }: 
               </span>
             </div>
 
-            <div className="absolute top-3 right-3 z-20 flex gap-2">
+            <div className="absolute top-3 right-3 z-20 flex flex-col gap-2">
               {CATEGORIES.filter((category) => category.kind !== kind).map(
                 ({ kind: categoryKind, icon: Icon }) => (
                   <button

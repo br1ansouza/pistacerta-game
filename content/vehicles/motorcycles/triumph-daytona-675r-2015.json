@@ -1,0 +1,33 @@
+{
+  "slug": "triumph-daytona-675r-2015",
+  "kind": "motorcycle",
+  "brand": "Triumph",
+  "model": "Daytona 675R",
+  "year": 2015,
+  "origin": "nacional",
+  "countryOfOrigin": "Reino Unido",
+  "style": "speed",
+  "fuel": "gasolina",
+  "displacement": { "value": 675, "unit": "cm³" },
+  "power": { "value": 128, "unit": "cv" },
+  "torque": { "value": 7.5, "unit": "kgfm" },
+  "transmission": "manual",
+  "finalDrive": "corrente",
+  "engineCycle": "4 tempos",
+  "cooling": "líquida",
+  "cylinders": 3,
+  "cylinderLayout": "em linha",
+  "valves": 12,
+  "weight": { "value": 184, "unit": "kg" },
+  "weightCondition": "ordem de marcha",
+  "seatHeight": { "value": 830, "unit": "mm" },
+  "abs": true,
+  "fipe": {
+    "value": 40077,
+    "referenceMonth": "2026-08",
+    "fipeCode": "826039-7"
+  },
+  "specSource": "fabricante",
+  "specSourceUrl": "https://www.triumphmotorcycles.co.uk/media-library/8adfec516fec432e9a68b3d73b50e8d1.pdf",
+  "active": true
+}

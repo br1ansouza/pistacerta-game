@@ -86,7 +86,7 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
           transition={{ duration: 1.3, repeat: Infinity }}
           className="text-chalk-500 py-10 text-center text-sm"
         >
-          Sorteando um automóvel…
+          Sorteando um veículo…
         </motion.p>
       )}
 

@@ -1,0 +1,33 @@
+{
+  "slug": "yamaha-rd-350r-viuva-negra-1992",
+  "kind": "motorcycle",
+  "brand": "Yamaha",
+  "model": "RD 350 R",
+  "version": "(Viúva Negra)",
+  "year": 1992,
+  "origin": "nacional",
+  "style": "speed",
+  "fuel": "gasolina",
+  "displacement": { "value": 347, "unit": "cm³" },
+  "power": { "value": 55, "unit": "cv" },
+  "torque": { "value": 4.74, "unit": "kgfm" },
+  "transmission": "manual",
+  "finalDrive": "corrente",
+  "engineCycle": "2 tempos",
+  "cooling": "líquida",
+  "engineCode": "YPVS",
+  "cylinders": 2,
+  "cylinderLayout": "em linha",
+  "weight": { "value": 167, "unit": "kg" },
+  "weightCondition": "seco",
+  "seatHeight": { "value": 780, "unit": "mm" },
+  "abs": false,
+  "fipe": {
+    "value": 16670,
+    "referenceMonth": "2026-08",
+    "fipeCode": "827015-5"
+  },
+  "specSource": "motonline",
+  "specSourceUrl": "https://motonline.com.br/noticia/yamaha-rd-350-review-e-ficha-tecnica-da-viuva-negra/",
+  "active": true
+}

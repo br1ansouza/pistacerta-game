@@ -1,0 +1,38 @@
+{
+  "slug": "mercedes-ls1934-terezona-1990",
+  "kind": "truck",
+  "brand": "Mercedes-Benz",
+  "model": "LS 1934",
+  "version": "Terezona",
+  "story": "Último pesado Mercedes com cabine AGL, ganhou fama como “Terezona” e ofereceu até carenagem aerodinâmica de fábrica.",
+  "year": 1990,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "11.6",
+  "power": {
+    "value": 340,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 1450,
+    "unit": "Nm"
+  },
+  "aspiration": "turbo",
+  "transmission": "manual",
+  "axleConfigs": ["4x2"],
+  "cabins": ["Leito"],
+  "gvwr": 16000,
+  "gcwr": 45000,
+  "engineCode": "OM 355/6 LA Turbocooler",
+  "cylinders": 6,
+  "cylinderLayout": "em linha",
+  "valves": 12,
+  "fipe": {
+    "value": 45791,
+    "referenceMonth": "2026-08",
+    "fipeCode": "509127-6"
+  },
+  "specSource": "literatura-especializada",
+  "specSourceUrl": "https://fliphtml5.com/laxbu/aybq/LIVRO_CAMINH%C3%95ES__PG_CO/",
+  "active": true
+}

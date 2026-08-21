@@ -1,0 +1,33 @@
+{
+  "slug": "yamaha-xt660r-tratorzao-2015",
+  "kind": "motorcycle",
+  "brand": "Yamaha",
+  "model": "XT 660R",
+  "year": 2015,
+  "origin": "nacional",
+  "countryOfOrigin": "Japão",
+  "style": "trail",
+  "fuel": "gasolina",
+  "displacement": { "value": 659.7, "unit": "cm³" },
+  "power": { "value": 48, "unit": "cv" },
+  "torque": { "value": 5.95, "unit": "kgfm" },
+  "transmission": "manual",
+  "finalDrive": "corrente",
+  "engineCycle": "4 tempos",
+  "cooling": "líquida",
+  "cylinders": 1,
+  "cylinderLayout": "em linha",
+  "valves": 4,
+  "weight": { "value": 181, "unit": "kg" },
+  "weightCondition": "ordem de marcha",
+  "seatHeight": { "value": 865, "unit": "mm" },
+  "abs": false,
+  "fipe": {
+    "value": 42107,
+    "referenceMonth": "2026-08",
+    "fipeCode": "827050-3"
+  },
+  "specSource": "quatro-rodas",
+  "specSourceUrl": "https://quatrorodas.abril.com.br/noticias/ficha-tecnica-da-yamaha-xt-660r/",
+  "active": true
+}

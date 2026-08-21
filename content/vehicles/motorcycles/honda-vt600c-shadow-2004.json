@@ -1,0 +1,33 @@
+{
+  "slug": "honda-vt600c-shadow-2004",
+  "kind": "motorcycle",
+  "brand": "Honda",
+  "model": "VT 600C Shadow",
+  "year": 2004,
+  "origin": "nacional",
+  "countryOfOrigin": "Japão",
+  "style": "custom",
+  "fuel": "gasolina",
+  "displacement": { "value": 583, "unit": "cm³" },
+  "power": { "value": 39, "unit": "cv" },
+  "torque": { "value": 5.1, "unit": "kgfm" },
+  "transmission": "manual",
+  "finalDrive": "corrente",
+  "engineCycle": "4 tempos",
+  "cooling": "líquida",
+  "cylinders": 2,
+  "cylinderLayout": "V",
+  "valves": 6,
+  "weight": { "value": 199, "unit": "kg" },
+  "weightCondition": "seco",
+  "seatHeight": { "value": 690, "unit": "mm" },
+  "abs": false,
+  "fipe": {
+    "value": 26348,
+    "referenceMonth": "2026-08",
+    "fipeCode": "811038-7"
+  },
+  "specSource": "motonline",
+  "specSourceUrl": "https://motonline.com.br/noticia/review-honda-shadow-600-ficha-tecnica-consumo-e-mais/",
+  "active": true
+}

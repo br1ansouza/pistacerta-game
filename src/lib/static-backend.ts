@@ -84,7 +84,7 @@ export async function startRoundStatic(
   const picked = pickFromDeck(candidates, readDeck(deck));
 
   if (!picked) {
-    throw new Error('Nenhum automóvel disponível');
+    throw new Error('Nenhum veículo disponível');
   }
 
   const entry = BY_SLUG.get(picked.vehicle.slug) as SealedVehicle;

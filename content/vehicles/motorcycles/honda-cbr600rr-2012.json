@@ -1,0 +1,33 @@
+{
+  "slug": "honda-cbr600rr-2012",
+  "kind": "motorcycle",
+  "brand": "Honda",
+  "model": "CBR 600RR",
+  "year": 2012,
+  "origin": "nacional",
+  "countryOfOrigin": "Japão",
+  "style": "speed",
+  "fuel": "gasolina",
+  "displacement": { "value": 599, "unit": "cm³" },
+  "power": { "value": 120, "unit": "cv" },
+  "torque": { "value": 6.73, "unit": "kgfm" },
+  "transmission": "manual",
+  "finalDrive": "corrente",
+  "engineCycle": "4 tempos",
+  "cooling": "líquida",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "weight": { "value": 186, "unit": "kg" },
+  "weightCondition": "ordem de marcha",
+  "seatHeight": { "value": 820, "unit": "mm" },
+  "abs": false,
+  "fipe": {
+    "value": 47791,
+    "referenceMonth": "2026-08",
+    "fipeCode": "811069-7"
+  },
+  "specSource": "quatro-rodas",
+  "specSourceUrl": "https://quatrorodas.abril.com.br/noticias/ficha-tecnica-honda-cbr-600rr/",
+  "active": true
+}

@@ -41,11 +41,14 @@ function normalize(text: string): string {
 
 async function main() {
   const args = process.argv.slice(2);
-  const vehicleType = args[0] === '--truck' ? 'trucks' : 'cars';
-  const [brandQuery, modelQuery, yearQuery] = vehicleType === 'trucks' ? args.slice(1) : args;
+  const typeFlag = args[0];
+  const vehicleType =
+    typeFlag === '--truck' ? 'trucks' : typeFlag === '--motorcycle' ? 'motorcycles' : 'cars';
+  const queryArgs = typeFlag === '--truck' || typeFlag === '--motorcycle' ? args.slice(1) : args;
+  const [brandQuery, modelQuery, yearQuery] = queryArgs;
 
   if (!brandQuery) {
-    console.error('uso: bun run fipe [--truck] <marca> [modelo] [ano]');
+    console.error('uso: bun run fipe [--truck|--motorcycle] <marca> [modelo] [ano]');
     process.exit(1);
   }
 

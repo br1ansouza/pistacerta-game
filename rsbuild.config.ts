@@ -42,7 +42,7 @@ export default defineConfig({
     title: 'PistaCerta',
     meta: {
       viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-      description: 'Descubra automóveis a partir de pistas progressivas.',
+      description: 'Descubra carros, caminhões e motos a partir de pistas progressivas.',
       'theme-color': '#7f56d9',
     },
     tags: [

@@ -73,7 +73,7 @@ export function VehicleReveal({
       {identity.story && (
         <aside className="border-flame-500/60 bg-flame-500/10 shadow-hard-sm border-2 px-4 py-3">
           <p className="text-flame-400 font-display text-[0.6rem] font-bold tracking-[0.16em] uppercase">
-            Fora de série brasileiro
+            Por que é especial
           </p>
           <p className="text-chalk-300 mt-1 text-xs leading-relaxed">{identity.story}</p>
         </aside>

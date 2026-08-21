@@ -51,7 +51,7 @@ function deckCookie(kind: string, deck: string): string {
 
 const roundSchema = z.object({
   mode: z.enum(['solo', 'duo']).default('solo'),
-  kind: z.enum(['car', 'truck']).default('car'),
+  kind: z.enum(['car', 'truck', 'motorcycle']).default('car'),
   deck: z.string().nullish().default(null),
 });
 
@@ -78,7 +78,7 @@ async function handleRound(request: Request, secret: string): Promise<Response> 
   const picked = pickFromDeck(pool, state.seen);
 
   if (!picked) {
-    return json({ error: 'Nenhum automóvel disponível' }, 503);
+    return json({ error: 'Nenhum veículo disponível' }, 503);
   }
 
   const { vehicle } = picked;
@@ -115,7 +115,7 @@ async function handleReveal(request: Request, secret: string): Promise<Response>
   const vehicle = VEHICLES.find((entry) => entry.slug === payload.slug);
 
   if (!vehicle) {
-    return json({ error: 'Automóvel não encontrado' }, 404);
+    return json({ error: 'Veículo não encontrado' }, 404);
   }
 
   return json({

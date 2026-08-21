@@ -47,6 +47,10 @@ function shuffle<T>(items: T[], random: () => number): T[] {
 }
 
 function categoryTier(answer: Vehicle, candidate: Vehicle): number {
+  if (answer.kind === 'motorcycle' && candidate.kind === 'motorcycle') {
+    return candidate.style === answer.style ? 0 : 1;
+  }
+
   if (answer.kind !== 'car' || candidate.kind !== 'car') {
     return 0;
   }
@@ -60,6 +64,13 @@ function categoryTier(answer: Vehicle, candidate: Vehicle): number {
   }
 
   return RELATED_BODY_TYPES[answer.bodyType]?.includes(candidate.bodyType) ? 1 : 2;
+}
+
+function displacementValue(vehicle: Vehicle): number | undefined {
+  if (!vehicle.displacement) return undefined;
+  return vehicle.kind === 'motorcycle'
+    ? vehicle.displacement.value / 1000
+    : Number(vehicle.displacement);
 }
 
 function relativeDistance(left: number | undefined, right: number | undefined): number {
@@ -83,17 +94,23 @@ function technicalDistance(answer: Vehicle, candidate: Vehicle): number {
 
   distance += relativeDistance(answer.power?.value, candidate.power?.value) * 2;
   distance += relativeDistance(answer.fipe?.value, candidate.fipe?.value) * 1.5;
-  distance += relativeDistance(
-    answer.displacement ? Number(answer.displacement) : undefined,
-    candidate.displacement ? Number(candidate.displacement) : undefined,
-  );
+  distance += relativeDistance(displacementValue(answer), displacementValue(candidate));
   distance += mismatch(answer.fuel, candidate.fuel, 0.4);
-  distance += mismatch(answer.aspiration, candidate.aspiration, 0.35);
   distance += mismatch(answer.transmission, candidate.transmission, 0.25);
+
+  if (answer.kind !== 'motorcycle' && candidate.kind !== 'motorcycle') {
+    distance += mismatch(answer.aspiration, candidate.aspiration, 0.35);
+  }
 
   if (answer.kind === 'car' && candidate.kind === 'car') {
     distance += mismatch(answer.drivetrain, candidate.drivetrain, 0.25);
     distance += mismatch(answer.doors, candidate.doors, 0.2);
+  }
+
+  if (answer.kind === 'motorcycle' && candidate.kind === 'motorcycle') {
+    distance += mismatch(answer.style, candidate.style, 0.8);
+    distance += mismatch(answer.engineCycle, candidate.engineCycle, 0.35);
+    distance += mismatch(answer.finalDrive, candidate.finalDrive, 0.2);
   }
 
   return distance;

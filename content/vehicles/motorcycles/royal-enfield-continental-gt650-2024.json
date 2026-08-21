@@ -1,0 +1,33 @@
+{
+  "slug": "royal-enfield-continental-gt650-2024",
+  "kind": "motorcycle",
+  "brand": "Royal Enfield",
+  "model": "Continental GT 650",
+  "year": 2024,
+  "origin": "nacional",
+  "countryOfOrigin": "Índia",
+  "style": "café racer",
+  "fuel": "gasolina",
+  "displacement": { "value": 647.95, "unit": "cm³" },
+  "power": { "value": 47, "unit": "cv" },
+  "torque": { "value": 52.3, "unit": "Nm" },
+  "transmission": "manual",
+  "finalDrive": "corrente",
+  "engineCycle": "4 tempos",
+  "cooling": "ar e óleo",
+  "cylinders": 2,
+  "cylinderLayout": "em linha",
+  "valves": 4,
+  "weight": { "value": 212, "unit": "kg" },
+  "weightCondition": "ordem de marcha",
+  "seatHeight": { "value": 820, "unit": "mm" },
+  "abs": true,
+  "fipe": {
+    "value": 27097,
+    "referenceMonth": "2026-08",
+    "fipeCode": "879017-5"
+  },
+  "specSource": "fabricante",
+  "specSourceUrl": "https://www.royalenfield.com/content/dam/open-pdf/royal-enfield-continental-gt-technical-specifications-brazil.pdf",
+  "active": true
+}

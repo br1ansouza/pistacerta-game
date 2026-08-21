@@ -14,7 +14,7 @@ import { readDeckDigests, signDeckToken, signRoundToken } from './_lib/round-tok
 
 const requestSchema = z.object({
   mode: z.enum(['solo', 'duo']).default('solo'),
-  kind: z.enum(['car', 'truck']).default('car'),
+  kind: z.enum(['car', 'truck', 'motorcycle']).default('car'),
   deck: z.string().nullish().default(null),
 });
 
@@ -41,7 +41,7 @@ export async function handleRound(request: Request): Promise<Response> {
   const picked = pickFromDeck(pool, state.seen);
 
   if (!picked) {
-    return errorResponse('Nenhum automóvel disponível', 503);
+    return errorResponse('Nenhum veículo disponível', 503);
   }
 
   const { vehicle } = picked;

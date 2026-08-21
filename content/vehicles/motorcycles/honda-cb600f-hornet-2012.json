@@ -1,0 +1,31 @@
+{
+  "slug": "honda-cb600f-hornet-2012",
+  "kind": "motorcycle",
+  "brand": "Honda",
+  "model": "CB 600F Hornet",
+  "year": 2012,
+  "origin": "nacional",
+  "style": "naked",
+  "fuel": "gasolina",
+  "displacement": { "value": 599.3, "unit": "cm³" },
+  "power": { "value": 102, "unit": "cv" },
+  "torque": { "value": 6.53, "unit": "kgfm" },
+  "transmission": "manual",
+  "finalDrive": "corrente",
+  "engineCycle": "4 tempos",
+  "cooling": "líquida",
+  "cylinders": 4,
+  "cylinderLayout": "em linha",
+  "valves": 16,
+  "weight": { "value": 188, "unit": "kg" },
+  "weightCondition": "seco",
+  "seatHeight": { "value": 800, "unit": "mm" },
+  "fipe": {
+    "value": 38007,
+    "referenceMonth": "2026-08",
+    "fipeCode": "811076-0"
+  },
+  "specSource": "quatro-rodas",
+  "specSourceUrl": "https://quatrorodas.abril.com.br/noticias/ficha-tecnica-honda-cb-600f-hornet/",
+  "active": true
+}

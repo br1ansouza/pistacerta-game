@@ -5,12 +5,13 @@ import {
   vehicleSchema,
   type Car,
   type Image,
+  type Motorcycle,
   type Truck,
   type Vehicle,
   type VehicleKind,
 } from './vehicle.schema.ts';
 
-type VehicleRecord = Omit<Car, 'image'> | Omit<Truck, 'image'>;
+type VehicleRecord = Omit<Car, 'image'> | Omit<Truck, 'image'> | Omit<Motorcycle, 'image'>;
 
 const CONTENT_ROOT = join(process.cwd(), 'content', 'vehicles');
 const IMAGES_PATH = join(process.cwd(), 'content', 'images.json');
@@ -18,6 +19,7 @@ const IMAGES_PATH = join(process.cwd(), 'content', 'images.json');
 const DIRECTORY_BY_KIND: Record<VehicleKind, string> = {
   car: 'cars',
   truck: 'trucks',
+  motorcycle: 'motorcycles',
 };
 
 export class VehicleContentError extends Error {

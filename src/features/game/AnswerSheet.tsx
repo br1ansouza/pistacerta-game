@@ -51,7 +51,7 @@ export function AnswerSheet({
         ref={panelRef}
         role="dialog"
         aria-modal="true"
-        aria-label="Escolha o automóvel"
+        aria-label="Escolha o veículo"
         tabIndex={-1}
         initial={{ y: 40, opacity: 0, scale: 0.98 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}

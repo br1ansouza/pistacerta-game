@@ -16,7 +16,7 @@ type PriceByCode = {
 
 type Vehicle = {
   slug: string;
-  kind: 'car' | 'truck';
+  kind: 'car' | 'truck' | 'motorcycle';
   brand: string;
   model: string;
   year: number;
@@ -26,6 +26,7 @@ type Vehicle = {
 const catalogs = [
   { directory: 'cars', apiType: 'cars', fuelCode: '1' },
   { directory: 'trucks', apiType: 'trucks', fuelCode: '3' },
+  { directory: 'motorcycles', apiType: 'motorcycles', fuelCode: '1' },
 ] as const;
 
 function parsePrice(price: string): number {

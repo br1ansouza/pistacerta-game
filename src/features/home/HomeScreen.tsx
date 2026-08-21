@@ -55,7 +55,7 @@ const KIND_GLOW: Record<VehicleKind, string> = {
 const KIND_MARKER: Record<VehicleKind, string> = {
   car: 'bg-flame-500',
   truck: 'bg-mint-400',
-  motorcycle: 'bg-flame-500',
+  motorcycle: 'bg-crimson-700',
 };
 
 const KIND_GARAGE_TINT: Record<VehicleKind, string> = {

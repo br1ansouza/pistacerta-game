@@ -2,7 +2,7 @@
 
 # PistaCerta
 
-**Jogo de adivinhação de veículos. Pistas progressivas, um carro, um caminhão — ou uma moto.**
+**Jogo de adivinhação de carros, caminhões e motos com pistas progressivas.**
 
 [**jogar →**](https://pistacerta.br1ansouza.workers.dev)
 
@@ -15,97 +15,122 @@
 
 </div>
 
-O sistema sorteia um veículo e mostra cinco pistas: ano, preço FIPE, combustível, cilindrada e potência. A cada clique vem mais uma — procedência, torque, motor, aspiração, câmbio, tração, carroceria e arranjo dos cilindros. Quanto antes você acertar, melhor.
+O jogo sorteia um veículo e mostra até cinco pistas iniciais. Cada pista extra reduz a pontuação da rodada.
 
-Três categorias, com baralhos separados: **98 carros**, **52 caminhões** e **27 motos**, todos com presença real no Brasil ou na América do Sul. Os ícones no canto superior direito trocam de garagem.
+O catálogo tem **177 veículos ativos**: **98 carros**, **52 caminhões** e **27 motos**. Cada categoria tem seu próprio baralho e suas próprias pistas.
 
-Nos caminhões as pistas mudam de acordo: trações disponíveis (4x2, 4x4, 6x2, 6x4, 8x2, 8x4), PBT, PBTC e as cabines disponíveis.
-
-Nas motos entra também o estilo — custom, café racer, big trail, speed, naked, clássica, trail ou urbana — além de ciclo do motor, refrigeração, transmissão final, peso, altura do banco e ABS.
-
-## Como joga
+## A interface
 
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="docs/home.jpg" width="240" alt="Tela inicial com a escolha de modo" /><br />
-      <sub><b>Escolha o modo</b><br />Sozinho ou em dupla</sub>
+      <img src="docs/inicio-carros.jpg" width="240" alt="Tela inicial da garagem de carros" /><br />
+      <sub><b>Carros</b><br />98 modelos no baralho</sub>
     </td>
     <td align="center" width="33%">
-      <img src="docs/rodada.jpg" width="240" alt="Rodada com as pistas reveladas" /><br />
-      <sub><b>As pistas</b><br />Cinco de saída, o resto sob demanda</sub>
+      <img src="docs/inicio-caminhoes.jpg" width="240" alt="Tela inicial da garagem de caminhões" /><br />
+      <sub><b>Caminhões</b><br />52 modelos no baralho</sub>
     </td>
     <td align="center" width="33%">
-      <img src="docs/alternativas.jpg" width="240" alt="Folha com quatro alternativas" /><br />
-      <sub><b>O palpite</b><br />Quatro alternativas, uma chance</sub>
+      <img src="docs/inicio-motos.jpg" width="240" alt="Tela inicial da garagem de motos" /><br />
+      <sub><b>Motos</b><br />27 modelos no baralho</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="docs/revelacao.jpg" width="240" alt="Revelação do veículo com foto e ficha" /><br />
-      <sub><b>A revelação</b><br />Foto e ficha completa</sub>
+      <img src="docs/revelacao-carro.jpg" width="240" alt="Revelação de um carro com foto e ficha técnica" /><br />
+      <sub><b>Carro revelado</b><br />Resposta e ficha completa</sub>
     </td>
     <td align="center">
-      <img src="docs/dupla.jpg" width="240" alt="Modo em dupla com a resposta revelada" /><br />
-      <sub><b>Em dupla</b><br />Você conduz, o outro adivinha</sub>
+      <img src="docs/revelacao-caminhao.jpg" width="240" alt="Revelação de um caminhão com foto e ficha técnica" /><br />
+      <sub><b>Caminhão revelado</b><br />Resposta e ficha completa</sub>
     </td>
     <td align="center">
-      <img src="docs/demo.gif" width="240" alt="Uma rodada completa em movimento" /><br />
-      <sub><b>Em movimento</b><br />Uma rodada do começo ao fim</sub>
+      <img src="docs/revelacao-moto.jpg" width="240" alt="Revelação de uma moto com foto e ficha técnica" /><br />
+      <sub><b>Moto revelada</b><br />Resposta e ficha completa</sub>
     </td>
   </tr>
 </table>
 
-## Nunca repete veículo
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/pistas-carro.jpg" width="240" alt="Rodada em andamento com as pistas iniciais de um carro" /><br />
+      <sub><b>Pistas progressivas</b><br />Cada pista extra reduz em um ponto o valor da rodada</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/demo.gif" width="240" alt="Demonstração de uma rodada completa" /><br />
+      <sub><b>Uma rodada completa</b><br />Da primeira pista à revelação</sub>
+    </td>
+  </tr>
+</table>
 
-O sorteio é um baralho, não um dado. Um veículo só volta a aparecer depois que todos os outros da categoria já apareceram — e o baralho vive num cookie assinado pelo servidor, então sobrevive a recarregar a página, minimizar o navegador no celular e até a um bundle velho em cache.
+## Como jogar
 
-## Os dois modos
+1. Escolha a categoria.
+2. Selecione **Sozinho** ou **Em dupla**.
+3. Revele pistas até saber a resposta.
+4. Responda e confira a ficha do veículo.
 
-**Sozinho** — quatro alternativas e um botão Responder. O veículo fica escondido até você responder, e quem decide se acertou é o servidor.
+No modo **Sozinho**, há quatro alternativas e o servidor confere a escolha. No modo **Em dupla**, quem conduz revela a resposta e lê as pistas para outra pessoa.
 
-**Em dupla** — você vê a resposta, atrás de um botão Revelar, e conduz a rodada lendo as pistas para outra pessoa. Aqui o Acertei/Errei faz sentido: tem alguém do outro lado para validar o palpite.
+Um acerto vale o número de pistas progressivas que restavam, com o mínimo de um ponto. Pontos, acertos e erros ficam salvos no navegador, separados por modo.
 
-Placar de acertos e erros por modo, guardado no navegador.
+## Pistas por categoria
 
-## O veículo fica realmente escondido
+| Categoria     | Pistas iniciais                                     | Outras pistas possíveis                                                                                                                             |
+| ------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Carros**    | ano, preço FIPE, combustível, cilindrada e potência | procedência, torque, motor, aspiração, câmbio, tração, carroceria, cilindros, portas e válvulas                                                     |
+| **Caminhões** | ano, preço FIPE, potência, torque e cilindrada      | trações disponíveis, procedência, PBT, PBTC, câmbio, cilindros, cabine, aspiração e motor                                                           |
+| **Motos**     | ano, preço FIPE, potência, estilo e combustível     | procedência, torque, ciclo do motor, cilindros, válvulas, refrigeração, câmbio, transmissão final, peso, altura do assento, ABS, cilindrada e motor |
 
-Um app estático entrega tudo que sabe assim que a página carrega — daria para ler a resposta no F12 antes da primeira pista. Aqui não: a identidade do veículo não sai do servidor até você responder.
+Campos sem fonte confiável não aparecem na rodada.
 
-O que trafega é uma projeção sem marca, modelo, geração e imagem, e um token cifrado com AES-GCM que carrega o veículo da rodada. Decodificar o token à força devolve binário, adulterar devolve 401, e nenhum nome de veículo aparece no bundle.
+## Baralho sem repetição
 
-## Rodando
+Um veículo só volta depois que os outros da categoria aparecerem. Quando o baralho recomeça, os oito veículos mais recentes continuam de fora nas primeiras rodadas.
+
+O histórico de cada categoria fica salvo no navegador. Na versão online, uma cópia cifrada também fica em cookie.
+
+## A resposta fica no servidor
+
+Na versão online, o navegador recebe apenas os campos usados nas pistas. No modo Sozinho, marca, modelo, versão e imagem só saem do Cloudflare Worker depois da resposta.
+
+Os tokens de rodada e de baralho usam **AES-GCM**. O servidor não guarda sessão ou histórico em banco de dados.
+
+O fallback do GitHub Pages roda todo o catálogo no cliente e não oferece a mesma proteção contra inspeção.
+
+## Os dados
+
+Cada veículo é um JSON em `content/vehicles/cars/`, `content/vehicles/trucks/` ou `content/vehicles/motorcycles/`. A identificação e os preços vêm da tabela FIPE. As outras especificações são pesquisadas em fabricantes e publicações especializadas. A fonte fica registrada em `specSource` e `specSourceUrl`.
+
+As imagens e seus créditos ficam em `content/images.json`. Cada registro informa mercado, conteúdo da foto, autor, licença e origem quando esses dados existem. O validador reprova veículos ativos sem imagem conferida.
+
+As fotos de carros e caminhões usam URLs HTTPS externas. As 27 motos usam arquivos WebP em `public/vehicles/`. Os créditos também podem ser consultados no jogo.
+
+## Rodando localmente
+
+Requer [Bun](https://bun.sh).
 
 ```bash
 bun install
 bun run dev
 ```
 
-Sobe a API em `127.0.0.1:3001` e o front em `0.0.0.0:3000`.
+A API sobe em `127.0.0.1:3001` e o frontend em `0.0.0.0:3000`.
 
 ```bash
-bun run typecheck        # tsc (TypeScript 7 nativo)
+bun run typecheck        # TypeScript 7 nativo
 bun run lint             # oxlint
+bun run format:check     # Prettier sem alterar arquivos
 bun run build
-bun run validate:content # schema e regras de curadoria do catálogo
-bun run refresh:fipe     # reconsulta os preços salvos
-bun run deploy           # publica no Cloudflare Workers
+bun run validate:content # schema, imagens e regras de curadoria
+bun run refresh:fipe     # atualiza os preços FIPE salvos
+bun run deploy           # build e deploy no Cloudflare Workers
 ```
-
-## Os dados
-
-Cada veículo é um JSON em `content/vehicles/cars/`, `content/vehicles/trucks/` ou `content/vehicles/motorcycles/`. Preço e identificação vêm da tabela FIPE; torque, potência e código do motor não existem lá, então foram pesquisados um a um em fabricantes e publicações especializadas. A fonte e o link consultado ficam registrados em `specSource` e `specSourceUrl`.
-
-**Campo sem fonte confiável fica ausente**, e o motor de pistas pula a pista correspondente em silêncio. Nunca aparece "não informado", e nada é inventado para preencher buraco. Carro que não junta pistas suficientes fica inativo em vez de render uma rodada curta.
-
-As fotos ficam em `content/images.json`, quase todas apontando para o Wikimedia Commons ou Flickr sob licença livre. Cada uma declara `market` (`br` ou `global`) e `depicts` — o que a imagem mostra de verdade —, e o validador reprova veículo ativo sem foto conferida. Foi assim que caíram um Escort RS Cosworth europeu passando por XR3 e um Camaro 1969 no lugar do SS 2018.
-
-As fotos de caminhões e motos priorizam URLs HTTPS externas. A Hunter 350 usa uma foto brasileira cedida para o jogo e hospedada em `public/vehicles/`; dois carros sem foto externa adequada também usam imagens de imprensa locais, sempre com autor e origem registrados.
 
 ## Arquitetura
 
-`src/domain/` não conhece React e é importado tanto pelo cliente quanto pelo worker — as regras do jogo vivem num lugar só.
+As regras ficam em `src/domain/` e são usadas pelo cliente, pela API local e pelo Worker. `Vehicle` é uma união discriminada por `kind`, com schema e pistas próprios para cada categoria.
 
-`Vehicle` é uma união discriminada por `kind`, e o motor de pistas é genérico sobre a lista de definições. Carros, caminhões e motos têm schema, pistas e diretórios de conteúdo próprios sem duplicar a experiência do jogo.
-
-Sem banco de dados. As rotas são handlers `(Request) => Response` sem estado — rodam no `Bun.serve` local, no Cloudflare Workers em produção, e em qualquer outro provedor serverless sem reescrita. O baralho de cada categoria viaja cifrado no cookie, então nem o histórico precisa de estado no servidor.
+Não há banco de dados. Em produção, o estado necessário viaja cifrado entre o navegador e o Cloudflare Worker. O frontend é responsivo e instalável como PWA.

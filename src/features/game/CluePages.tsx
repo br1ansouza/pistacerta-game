@@ -15,22 +15,22 @@ function ClueHelp({ label, children }: { label: string; children: string }) {
   const [pinned, setPinned] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
-  const [position, setPosition] = useState<{ left: number; top: number } | null>(null);
   const rootRef = useRef<HTMLSpanElement>(null);
+  const tooltipRef = useRef<HTMLSpanElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const tooltipId = useId();
   const open = pinned || hovered || focused;
 
   useLayoutEffect(() => {
     if (!open) {
-      setPosition(null);
       return;
     }
 
     function updatePosition() {
       const button = buttonRef.current;
+      const tooltip = tooltipRef.current;
 
-      if (!button) {
+      if (!button || !tooltip) {
         return;
       }
 
@@ -43,7 +43,8 @@ function ClueHelp({ label, children }: { label: string; children: string }) {
         globalThis.innerWidth - viewportMargin - tooltipHalfWidth,
       );
 
-      setPosition({ left, top: rect.bottom + 8 });
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${rect.bottom + 8}px`;
     }
 
     updatePosition();
@@ -113,12 +114,11 @@ function ClueHelp({ label, children }: { label: string; children: string }) {
       </button>
 
       {open &&
-        position &&
         createPortal(
           <span
+            ref={tooltipRef}
             id={tooltipId}
             role="tooltip"
-            style={{ left: position.left, top: position.top }}
             className="border-ink-600 bg-ink-950 text-chalk-300 shadow-hard-sm pointer-events-none fixed z-[60] w-48 -translate-x-1/2 border-2 px-3 py-2 text-[0.7rem] leading-relaxed font-normal tracking-normal normal-case"
           >
             {children}

@@ -2,6 +2,8 @@ const ROUND_TTL_MS = 6 * 60 * 60 * 1000;
 const DECK_TTL_MS = 180 * 24 * 60 * 60 * 1000;
 const IV_BYTES = 12;
 
+export const MAX_TOKEN_LENGTH = 8192;
+
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 
@@ -68,6 +70,10 @@ async function seal(payload: unknown, secret: string): Promise<string> {
 }
 
 async function unseal(token: string, secret: string): Promise<unknown> {
+  if (token.length > MAX_TOKEN_LENGTH) {
+    return null;
+  }
+
   let packed: Uint8Array<ArrayBuffer>;
 
   try {

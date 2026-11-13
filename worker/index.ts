@@ -3,7 +3,13 @@ import { buildChoices } from '@/domain/round/choices';
 import { pickFromDeck } from '@/domain/round/deck';
 import { describeVehicle, toSafeVehicle, toVehicleIdentity } from '@/domain/vehicle/safe-vehicle';
 import { VEHICLES } from '@/generated/vehicles';
-import { readDeckDigests, signDeckToken, signRoundToken, verifyRoundToken } from './round-token';
+import {
+  MAX_TOKEN_LENGTH,
+  readDeckDigests,
+  signDeckToken,
+  signRoundToken,
+  verifyRoundToken,
+} from './round-token';
 
 type RateLimiter = { limit: (options: { key: string }) => Promise<{ success: boolean }> };
 
@@ -52,12 +58,12 @@ function deckCookie(kind: string, deck: string): string {
 const roundSchema = z.object({
   mode: z.enum(['solo', 'duo']).default('solo'),
   kind: z.enum(['car', 'truck', 'motorcycle']).default('car'),
-  deck: z.string().nullish().default(null),
+  deck: z.string().max(MAX_TOKEN_LENGTH).nullish().default(null),
 });
 
 const revealSchema = z.object({
-  token: z.string().min(1),
-  choiceId: z.string().min(1).nullable().default(null),
+  token: z.string().min(1).max(MAX_TOKEN_LENGTH),
+  choiceId: z.string().min(1).max(120).nullable().default(null),
 });
 
 async function handleRound(request: Request, secret: string): Promise<Response> {

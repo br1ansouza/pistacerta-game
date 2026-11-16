@@ -633,13 +633,11 @@
     "sourceUrl": "https://www.usadosbr.com/motos-e-quadriciclos/honda/cg-125/titan-1404318610/1999-verde-itapolis-sao-paulo"
   },
   "honda-civic-coupe-1995": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Tuned_Honda_Civic_Coup%C3%A9_%28EJ%29_in_Thailand_01.jpg/960px-Tuned_Honda_Civic_Coup%C3%A9_%28EJ%29_in_Thailand_01.jpg",
-    "source": "wikimedia",
+    "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlRgxPYV1uFZPQRjD9EkO2uRKsZMbeoaJh53-uop_ZEswCExJrtluBQUI&s=10",
+    "source": "editorial",
     "market": "global",
-    "depicts": "Honda Civic Coupé da geração EJ",
-    "author": "Jirapat Chroenkeskij",
-    "license": "CC0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tuned_Honda_Civic_Coupé_(EJ)_in_Thailand_01.jpg"
+    "depicts": "Honda Civic Coupé de sexta geração; foto ilustrativa para o cadastro de 1995",
+    "sourceUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlRgxPYV1uFZPQRjD9EkO2uRKsZMbeoaJh53-uop_ZEswCExJrtluBQUI&s=10"
   },
   "honda-civic-si-2010": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/2009_Honda_Civic_Si_sedan_--_10-05-2009.jpg/960px-2009_Honda_Civic_Si_sedan_--_10-05-2009.jpg",
@@ -872,13 +870,11 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014_Kawasaki_Z1000.JPG"
   },
   "kia-soul-2016": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/%2716_Kia_Soul_%28Galeries_D%27Anjou%29.jpg/960px-%2716_Kia_Soul_%28Galeries_D%27Anjou%29.jpg",
-    "source": "wikimedia",
-    "market": "global",
-    "depicts": "Kia Soul a gasolina, mesma geração importada pelo Brasil",
-    "author": "Bull-Doser",
-    "license": "Public domain",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:'16_Kia_Soul_(Galeries_D'Anjou).jpg"
+    "src": "https://www.webmotors.com.br/imagens/prod/345555/KIA_SOUL_1.6_EX_16V_FLEX_4P_AUTOMATICO_34555517125622880.jpg",
+    "source": "editorial",
+    "market": "br",
+    "depicts": "Kia Soul EX 1.6 de segunda geração, imagem de catálogo da Webmotors",
+    "sourceUrl": "https://www.webmotors.com.br/imagens/prod/345555/KIA_SOUL_1.6_EX_16V_FLEX_4P_AUTOMATICO_34555517125622880.jpg"
   },
   "lamborghini-gallardo-2013": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Lamborghini_-_Gallardo_LP_560-4_-_Mondial_de_l%27Automobile_de_Paris_2012_-_203.jpg/960px-Lamborghini_-_Gallardo_LP_560-4_-_Mondial_de_l%27Automobile_de_Paris_2012_-_203.jpg",
@@ -1263,13 +1259,11 @@
     "sourceUrl": "https://motonline.com.br/noticia/wp-content/uploads/2021/02/Suzuki-Intruder-125.jpg"
   },
   "toyota-corolla-fielder-2008": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Corollafielderarg.jpg/960px-Corollafielderarg.jpg",
-    "source": "wikimedia",
+    "src": "https://cdn.autopapo.com.br/box/uploads/2024/08/14163949/toyota-corolla-fielder-2004-prata-frente-e-lateral-732x488.jpeg",
+    "source": "editorial",
     "market": "br",
-    "depicts": "Toyota Corolla Fielder",
-    "author": "Pinoles04",
-    "license": "CC BY-SA 4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Corollafielderarg.jpg"
+    "depicts": "Toyota Corolla Fielder 2004 prata, mesma geração do cadastro de 2008",
+    "sourceUrl": "https://cdn.autopapo.com.br/box/uploads/2024/08/14163949/toyota-corolla-fielder-2004-prata-frente-e-lateral-732x488.jpeg"
   },
   "toyota-corolla-gr-sport-2023": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Toyota_Corolla_Altis_GR_Sport_%28front%29.jpg/960px-Toyota_Corolla_Altis_GR_Sport_%28front%29.jpg",

@@ -7,9 +7,18 @@
   "origin": "nacional",
   "style": "naked",
   "fuel": "gasolina",
-  "displacement": { "value": 599.3, "unit": "cm³" },
-  "power": { "value": 102, "unit": "cv" },
-  "torque": { "value": 6.53, "unit": "kgfm" },
+  "displacement": {
+    "value": 599.3,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 102,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 6.53,
+    "unit": "kgfm"
+  },
   "transmission": "manual",
   "finalDrive": "corrente",
   "engineCycle": "4 tempos",
@@ -17,12 +26,18 @@
   "cylinders": 4,
   "cylinderLayout": "em linha",
   "valves": 16,
-  "weight": { "value": 188, "unit": "kg" },
+  "weight": {
+    "value": 188,
+    "unit": "kg"
+  },
   "weightCondition": "seco",
-  "seatHeight": { "value": 800, "unit": "mm" },
+  "seatHeight": {
+    "value": 800,
+    "unit": "mm"
+  },
   "fipe": {
-    "value": 38007,
-    "referenceMonth": "2026-08",
+    "value": 37430,
+    "referenceMonth": "2026-11",
     "fipeCode": "811076-0"
   },
   "specSource": "quatro-rodas",

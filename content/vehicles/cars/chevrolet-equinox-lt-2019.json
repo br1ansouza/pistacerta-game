@@ -28,8 +28,8 @@
   "valves": 16,
   "doors": 5,
   "fipe": {
-    "value": 102396,
-    "referenceMonth": "2026-08",
+    "value": 98418,
+    "referenceMonth": "2026-11",
     "fipeCode": "004487-3"
   },
   "specSource": "icarros",

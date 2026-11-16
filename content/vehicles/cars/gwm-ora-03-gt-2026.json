@@ -1,0 +1,30 @@
+{
+  "slug": "gwm-ora-03-gt-2026",
+  "kind": "car",
+  "brand": "GWM",
+  "model": "ORA 03",
+  "version": "GT",
+  "year": 2026,
+  "origin": "importado",
+  "countryOfOrigin": "China",
+  "fuel": "elétrico",
+  "power": {
+    "value": 171,
+    "unit": "cv"
+  },
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "engineFamily": "Elétrico",
+  "fipe": {
+    "value": 153344,
+    "referenceMonth": "2026-11",
+    "fipeCode": "096007-1"
+  },
+  "specSource": "fabricante",
+  "specSourceUrl": "https://www.gwmmotors.com.br/pt/media-center/news/2024/gwm-brasil-lan-a-serie-especial-ora-03-gt-approve",
+  "active": true,
+  "torque": {
+    "value": 25.5,
+    "unit": "kgfm"
+  }
+}

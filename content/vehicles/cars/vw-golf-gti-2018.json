@@ -26,8 +26,8 @@
   "cylinderLayout": "em linha",
   "doors": 4,
   "fipe": {
-    "value": 176217,
-    "referenceMonth": "2026-08",
+    "value": 166508,
+    "referenceMonth": "2026-11",
     "fipeCode": "005496-8"
   },
   "specSource": "webmotors",

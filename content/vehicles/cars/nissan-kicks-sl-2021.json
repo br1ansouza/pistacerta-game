@@ -26,8 +26,8 @@
   "valves": 16,
   "doors": 5,
   "fipe": {
-    "value": 90054,
-    "referenceMonth": "2026-08",
+    "value": 88126,
+    "referenceMonth": "2026-11",
     "fipeCode": "023149-5"
   },
   "specSource": "webmotors",

@@ -1,0 +1,31 @@
+{
+  "slug": "omoda-5-shs-h-luxury-2026",
+  "kind": "car",
+  "brand": "Omoda",
+  "model": "5",
+  "version": "SHS-H Luxury",
+  "year": 2026,
+  "origin": "importado",
+  "countryOfOrigin": "China",
+  "fuel": "híbrido",
+  "power": {
+    "value": 224,
+    "unit": "cv"
+  },
+  "drivetrain": "dianteira",
+  "bodyType": "suv",
+  "engineFamily": "Híbrido 1.5 turbo",
+  "fipe": {
+    "value": 148802,
+    "referenceMonth": "2026-11",
+    "fipeCode": "302002-9"
+  },
+  "specSource": "concessionária",
+  "specSourceUrl": "https://www.euroviaomoda.com.br/modelos/omoda-5-shs-h",
+  "active": true,
+  "displacement": "1.5",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "cylinders": 4,
+  "cylinderLayout": "em linha"
+}

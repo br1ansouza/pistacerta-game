@@ -9,9 +9,18 @@
   "countryOfOrigin": "Alemanha",
   "style": "big trail",
   "fuel": "gasolina",
-  "displacement": { "value": 1254, "unit": "cm³" },
-  "power": { "value": 136, "unit": "cv" },
-  "torque": { "value": 143, "unit": "Nm" },
+  "displacement": {
+    "value": 1254,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 136,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 143,
+    "unit": "Nm"
+  },
   "transmission": "manual",
   "finalDrive": "cardã",
   "engineCycle": "4 tempos",
@@ -20,13 +29,19 @@
   "cylinders": 2,
   "cylinderLayout": "boxer",
   "valves": 8,
-  "weight": { "value": 270, "unit": "kg" },
+  "weight": {
+    "value": 270,
+    "unit": "kg"
+  },
   "weightCondition": "ordem de marcha",
-  "seatHeight": { "value": 890, "unit": "mm" },
+  "seatHeight": {
+    "value": 890,
+    "unit": "mm"
+  },
   "abs": true,
   "fipe": {
-    "value": 84875,
-    "referenceMonth": "2026-08",
+    "value": 83606,
+    "referenceMonth": "2026-11",
     "fipeCode": "803075-8"
   },
   "specSource": "fabricante",

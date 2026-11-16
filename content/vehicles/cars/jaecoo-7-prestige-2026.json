@@ -1,0 +1,35 @@
+{
+  "slug": "jaecoo-7-prestige-2026",
+  "kind": "car",
+  "brand": "Jaecoo",
+  "model": "7",
+  "version": "SHS Prestige",
+  "year": 2026,
+  "origin": "importado",
+  "countryOfOrigin": "China",
+  "fuel": "híbrido",
+  "power": {
+    "value": 339,
+    "unit": "cv"
+  },
+  "drivetrain": "dianteira",
+  "bodyType": "suv",
+  "engineFamily": "Híbrido 1.5 turbo",
+  "fipe": {
+    "value": 207801,
+    "referenceMonth": "2026-11",
+    "fipeCode": "303002-4"
+  },
+  "specSource": "fabricante",
+  "specSourceUrl": "https://cms.omodajaecoo.com.br/manual/pdf/Spec-Sheet-Jaecoo-7.pdf",
+  "active": true,
+  "torque": {
+    "value": 52.0,
+    "unit": "kgfm"
+  },
+  "displacement": "1.5",
+  "aspiration": "turbo",
+  "transmission": "automático",
+  "cylinders": 4,
+  "cylinderLayout": "em linha"
+}

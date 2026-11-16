@@ -29,8 +29,8 @@
   "valves": 12,
   "doors": 3,
   "fipe": {
-    "value": 329978,
-    "referenceMonth": "2026-08",
+    "value": 323201,
+    "referenceMonth": "2026-11",
     "fipeCode": "002229-2"
   },
   "specSource": "fabricante",

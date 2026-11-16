@@ -8,9 +8,18 @@
   "origin": "nacional",
   "style": "speed",
   "fuel": "gasolina",
-  "displacement": { "value": 347, "unit": "cm³" },
-  "power": { "value": 55, "unit": "cv" },
-  "torque": { "value": 4.74, "unit": "kgfm" },
+  "displacement": {
+    "value": 347,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 55,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 4.74,
+    "unit": "kgfm"
+  },
   "transmission": "manual",
   "finalDrive": "corrente",
   "engineCycle": "2 tempos",
@@ -18,13 +27,19 @@
   "engineCode": "YPVS",
   "cylinders": 2,
   "cylinderLayout": "em linha",
-  "weight": { "value": 167, "unit": "kg" },
+  "weight": {
+    "value": 167,
+    "unit": "kg"
+  },
   "weightCondition": "seco",
-  "seatHeight": { "value": 780, "unit": "mm" },
+  "seatHeight": {
+    "value": 780,
+    "unit": "mm"
+  },
   "abs": false,
   "fipe": {
-    "value": 16670,
-    "referenceMonth": "2026-08",
+    "value": 18487,
+    "referenceMonth": "2026-11",
     "fipeCode": "827015-5"
   },
   "specSource": "motonline",

@@ -1,0 +1,21 @@
+{
+  "slug": "volvo-fh-540-100-anos-2027",
+  "kind": "truck",
+  "brand": "Volvo",
+  "model": "FH 540",
+  "version": "100 Anos 6x4",
+  "year": 2027,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "power": {
+    "value": 540,
+    "unit": "cv"
+  },
+  "transmission": "automatizado",
+  "axleConfigs": ["6x4"],
+  "fipe": null,
+  "specSource": "fabricante",
+  "specSourceUrl": "https://www.volvogroup.com/br/news-and-media/news/2026/nov/volvo-lanca-no-brasil-a-serie-mundial-exclusiva-fh-100-anos--par.html",
+  "story": "Edição do centenário apresentada na Fenatran 2026. A série brasileira foi limitada a 100 unidades numeradas, divididas entre as configurações 6x2 e 6x4.",
+  "active": true
+}

@@ -8,10 +8,9 @@ const THROTTLE_MS = 400;
 const MAX_RETRIES = 5;
 
 type PriceByCode = {
-  price: string;
-  referenceMonth: string;
   codeFipe: string;
-  model: string;
+  modelYear: number;
+  priceHistory: { price: string; month: string; reference: string }[];
 };
 
 type Vehicle = {
@@ -20,6 +19,7 @@ type Vehicle = {
   brand: string;
   model: string;
   year: number;
+  fuel?: string;
   fipe: { value: number; referenceMonth: string; fipeCode: string } | null;
 };
 
@@ -58,7 +58,7 @@ function toReferenceMonth(label: string): string | null {
 async function api<T>(path: string): Promise<T | null> {
   for (let attempt = 0; attempt < MAX_RETRIES; attempt += 1) {
     await delay(THROTTLE_MS);
-    const response = await fetch(`${API}${path}`);
+    const response = await fetch(`${API}${path}`, { signal: AbortSignal.timeout(30000) });
 
     if (response.status === 429) {
       await delay(2000 * 2 ** attempt);
@@ -82,6 +82,11 @@ async function api<T>(path: string): Promise<T | null> {
 const changes: string[] = [];
 const gone: string[] = [];
 let checked = 0;
+const requestedSlugs = new Set(process.argv.slice(2));
+const references = await api<{ code: string; month: string }[]>('/references');
+const latest = references?.[0];
+if (!latest) throw new Error('A API não retornou a referência FIPE atual.');
+console.log(`Referência FIPE: ${latest.month} (${latest.code}).`);
 
 for (const catalog of catalogs) {
   const directory = join(process.cwd(), 'content', 'vehicles', catalog.directory);
@@ -90,26 +95,51 @@ for (const catalog of catalogs) {
   for (const fileName of fileNames) {
     const path = join(directory, fileName);
     const vehicle = JSON.parse(await readFile(path, 'utf8')) as Vehicle;
+    if (requestedSlugs.size > 0 && !requestedSlugs.has(vehicle.slug)) continue;
 
-    if (!vehicle.fipe) {
+    if (!vehicle.fipe?.fipeCode) {
       continue;
     }
 
     checked += 1;
+    const fuelCodes: Record<string, string> = {
+      etanol: '2',
+      diesel: '3',
+      elétrico: '4',
+      flex: '5',
+      híbrido: '6',
+    };
+    const fuelCode = fuelCodes[vehicle.fuel ?? ''] ?? catalog.fuelCode;
 
-    const prices = await api<PriceByCode[]>(
-      `/${catalog.apiType}/${vehicle.fipe.fipeCode}/years/${vehicle.year}-${catalog.fuelCode}/history`,
+    let prices = await api<PriceByCode>(
+      `/${catalog.apiType}/${vehicle.fipe.fipeCode}/years/${vehicle.year}-${fuelCode}/history`,
     );
+    // A FIPE também mantém versões flex antigas sob o código de gasolina.
+    if (!prices && vehicle.fuel === 'flex') {
+      prices = await api<PriceByCode>(
+        `/${catalog.apiType}/${vehicle.fipe.fipeCode}/years/${vehicle.year}-1/history`,
+      );
+    }
 
-    const current = prices?.[0];
+    const current = prices?.priceHistory?.find((item) => item.reference === latest.code);
 
     if (!current) {
-      gone.push(`${vehicle.slug}: código ${vehicle.fipe.fipeCode} não retornou preço`);
+      gone.push(`${vehicle.slug}: código ${vehicle.fipe.fipeCode} sem preço em ${latest.month}`);
       continue;
     }
 
     const value = parsePrice(current.price);
-    const referenceMonth = toReferenceMonth(current.referenceMonth) ?? vehicle.fipe.referenceMonth;
+    const referenceMonth = toReferenceMonth(current.month);
+    if (
+      !referenceMonth ||
+      !Number.isFinite(value) ||
+      value <= 0 ||
+      prices?.codeFipe !== vehicle.fipe.fipeCode ||
+      prices.modelYear !== vehicle.year
+    ) {
+      gone.push(`${vehicle.slug}: resposta FIPE inválida ou incompatível`);
+      continue;
+    }
 
     if (value === vehicle.fipe.value && referenceMonth === vehicle.fipe.referenceMonth) {
       continue;

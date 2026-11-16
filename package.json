@@ -1,6 +1,6 @@
 {
   "name": "pistacerta-game",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "private": true,
   "type": "module",
   "description": "Jogo de adivinhação de veículos com pistas progressivas.",

@@ -27,8 +27,8 @@
   "cylinderLayout": "em linha",
   "valves": 12,
   "fipe": {
-    "value": 25521,
-    "referenceMonth": "2026-08",
+    "value": 24760,
+    "referenceMonth": "2026-11",
     "fipeCode": "513001-8"
   },
   "specSource": "o-carreteiro",

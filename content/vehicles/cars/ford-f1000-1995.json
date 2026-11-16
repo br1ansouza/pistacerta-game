@@ -27,8 +27,8 @@
   "cylinderLayout": "em linha",
   "valves": 8,
   "fipe": {
-    "value": 84202,
-    "referenceMonth": "2026-08",
+    "value": 86085,
+    "referenceMonth": "2026-11",
     "fipeCode": "003163-1"
   },
   "specSource": "carros-na-web",

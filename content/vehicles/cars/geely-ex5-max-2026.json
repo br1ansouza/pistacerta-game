@@ -1,0 +1,30 @@
+{
+  "slug": "geely-ex5-max-2026",
+  "kind": "car",
+  "brand": "Geely",
+  "model": "EX5",
+  "version": "Max",
+  "year": 2026,
+  "origin": "importado",
+  "countryOfOrigin": "China",
+  "fuel": "elétrico",
+  "power": {
+    "value": 218,
+    "unit": "cv"
+  },
+  "drivetrain": "dianteira",
+  "bodyType": "suv",
+  "engineFamily": "Elétrico",
+  "fipe": {
+    "value": 197080,
+    "referenceMonth": "2026-11",
+    "fipeCode": "088004-3"
+  },
+  "specSource": "fabricante",
+  "specSourceUrl": "https://www.geelybrasil.com.br/ex5",
+  "active": true,
+  "torque": {
+    "value": 32.6,
+    "unit": "kgfm"
+  }
+}

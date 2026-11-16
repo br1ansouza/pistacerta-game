@@ -1,0 +1,22 @@
+{
+  "slug": "scania-g430-super-2027",
+  "kind": "truck",
+  "brand": "Scania",
+  "model": "G 430",
+  "version": "Super 4x2",
+  "year": 2027,
+  "origin": "nacional",
+  "fuel": "diesel",
+  "displacement": "11.0",
+  "power": {
+    "value": 430,
+    "unit": "cv"
+  },
+  "transmission": "automatizado",
+  "axleConfigs": ["4x2"],
+  "fipe": null,
+  "specSource": "fabricante",
+  "specSourceUrl": "https://jornadascania.com.br/super-11-litros.php",
+  "story": "A nova geração Super de 11 litros estreou no Brasil na Fenatran 2026, ampliando a linha com foco em eficiência no transporte rodoviário.",
+  "active": true
+}

@@ -62,6 +62,20 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_BMW_M5_Automatic_4.4.jpg"
   },
+  "bmw-r1250gs-adventure-premium-2020": {
+    "src": "vehicles/bmw-r1250gs-adventure-premium-2020.webp",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "BMW R 1250 GS Adventure 2020, geração oferecida na configuração Premium brasileira",
+    "sourceUrl": "https://www.press.bmwgroup.com/brazil/article/detail/T0297618PT/novas-bmw-r-1250-gs-e-r-1250-gs-adventure-chegam-na-rede-bmw-motorrad-no-brasil"
+  },
+  "bmw-s1000rr-2024": {
+    "src": "vehicles/bmw-s1000rr-2024.webp",
+    "source": "editorial",
+    "market": "br",
+    "depicts": "BMW S 1000 RR da geração K67 2023–2024 em uso na pista",
+    "sourceUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXK98qMtUslh5_a7PJ4K_Cnt4JKlVhwulo-64fdU1dDUy2g9W6p2ZXW1En&s=10"
+  },
   "bmw-z4-2020": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BMW_G29_%28Facelift%29_1X7A7373.jpg/960px-BMW_G29_%28Facelift%29_1X7A7373.jpg",
     "source": "wikimedia",
@@ -70,6 +84,33 @@
     "author": "Alexander-93",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMW_G29_(Facelift)_1X7A7373.jpg"
+  },
+  "byd-dolphin-gs-2026": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/BYD_Dolphin_%28Global_version%29_IMG_9507.jpg/960px-BYD_Dolphin_%28Global_version%29_IMG_9507.jpg",
+    "source": "wikimedia",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_(Global_version)_IMG_9507.jpg",
+    "market": "global",
+    "depicts": "BYD Dolphin de primeira geração, versão global"
+  },
+  "byd-seal-2025": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/BYD_Seal_IAA_2023_1X7A0371.jpg/960px-BYD_Seal_IAA_2023_1X7A0371.jpg",
+    "source": "wikimedia",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BYD_Seal_IAA_2023_1X7A0371.jpg",
+    "market": "global",
+    "depicts": "BYD Seal de primeira geração, versão global"
+  },
+  "byd-yuan-plus-2026": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/BYD_Atto_3_1X7A6495.jpg/960px-BYD_Atto_3_1X7A6495.jpg",
+    "source": "wikimedia",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BYD_Atto_3_1X7A6495.jpg",
+    "market": "global",
+    "depicts": "BYD Atto 3, nome global do Yuan Plus de primeira geração"
   },
   "cadillac-escalade-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/2021_Cadillac_Escalade_ESV%2C_front_6.2.21.jpg/960px-2021_Cadillac_Escalade_ESV%2C_front_6.2.21.jpg",
@@ -267,6 +308,15 @@
     "author": "JoachimKohler-HB",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:DAF_XF_480_(2021)_Sattelzug_in_Berlin.jpg"
+  },
+  "ducati-996-matrix-reloaded-2001": {
+    "src": "vehicles/ducati-996-matrix-reloaded-2001.webp",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Ducati 996 pilotada por Trinity em Matrix Reloaded",
+    "author": "Shannon Hobbs",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ducati_996_Matrix.jpg"
   },
   "ferrari-purosangue-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ferrari_Purosangue%2C_Auto_2025%2C_Zurich_%2820251029-P1074508%29.jpg/960px-Ferrari_Purosangue%2C_Auto_2025%2C_Zurich_%2820251029-P1074508%29.jpg",
@@ -498,6 +548,24 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Ford_Mustang_GT_5.0_Front.jpg"
   },
+  "geely-ex5-max-2026": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Geely_Galaxy_E5_001.jpg/960px-Geely_Galaxy_E5_001.jpg",
+    "source": "wikimedia",
+    "author": "JustAnotherCarDesigner",
+    "license": "CC0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Geely_Galaxy_E5_001.jpg",
+    "market": "global",
+    "depicts": "Geely Galaxy E5, equivalente chinês do EX5"
+  },
+  "gwm-ora-03-gt-2026": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/GWM_Ora_03_GT_DSC_0753.jpg/960px-GWM_Ora_03_GT_DSC_0753.jpg",
+    "source": "wikimedia",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:GWM_Ora_03_GT_DSC_0753.jpg",
+    "market": "global",
+    "depicts": "GWM ORA 03 GT, versão global"
+  },
   "harley-davidson-fat-boy-114-2024": {
     "src": "vehicles/harley-davidson-fat-boy-114-2024.webp",
     "source": "wikimedia",
@@ -516,6 +584,13 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014_Honda_Accord_2.4_i-VTEC_sedan_(2016-01-07)_01.jpg"
   },
+  "honda-biz125-2024": {
+    "src": "vehicles/honda-biz125-2024.webp",
+    "source": "classified",
+    "market": "br",
+    "depicts": "Honda Biz 125 2024 em ambiente urbano brasileiro",
+    "sourceUrl": "https://catarinacarros.com.br/sao-jose/moto/honda/biz/sao-jose-honda-biz-2024-492867"
+  },
   "honda-cb600f-hornet-2012": {
     "src": "vehicles/honda-cb600f-hornet-2012.webp",
     "source": "wikimedia",
@@ -525,6 +600,13 @@
     "license": "CC BY-SA 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Honda_CB600F_Hornet_2011.JPG"
   },
+  "honda-cbr600rr-2012": {
+    "src": "vehicles/honda-cbr600rr-2012.webp",
+    "source": "classified",
+    "market": "br",
+    "depicts": "Honda CBR 600RR da geração 2009–2012 oferecida no mercado brasileiro",
+    "sourceUrl": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2026/202601/20260126/hondacbr_600rrwmimagem12535432128.jpg"
+  },
   "honda-cbx-1050-1979": {
     "src": "vehicles/honda-cbx-1050-1979.webp",
     "source": "wikimedia",
@@ -533,6 +615,22 @@
     "author": "SG2012",
     "license": "CC BY 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Honda_CBX_(1979).jpg"
+  },
+  "honda-cbx-750f-indy-1990": {
+    "src": "vehicles/honda-cbx-750f-indy-1990.webp",
+    "source": "wikimedia",
+    "market": "br",
+    "depicts": "Honda CBX 750F Indy nacional, da geração 1990–1994",
+    "author": "Marcoscm",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:7Galo_Indy_94.jpg"
+  },
+  "honda-cg125-titan-1999": {
+    "src": "vehicles/honda-cg125-titan-1999.webp",
+    "source": "classified",
+    "market": "br",
+    "depicts": "Honda CG 125 Titan 1999 anunciada em São Paulo",
+    "sourceUrl": "https://www.usadosbr.com/motos-e-quadriciclos/honda/cg-125/titan-1404318610/1999-verde-itapolis-sao-paulo"
   },
   "honda-civic-coupe-1995": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Tuned_Honda_Civic_Coup%C3%A9_%28EJ%29_in_Thailand_01.jpg/960px-Tuned_Honda_Civic_Coup%C3%A9_%28EJ%29_in_Thailand_01.jpg",
@@ -569,6 +667,13 @@
     "author": "Mr.choppers",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Honda_CRF1100L_Africa_Twin_in_Pearl_Glare_White_Tricolor,_front_right.jpg"
+  },
+  "honda-crf230f-2019": {
+    "src": "vehicles/honda-crf230f-2019.webp",
+    "source": "classified",
+    "market": "br",
+    "depicts": "Honda CRF 230F 2019 de trilha em revenda brasileira",
+    "sourceUrl": "https://m.autocarro.com.br/autosantafe/anuncio/honda-crf-230-f-2019-vermelha/1838686"
   },
   "honda-hrv-touring-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/2021_Honda_HR-V_1.8_EX_2WD_CVT.jpg/960px-2021_Honda_HR-V_1.8_EX_2WD_CVT.jpg",
@@ -712,6 +817,15 @@
     "license": "CC BY 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:AySa_Iveco_Tector.jpg"
   },
+  "jaecoo-7-prestige-2026": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Jaecoo_7_SHS_IMG_8113.jpg/960px-Jaecoo_7_SHS_IMG_8113.jpg",
+    "source": "wikimedia",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jaecoo_7_SHS_IMG_8113.jpg",
+    "market": "global",
+    "depicts": "Jaecoo 7 SHS híbrido plug-in, versão global"
+  },
   "jeep-compass-diesel-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg/960px-2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg",
     "source": "wikimedia",
@@ -747,6 +861,15 @@
     "author": "Reg Mckenna",
     "license": "CC BY 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kawasaki_GPZ900R_Ninja_01.jpg"
+  },
+  "kawasaki-z1000-2024": {
+    "src": "vehicles/kawasaki-z1000-2024.webp",
+    "source": "wikimedia",
+    "market": "global",
+    "depicts": "Kawasaki Z1000 de quarta geração, a mesma configuração-base comercializada no Brasil em 2024",
+    "author": "Dennis Bratland",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014_Kawasaki_Z1000.JPG"
   },
   "kia-soul-2016": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/%2716_Kia_Soul_%28Galeries_D%27Anjou%29.jpg/960px-%2716_Kia_Soul_%28Galeries_D%27Anjou%29.jpg",
@@ -845,6 +968,13 @@
     "author": "Pinterest",
     "sourceUrl": "https://br.pinterest.com/pin/679058450052535788/"
   },
+  "mercedes-ls1934-terezona-1990": {
+    "src": "https://cdn.autopapo.com.br/box/uploads/2023/03/10155514/mercedes-benz_ls_1934.jpg",
+    "source": "editorial",
+    "market": "br",
+    "depicts": "Mercedes-Benz LS 1934 Terezona em operação no Brasil",
+    "sourceUrl": "https://autopapo.com.br/noticia/5-caminhoes-bicudos-brasil/"
+  },
   "mini-cooper-2021": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg/960px-2018_Mini_Hatch_%28F56%29_Cooper_S_IMG_4393.jpg",
     "source": "wikimedia",
@@ -889,6 +1019,14 @@
     "author": "Ezarate",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:NissanKicks-Carilo-06281.jpg"
+  },
+  "omoda-5-shs-h-luxury-2026": {
+    "src": "https://static.autodromo.com.br/uploads/89203707-39c7-4556-867c-b535ca6f5266_OMODA-5-SHS-H-2026-VERSAO.webp",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Omoda 5 SHS-H Luxury brasileiro",
+    "author": "Omoda & Jaecoo / Eurovia",
+    "sourceUrl": "https://www.euroviaomoda.com.br/modelos/omoda-5-shs-h"
   },
   "peterbilt-389-legendary-2021": {
     "src": "https://quatrorodas.abril.com.br/wp-content/uploads/2022/03/Peterbilt-389-Legendary-Edition-3.jpg?quality=70&strip=info",
@@ -978,6 +1116,14 @@
     "author": "Brian de Souza",
     "sourceUrl": "https://drive.google.com/file/d/1W3Kj_ZN8EuD9rVW1kwsR8PsXWB_MbGzS/view"
   },
+  "scania-g430-super-2027": {
+    "src": "https://jornadascania.com.br/materias/super-11-litros/CAPA.jpg",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Scania G 430 Super de 11 litros, linha brasileira 2027",
+    "author": "Scania / Wagner Menezes",
+    "sourceUrl": "https://jornadascania.com.br/super-11-litros.php"
+  },
   "scania-l111-jacare-1978": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/1978_Scania_LS111.jpg/960px-1978_Scania_LS111.jpg",
     "source": "wikimedia",
@@ -986,6 +1132,13 @@
     "author": "Herranderssvensson",
     "license": "CC BY-SA 3.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:1978_Scania_LS111.jpg"
+  },
+  "scania-l111s-jacare-1981": {
+    "src": "https://http2.mlstatic.com/D_NQ_NP_871169-MLB90974411452_082025-O-caminho-scania-jacare-111s-1981-placa-preta.webp",
+    "source": "classified",
+    "market": "br",
+    "depicts": "Scania L 111 S Jacaré 1981 com placa preta no Brasil",
+    "sourceUrl": "https://caminhao.mercadolivre.com.br/MLB-4490904119-caminho-scania-jacare-111s-1981-placa-preta-_JM"
   },
   "scania-r450-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Blue_Scania_M%C3%A4kel%C3%A4.jpg/960px-Blue_Scania_M%C3%A4kel%C3%A4.jpg",
@@ -1095,6 +1248,20 @@
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Suzuki_Hayabusa_2025.jpg"
   },
+  "suzuki-gsxr750-srad-biker-boyz-2001": {
+    "src": "vehicles/suzuki-gsxr750-srad-biker-boyz-2001.webp",
+    "source": "pinterest",
+    "market": "global",
+    "depicts": "Suzuki GSX-R 750 2001 personalizada usada por Kid em Biker Boyz",
+    "sourceUrl": "https://mx.pinterest.com/pin/765400899209010938/"
+  },
+  "suzuki-intruder-125-2016": {
+    "src": "vehicles/suzuki-intruder-125-2016.webp",
+    "source": "editorial",
+    "market": "br",
+    "depicts": "Suzuki Intruder 125 nacional fotografada no Brasil",
+    "sourceUrl": "https://motonline.com.br/noticia/wp-content/uploads/2021/02/Suzuki-Intruder-125.jpg"
+  },
   "toyota-corolla-fielder-2008": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Corollafielderarg.jpg/960px-Corollafielderarg.jpg",
     "source": "wikimedia",
@@ -1149,6 +1316,13 @@
     "license": "CC BY-SA 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_SW4_SRX_2023_(54539868792).jpg"
   },
+  "triumph-daytona-675r-2015": {
+    "src": "vehicles/triumph-daytona-675r-2015.webp",
+    "source": "editorial",
+    "market": "br",
+    "depicts": "Triumph Daytona 675R da geração 2013–2016 lançada no Brasil",
+    "sourceUrl": "https://quatrorodas.abril.com.br/noticias/galeria-triumph-daytona-675r/"
+  },
   "triumph-thruxton-900-2015": {
     "src": "vehicles/triumph-thruxton-900-2015.webp",
     "source": "wikimedia",
@@ -1157,6 +1331,13 @@
     "author": "A1AA1A",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Triumph_Thruxton_900.jpg"
+  },
+  "triumph-tiger-900-rally-pro-2024": {
+    "src": "vehicles/triumph-tiger-900-rally-pro-2024.webp",
+    "source": "editorial",
+    "market": "br",
+    "depicts": "Triumph Tiger 900 Rally Pro 2024 em configuração off-road divulgada pela MotoMais",
+    "sourceUrl": "https://motomais.motosport.com.pt/wp-content/uploads/2023/12/triumph-tiger-900-rally-pro-offroad-statics-2024-044-1024x683.jpeg"
   },
   "volvo-fh-420-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2011_Volvo_FH_460.jpg/960px-2011_Volvo_FH_460.jpg",
@@ -1184,6 +1365,14 @@
     "author": "Bahnfrend",
     "license": "CC BY-SA 4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Volvo_FH_540,_North_Fremantle,_2020_(01).jpg"
+  },
+  "volvo-fh-540-100-anos-2027": {
+    "src": "https://assets.volvo.com/is/image/VolvoInformationTechnologyAB/Volvo100Anos?wid=1024",
+    "source": "press-kit",
+    "market": "br",
+    "depicts": "Volvo FH série 100 Anos brasileira",
+    "author": "Volvo / Divulgação",
+    "sourceUrl": "https://www.volvogroup.com/br/news-and-media/news/2026/nov/volvo-lanca-no-brasil-a-serie-mundial-exclusiva-fh-100-anos--par.html"
   },
   "volvo-fh-540-2024": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg/960px-Volvo_FH_540%2C_North_Fremantle%2C_2020_%2801%29.jpg",
@@ -1402,123 +1591,12 @@
     "license": "CC BY 2.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010_IZOD_IndyCar_Series_-_São_Paulo_Indy_300_Caminhão_Volkswagen_Worker_13.180_guinchando_o_carro_danificado_de_Mario_Moraes_-_Volkswagen_Worker_13.180_Truck_screeching_Mario_Moraes_damaged_car_(26479335864).jpg"
   },
-  "scania-l111s-jacare-1981": {
-    "src": "https://http2.mlstatic.com/D_NQ_NP_871169-MLB90974411452_082025-O-caminho-scania-jacare-111s-1981-placa-preta.webp",
-    "source": "classified",
-    "market": "br",
-    "depicts": "Scania L 111 S Jacaré 1981 com placa preta no Brasil",
-    "sourceUrl": "https://caminhao.mercadolivre.com.br/MLB-4490904119-caminho-scania-jacare-111s-1981-placa-preta-_JM"
-  },
-  "mercedes-ls1934-terezona-1990": {
-    "src": "https://cdn.autopapo.com.br/box/uploads/2023/03/10155514/mercedes-benz_ls_1934.jpg",
-    "source": "editorial",
-    "market": "br",
-    "depicts": "Mercedes-Benz LS 1934 Terezona em operação no Brasil",
-    "sourceUrl": "https://autopapo.com.br/noticia/5-caminhoes-bicudos-brasil/"
-  },
-  "honda-cbx-750f-indy-1990": {
-    "src": "vehicles/honda-cbx-750f-indy-1990.webp",
-    "source": "wikimedia",
-    "market": "br",
-    "depicts": "Honda CBX 750F Indy nacional, da geração 1990–1994",
-    "author": "Marcoscm",
-    "license": "CC BY 3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:7Galo_Indy_94.jpg"
-  },
-  "yamaha-rd-350r-viuva-negra-1992": {
-    "src": "vehicles/yamaha-rd-350r-viuva-negra-1992.webp",
-    "source": "classified",
-    "market": "br",
-    "depicts": "Yamaha RD 350R 1992 nacional, a última evolução brasileira da Viúva Negra",
-    "sourceUrl": "https://velocemotori.com.br/carros/yamaha-rd-350-r-1992/"
-  },
-  "bmw-r1250gs-adventure-premium-2020": {
-    "src": "vehicles/bmw-r1250gs-adventure-premium-2020.webp",
-    "source": "press-kit",
-    "market": "br",
-    "depicts": "BMW R 1250 GS Adventure 2020, geração oferecida na configuração Premium brasileira",
-    "sourceUrl": "https://www.press.bmwgroup.com/brazil/article/detail/T0297618PT/novas-bmw-r-1250-gs-e-r-1250-gs-adventure-chegam-na-rede-bmw-motorrad-no-brasil"
-  },
-  "triumph-tiger-900-rally-pro-2024": {
-    "src": "vehicles/triumph-tiger-900-rally-pro-2024.webp",
-    "source": "editorial",
-    "market": "br",
-    "depicts": "Triumph Tiger 900 Rally Pro 2024 em configuração off-road divulgada pela MotoMais",
-    "sourceUrl": "https://motomais.motosport.com.pt/wp-content/uploads/2023/12/triumph-tiger-900-rally-pro-offroad-statics-2024-044-1024x683.jpeg"
-  },
-  "kawasaki-z1000-2024": {
-    "src": "vehicles/kawasaki-z1000-2024.webp",
-    "source": "wikimedia",
-    "market": "global",
-    "depicts": "Kawasaki Z1000 de quarta geração, a mesma configuração-base comercializada no Brasil em 2024",
-    "author": "Dennis Bratland",
-    "license": "CC BY-SA 3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014_Kawasaki_Z1000.JPG"
-  },
-  "suzuki-intruder-125-2016": {
-    "src": "vehicles/suzuki-intruder-125-2016.webp",
-    "source": "editorial",
-    "market": "br",
-    "depicts": "Suzuki Intruder 125 nacional fotografada no Brasil",
-    "sourceUrl": "https://motonline.com.br/noticia/wp-content/uploads/2021/02/Suzuki-Intruder-125.jpg"
-  },
   "yamaha-dt-180z-1991": {
     "src": "vehicles/yamaha-dt-180z-1991.webp",
     "source": "classified",
     "market": "br",
     "depicts": "Yamaha DT 180Z 1991 em leilão brasileiro",
     "sourceUrl": "https://www.consorciorioparkingcarioca.com/oferta/leilao/veiculos/motos/2052/id-2074/yamaha-dt-180-z-1991-1991-gasolina"
-  },
-  "honda-cg125-titan-1999": {
-    "src": "vehicles/honda-cg125-titan-1999.webp",
-    "source": "classified",
-    "market": "br",
-    "depicts": "Honda CG 125 Titan 1999 anunciada em São Paulo",
-    "sourceUrl": "https://www.usadosbr.com/motos-e-quadriciclos/honda/cg-125/titan-1404318610/1999-verde-itapolis-sao-paulo"
-  },
-  "honda-cbr600rr-2012": {
-    "src": "vehicles/honda-cbr600rr-2012.webp",
-    "source": "classified",
-    "market": "br",
-    "depicts": "Honda CBR 600RR da geração 2009–2012 oferecida no mercado brasileiro",
-    "sourceUrl": "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2026/202601/20260126/hondacbr_600rrwmimagem12535432128.jpg"
-  },
-  "yamaha-xt660r-tratorzao-2015": {
-    "src": "vehicles/yamaha-xt660r-tratorzao-2015.webp",
-    "source": "editorial",
-    "market": "br",
-    "depicts": "Yamaha XT 660R nacional em avaliação da Quatro Rodas",
-    "sourceUrl": "https://quatrorodas.abril.com.br/noticias/galeria-xt-660r/"
-  },
-  "bmw-s1000rr-2024": {
-    "src": "vehicles/bmw-s1000rr-2024.webp",
-    "source": "editorial",
-    "market": "br",
-    "depicts": "BMW S 1000 RR da geração K67 2023–2024 em uso na pista",
-    "sourceUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXK98qMtUslh5_a7PJ4K_Cnt4JKlVhwulo-64fdU1dDUy2g9W6p2ZXW1En&s=10"
-  },
-  "triumph-daytona-675r-2015": {
-    "src": "vehicles/triumph-daytona-675r-2015.webp",
-    "source": "editorial",
-    "market": "br",
-    "depicts": "Triumph Daytona 675R da geração 2013–2016 lançada no Brasil",
-    "sourceUrl": "https://quatrorodas.abril.com.br/noticias/galeria-triumph-daytona-675r/"
-  },
-  "ducati-996-matrix-reloaded-2001": {
-    "src": "vehicles/ducati-996-matrix-reloaded-2001.webp",
-    "source": "wikimedia",
-    "market": "global",
-    "depicts": "Ducati 996 pilotada por Trinity em Matrix Reloaded",
-    "author": "Shannon Hobbs",
-    "license": "CC BY-SA 2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ducati_996_Matrix.jpg"
-  },
-  "suzuki-gsxr750-srad-biker-boyz-2001": {
-    "src": "vehicles/suzuki-gsxr750-srad-biker-boyz-2001.webp",
-    "source": "pinterest",
-    "market": "global",
-    "depicts": "Suzuki GSX-R 750 2001 personalizada usada por Kid em Biker Boyz",
-    "sourceUrl": "https://mx.pinterest.com/pin/765400899209010938/"
   },
   "yamaha-mt07-abs-2024": {
     "src": "vehicles/yamaha-mt07-abs-2024.webp",
@@ -1527,18 +1605,18 @@
     "depicts": "Yamaha MT-07 ABS 2024 anunciada em Brasília",
     "sourceUrl": "https://www.usadosbr.com/motos-e-quadriciclos/yamaha/mt-07/690-abs-1896514350/2024-azul-brasilia-distrito-federal-34"
   },
-  "honda-crf230f-2019": {
-    "src": "vehicles/honda-crf230f-2019.webp",
+  "yamaha-rd-350r-viuva-negra-1992": {
+    "src": "vehicles/yamaha-rd-350r-viuva-negra-1992.webp",
     "source": "classified",
     "market": "br",
-    "depicts": "Honda CRF 230F 2019 de trilha em revenda brasileira",
-    "sourceUrl": "https://m.autocarro.com.br/autosantafe/anuncio/honda-crf-230-f-2019-vermelha/1838686"
+    "depicts": "Yamaha RD 350R 1992 nacional, a última evolução brasileira da Viúva Negra",
+    "sourceUrl": "https://velocemotori.com.br/carros/yamaha-rd-350-r-1992/"
   },
-  "honda-biz125-2024": {
-    "src": "vehicles/honda-biz125-2024.webp",
-    "source": "classified",
+  "yamaha-xt660r-tratorzao-2015": {
+    "src": "vehicles/yamaha-xt660r-tratorzao-2015.webp",
+    "source": "editorial",
     "market": "br",
-    "depicts": "Honda Biz 125 2024 em ambiente urbano brasileiro",
-    "sourceUrl": "https://catarinacarros.com.br/sao-jose/moto/honda/biz/sao-jose-honda-biz-2024-492867"
+    "depicts": "Yamaha XT 660R nacional em avaliação da Quatro Rodas",
+    "sourceUrl": "https://quatrorodas.abril.com.br/noticias/galeria-xt-660r/"
   }
 }

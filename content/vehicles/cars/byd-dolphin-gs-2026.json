@@ -1,0 +1,30 @@
+{
+  "slug": "byd-dolphin-gs-2026",
+  "kind": "car",
+  "brand": "BYD",
+  "model": "Dolphin",
+  "version": "GS",
+  "year": 2026,
+  "origin": "importado",
+  "countryOfOrigin": "China",
+  "fuel": "elétrico",
+  "power": {
+    "value": 95,
+    "unit": "cv"
+  },
+  "drivetrain": "dianteira",
+  "bodyType": "hatch",
+  "engineFamily": "Elétrico",
+  "fipe": {
+    "value": 128690,
+    "referenceMonth": "2026-11",
+    "fipeCode": "095007-6"
+  },
+  "specSource": "concessionária",
+  "specSourceUrl": "https://www.bydautomotive.com.br/modelos/byd-dolphin",
+  "active": true,
+  "torque": {
+    "value": 18.0,
+    "unit": "kgfm"
+  }
+}

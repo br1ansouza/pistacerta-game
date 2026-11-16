@@ -8,9 +8,18 @@
   "countryOfOrigin": "Japão",
   "style": "custom",
   "fuel": "gasolina",
-  "displacement": { "value": 124, "unit": "cm³" },
-  "power": { "value": 11, "unit": "cv" },
-  "torque": { "value": 0.98, "unit": "kgfm" },
+  "displacement": {
+    "value": 124,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 11,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 0.98,
+    "unit": "kgfm"
+  },
   "transmission": "manual",
   "finalDrive": "corrente",
   "engineCycle": "4 tempos",
@@ -18,13 +27,19 @@
   "cylinders": 1,
   "cylinderLayout": "em linha",
   "valves": 2,
-  "weight": { "value": 107, "unit": "kg" },
+  "weight": {
+    "value": 107,
+    "unit": "kg"
+  },
   "weightCondition": "seco",
-  "seatHeight": { "value": 735, "unit": "mm" },
+  "seatHeight": {
+    "value": 735,
+    "unit": "mm"
+  },
   "abs": false,
   "fipe": {
-    "value": 10461,
-    "referenceMonth": "2026-08",
+    "value": 10814,
+    "referenceMonth": "2026-11",
     "fipeCode": "825040-5"
   },
   "specSource": "moto-com-br",

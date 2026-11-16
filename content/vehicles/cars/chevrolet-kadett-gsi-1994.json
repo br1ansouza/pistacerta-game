@@ -23,8 +23,8 @@
   "cylinderLayout": "em linha",
   "valves": 8,
   "fipe": {
-    "value": 25416,
-    "referenceMonth": "2026-08",
+    "value": 25404,
+    "referenceMonth": "2026-11",
     "fipeCode": "004044-4"
   },
   "specSource": "webmotors",

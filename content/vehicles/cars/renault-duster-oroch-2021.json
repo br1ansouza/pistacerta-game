@@ -24,8 +24,8 @@
   "cylinderLayout": "em linha",
   "valves": 16,
   "fipe": {
-    "value": 79034,
-    "referenceMonth": "2026-08",
+    "value": 80955,
+    "referenceMonth": "2026-11",
     "fipeCode": "025231-0"
   },
   "specSource": "icarros",

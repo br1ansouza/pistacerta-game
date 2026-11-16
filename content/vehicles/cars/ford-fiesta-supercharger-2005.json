@@ -25,8 +25,8 @@
   "valves": 8,
   "doors": 5,
   "fipe": {
-    "value": 15459,
-    "referenceMonth": "2026-08",
+    "value": 15545,
+    "referenceMonth": "2026-11",
     "fipeCode": "003260-3"
   },
   "specSource": "carros-na-web",

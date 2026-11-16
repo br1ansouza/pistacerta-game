@@ -8,9 +8,18 @@
   "countryOfOrigin": "Japão",
   "style": "trail",
   "fuel": "gasolina",
-  "displacement": { "value": 223, "unit": "cm³" },
-  "power": { "value": 17.5, "unit": "cv" },
-  "torque": { "value": 1.84, "unit": "kgfm" },
+  "displacement": {
+    "value": 223,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 17.5,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 1.84,
+    "unit": "kgfm"
+  },
   "transmission": "manual",
   "finalDrive": "corrente",
   "engineCycle": "4 tempos",
@@ -18,13 +27,19 @@
   "cylinders": 1,
   "cylinderLayout": "em linha",
   "valves": 2,
-  "weight": { "value": 107, "unit": "kg" },
+  "weight": {
+    "value": 107,
+    "unit": "kg"
+  },
   "weightCondition": "seco",
-  "seatHeight": { "value": 872, "unit": "mm" },
+  "seatHeight": {
+    "value": 872,
+    "unit": "mm"
+  },
   "abs": false,
   "fipe": {
-    "value": 16282,
-    "referenceMonth": "2026-08",
+    "value": 15926,
+    "referenceMonth": "2026-11",
     "fipeCode": "811087-5"
   },
   "specSource": "fabricante",

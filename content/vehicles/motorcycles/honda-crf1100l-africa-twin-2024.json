@@ -7,9 +7,18 @@
   "origin": "nacional",
   "style": "big trail",
   "fuel": "gasolina",
-  "displacement": { "value": 1084, "unit": "cm³" },
-  "power": { "value": 99.3, "unit": "cv" },
-  "torque": { "value": 10.9, "unit": "kgfm" },
+  "displacement": {
+    "value": 1084,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 99.3,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 10.9,
+    "unit": "kgfm"
+  },
   "transmission": "manual",
   "finalDrive": "corrente",
   "engineCycle": "4 tempos",
@@ -17,13 +26,19 @@
   "cylinders": 2,
   "cylinderLayout": "em linha",
   "valves": 8,
-  "weight": { "value": 217, "unit": "kg" },
+  "weight": {
+    "value": 217,
+    "unit": "kg"
+  },
   "weightCondition": "seco",
-  "seatHeight": { "value": 870, "unit": "mm" },
+  "seatHeight": {
+    "value": 870,
+    "unit": "mm"
+  },
   "abs": true,
   "fipe": {
-    "value": 84862,
-    "referenceMonth": "2026-08",
+    "value": 86564,
+    "referenceMonth": "2026-11",
     "fipeCode": "811166-9"
   },
   "specSource": "fabricante",

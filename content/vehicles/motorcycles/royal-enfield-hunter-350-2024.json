@@ -9,9 +9,18 @@
   "countryOfOrigin": "Índia",
   "style": "clássica",
   "fuel": "gasolina",
-  "displacement": { "value": 349.24, "unit": "cm³" },
-  "power": { "value": 20.2, "unit": "cv" },
-  "torque": { "value": 2.7, "unit": "kgfm" },
+  "displacement": {
+    "value": 349.24,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 20.2,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 2.7,
+    "unit": "kgfm"
+  },
   "transmission": "manual",
   "finalDrive": "corrente",
   "engineCycle": "4 tempos",
@@ -19,13 +28,19 @@
   "cylinders": 1,
   "cylinderLayout": "em linha",
   "valves": 2,
-  "weight": { "value": 181, "unit": "kg" },
+  "weight": {
+    "value": 181,
+    "unit": "kg"
+  },
   "weightCondition": "ordem de marcha",
-  "seatHeight": { "value": 790, "unit": "mm" },
+  "seatHeight": {
+    "value": 790,
+    "unit": "mm"
+  },
   "abs": true,
   "fipe": {
-    "value": 17602,
-    "referenceMonth": "2026-08",
+    "value": 17384,
+    "referenceMonth": "2026-11",
     "fipeCode": "879032-9"
   },
   "specSource": "fabricante",

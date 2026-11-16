@@ -28,8 +28,8 @@
   "valves": 16,
   "doors": 5,
   "fipe": {
-    "value": 248343,
-    "referenceMonth": "2026-08",
+    "value": 242961,
+    "referenceMonth": "2026-11",
     "fipeCode": "004153-0"
   },
   "specSource": "fabricante",

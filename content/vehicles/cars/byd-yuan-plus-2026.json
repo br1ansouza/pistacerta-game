@@ -1,0 +1,30 @@
+{
+  "slug": "byd-yuan-plus-2026",
+  "kind": "car",
+  "brand": "BYD",
+  "model": "Yuan Plus",
+  "version": "EV",
+  "year": 2026,
+  "origin": "importado",
+  "countryOfOrigin": "China",
+  "fuel": "elétrico",
+  "power": {
+    "value": 204,
+    "unit": "cv"
+  },
+  "drivetrain": "dianteira",
+  "bodyType": "suv",
+  "engineFamily": "Elétrico",
+  "fipe": {
+    "value": 180010,
+    "referenceMonth": "2026-11",
+    "fipeCode": "095006-8"
+  },
+  "specSource": "fabricante",
+  "specSourceUrl": "https://www.byd.com/content/dam/byd-site/br/fichas-tecnicas-2026/356.1575.7802.8%20-%20FICHA%20TECNICA%20YUAN%20PLUS.pdf",
+  "active": true,
+  "torque": {
+    "value": 31.6,
+    "unit": "kgfm"
+  }
+}

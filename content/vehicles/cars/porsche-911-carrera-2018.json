@@ -24,8 +24,8 @@
   "cylinderLayout": "boxer",
   "valves": 24,
   "fipe": {
-    "value": 618153,
-    "referenceMonth": "2026-08",
+    "value": 625650,
+    "referenceMonth": "2026-11",
     "fipeCode": "035073-7"
   },
   "specSource": "webmotors",

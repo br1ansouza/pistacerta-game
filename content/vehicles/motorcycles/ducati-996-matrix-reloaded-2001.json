@@ -10,9 +10,18 @@
   "countryOfOrigin": "Itália",
   "style": "speed",
   "fuel": "gasolina",
-  "displacement": { "value": 996, "unit": "cm³" },
-  "power": { "value": 112, "unit": "cv" },
-  "torque": { "value": 9.5, "unit": "kgfm" },
+  "displacement": {
+    "value": 996,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 112,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 9.5,
+    "unit": "kgfm"
+  },
   "transmission": "manual",
   "finalDrive": "corrente",
   "engineCycle": "4 tempos",
@@ -21,13 +30,19 @@
   "cylinders": 2,
   "cylinderLayout": "V",
   "valves": 8,
-  "weight": { "value": 198, "unit": "kg" },
+  "weight": {
+    "value": 198,
+    "unit": "kg"
+  },
   "weightCondition": "seco",
-  "seatHeight": { "value": 790, "unit": "mm" },
+  "seatHeight": {
+    "value": 790,
+    "unit": "mm"
+  },
   "abs": false,
   "fipe": {
-    "value": 34116,
-    "referenceMonth": "2026-08",
+    "value": 34186,
+    "referenceMonth": "2026-11",
     "fipeCode": "808002-0"
   },
   "specSource": "literatura-especializada",

@@ -1,0 +1,30 @@
+{
+  "slug": "byd-seal-2025",
+  "kind": "car",
+  "brand": "BYD",
+  "model": "Seal",
+  "version": "AWD",
+  "year": 2025,
+  "origin": "importado",
+  "countryOfOrigin": "China",
+  "fuel": "elétrico",
+  "power": {
+    "value": 531,
+    "unit": "cv"
+  },
+  "drivetrain": "integral",
+  "bodyType": "sedã",
+  "engineFamily": "Elétrico",
+  "fipe": {
+    "value": 220137,
+    "referenceMonth": "2026-11",
+    "fipeCode": "095008-4"
+  },
+  "specSource": "webmotors",
+  "specSourceUrl": "https://www.webmotors.com.br/byd/seal/2025/82-5-kw-eletrico-awd/386545",
+  "active": true,
+  "torque": {
+    "value": 60.1,
+    "unit": "kgfm"
+  }
+}

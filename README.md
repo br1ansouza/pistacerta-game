@@ -17,7 +17,7 @@
 
 O jogo sorteia um veículo e mostra até cinco pistas iniciais. Cada pista extra reduz a pontuação da rodada.
 
-O catálogo tem **177 veículos ativos**: **98 carros**, **52 caminhões** e **27 motos**. Cada categoria tem seu próprio baralho e suas próprias pistas.
+O catálogo tem **186 veículos ativos**: **105 carros**, **54 caminhões** e **27 motos**. Cada categoria tem seu próprio baralho e suas próprias pistas.
 
 ## A interface
 

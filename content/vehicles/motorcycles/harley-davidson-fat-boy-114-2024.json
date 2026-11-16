@@ -8,9 +8,18 @@
   "countryOfOrigin": "Estados Unidos",
   "style": "custom",
   "fuel": "gasolina",
-  "displacement": { "value": 1868, "unit": "cm³" },
-  "power": { "value": 94, "unit": "cv" },
-  "torque": { "value": 161, "unit": "Nm" },
+  "displacement": {
+    "value": 1868,
+    "unit": "cm³"
+  },
+  "power": {
+    "value": 94,
+    "unit": "cv"
+  },
+  "torque": {
+    "value": 161,
+    "unit": "Nm"
+  },
   "transmission": "manual",
   "finalDrive": "correia",
   "engineCycle": "4 tempos",
@@ -19,13 +28,19 @@
   "cylinders": 2,
   "cylinderLayout": "V",
   "valves": 8,
-  "weight": { "value": 317, "unit": "kg" },
+  "weight": {
+    "value": 317,
+    "unit": "kg"
+  },
   "weightCondition": "ordem de marcha",
-  "seatHeight": { "value": 675, "unit": "mm" },
+  "seatHeight": {
+    "value": 675,
+    "unit": "mm"
+  },
   "abs": true,
   "fipe": {
-    "value": 112848,
-    "referenceMonth": "2026-08",
+    "value": 110321,
+    "referenceMonth": "2026-11",
     "fipeCode": "810076-4"
   },
   "specSource": "fabricante",

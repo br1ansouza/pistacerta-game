@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowLeft } from '@untitledui/icons';
 import { hasMoreClues, visibleClues } from '@/domain/clues/clue-engine';
@@ -7,6 +7,8 @@ import type { GameMode } from '@/domain/round/round.types';
 import { AnswerControls } from './AnswerControls';
 import { AnswerRevealBar } from './AnswerRevealBar';
 import { AnswerSheet } from './AnswerSheet';
+import { AnswerChoices } from './AnswerChoices';
+import { DuoHelp } from './DuoHelp';
 import { CluePages } from './CluePages';
 import { ScoreBoard } from './ScoreBoard';
 import { RoundProgress } from './RoundProgress';
@@ -25,6 +27,7 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
   const { state, beginRound, revealNextClue, selectChoice, submitChoice, selfReport } =
     useGameRound(mode, kind);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const closeSheet = useCallback(() => setSheetOpen(false), []);
   const { score, record, reset } = useScore(mode);
   const scoredToken = useRef<string | null>(null);
 
@@ -58,7 +61,7 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
   const freshKey = revealed > 0 ? (shown.at(-1)?.key ?? null) : null;
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col gap-5 px-4 py-6 lg:max-w-2xl">
+    <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col gap-5 px-4 py-6 md:max-w-4xl md:px-8 md:py-8">
       <header className="flex items-center justify-between gap-3">
         <button
           type="button"
@@ -78,6 +81,13 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
 
         <ScoreBoard score={score} onReset={reset} />
       </header>
+
+      {mode === 'duo' && (
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-chalk-500 text-xs">Um lê as pistas. O outro adivinha.</p>
+          <DuoHelp />
+        </div>
+      )}
 
       {(state.status === 'loading' || state.status === 'idle') && (
         <motion.p
@@ -124,22 +134,34 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
               <motion.button
                 type="button"
                 onClick={revealNextClue}
+                disabled={state.status === 'revealing'}
                 whileTap={{ scale: 0.98 }}
-                className="border-chalk-500/40 bg-ink-900 text-chalk-100 hover:border-flame-500 hover:text-flame-400 focus-visible:outline-flame-500 font-display shadow-hard border-2 px-5 py-3.5 text-xs font-bold tracking-[0.15em] uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="border-chalk-500/40 bg-ink-900 text-chalk-100 hover:border-flame-500 hover:text-flame-400 focus-visible:outline-flame-500 font-display shadow-hard border-2 px-5 py-3.5 text-xs font-bold tracking-[0.15em] uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-40 md:self-start md:min-w-52"
               >
                 Próxima pista
               </motion.button>
             )}
 
             {state.round.choices ? (
-              <motion.button
-                type="button"
-                onClick={() => setSheetOpen(true)}
-                whileTap={{ scale: 0.98 }}
-                className="from-flame-600 to-flame-400 text-ink-950 font-display border-flame-400 shadow-hard focus-visible:outline-flame-400 border-2 bg-gradient-to-r px-5 py-4 text-sm font-bold tracking-[0.15em] uppercase focus-visible:outline-2 focus-visible:outline-offset-2"
-              >
-                Responder
-              </motion.button>
+              <>
+                <motion.button
+                  type="button"
+                  onClick={() => setSheetOpen(true)}
+                  whileTap={{ scale: 0.98 }}
+                  className="md:hidden from-flame-600 to-flame-400 text-ink-950 font-display border-flame-400 shadow-hard focus-visible:outline-flame-400 border-2 bg-gradient-to-r px-5 py-4 text-sm font-bold tracking-[0.15em] uppercase focus-visible:outline-2 focus-visible:outline-offset-2"
+                >
+                  Responder
+                </motion.button>
+                <div className="hidden md:block">
+                  <AnswerChoices
+                    choices={state.round.choices}
+                    selectedId={state.round.selectedChoiceId}
+                    submitting={state.status === 'revealing'}
+                    onSelect={selectChoice}
+                    onConfirm={() => void submitChoice()}
+                  />
+                </div>
+              </>
             ) : (
               <AnswerControls
                 onAnswer={(outcome) => void selfReport(outcome)}
@@ -158,7 +180,7 @@ export function GameScreen({ mode, kind, onBackHome }: GameScreenProps) {
             submitting={state.status === 'revealing'}
             onSelect={selectChoice}
             onConfirm={() => void submitChoice()}
-            onClose={() => setSheetOpen(false)}
+            onClose={closeSheet}
           />
         )}
       </AnimatePresence>

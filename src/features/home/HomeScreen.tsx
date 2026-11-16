@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ComponentType, type SVGProps } from '
 import { flushSync } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Car01, Truck01 } from '@untitledui/icons';
+import { DuoHelp } from '../game/DuoHelp';
 import { asset } from '@/lib/asset';
 import { motionSpring } from '@/lib/motion';
 import type { GameMode } from '@/domain/round/round.types';
@@ -24,7 +25,7 @@ const KIND_COPY: Record<
     label: 'Carros',
     garage: 'Garagem de carros',
     tagline: 'Pistas progressivas. Um carro. Descubra antes que elas acabem.',
-    solo: 'Quatro alternativas no fim. O carro só aparece quando você responde.',
+    solo: 'Escolha entre quatro alternativas. O carro só aparece quando você responde.',
     duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
     sprite: 'car.gif',
   },
@@ -32,7 +33,7 @@ const KIND_COPY: Record<
     label: 'Caminhões',
     garage: 'Garagem de caminhões',
     tagline: 'Pistas progressivas. Um caminhão. Descubra antes que elas acabem.',
-    solo: 'Quatro alternativas no fim. O caminhão só aparece quando você responde.',
+    solo: 'Escolha entre quatro alternativas. O caminhão só aparece quando você responde.',
     duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
     sprite: 'truck.gif',
   },
@@ -40,7 +41,7 @@ const KIND_COPY: Record<
     label: 'Motos',
     garage: 'Garagem de motos',
     tagline: 'Pistas progressivas. Uma moto. Descubra antes que elas acabem.',
-    solo: 'Quatro alternativas no fim. A moto só aparece quando você responde.',
+    solo: 'Escolha entre quatro alternativas. A moto só aparece quando você responde.',
     duo: 'Você vê a resposta e lê as pistas para outra pessoa adivinhar.',
     sprite: 'motorcycle.gif',
   },
@@ -164,8 +165,8 @@ export function HomeScreen({ kind, onSelectKind, onSelectMode, onOpenCredits }: 
   }
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col justify-center px-5 py-8 sm:py-12">
-      <div className="flex flex-col gap-7 sm:gap-8">
+    <main className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col justify-center px-5 py-8 sm:py-12">
+      <div className="flex flex-col gap-7 sm:gap-8 md:pr-36">
         <header className="text-center">
           <h1 className="font-display text-chalk-100 text-4xl font-bold tracking-tight sm:text-5xl">
             Pista<span className="text-flame-500">Certa</span>
@@ -173,89 +174,110 @@ export function HomeScreen({ kind, onSelectKind, onSelectMode, onOpenCredits }: 
         </header>
 
         <section className="flex flex-col gap-4" aria-label="Categoria do jogo">
-          <div className="border-ink-700 bg-ink-900/70 shadow-hard relative h-52 overflow-hidden border-2 sm:h-60">
-            <div className={`pointer-events-none absolute inset-0 ${KIND_GARAGE_TINT[kind]}`} />
-            <div className="garage-grid pointer-events-none absolute inset-0" />
-            <div
-              className={`pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent ${KIND_GLOW[kind]}`}
-            />
+          <div className="relative">
+            <div className="border-ink-700 bg-ink-900/70 shadow-hard relative h-52 overflow-hidden border-2 sm:h-60">
+              <div className={`pointer-events-none absolute inset-0 ${KIND_GARAGE_TINT[kind]}`} />
+              <div className="garage-grid pointer-events-none absolute inset-0" />
+              <div
+                className={`pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent ${KIND_GLOW[kind]}`}
+              />
 
-            <div className="absolute top-3 left-3 z-20 flex items-center gap-2">
-              <span className={`size-2 ${KIND_MARKER[kind]}`} aria-hidden />
-              <span className="text-chalk-500 font-display text-[0.6rem] tracking-[0.18em] uppercase">
-                <span className="sm:hidden">{copy.label}</span>
-                <span className="hidden sm:inline">{copy.garage}</span>
-              </span>
-            </div>
+              <div className="absolute top-3 left-3 z-20 flex items-center gap-2">
+                <span className={`size-2 ${KIND_MARKER[kind]}`} aria-hidden />
+                <span className="text-chalk-500 font-display text-[0.6rem] tracking-[0.18em] uppercase">
+                  <span className="sm:hidden">{copy.label}</span>
+                  <span className="hidden sm:inline">{copy.garage}</span>
+                </span>
+              </div>
 
-            <div className="absolute top-3 right-3 z-20 flex flex-col gap-2">
-              {CATEGORIES.filter((category) => category.kind !== kind).map(
-                ({ kind: categoryKind, icon: Icon }) => (
-                  <button
-                    key={categoryKind}
-                    type="button"
-                    onClick={() => selectKind(categoryKind)}
-                    disabled={switching}
-                    aria-label={`Trocar para ${KIND_COPY[categoryKind].label.toLocaleLowerCase('pt-BR')}`}
-                    title={`Trocar para ${KIND_COPY[categoryKind].label.toLocaleLowerCase('pt-BR')}`}
-                    className="border-ink-600 bg-ink-950/75 text-chalk-500 hover:border-flame-500 hover:text-flame-400 focus-visible:outline-flame-500 shadow-hard-sm flex size-10 items-center justify-center border-2 transition-colors disabled:cursor-wait disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2"
+              <div className="absolute top-3 right-3 z-20 flex flex-col gap-2 md:hidden">
+                {CATEGORIES.filter((category) => category.kind !== kind).map(
+                  ({ kind: categoryKind, icon: Icon }) => (
+                    <button
+                      key={categoryKind}
+                      type="button"
+                      onClick={() => selectKind(categoryKind)}
+                      disabled={switching}
+                      aria-label={`Trocar para ${KIND_COPY[categoryKind].label.toLocaleLowerCase('pt-BR')}`}
+                      title={`Trocar para ${KIND_COPY[categoryKind].label.toLocaleLowerCase('pt-BR')}`}
+                      className="border-ink-600 bg-ink-950/75 text-chalk-500 hover:border-flame-500 hover:text-flame-400 focus-visible:outline-flame-500 shadow-hard-sm flex size-10 items-center justify-center border-2 transition-colors disabled:cursor-wait disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2"
+                    >
+                      <Icon className="size-5" />
+                    </button>
+                  ),
+                )}
+              </div>
+
+              <motion.img
+                key={kind}
+                src={asset(copy.sprite)}
+                alt=""
+                aria-hidden
+                onLoad={() => setLoadedSprite(kind)}
+                initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                animate={
+                  loadedSprite === kind
+                    ? { opacity: 1, y: [10, -2, 0], scale: 1 }
+                    : { opacity: 0, y: 10, scale: 0.98 }
+                }
+                transition={{ ...motionSpring, delay: 0.05 }}
+                className={`pixelated absolute inset-0 m-auto object-contain ${KIND_SPRITE[kind]}`}
+              />
+
+              <AnimatePresence>
+                {loadedSprite !== kind && (
+                  <motion.div
+                    role="status"
+                    aria-label="Carregando veículo"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="absolute inset-0 flex items-center justify-center gap-1.5"
                   >
-                    <Icon className="size-5" />
-                  </button>
-                ),
-              )}
+                    {[0, 1, 2].map((index) => (
+                      <motion.span
+                        key={index}
+                        animate={{ opacity: [0.25, 1, 0.25] }}
+                        transition={{ duration: 0.75, repeat: Infinity, delay: index * 0.12 }}
+                        className="bg-chalk-500 size-1.5"
+                      />
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <div
+                ref={shutterRef}
+                aria-hidden
+                style={{ transform: 'scaleY(0)' }}
+                className="garage-shutter pointer-events-none absolute inset-0 z-[30] origin-top"
+              />
+
+              <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center gap-3 opacity-35">
+                <span className="bg-chalk-500 h-px w-12" />
+                <span className="bg-flame-400 h-px w-5" />
+                <span className="bg-chalk-500 h-px w-12" />
+              </div>
             </div>
 
-            <motion.img
-              key={kind}
-              src={asset(copy.sprite)}
-              alt=""
-              aria-hidden
-              onLoad={() => setLoadedSprite(kind)}
-              initial={{ opacity: 0, y: 10, scale: 0.98 }}
-              animate={
-                loadedSprite === kind
-                  ? { opacity: 1, y: [10, -2, 0], scale: 1 }
-                  : { opacity: 0, y: 10, scale: 0.98 }
-              }
-              transition={{ ...motionSpring, delay: 0.05 }}
-              className={`pixelated absolute inset-0 m-auto object-contain ${KIND_SPRITE[kind]}`}
-            />
-
-            <AnimatePresence>
-              {loadedSprite !== kind && (
-                <motion.div
-                  role="status"
-                  aria-label="Carregando veículo"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="absolute inset-0 flex items-center justify-center gap-1.5"
+            <nav
+              aria-label="Categorias"
+              className="absolute top-0 -right-36 hidden w-32 flex-col gap-2 md:flex"
+            >
+              {CATEGORIES.map(({ kind: categoryKind, icon: Icon }) => (
+                <button
+                  key={categoryKind}
+                  type="button"
+                  onClick={() => selectKind(categoryKind)}
+                  disabled={switching}
+                  aria-pressed={categoryKind === kind}
+                  className={`font-display shadow-hard-sm focus-visible:outline-flame-500 flex min-h-16 flex-col items-center justify-center gap-2 border-2 px-2 py-3 text-[0.65rem] font-bold tracking-wide transition-colors disabled:cursor-wait disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2 ${categoryKind === kind ? 'border-flame-500 bg-flame-500/10 text-flame-400' : 'border-ink-700 bg-ink-900/70 text-chalk-500 hover:border-flame-500 hover:text-chalk-100'}`}
                 >
-                  {[0, 1, 2].map((index) => (
-                    <motion.span
-                      key={index}
-                      animate={{ opacity: [0.25, 1, 0.25] }}
-                      transition={{ duration: 0.75, repeat: Infinity, delay: index * 0.12 }}
-                      className="bg-chalk-500 size-1.5"
-                    />
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            <div
-              ref={shutterRef}
-              aria-hidden
-              style={{ transform: 'scaleY(0)' }}
-              className="garage-shutter pointer-events-none absolute inset-0 z-[30] origin-top"
-            />
-
-            <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center gap-3 opacity-35">
-              <span className="bg-chalk-500 h-px w-12" />
-              <span className="bg-flame-400 h-px w-5" />
-              <span className="bg-chalk-500 h-px w-12" />
-            </div>
+                  <Icon aria-hidden className="size-5" />
+                  {KIND_COPY[categoryKind].label}
+                </button>
+              ))}
+            </nav>
           </div>
 
           <AnimatePresence mode="wait" initial={false}>
@@ -305,6 +327,10 @@ export function HomeScreen({ kind, onSelectKind, onSelectMode, onOpenCredits }: 
             </motion.button>
           ))}
         </section>
+
+        <div className="-mt-4 flex justify-center sm:justify-end">
+          <DuoHelp />
+        </div>
 
         <div className="flex flex-col items-center gap-2">
           <button

@@ -135,7 +135,7 @@ function ClueCell({ clue, fresh, width }: { clue: ResolvedClue; fresh: boolean; 
       initial={{ opacity: 0, y: 6 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.18, ease: motionEase }}
-      className={`min-h-10 py-0.5 ${
+      className={`min-w-0 min-h-10 py-0.5 ${
         fresh ? 'border-flame-500 border-l-[3px] pl-3' : 'border-ink-700 border-l-[3px] pl-3'
       } ${width}`}
     >
@@ -156,32 +156,18 @@ function ClueCell({ clue, fresh, width }: { clue: ResolvedClue; fresh: boolean; 
   );
 }
 
-function clueWidth(
-  clue: ResolvedClue,
-  pageIndex: number,
-  pageLength: number,
-  globalIndex: number,
-  total: number,
-): string {
+function clueWidth(clue: ResolvedClue, pageIndex: number, pageLength: number): string {
   if (clue.key === 'cabin' && clue.value.length > 36) {
-    return 'col-span-full col-start-auto lg:col-span-2';
+    return 'col-span-full col-start-auto md:col-span-2';
   }
 
   const lastOnPage = pageIndex === pageLength - 1;
-  const lastOverall = globalIndex === total - 1;
-  const startsFinalPair = total % 4 === 2 && globalIndex === total - 2;
-
-  const desktopWidth = lastOverall && total % 4 === 1 ? 'lg:col-span-2' : 'lg:col-span-1';
-  const desktopStart =
-    (lastOverall && total % 4 === 1) || startsFinalPair ? 'lg:col-start-2' : 'lg:col-start-auto';
-
   return [
     lastOnPage && pageLength % 2 === 1 ? 'col-span-2' : 'col-span-1',
     lastOnPage && pageLength % 3 === 1
       ? 'sm:col-start-2 sm:col-span-1'
       : 'sm:col-start-auto sm:col-span-1',
-    desktopStart,
-    desktopWidth,
+    'md:col-start-auto md:col-span-1',
   ].join(' ');
 }
 
@@ -210,7 +196,7 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
     }
 
     function updateHeight() {
-      if (globalThis.matchMedia('(width >= 64rem)').matches) {
+      if (globalThis.matchMedia('(min-width: 768px)').matches) {
         setTrackHeight(null);
         return;
       }
@@ -223,7 +209,7 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
     pageElements.forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
-  }, [clues.length, pages.length]);
+  }, [pages.length]);
 
   useEffect(() => {
     if (pages.length === previousCount.current) {
@@ -234,7 +220,7 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
 
     const track = trackRef.current;
 
-    if (track && globalThis.matchMedia('(width < 64rem)').matches) {
+    if (track && globalThis.matchMedia('(max-width: 767px)').matches) {
       track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
     }
   }, [pages.length]);
@@ -269,7 +255,7 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
             '--clue-track-height': trackHeight === null ? 'auto' : `${trackHeight}px`,
           } as CSSProperties
         }
-        className="scrollbar-hide flex snap-x snap-mandatory items-start overflow-x-auto overscroll-x-contain [height:var(--clue-track-height)] lg:grid lg:h-auto lg:auto-rows-min lg:grid-cols-4 lg:gap-x-3 lg:gap-y-4 lg:overflow-visible"
+        className="scrollbar-hide flex snap-x snap-mandatory items-start overflow-x-auto overscroll-x-contain [height:var(--clue-track-height)] md:grid md:h-auto md:auto-rows-min md:grid-cols-3 lg:grid-cols-4 md:gap-x-3 md:gap-y-4 md:overflow-visible"
       >
         {pages.map((entries, index) => (
           <dl
@@ -277,20 +263,14 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
             ref={(element) => {
               pageRefs.current[index] = element;
             }}
-            className="grid w-full shrink-0 snap-start auto-rows-min content-start grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-3 lg:contents"
+            className="grid w-full shrink-0 snap-start auto-rows-min content-start grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-3 md:contents"
           >
             {entries.map((clue, entryIndex) => (
               <ClueCell
                 key={clue.key}
                 clue={clue}
                 fresh={clue.key === freshKey}
-                width={clueWidth(
-                  clue,
-                  entryIndex,
-                  entries.length,
-                  index * pageSize + entryIndex,
-                  clues.length,
-                )}
+                width={clueWidth(clue, entryIndex, entries.length)}
               />
             ))}
           </dl>
@@ -298,7 +278,7 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
       </div>
 
       {pages.length > 1 && (
-        <div className="flex items-center justify-center gap-2 lg:hidden">
+        <div className="flex items-center justify-center gap-2 md:hidden">
           {pages.map((entries, index) => (
             <button
               key={entries[0]?.key ?? index}
@@ -306,12 +286,17 @@ export function CluePages({ clues, pageSize, freshKey }: CluePagesProps) {
               onClick={() => goTo(index)}
               aria-label={`Bloco ${index + 1}`}
               aria-current={index === page}
-              className={
-                index === page
-                  ? 'bg-flame-500 h-1.5 w-6 transition-all'
-                  : 'bg-ink-600 hover:bg-ink-700 h-1.5 w-1.5 transition-all'
-              }
-            />
+              className="focus-visible:outline-flame-400 flex min-h-11 min-w-11 items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2"
+            >
+              <span
+                aria-hidden
+                className={
+                  index === page
+                    ? 'bg-flame-500 h-1.5 w-6 transition-all'
+                    : 'bg-ink-600 h-1.5 w-1.5 transition-all'
+                }
+              />
+            </button>
           ))}
         </div>
       )}
